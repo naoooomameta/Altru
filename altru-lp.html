@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altru（アルトル）｜想いを習慣に。フラワーサブスクリプション</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@200;300;400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --white:     #ffffff;
+  --off:       #f8f5f0;
+  --off2:      #f0ebe2;
+  --border:    #e5dfd6;
+  --black:     #0f0f0f;
+  --gray-dk:   #2a2a2a;
+  --gray:      #555555;
+  --gray-lt:   #888888;
+  --champ:     #b89a5a;
+  --champ-lt:  #cdb47a;
+  --champ-pale:#f5eedd;
+  --radius:    6px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  color:var(--black);
+  background:var(--white);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* ══ HEADER ══ */
+#hd{
+  position:sticky;top:0;z-index:300;
+  height:64px;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;
+}
+.hd-in{
+  max-width:1160px;width:100%;margin:0 auto;
+  padding:0 40px;
+  display:flex;align-items:center;gap:32px;
+}
+.hd-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:400;letter-spacing:.3em;color:var(--black);
+}
+.hd-nav{display:flex;gap:28px;margin-left:auto;}
+.hd-nav a{font-size:14px;font-weight:400;color:var(--gray-dk);transition:color .2s;}
+.hd-nav a:hover{color:var(--champ);}
+.hd-btn{
+  display:inline-flex;align-items:center;
+  background:var(--black);color:var(--white);
+  font-size:13px;font-weight:500;letter-spacing:.06em;
+  padding:10px 22px;border-radius:var(--radius);
+  transition:background .2s;white-space:nowrap;
+}
+.hd-btn:hover{background:var(--gray-dk);}
+
+/* ══ HERO ══ */
+#hero{
+  background:var(--black);
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  position:relative;
+}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:120px 64px 120px 80px;
+  position:relative;z-index:2;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(200,173,127,.35);
+  border-radius:40px;padding:5px 16px;
+  font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--champ-lt);
+  margin-bottom:36px;width:fit-content;
+}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--champ);}
+.hero-h1{
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:300;line-height:1.5;letter-spacing:.04em;
+  color:var(--white);margin-bottom:28px;
+}
+.hero-h1 em{display:block;font-style:normal;color:var(--champ-lt);}
+.hero-p{
+  font-size:16px;font-weight:300;line-height:2.1;
+  color:rgba(255,255,255,.5);margin-bottom:48px;max-width:420px;
+}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+.btn-main{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--champ);color:var(--black);
+  font-size:15px;font-weight:500;letter-spacing:.05em;
+  padding:16px 36px;border-radius:var(--radius);
+  transition:background .25s,transform .2s;
+}
+.btn-main:hover{background:var(--champ-lt);transform:translateY(-2px);}
+.btn-ghost{
+  font-size:14px;font-weight:300;color:rgba(255,255,255,.5);
+  display:inline-flex;align-items:center;gap:6px;
+  transition:color .2s;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:2px;
+}
+.btn-ghost:hover{color:var(--white);}
+.hero-stats{
+  display:flex;gap:40px;margin-top:56px;padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:40px;font-weight:300;color:var(--champ-lt);line-height:1;margin-bottom:6px;
+}
+.hero-stat-label{font-size:12px;font-weight:300;letter-spacing:.1em;color:rgba(255,255,255,.35);}
+
+.hero-right{
+  position:relative;overflow:hidden;
+}
+.hero-right img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(.8);
+}
+.hero-right::before{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to right, rgba(15,15,15,.6) 0%, transparent 50%);
+}
+
+/* ══ MARQUEE ══ */
+.marquee-wrap{background:var(--champ);padding:13px 0;overflow:hidden;}
+.marquee-track{
+  display:flex;animation:ticker 32s linear infinite;white-space:nowrap;
+}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.marquee-item{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:500;letter-spacing:.18em;
+  color:var(--black);padding:0 40px;text-transform:uppercase;
+}
+.marquee-item::after{content:'✦';font-size:9px;color:rgba(0,0,0,.25);}
+
+/* ══ SECTION BASE ══ */
+.sec{padding:112px 0;}
+.sec-in{max-width:1160px;margin:0 auto;padding:0 40px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:500;letter-spacing:.3em;
+  color:var(--champ);text-transform:uppercase;margin-bottom:18px;
+}
+.eyebrow::before{content:'';width:18px;height:1px;background:var(--champ);}
+.sec-h2{
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(28px,3.5vw,44px);
+  font-weight:300;line-height:1.5;letter-spacing:.03em;margin-bottom:20px;
+}
+.sec-lead{font-size:17px;font-weight:300;line-height:2.1;color:var(--gray);}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .75s ease,transform .75s ease;}
+.rv.on{opacity:1;transform:translateY(0);}
+.rv-l{opacity:0;transform:translateX(-24px);transition:opacity .75s ease,transform .75s ease;}
+.rv-l.on{opacity:1;transform:translateX(0);}
+.rv-r{opacity:0;transform:translateX(24px);transition:opacity .75s ease,transform .75s ease;}
+.rv-r.on{opacity:1;transform:translateX(0);}
+
+/* ══ ABOUT (S.RIDE style alternating rows) ══ */
+#about{background:var(--white);}
+.about-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;align-items:stretch;
+  border-top:1px solid var(--border);
+}
+.about-row:last-child{border-bottom:1px solid var(--border);}
+.about-img{
+  overflow:hidden;
+  aspect-ratio:4/3;
+}
+.about-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s ease;
+}
+.about-row:hover .about-img img{transform:scale(1.04);}
+.about-copy{
+  padding:72px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--white);
+}
+.about-row.reverse .about-img{order:2;}
+.about-row.reverse .about-copy{order:1;background:var(--off);}
+.about-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:72px;font-weight:300;font-style:italic;
+  color:var(--off2);line-height:1;margin-bottom:24px;
+  letter-spacing:-.02em;
+}
+.about-h3{
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(20px,2.2vw,28px);font-weight:300;
+  line-height:1.6;letter-spacing:.04em;color:var(--black);
+  margin-bottom:20px;
+}
+.about-h3 em{color:var(--champ);font-style:normal;}
+.about-p{
+  font-size:16px;font-weight:300;line-height:2.2;color:var(--gray);
+  margin-bottom:28px;max-width:400px;
+}
+.about-merit{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:500;color:var(--champ);
+  padding:10px 16px;background:var(--champ-pale);
+  border-radius:var(--radius);
+}
+.about-merit::before{content:'✓';}
+
+/* ══ STATS (S.RIDE "選ばれる理由" style) ══ */
+#stats{background:var(--black);}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(255,255,255,.06);
+  margin-top:56px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);overflow:hidden;
+}
+.stat-item{
+  background:var(--black);padding:56px 48px;
+  transition:background .3s;
+}
+.stat-item:hover{background:#1a1a1a;}
+.stat-photo{
+  width:100%;height:200px;object-fit:cover;
+  border-radius:var(--radius);margin-bottom:32px;
+  filter:brightness(.75) saturate(.9);
+}
+.stat-big{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(52px,6vw,72px);font-weight:300;
+  color:var(--champ-lt);line-height:1;margin-bottom:12px;
+  letter-spacing:-.01em;
+}
+.stat-big span{font-size:.45em;color:rgba(205,180,122,.6);vertical-align:middle;}
+.stat-h3{
+  font-family:'Noto Serif JP',serif;
+  font-size:19px;font-weight:300;color:var(--white);
+  margin-bottom:16px;line-height:1.6;
+}
+.stat-p{font-size:14px;font-weight:300;line-height:2.0;color:rgba(255,255,255,.4);}
+
+/* ══ GALLERY (S.RIDE visual section style) ══ */
+#gallery{background:var(--off);padding:0;}
+.gallery-hero{
+  position:relative;height:70vh;min-height:500px;overflow:hidden;
+}
+.gallery-hero img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(.7);
+}
+.gallery-hero-overlay{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:80px;
+  background:linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 60%);
+}
+.gallery-hero-overlay .eyebrow{margin-bottom:12px;}
+.gallery-hero-overlay .sec-h2{color:var(--white);margin-bottom:12px;}
+.gallery-hero-overlay p{font-size:16px;color:rgba(255,255,255,.6);font-weight:300;line-height:1.8;}
+
+.gallery-sub{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+}
+.gallery-sub-item{
+  aspect-ratio:1;overflow:hidden;position:relative;
+}
+.gallery-sub-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease,filter .6s ease;
+}
+.gallery-sub-item:hover img{transform:scale(1.06);filter:brightness(.85);}
+.gallery-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:20px 24px;
+  background:linear-gradient(to top, rgba(0,0,0,.6) 0%, transparent 100%);
+  font-size:13px;font-weight:300;letter-spacing:.08em;color:rgba(255,255,255,.85);
+  opacity:0;transition:opacity .35s;
+}
+.gallery-sub-item:hover .gallery-caption{opacity:1;}
+
+/* ══ PLANS ══ */
+#plans{background:var(--white);}
+.plans-intro{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;
+  align-items:center;margin-bottom:64px;
+}
+.plans-note{
+  font-size:15px;font-weight:300;line-height:2.1;color:var(--gray);
+  border-left:2px solid var(--champ);padding-left:24px;
+}
+.plans-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--border);border-radius:10px;overflow:hidden;
+  box-shadow:0 4px 40px rgba(0,0,0,.06);
+}
+.plan-card{
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;
+  transition:background .3s;
+}
+.plan-card:last-child{border-right:none;}
+.plan-card:hover{background:var(--off);}
+.plan-card.rec{background:var(--black);border-right:none;}
+.plan-card.rec:hover{background:#1c1c1c;}
+.plan-photo{width:100%;height:200px;object-fit:cover;filter:brightness(.85);}
+.plan-card.rec .plan-photo{filter:brightness(.6) saturate(.8);}
+.plan-body-wrap{padding:36px 32px;flex:1;display:flex;flex-direction:column;}
+.plan-badge{
+  display:inline-block;background:var(--champ);color:var(--black);
+  font-size:9px;font-weight:500;letter-spacing:.2em;
+  padding:3px 12px;border-radius:40px;margin-bottom:16px;width:fit-content;
+}
+.plan-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:300;letter-spacing:.08em;
+  color:var(--black);margin-bottom:4px;
+}
+.plan-card.rec .plan-name{color:var(--white);}
+.plan-sub{font-size:12px;font-weight:300;color:var(--gray-lt);margin-bottom:28px;letter-spacing:.04em;}
+.plan-card.rec .plan-sub{color:rgba(255,255,255,.35);}
+.plan-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;font-weight:300;line-height:1;
+  color:var(--black);display:flex;align-items:baseline;gap:4px;margin-bottom:6px;
+}
+.plan-card.rec .plan-price{color:var(--champ-lt);}
+.plan-price s{font-size:14px;color:var(--gray-lt);}
+.plan-price sub{font-size:14px;color:var(--gray-lt);font-weight:300;}
+.plan-incl{font-size:12px;font-weight:300;color:var(--gray-lt);margin-bottom:24px;}
+.plan-card.rec .plan-incl{color:rgba(255,255,255,.3);}
+.plan-feats{list-style:none;flex:1;margin-bottom:28px;}
+.plan-feats li{
+  font-size:14px;font-weight:300;line-height:1.8;color:var(--gray-dk);
+  padding:8px 0;border-bottom:1px solid var(--border);
+  display:flex;gap:10px;align-items:center;
+}
+.plan-card.rec .plan-feats li{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.06);}
+.plan-feats li::before{content:'✓';color:var(--champ);font-size:11px;flex-shrink:0;}
+.plan-btn{
+  display:block;text-align:center;padding:14px;border-radius:var(--radius);
+  font-size:14px;font-weight:500;letter-spacing:.06em;
+  background:var(--off2);color:var(--black);transition:background .25s;
+}
+.plan-btn:hover{background:var(--off);}
+.plan-card.rec .plan-btn{background:var(--champ);color:var(--black);}
+.plan-card.rec .plan-btn:hover{background:var(--champ-lt);}
+
+/* ══ VOICES ══ */
+#voices{background:var(--off);}
+.voices-top{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;
+  align-items:center;margin-bottom:56px;
+}
+.voices-rating{
+  display:flex;gap:40px;align-items:center;
+}
+.rating-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:80px;font-weight:300;color:var(--champ-lt);line-height:1;
+}
+.rating-info{display:flex;flex-direction:column;gap:4px;}
+.rating-stars{color:var(--champ);font-size:18px;letter-spacing:3px;}
+.rating-label{font-size:12px;font-weight:300;color:var(--gray-lt);letter-spacing:.12em;}
+.voices-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.voice-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:36px 32px;
+  transition:box-shadow .3s,transform .3s;
+}
+.voice-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-3px);}
+.vc-stars{color:var(--champ);font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.vc-title{font-size:18px;font-weight:500;color:var(--black);margin-bottom:12px;}
+.vc-date{font-size:11px;font-weight:300;color:var(--gray-lt);margin-bottom:16px;}
+.vc-text{font-size:15px;font-weight:300;line-height:2.1;color:var(--gray-dk);}
+.vc-attr{
+  margin-top:20px;padding-top:18px;border-top:1px solid var(--border);
+  display:flex;align-items:center;gap:12px;
+}
+.vc-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--off2);display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:500;color:var(--gray);flex-shrink:0;
+}
+.vc-name{font-size:13px;font-weight:500;color:var(--black);}
+.vc-role{font-size:11px;font-weight:300;color:var(--gray-lt);}
+
+/* ══ HOW TO USE (S.RIDE step style) ══ */
+#howto{background:var(--white);border-top:1px solid var(--border);}
+.howto-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;margin-top:56px;
+}
+.howto-col{
+  padding:48px 36px;border-right:1px solid var(--border);
+  position:relative;
+  opacity:0;transform:translateY(18px);
+  transition:opacity .55s ease,transform .55s ease;
+}
+.howto-col.on{opacity:1;transform:translateY(0);}
+.howto-col:last-child{border-right:none;}
+.howto-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-weight:300;letter-spacing:.2em;color:var(--champ);
+  margin-bottom:24px;text-transform:uppercase;
+}
+.howto-icon{
+  font-size:36px;margin-bottom:20px;display:block;
+}
+.howto-title{font-size:17px;font-weight:500;color:var(--black);margin-bottom:12px;line-height:1.5;}
+.howto-body{font-size:14px;font-weight:300;line-height:2.0;color:var(--gray);}
+.howto-col:not(:last-child)::after{
+  content:'→';position:absolute;right:-14px;top:56px;
+  font-size:18px;color:var(--champ);z-index:1;
+}
+
+/* ══ PAYMENT ══ */
+#payment{background:var(--off);border-top:1px solid var(--border);}
+.payment-layout{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
+  margin-top:56px;
+}
+.pay-methods-title{font-size:17px;font-weight:500;color:var(--black);margin-bottom:20px;}
+.card-logos{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+.card-logo{
+  height:42px;padding:0 16px;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:6px;display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--gray-dk);
+  white-space:nowrap;transition:border-color .2s,box-shadow .2s;
+}
+.card-logo:hover{border-color:var(--champ);box-shadow:0 2px 8px rgba(184,154,90,.15);}
+.card-logo.visa{color:#1a1f71;font-style:italic;font-size:16px;}
+.card-logo.mc{padding:0 16px;display:flex;align-items:center;gap:0;}
+.card-logo.mc::before,.card-logo.mc::after{
+  content:'';width:22px;height:22px;border-radius:50%;
+}
+.card-logo.mc::before{background:#eb001b;margin-right:-8px;}
+.card-logo.mc::after{background:#f79e1b;}
+.card-logo.amex{color:#007bc1;font-weight:700;font-size:12px;letter-spacing:.06em;}
+.card-logo.jcb{color:#003087;font-weight:700;}
+.card-logo.paypay{color:#d40000;font-weight:700;}
+.card-logo.apple{color:var(--black);font-weight:500;font-size:13px;}
+.card-logo.gpay{color:#5f6368;font-size:13px;font-weight:500;}
+.pay-note{font-size:15px;font-weight:300;line-height:2.1;color:var(--gray);}
+.security-cards{display:flex;flex-direction:column;gap:16px;}
+.sec-card{
+  display:flex;gap:18px;align-items:flex-start;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:8px;padding:22px 26px;
+  transition:box-shadow .25s;
+}
+.sec-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06);}
+.sec-icon{
+  width:46px;height:46px;border-radius:10px;
+  background:var(--champ-pale);display:flex;align-items:center;
+  justify-content:center;font-size:20px;flex-shrink:0;
+}
+.sec-t{font-size:15px;font-weight:500;color:var(--black);margin-bottom:5px;}
+.sec-b{font-size:14px;font-weight:300;line-height:1.8;color:var(--gray);}
+.cancel-box{
+  grid-column:1/-1;margin-top:48px;padding-top:40px;border-top:1px solid var(--border);
+}
+.cancel-title{font-size:19px;font-weight:500;color:var(--black);margin-bottom:24px;}
+.cancel-steps{display:flex;gap:0;}
+.c-step{
+  flex:1;padding:28px 28px;
+  background:var(--white);border:1px solid var(--border);
+  border-right:none;transition:background .25s;position:relative;
+}
+.c-step:first-child{border-radius:8px 0 0 8px;}
+.c-step:last-child{border-right:1px solid var(--border);border-radius:0 8px 8px 0;}
+.c-step:hover{background:var(--champ-pale);}
+.c-step::after{
+  content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);
+  font-size:16px;color:var(--champ);z-index:1;
+}
+.c-step:last-child::after{display:none;}
+.c-num{font-size:10px;font-weight:500;letter-spacing:.2em;color:var(--champ);margin-bottom:10px;text-transform:uppercase;}
+.c-title{font-size:15px;font-weight:500;color:var(--black);margin-bottom:6px;}
+.c-body{font-size:13px;font-weight:300;line-height:1.9;color:var(--gray);}
+
+/* ══ FAQ ══ */
+#faq{background:var(--white);}
+.faq-layout{
+  display:grid;grid-template-columns:2fr 3fr;gap:80px;margin-top:56px;
+}
+.faq-aside-h{
+  font-family:'Noto Serif JP',serif;
+  font-size:24px;font-weight:300;line-height:1.7;color:var(--black);margin-bottom:16px;
+}
+.faq-aside-p{font-size:15px;font-weight:300;line-height:2.1;color:var(--gray);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;gap:24px;
+  padding:24px 0;cursor:pointer;
+  font-size:16px;font-weight:400;color:var(--black);line-height:1.6;
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--champ);}
+.faq-ico{
+  width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:var(--gray-lt);flex-shrink:0;
+  transition:transform .3s,border-color .3s,color .3s;
+}
+.faq-item.open .faq-ico{transform:rotate(45deg);border-color:var(--champ);color:var(--champ);}
+.faq-a{
+  font-size:15px;font-weight:300;line-height:2.3;color:var(--gray);
+  max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s;
+}
+.faq-item.open .faq-a{max-height:200px;padding-bottom:24px;}
+
+/* ══ CTA ══ */
+#cta{
+  background:var(--black);
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:500px;overflow:hidden;
+}
+.cta-left{
+  padding:100px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:1;
+}
+.cta-h2{
+  font-family:'Noto Serif JP',serif;
+  font-size:clamp(28px,3.5vw,44px);font-weight:300;
+  line-height:1.6;color:var(--white);letter-spacing:.04em;margin-bottom:20px;
+}
+.cta-h2 em{color:var(--champ-lt);font-style:normal;}
+.cta-p{
+  font-size:16px;font-weight:300;line-height:2.2;
+  color:rgba(255,255,255,.45);margin-bottom:48px;
+}
+.cta-btns{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.cta-right{position:relative;overflow:hidden;}
+.cta-right img{width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(.8);}
+.cta-right::before{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to right, rgba(15,15,15,.8) 0%, transparent 60%);
+}
+.price-strip{
+  display:flex;gap:0;margin-top:52px;padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.price-strip-item{
+  flex:1;padding-right:32px;
+  border-right:1px solid rgba(255,255,255,.08);margin-right:32px;
+}
+.price-strip-item:last-child{border-right:none;margin-right:0;padding-right:0;}
+.psi-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:300;color:var(--champ-lt);margin-bottom:4px;
+}
+.psi-label{font-size:11px;font-weight:300;color:rgba(255,255,255,.3);letter-spacing:.1em;}
+
+/* ══ FOOTER ══ */
+footer{
+  background:var(--black);border-top:1px solid rgba(255,255,255,.07);
+  padding:56px 0 32px;
+}
+.ft-in{max-width:1160px;margin:0 auto;padding:0 40px;}
+.ft-top{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:48px;flex-wrap:wrap;
+  padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;
+}
+.ft-brand-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:400;letter-spacing:.3em;
+  color:rgba(255,255,255,.45);margin-bottom:12px;
+}
+.ft-brand-p{
+  font-size:13px;font-weight:300;line-height:1.9;
+  color:rgba(255,255,255,.2);max-width:200px;
+}
+.ft-nav{display:flex;gap:56px;flex-wrap:wrap;}
+.ft-col-title{
+  font-size:11px;font-weight:500;letter-spacing:.2em;
+  color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:16px;
+}
+.ft-links{display:flex;flex-direction:column;gap:10px;}
+.ft-links a{
+  font-size:13px;font-weight:300;color:rgba(255,255,255,.25);transition:color .2s;
+}
+.ft-links a:hover{color:rgba(255,255,255,.65);}
+.ft-copy{
+  font-size:11px;font-weight:300;letter-spacing:.1em;
+  color:rgba(255,255,255,.15);
+}
+
+/* ══ MOBILE ══ */
+@media(max-width:768px){
+  .hd-nav{display:none;}
+  .hd-in{padding:0 20px;}
+  #hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{height:260px;order:-1;}
+  .hero-left{padding:56px 24px 64px;}
+  .hero-stats{gap:24px;flex-wrap:wrap;}
+  .sec{padding:72px 0;}
+  .sec-in{padding:0 24px;}
+  .about-row{grid-template-columns:1fr;}
+  .about-row.reverse .about-img{order:0;}
+  .about-row.reverse .about-copy{order:1;}
+  .about-copy{padding:48px 28px;}
+  .stats-grid{grid-template-columns:1fr;}
+  .gallery-sub{grid-template-columns:1fr 1fr;}
+  .gallery-hero-overlay{padding:40px 24px;}
+  .plans-intro{grid-template-columns:1fr;}
+  .plans-cards{grid-template-columns:1fr;}
+  .plan-card{border-right:none;border-bottom:1px solid var(--border);}
+  .voices-top{grid-template-columns:1fr;}
+  .voices-cards{grid-template-columns:1fr;}
+  .howto-grid{grid-template-columns:1fr 1fr;}
+  .howto-col:not(:last-child)::after{display:none;}
+  .payment-layout{grid-template-columns:1fr;}
+  .cancel-steps{flex-direction:column;gap:8px;}
+  .c-step{border-right:1px solid var(--border) !important;border-radius:8px !important;}
+  .c-step::after{display:none;}
+  .faq-layout{grid-template-columns:1fr;}
+  #cta{grid-template-columns:1fr;}
+  .cta-right{height:240px;}
+  .cta-left{padding:64px 24px;}
+  .price-strip{flex-direction:column;gap:20px;}
+  .price-strip-item{border-right:none;margin-right:0;padding-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:20px;}
+  .ft-top{flex-direction:column;}
+  .ft-in{padding:0 24px;}
+  footer{padding:48px 0 28px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header id="hd">
+  <div class="hd-in">
+    <div class="hd-logo">Altru</div>
+    <nav class="hd-nav">
+      <a href="#about">特徴</a>
+      <a href="#gallery">ギャラリー</a>
+      <a href="#plans">料金</a>
+      <a href="#payment">決済</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#cta" class="hd-btn" style="margin-left:auto">無料で始める</a>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Flower Subscription for Men</div>
+    <h1 class="hero-h1">
+      大切な人を想う気持ちを、<br>
+      <em>あなたの習慣に変える。</em>
+    </h1>
+    <p class="hero-p">
+      忙しさを理由に、愛する人を後回しにしない。<br>
+      Altruは、あなたの代わりに「感謝」と「驚き」を届ける、<br>男性のためのギフト特化型フラワーサブスクリプション。
+    </p>
+    <div class="hero-btns">
+      <a href="#cta" class="btn-main">想いの習慣化を始める</a>
+      <a href="#about" class="btn-ghost">サービスを見る</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">3,800<small style="font-size:.4em;color:rgba(205,180,122,.5)">円〜</small></div>
+        <div class="hero-stat-label">送料込み・回数縛りなし</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">98<small style="font-size:.4em;color:rgba(205,180,122,.5)">%</small></div>
+        <div class="hero-stat-label">継続率（サービス調査）</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3<small style="font-size:.4em;color:rgba(205,180,122,.5)">種類</small></div>
+        <div class="hero-stat-label">プランから選べる</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1487530811015-780dfe04dbe7?w=1200&q=85" alt="上質な花束">
+  </div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Stealth Gift Design</span>
+    <span class="marquee-item">Professional Curation</span>
+    <span class="marquee-item">Smart Reminder</span>
+    <span class="marquee-item">No Contract</span>
+    <span class="marquee-item">Free Shipping</span>
+    <span class="marquee-item">Anniversary Upgrade</span>
+    <span class="marquee-item">Secure Payment</span>
+    <span class="marquee-item">Stealth Gift Design</span>
+    <span class="marquee-item">Professional Curation</span>
+    <span class="marquee-item">Smart Reminder</span>
+    <span class="marquee-item">No Contract</span>
+    <span class="marquee-item">Free Shipping</span>
+    <span class="marquee-item">Anniversary Upgrade</span>
+    <span class="marquee-item">Secure Payment</span>
+  </div>
+</div>
+
+<!-- ═══ ABOUT（交互レイアウト） ═══ -->
+<section id="about" class="sec" style="padding:0;">
+  <div class="sec-in" style="padding-top:96px;padding-bottom:48px;">
+    <div class="eyebrow rv">Why Altru</div>
+    <h2 class="sec-h2 rv">Altruとは</h2>
+    <p class="sec-lead rv">「Altruism（利他主義）」の名を冠する、男性のためのフラワーサブスクリプション。<br>一度の設定で、プロの花が、あなた名義で、届き続ける。</p>
+  </div>
+
+  <!-- Row 1 -->
+  <div class="about-row">
+    <div class="about-img rv-l">
+      <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc4e?w=900&q=80" alt="ステルスギフト" loading="lazy">
+    </div>
+    <div class="about-copy rv-r" style="transition-delay:.1s">
+      <div class="about-num">01</div>
+      <h3 class="about-h3"><em>ステルス・ギフト設計。</em><br>サブスクだと気づかれない。</h3>
+      <p class="about-p">配送伝票の送り主はあなた個人のお名前。パッケージからカードまで、Altruのサービス名は一切登場しません。まるであなたが花屋で選んで送ったかのような体験を演出します。</p>
+      <div class="about-merit">毎回「また手配してくれた」と思ってもらえる</div>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="about-row reverse">
+    <div class="about-img rv-r" style="transition-delay:.05s">
+      <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=900&q=80" alt="プロセレクト" loading="lazy">
+    </div>
+    <div class="about-copy rv-l" style="transition-delay:.1s">
+      <div class="about-num">02</div>
+      <h3 class="about-h3"><em>プロのフローリストが厳選。</em><br>甘すぎない、上質さを。</h3>
+      <p class="about-p">季節の希少な花々を、目の肥えた相手にも喜ばれる「空間に映える美しさ」を重視して選定。センスに自信がなくても、プロが代わりに最高の一択を届けます。</p>
+      <div class="about-merit">毎回テイストの異なる一束で「飽き」がない</div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="about-row">
+    <div class="about-img rv-l" style="transition-delay:.05s">
+      <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=900&q=80" alt="スマート管理" loading="lazy">
+    </div>
+    <div class="about-copy rv-r" style="transition-delay:.1s">
+      <div class="about-num">03</div>
+      <h3 class="about-h3"><em>スマートな関係性メンテナンス。</em><br>「忘れる」不安から解放。</h3>
+      <p class="about-p">誕生日・記念日を登録すると自動でアップグレード。スキップ・変更・解約はすべてスマホのマイページから、いつでも即日対応。煩雑な手続きは一切ありません。</p>
+      <div class="about-merit">記念日を「覚えていてくれた」体験を自動化</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section id="stats" class="sec">
+  <div class="sec-in">
+    <div class="eyebrow rv" style="color:var(--champ)">Numbers</div>
+    <h2 class="sec-h2 rv" style="color:var(--white)">Altruが選ばれる理由</h2>
+    <div class="stats-grid">
+      <div class="stat-item rv">
+        <img class="stat-photo" src="https://images.unsplash.com/photo-1490750967868-88df5691cc4e?w=600&q=70" alt="" loading="lazy">
+        <div class="stat-big">98<span>%</span></div>
+        <h3 class="stat-h3">継続率98%</h3>
+        <p class="stat-p">一度始めたユーザーの98%が、3ヶ月後も継続。「止める理由がない」サービス設計です。</p>
+      </div>
+      <div class="stat-item rv" style="transition-delay:.1s">
+        <img class="stat-photo" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&q=70" alt="" loading="lazy">
+        <div class="stat-big">3<span>日以内</span></div>
+        <h3 class="stat-h3">最短3日で初回お届け</h3>
+        <p class="stat-p">登録から最短3日でプロ厳選の花束があなた名義で届き始めます。</p>
+      </div>
+      <div class="stat-item rv" style="transition-delay:.2s">
+        <img class="stat-photo" src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=600&q=70" alt="" loading="lazy">
+        <div class="stat-big">4.8<span>★</span></div>
+        <h3 class="stat-h3">平均評価4.8</h3>
+        <p class="stat-p">「相手の笑顔が変わった」「夫婦の会話が増えた」という声が多数寄せられています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="gallery-hero rv">
+    <img src="https://images.unsplash.com/photo-1487530811015-780dfe04dbe7?w=1800&q=85" alt="Altruの花束" loading="lazy">
+    <div class="gallery-hero-overlay">
+      <div class="eyebrow">Gallery</div>
+      <h2 class="sec-h2">届く花の、美しさを。</h2>
+      <p>プロのフローリストが季節ごとに厳選した、Altruの花たち。</p>
+    </div>
+  </div>
+  <div class="gallery-sub">
+    <div class="gallery-sub-item rv">
+      <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc4e?w=800&q=80" alt="Premium" loading="lazy">
+      <div class="gallery-caption">Premium — ピンクグラデーション</div>
+    </div>
+    <div class="gallery-sub-item rv" style="transition-delay:.1s">
+      <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=800&q=80" alt="Executive" loading="lazy">
+      <div class="gallery-caption">Executive — ホワイト×グリーン</div>
+    </div>
+    <div class="gallery-sub-item rv" style="transition-delay:.2s">
+      <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=800&q=80" alt="Standard" loading="lazy">
+      <div class="gallery-caption">Standard — 季節の旬を一束に</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLANS ═══ -->
+<section id="plans" class="sec">
+  <div class="sec-in">
+    <div class="plans-intro">
+      <div>
+        <div class="eyebrow rv">Pricing</div>
+        <h2 class="sec-h2 rv">プラン・料金</h2>
+      </div>
+      <p class="plans-note rv" style="transition-delay:.1s">
+        すべてのプランに<strong>送料込み</strong>。<br>
+        回数縛り・違約金なし。<br>
+        いつでもプラン変更・解約できます。
+      </p>
+    </div>
+    <div class="plans-cards rv" style="transition-delay:.1s">
+      <div class="plan-card">
+        <img class="plan-photo" src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=600&q=75" alt="Standard" loading="lazy">
+        <div class="plan-body-wrap">
+          <div class="plan-name">Standard</div>
+          <div class="plan-sub">まずは習慣化したい方へ</div>
+          <div class="plan-price"><s>¥</s>3,800<sub>/回</sub></div>
+          <div class="plan-incl">送料込み</div>
+          <ul class="plan-feats">
+            <li>季節の旬を楽しむ一束</li>
+            <li>メッセージカード付き</li>
+            <li>毎週 / 隔週 / 月1回から選択</li>
+            <li>ステルスパッケージ</li>
+          </ul>
+          <a href="#cta" class="plan-btn">このプランを始める</a>
+        </div>
+      </div>
+      <div class="plan-card rec">
+        <img class="plan-photo" src="https://images.unsplash.com/photo-1490750967868-88df5691cc4e?w=600&q=75" alt="Premium" loading="lazy">
+        <div class="plan-body-wrap">
+          <div class="plan-badge">MOST POPULAR</div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-sub">特別な想いを伝えたい方へ</div>
+          <div class="plan-price"><s>¥</s>6,500<sub>/回</sub></div>
+          <div class="plan-incl">送料込み</div>
+          <ul class="plan-feats">
+            <li>ボリュームのある主役級の一束</li>
+            <li>記念日アップグレード対応</li>
+            <li>毎週 / 隔週 / 月1回から選択</li>
+            <li>ステルスパッケージ</li>
+          </ul>
+          <a href="#cta" class="plan-btn">このプランを始める</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <img class="plan-photo" src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&q=75" alt="Executive" loading="lazy">
+        <div class="plan-body-wrap">
+          <div class="plan-name">Executive</div>
+          <div class="plan-sub">常に最高を届けたい方へ</div>
+          <div class="plan-price"><s>¥</s>12,000<sub>/回</sub></div>
+          <div class="plan-incl">送料込み</div>
+          <ul class="plan-feats">
+            <li>希少種＋専属デザイナー</li>
+            <li>記念日アップグレード対応</li>
+            <li>毎週 / 隔週 / 月1回から選択</li>
+            <li>ステルスパッケージ</li>
+          </ul>
+          <a href="#cta" class="plan-btn">このプランを始める</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VOICES ═══ -->
+<section id="voices" class="sec">
+  <div class="sec-in">
+    <div class="voices-top">
+      <div>
+        <div class="eyebrow rv">Testimonials</div>
+        <h2 class="sec-h2 rv">利用者の声</h2>
+        <p class="sec-lead rv" style="transition-delay:.1s;max-width:360px">多くのビジネスパーソンに選ばれています。</p>
+      </div>
+      <div class="voices-rating rv" style="transition-delay:.1s">
+        <div class="rating-num">4.8</div>
+        <div class="rating-info">
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-label">平均サービス評価</div>
+          <div style="font-size:12px;color:var(--gray-lt);margin-top:4px;font-weight:300">※サービス内アンケート 2024年調査</div>
+        </div>
+      </div>
+    </div>
+    <div class="voices-cards">
+      <div class="voice-card rv">
+        <div class="vc-stars">★★★★★</div>
+        <div class="vc-title">凄い！夫婦の会話が増えた</div>
+        <div class="vc-date">2024年10月</div>
+        <p class="vc-text">これのおかげで、夫婦の会話が増えました。「今月の花、またきれいだね」が定番になって。選ぶ手間がないのが本当に助かります。</p>
+        <div class="vc-attr">
+          <div class="vc-avatar">K</div>
+          <div><div class="vc-name">K.T さん</div><div class="vc-role">30代 / 経営者</div></div>
+        </div>
+      </div>
+      <div class="voice-card rv" style="transition-delay:.1s">
+        <div class="vc-stars">★★★★★</div>
+        <div class="vc-title">バレずに毎回驚いてもらえる</div>
+        <div class="vc-date">2024年9月</div>
+        <p class="vc-text">サブスクだとバレずに毎回驚いてもらえるのが快感です。「またやってくれた」という顔が見たくて、止めるつもりがありません。</p>
+        <div class="vc-attr">
+          <div class="vc-avatar">M</div>
+          <div><div class="vc-name">M.S さん</div><div class="vc-role">40代 / 弁護士</div></div>
+        </div>
+      </div>
+      <div class="voice-card rv" style="transition-delay:.2s">
+        <div class="vc-stars">★★★★★</div>
+        <div class="vc-title">記念日を忘れることがなくなった</div>
+        <div class="vc-date">2024年8月</div>
+        <p class="vc-text">仕事が忙しくて毎年記念日を忘れがちだったのが、完全に解決。自動でアップグレードされて届くので、妻が毎回感動してくれています。</p>
+        <div class="vc-attr">
+          <div class="vc-avatar">T</div>
+          <div><div class="vc-name">T.N さん</div><div class="vc-role">40代 / 医師</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW TO USE ═══ -->
+<section id="howto" class="sec">
+  <div class="sec-in">
+    <div class="eyebrow rv">How to Use</div>
+    <h2 class="sec-h2 rv">Altruの使い方</h2>
+    <p class="sec-lead rv" style="transition-delay:.1s">登録から配送まで、4ステップ。あとは何もしなくていい。</p>
+    <div class="howto-grid">
+      <div class="howto-col">
+        <div class="howto-num">Step 01</div>
+        <div class="howto-icon">🎁</div>
+        <div class="howto-title">プランを選ぶ</div>
+        <div class="howto-body">配送頻度とボリュームを選択。Standard / Premium / Executiveから好みのプランへ。</div>
+      </div>
+      <div class="howto-col" style="transition-delay:.1s">
+        <div class="howto-num">Step 02</div>
+        <div class="howto-icon">📬</div>
+        <div class="howto-title">相手を登録する</div>
+        <div class="howto-body">配送先・記念日・メッセージカードの文面を入力。特別な日も忘れない仕組みが整います。</div>
+      </div>
+      <div class="howto-col" style="transition-delay:.2s">
+        <div class="howto-num">Step 03</div>
+        <div class="howto-icon">🌸</div>
+        <div class="howto-title">自動で届き始める</div>
+        <div class="howto-body">プロが厳選した花が、あなた名義で彼女のもとへ。あとは何もしなくていいのです。</div>
+      </div>
+      <div class="howto-col" style="transition-delay:.3s">
+        <div class="howto-num">Step 04</div>
+        <div class="howto-icon">📱</div>
+        <div class="howto-title">マイページで管理</div>
+        <div class="howto-body">変更・スキップ・解約はいつでもスマホから。年間を通じてあなたらしく贈り続ける。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAYMENT ═══ -->
+<section id="payment" class="sec">
+  <div class="sec-in">
+    <div class="eyebrow rv">Payment &amp; Security</div>
+    <h2 class="sec-h2 rv">安心してお支払いいただけます</h2>
+    <p class="sec-lead rv" style="transition-delay:.1s">業界標準のセキュリティ環境で、決済情報を安全に保護します。</p>
+    <div class="payment-layout">
+      <div class="rv" style="transition-delay:.1s">
+        <div class="pay-methods-title">対応決済方法</div>
+        <div class="card-logos">
+          <div class="card-logo visa">VISA</div>
+          <div class="card-logo mc"></div>
+          <div class="card-logo amex">AMEX</div>
+          <div class="card-logo jcb">JCB</div>
+          <div class="card-logo paypay">PayPay</div>
+          <div class="card-logo apple"> Apple Pay</div>
+          <div class="card-logo gpay">G Pay</div>
+          <div class="card-logo" style="color:#009fe8;font-weight:700">コンビニ払い</div>
+          <div class="card-logo" style="color:#e60012;font-weight:700">銀行振込</div>
+        </div>
+        <p class="pay-note">
+          すべての決済はSSL暗号化通信により保護されています。カード情報はStripeの安全なサーバーで処理され、Altruのサーバーには一切保存されません。<br><br>
+          お支払いは初回配送時に自動で行われ、以降は設定した配送サイクルごとに引き落とされます。
+        </p>
+      </div>
+      <div class="security-cards rv" style="transition-delay:.15s">
+        <div class="sec-card">
+          <div class="sec-icon">🔒</div>
+          <div>
+            <div class="sec-t">SSL / TLS 暗号化通信</div>
+            <div class="sec-b">すべての通信はSSL証明書による暗号化で保護。第三者による傍受・改ざんを防止します。</div>
+          </div>
+        </div>
+        <div class="sec-card">
+          <div class="sec-icon">🛡️</div>
+          <div>
+            <div class="sec-t">Stripeによる決済処理</div>
+            <div class="sec-b">世界No.1クラスの決済プラットフォーム「Stripe」を採用。PCI DSS準拠の最高レベルセキュリティ。</div>
+          </div>
+        </div>
+        <div class="sec-card">
+          <div class="sec-icon">↩️</div>
+          <div>
+            <div class="sec-t">品質保証・返金対応</div>
+            <div class="sec-b">品質に問題があった場合は全額返金またはお届け直しに対応。安心してご利用いただけます。</div>
+          </div>
+        </div>
+      </div>
+      <div class="cancel-box rv" style="transition-delay:.2s">
+        <div class="cancel-title">解約・スキップはいつでも簡単に</div>
+        <div class="cancel-steps">
+          <div class="c-step">
+            <div class="c-num">Step 01</div>
+            <div class="c-title">マイページにログイン</div>
+            <div class="c-body">スマホ・PCどちらからでもアクセス可能。</div>
+          </div>
+          <div class="c-step">
+            <div class="c-num">Step 02</div>
+            <div class="c-title">「プラン管理」を開く</div>
+            <div class="c-body">配送中のプランが一覧で確認できます。</div>
+          </div>
+          <div class="c-step">
+            <div class="c-num">Step 03</div>
+            <div class="c-title">操作を選択</div>
+            <div class="c-body">解約・スキップ・プラン変更を即時反映。</div>
+          </div>
+          <div class="c-step">
+            <div class="c-num">Step 04</div>
+            <div class="c-title">完了</div>
+            <div class="c-body">違約金・手数料は一切かかりません。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="sec" style="border-top:1px solid var(--border)">
+  <div class="sec-in">
+    <div class="faq-layout">
+      <div>
+        <div class="eyebrow rv">FAQ</div>
+        <div class="faq-aside-h rv" style="transition-delay:.05s">よくある<br>ご質問</div>
+        <p class="faq-aside-p rv" style="transition-delay:.1s">その他ご不明な点は<br>お気軽にお問い合わせください。</p>
+      </div>
+      <div class="rv" style="transition-delay:.1s">
+        <div class="faq-item">
+          <div class="faq-q">途中で解約やスキップはできますか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">はい、マイページからいつでも可能です。回数縛りもなく、違約金も一切ありません。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">どんな花が届きますか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">季節ごとの最高品質の生花を、プロのフローリストがバランスを考えてセレクトします。ご希望のカラートーンなどがあればお知らせください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">相手が不在の場合はどうなりますか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">保水処理を施したギフト専用BOXで梱包しています。再配達にも対応できるよう工夫しており、翌日でも美しい状態でお届けできます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">サブスクリプションだと気づかれませんか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">完全なステルス設計です。配送伝票・パッケージ・同封カードのいずれにも、サブスクリプションサービスを連想させる表記は一切ありません。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">複数の相手に送ることはできますか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">はい、マイページから配送先を複数登録できます。それぞれに異なる頻度・プランを設定することも可能です。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">領収書・明細はもらえますか？<span class="faq-ico">+</span></div>
+          <div class="faq-a">マイページから電子領収書のダウンロードが可能です。宛名の変更にも対応しています。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="cta-left">
+    <div class="eyebrow" style="color:var(--champ);margin-bottom:20px">Begin</div>
+    <h2 class="cta-h2">「ありがとう」は、<br><em>何度言ってもいい。</em></h2>
+    <p class="cta-p">大切な人との絆を、枯らさないために。<br>今、この瞬間から新しい習慣を。</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-main">無料で始める</a>
+      <a href="#plans" class="btn-ghost">料金を確認する</a>
+    </div>
+    <div class="price-strip">
+      <div class="price-strip-item">
+        <div class="psi-price">¥3,800〜</div>
+        <div class="psi-label">Standard</div>
+      </div>
+      <div class="price-strip-item">
+        <div class="psi-price">¥6,500〜</div>
+        <div class="psi-label">Premium</div>
+      </div>
+      <div class="price-strip-item">
+        <div class="psi-price">¥12,000〜</div>
+        <div class="psi-label">Executive</div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-right">
+    <img src="https://images.unsplash.com/photo-1487530811015-780dfe04dbe7?w=1200&q=85" alt="Altru">
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand-logo">Altru</div>
+        <p class="ft-brand-p">想いを届ける、<br>フラワーサブスクリプション。</p>
+      </div>
+      <nav class="ft-nav">
+        <div>
+          <div class="ft-col-title">サービス</div>
+          <div class="ft-links">
+            <a href="#">サービス概要</a>
+            <a href="#plans">料金プラン</a>
+            <a href="#faq">よくある質問</a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-col-title">会社</div>
+          <div class="ft-links">
+            <a href="#">運営会社</a>
+            <a href="#">お問い合わせ</a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-col-title">法的情報</div>
+          <div class="ft-links">
+            <a href="#">利用規約</a>
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">特定商取引法に基づく表記</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="ft-copy">© 2025 Altru. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+/* reveal */
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on'); });
+},{threshold:.12});
+document.querySelectorAll('.rv,.rv-l,.rv-r,.howto-col').forEach(el=>obs.observe(el));
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement, was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!was) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
