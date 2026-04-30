@@ -47,26 +47,26 @@
     .spacer{height:86px}
 
     @media(max-width:900px){.split,.cards,.two,.steps,.tiers{grid-template-columns:1fr} .poem{border-left:none;border-top:1px solid var(--line);padding:16px 0 0}}
-    @media(max-width:768px){section{padding:60px 0}.sticky .counter{display:none}}
+    @media(max-width:768px){section{padding:60px 0}.sticky .counter{display:none}.sticky-in{justify-content:center}.cta{width:min(92vw,420px)}}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="container">
       <div class="brand">Altru</div>
-      <div class="switch">
-        <button class="on" data-fv="a">Pattern A</button><button data-fv="b">Pattern B</button><button data-fv="c">Pattern C</button>
+      <div class="switch" role="tablist" aria-label="ファーストビュー切り替え">
+        <button class="on" data-fv="a" role="tab" aria-selected="true">Pattern A</button><button data-fv="b" role="tab" aria-selected="false">Pattern B</button><button data-fv="c" role="tab" aria-selected="false">Pattern C</button>
       </div>
 
       <div id="a" class="fv on">
         <h1>花を贈る。<br>それだけで、<span class="gold">少しいい男</span>になれる。</h1>
         <p class="sub">記念日に。何でもない日に。LINEで30秒。大切な人に花が届く。花のギフトサブスクリプション、まもなく始動。</p>
-        <a class="cta" href="#">LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div>
+        <a class="cta" href="https://line.me/R/ti/p/@example" target="_blank" rel="noopener noreferrer" aria-label="LINEで事前登録する（新しいタブで開く）"><span aria-hidden="true">🟢</span>LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div>
       </div>
 
       <div id="b" class="fv">
         <div class="split">
-          <div><h1>忙しい。<br>でも、<span class="gold">気は利く。</span></h1><p class="sub">花屋に寄る時間がなくても、大切な人に花を届けられる。LINEから30秒。そういう男でいるための、仕組みがある。</p><a class="cta" href="#">LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div></div>
+          <div><h1>忙しい。<br>でも、<span class="gold">気は利く。</span></h1><p class="sub">花屋に寄る時間がなくても、大切な人に花を届けられる。LINEから30秒。そういう男でいるための、仕組みがある。</p><a class="cta" href="https://line.me/R/ti/p/@example" target="_blank" rel="noopener noreferrer" aria-label="LINEで事前登録する（新しいタブで開く）"><span aria-hidden="true">🟢</span>LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div></div>
           <p class="poem">「帰り道、ふと思った。最後に花を贈ったのはいつだっただろう。そう思えたなら、もう十分だ。」</p>
         </div>
       </div>
@@ -74,7 +74,7 @@
       <div id="c" class="fv impact">
         <h1><span class="sub">何でもない日に、</span><br><span class="gold">理由はない。ただ、届けておく。</span></h1>
         <p class="sub">何でもない日に花が届く。それは、あなたが少しだけ余裕のある男だという証拠だ。</p>
-        <a class="cta" href="#">LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div>
+        <a class="cta" href="https://line.me/R/ti/p/@example" target="_blank" rel="noopener noreferrer" aria-label="LINEで事前登録する（新しいタブで開く）"><span aria-hidden="true">🟢</span>LINEで事前登録する</a><div class="counter">現在 <span class="gold">247名</span> が事前登録済み</div>
         <div class="water">Altru</div>
       </div>
     </div>
@@ -110,12 +110,18 @@
   </div></div></section>
 
   <div class="spacer"></div>
-  <div class="sticky"><div class="sticky-in"><p class="counter">現在 <span class="gold">247名</span> が事前登録済み</p><a class="cta" href="#">LINEで事前登録する</a></div></div>
+  <div class="sticky"><div class="sticky-in"><p class="counter">現在 <span class="gold">247名</span> が事前登録済み</p><a class="cta" href="https://line.me/R/ti/p/@example" target="_blank" rel="noopener noreferrer" aria-label="LINEで事前登録する（新しいタブで開く）"><span aria-hidden="true">🟢</span>LINEで事前登録する</a></div></div>
 
   <script>
     const buttons=document.querySelectorAll('[data-fv]');
     const fvs=document.querySelectorAll('.fv');
-    buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('on'));btn.classList.add('on');fvs.forEach(f=>f.classList.remove('on'));document.getElementById(btn.dataset.fv).classList.add('on')}));
+    const setPattern=(id)=>{
+      buttons.forEach(b=>{const on=b.dataset.fv===id;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false')});
+      fvs.forEach(f=>f.classList.toggle('on',f.id===id));
+    };
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{setPattern(btn.dataset.fv);history.replaceState(null,'',`#pattern-${btn.dataset.fv}`);}));
+    const hash=(location.hash||'').replace('#pattern-','');
+    if(['a','b','c'].includes(hash)) setPattern(hash);
   </script>
 </body>
 </html>
