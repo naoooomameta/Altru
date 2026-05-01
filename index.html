@@ -6,41 +6,1192 @@
   <title>Altru（アルトル）｜女性が手放したくないのは、こういう男。</title>
   <meta name="description" content="Altruは、男性が大切な人へ花を定期的に届けるサービス。言葉にしにくい感謝を、季節の花にのせて届けます。" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Shippori+Mincho+B1:wght@500;600;700&display=swap');
-    :root{
-      --charcoal:#171410;--charcoal2:#24201b;--cream:#f6f0e6;--cream2:#fbf7ef;--paper:#fffaf1;
-      --gold:#b9904c;--gold2:#d9bc7a;--bronze:#6e5733;--ink:#2a251f;--muted:#756d62;
-      --line:rgba(77,58,32,.18);--line-dark:rgba(217,188,122,.22);--shadow:0 24px 70px rgba(29,21,12,.14);
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Shippori+Mincho+B1:wght@500;600;700&display=swap');
+
+    :root {
+      --charcoal:#171410;
+      --charcoal-2:#24201b;
+      --cream:#f6f0e6;
+      --cream-2:#fbf7ef;
+      --paper:#fffaf3;
+      --white:#fffdf8;
+      --gold:#b9904c;
+      --gold-2:#d9bc7a;
+      --bronze:#6e5733;
+      --ink:#29241e;
+      --muted:#70685e;
+      --line:rgba(95,72,40,.18);
+      --line-dark:rgba(217,188,122,.24);
+      --shadow:0 22px 64px rgba(29,21,12,.13);
+      --shadow-soft:0 12px 34px rgba(29,21,12,.08);
       --font-heading:"Shippori Mincho B1","Yu Mincho","Hiragino Mincho ProN",serif;
       --font-body:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
       --font-en:"Cormorant Garamond",Georgia,serif;
     }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);line-height:1.85;letter-spacing:.035em;-webkit-font-smoothing:antialiased}a{color:inherit}.container{width:min(1120px,calc(100% - 40px));margin:0 auto}.gold{color:var(--gold)}
-    h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.32;letter-spacing:.06em;margin:0}p{margin:0}.topbar{position:sticky;top:0;z-index:40;background:rgba(246,240,230,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(106,83,45,.14)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:var(--font-en);font-size:31px;letter-spacing:.18em;font-weight:700;text-decoration:none;line-height:1}.tagline{font-family:var(--font-en);font-size:12px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}.navlinks{display:flex;align-items:center;gap:22px;font-size:13px;color:#4d4439}.navlinks a{text-decoration:none}.nav-cta{padding:10px 18px;border-radius:999px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#22190f;font-weight:800;box-shadow:0 12px 28px rgba(185,144,76,.22)}
-    .hero{position:relative;overflow:hidden;padding:76px 0 62px;background:radial-gradient(circle at 5% 15%,rgba(217,188,122,.22),transparent 28%),linear-gradient(135deg,#fbf7ef 0%,#f3eadc 52%,#ebe0d0 100%)}.hero:after{content:"";position:absolute;right:-180px;bottom:-260px;width:560px;height:560px;background:radial-gradient(circle,rgba(185,144,76,.18),transparent 66%)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;gap:54px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-family:var(--font-en);font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase}.eyebrow:before{content:"";width:42px;height:1px;background:var(--gold)}h1{font-size:clamp(42px,6vw,76px);color:var(--charcoal);margin:22px 0 22px;text-wrap:balance}.hero-lead{font-size:18px;color:#4f473d;max-width:620px;line-height:2.05}.copy-note{border-left:1px solid var(--gold);padding-left:18px;color:#5f564c;margin-top:24px}.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 26px;border-radius:999px;text-decoration:none;font-weight:900;transition:.25s ease;letter-spacing:.08em}.btn-primary{background:linear-gradient(135deg,#e8ce8d,#b9904c 70%,#8b6b38);color:#22180c;box-shadow:0 20px 42px rgba(159,113,45,.28)}.btn-primary:after{content:"→";width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.32)}.btn-secondary{border:1px solid rgba(42,37,31,.18);background:rgba(255,255,255,.36);color:var(--ink)}.btn:hover{transform:translateY(-2px)}
-    .visual{position:relative;min-height:620px}.photo-card{position:absolute;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.46)}.photo-main{inset:0 0 72px 86px;background:linear-gradient(145deg,rgba(23,20,16,.1),rgba(23,20,16,.32)),radial-gradient(circle at 38% 36%,#f7d6d3 0 5%,transparent 6%),radial-gradient(circle at 48% 42%,#f1c1bd 0 7%,transparent 8%),radial-gradient(circle at 58% 36%,#fff2e4 0 6%,transparent 7%),linear-gradient(135deg,#d7c7b5,#9a8165)}.photo-sub{left:0;bottom:0;width:47%;height:250px;background:linear-gradient(145deg,#fff8eb,#d5b985)}.visual .man,.visual .woman{position:absolute;border-radius:42% 42% 38% 38%;background:#2b241e;box-shadow:inset 0 -12px 0 rgba(255,255,255,.08)}.man{left:180px;top:135px;width:96px;height:130px}.woman{right:86px;top:150px;width:88px;height:124px;background:#3a2e27}.body1,.body2{position:absolute;border-radius:48px 48px 20px 20px}.body1{left:154px;top:254px;width:150px;height:200px;background:#25211e}.body2{right:50px;top:260px;width:140px;height:190px;background:#eee4d4}.bouquet{position:absolute;left:275px;top:302px;width:170px;height:170px}.flower{position:absolute;border-radius:50%;background:#efd5d4;box-shadow:0 0 0 10px rgba(255,255,255,.18)}.f1{left:10px;top:38px;width:58px;height:58px}.f2{left:62px;top:12px;width:72px;height:72px;background:#f5e9df}.f3{left:95px;top:70px;width:56px;height:56px;background:#e6c2bd}.stem{position:absolute;left:80px;top:86px;width:12px;height:105px;background:#6a7757;transform:rotate(20deg);border-radius:12px}.floating-panel{position:absolute;left:0;bottom:42px;width:min(360px,82%);background:rgba(23,20,16,.93);color:#fff;border:1px solid rgba(217,188,122,.26);border-radius:22px;padding:22px;box-shadow:0 30px 90px rgba(0,0,0,.32);backdrop-filter:blur(10px)}.floating-panel b{font-family:var(--font-heading);font-size:25px;color:var(--gold2)}.floating-panel p{margin-top:7px;color:#d9d1c5;font-size:13px;line-height:1.75}.feature-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}.feature{background:rgba(255,255,255,.5);border:1px solid rgba(185,144,76,.2);border-radius:16px;padding:16px 14px;min-height:96px}.feature .ico{width:34px;height:34px;border-radius:50%;border:1px solid rgba(185,144,76,.55);display:grid;place-items:center;color:var(--gold);font-size:17px;margin-bottom:10px}.feature b{display:block;font-size:13px}.feature span{display:block;color:var(--muted);font-size:12px;margin-top:2px;line-height:1.55}
-    section{padding:92px 0}.section-head{display:grid;grid-template-columns:.82fr 1fr;gap:44px;align-items:end;margin-bottom:44px}.label{font-size:12px;font-weight:900;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}h2{font-size:clamp(32px,4.4vw,56px)}.section-lead{color:var(--muted);font-size:16px;line-height:2.05}.problems{background:var(--cream2)}.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.problem-list{display:grid;gap:14px}.problem-item{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start}.problem-item span{color:var(--gold);font-weight:900}.problem-visual{min-height:470px;border-radius:26px;background:radial-gradient(circle at 42% 30%,#f4d9cf,transparent 18%),radial-gradient(circle at 60% 48%,#e6c4b4,transparent 16%),linear-gradient(135deg,#e4d7c4,#9f8569);box-shadow:var(--shadow);position:relative;overflow:hidden}.problem-visual:after{content:"";position:absolute;left:12%;right:12%;bottom:14%;height:34%;background:rgba(23,20,16,.55);border-radius:26px 26px 0 0}
-    .dark{background:radial-gradient(circle at 78% 8%,rgba(185,144,76,.18),transparent 34%),linear-gradient(180deg,var(--charcoal),#0f0d0b);color:#f6efe3}.dark .section-lead,.dark .muted{color:#c6bbab}.executive-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:38px;align-items:center}.statement{border:1px solid var(--line-dark);border-radius:26px;padding:34px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));box-shadow:0 30px 90px rgba(0,0,0,.32)}.statement h2{font-size:clamp(36px,5vw,64px)}.quote-cards{display:grid;gap:16px}.quote-card{border:1px solid var(--line-dark);background:rgba(255,255,255,.045);border-radius:20px;padding:22px}.quote-card b{font-family:var(--font-heading);font-size:24px;color:var(--gold2)}.quote-card p{margin-top:8px;color:#cdc4b6}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 18px 48px rgba(56,42,25,.08)}.service-visual{height:238px;background:radial-gradient(circle at 45% 38%,#f1c6c1 0 7%,transparent 8%),radial-gradient(circle at 56% 34%,#fff2e4 0 6%,transparent 7%),radial-gradient(circle at 62% 49%,#dcb3ae 0 5%,transparent 6%),linear-gradient(135deg,#efe2d0,#bfa177)}.service-card:nth-child(2) .service-visual{background:radial-gradient(circle at 45% 38%,#fff8ee 0 7%,transparent 8%),radial-gradient(circle at 56% 34%,#d9e0bf 0 6%,transparent 7%),linear-gradient(135deg,#e8dfd2,#9f8b6c)}.service-card:nth-child(3) .service-visual{background:radial-gradient(circle at 45% 38%,#f8d4c8 0 7%,transparent 8%),radial-gradient(circle at 56% 34%,#eed6a6 0 6%,transparent 7%),linear-gradient(135deg,#f0e3d3,#c1a581)}.service-card-body{padding:24px}.num{font-family:var(--font-en);font-size:15px;color:var(--gold);letter-spacing:.2em;font-weight:700}.service-card h3{font-size:25px;margin:6px 0 8px}.service-card p{color:var(--muted)}.reason{background:linear-gradient(180deg,#f6f0e6,#fffaf1)}.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.reason-card{border:1px solid var(--line);border-radius:22px;padding:24px;background:rgba(255,255,255,.55)}.reason-icon{width:46px;height:46px;border:1px solid rgba(185,144,76,.45);color:var(--gold);border-radius:50%;display:grid;place-items:center;margin-bottom:16px;font-size:20px}.reason-card h3{font-size:22px;margin-bottom:8px}.reason-card p{color:var(--muted);font-size:14px}
-    .scenes{padding-bottom:72px}.scene-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.scene-large,.scene-small{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#d8c5ad,#876d53);box-shadow:var(--shadow)}.scene-large{min-height:560px}.scene-small{min-height:268px}.scene-stack{display:grid;gap:22px}.scene-small:nth-child(1){background:linear-gradient(135deg,#f2e5d6,#a38b71)}.scene-small:nth-child(2){background:linear-gradient(135deg,#ead4c7,#7c604e)}.scene-caption{position:absolute;left:22px;right:22px;bottom:22px;background:rgba(23,20,16,.78);color:#fff;border:1px solid rgba(217,188,122,.22);border-radius:18px;padding:18px;backdrop-filter:blur(12px)}.scene-caption b{font-family:var(--font-heading);color:var(--gold2);font-size:22px}.scene-caption p{margin-top:4px;color:#e4dbcd;font-size:13px}.pricing{background:var(--cream2)}.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.price-card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 18px 50px rgba(56,42,25,.08);display:flex;flex-direction:column;gap:18px}.price-card.recommended{border:1px solid rgba(185,144,76,.55);box-shadow:0 24px 70px rgba(185,144,76,.16)}.recommend{position:absolute;right:20px;top:-14px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#24190c;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:900;letter-spacing:.14em}.price-card h3{font-size:28px}.plan-for{color:var(--muted);font-size:13px;min-height:48px}.price{font-family:var(--font-en);font-size:50px;font-weight:700;letter-spacing:.02em;line-height:1;color:var(--charcoal)}.price small{font-family:var(--font-body);font-size:14px;color:var(--muted);margin-left:4px}.annual{border:1px solid rgba(185,144,76,.24);background:rgba(185,144,76,.08);border-radius:16px;padding:14px}.annual span{display:block;font-family:var(--font-en);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-size:12px}.annual b{display:block;font-family:var(--font-en);font-size:30px;line-height:1.2}.annual em{font-style:normal;color:var(--muted);font-size:12px}.checklist{padding:0;margin:0;list-style:none;display:grid;gap:8px;font-size:13px;color:#51493f}.checklist li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:8px}.price-card .btn{margin-top:auto;min-height:50px;width:100%;padding:0 16px;font-size:13px}
-    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border-top:1px solid var(--gold);padding-top:22px}.step-no{font-family:var(--font-en);font-size:42px;color:var(--gold);font-weight:700;line-height:1}.step h3{font-size:24px;margin:10px 0 8px}.step p{color:var(--muted)}.faq{background:var(--paper)}.faq-list{display:grid;gap:12px}details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}summary{cursor:pointer;font-weight:900}details p{color:var(--muted);margin-top:12px}.final-cta{background:radial-gradient(circle at 50% 0,rgba(185,144,76,.22),transparent 36%),linear-gradient(180deg,#201b15,#0f0d0b);color:#fff;text-align:center}.final-inner{max-width:900px}.final-cta h2{font-size:clamp(38px,5vw,68px);margin-top:12px}.final-cta p{margin:20px auto 0;color:#d4c9ba;max-width:620px}footer{background:#0f0d0b;color:#9f9485;padding:26px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:16px}.spacer{height:10px}
-    @media(max-width:980px){.navlinks a:not(.nav-cta){display:none}.hero-grid,.problem-grid,.executive-grid,.section-head,.scene-grid{grid-template-columns:1fr}.visual{min-height:520px}.photo-main{left:36px}.feature-strip,.pricing-grid{grid-template-columns:repeat(2,1fr)}.service-grid,.reason-grid,.steps-grid{grid-template-columns:1fr}}@media(max-width:640px){.container{width:min(100% - 28px,1120px)}.nav{height:64px}.brand{font-size:27px}.tagline{display:none}.hero{padding:52px 0 44px}h1{font-size:40px}.hero-lead{font-size:15px}.visual{min-height:420px}.photo-main{left:24px;bottom:50px}.floating-panel{left:12px;bottom:16px}.feature-strip,.pricing-grid{grid-template-columns:1fr}section{padding:68px 0}.price{font-size:44px}.footer-inner{display:block}.footer-inner div+div{margin-top:6px}}
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:var(--font-body);
+      font-size:16px;
+      line-height:1.9;
+      letter-spacing:.025em;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img { max-width:100%; display:block; }
+    a { color:inherit; }
+    p { margin:0; }
+    h1,h2,h3 {
+      margin:0;
+      font-family:var(--font-heading);
+      font-weight:600;
+      line-height:1.34;
+      letter-spacing:.045em;
+    }
+    .container {
+      width:min(1160px, calc(100% - 48px));
+      margin:0 auto;
+    }
+    .gold { color:var(--gold); }
+    .label {
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+      color:var(--gold);
+      font-family:var(--font-en);
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.24em;
+      text-transform:uppercase;
+    }
+    .label:before {
+      content:"";
+      width:34px;
+      height:1px;
+      background:var(--gold);
+    }
+    .section-title {
+      font-size:clamp(32px, 3.8vw, 54px);
+      max-width:760px;
+    }
+    .section-lead {
+      color:var(--muted);
+      font-size:16px;
+      line-height:2.05;
+      max-width:680px;
+    }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(246,240,230,.9);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(106,83,45,.13);
+    }
+    .nav {
+      height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand {
+      font-family:var(--font-en);
+      font-size:32px;
+      line-height:1;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-decoration:none;
+    }
+    .tagline {
+      margin-top:3px;
+      color:var(--muted);
+      font-family:var(--font-en);
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    .navlinks {
+      display:flex;
+      align-items:center;
+      gap:22px;
+      color:#51483d;
+      font-size:13px;
+      font-weight:700;
+    }
+    .navlinks a {
+      text-decoration:none;
+    }
+    .nav-cta {
+      padding:10px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--gold-2),var(--gold));
+      color:#22190f;
+      box-shadow:0 12px 28px rgba(185,144,76,.22);
+    }
+
+    .hero {
+      position:relative;
+      overflow:hidden;
+      padding:76px 0 68px;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(217,188,122,.23), transparent 30%),
+        linear-gradient(135deg,#fbf7ef 0%,#f3eadc 56%,#eadfce 100%);
+    }
+    .hero:after {
+      content:"";
+      position:absolute;
+      right:-180px;
+      bottom:-250px;
+      width:560px;
+      height:560px;
+      background:radial-gradient(circle,rgba(185,144,76,.18),transparent 66%);
+      pointer-events:none;
+    }
+    .hero-grid {
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr);
+      gap:56px;
+      align-items:center;
+    }
+    .hero h1 {
+      margin:18px 0 20px;
+      color:var(--charcoal);
+      font-size:clamp(42px,5.1vw,68px);
+      letter-spacing:.035em;
+      text-wrap:balance;
+    }
+    .hero-lead {
+      max-width:640px;
+      color:#4f473d;
+      font-size:17px;
+      line-height:2;
+      font-weight:500;
+    }
+    .copy-note {
+      max-width:620px;
+      margin-top:22px;
+      padding:16px 0 16px 20px;
+      border-left:1px solid var(--gold);
+      color:#5f564c;
+      font-size:15px;
+      line-height:2;
+    }
+    .cta-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+    }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      min-height:56px;
+      padding:0 26px;
+      border-radius:999px;
+      border:0;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.07em;
+      transition:.22s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn-primary {
+      background:linear-gradient(135deg,#e8ce8d,#b9904c 68%,#8b6b38);
+      color:#22180c;
+      box-shadow:0 18px 40px rgba(159,113,45,.28);
+    }
+    .btn-primary:after {
+      content:"→";
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.34);
+      font-family:var(--font-body);
+    }
+    .btn-secondary {
+      border:1px solid rgba(42,37,31,.18);
+      background:rgba(255,255,255,.42);
+      color:var(--ink);
+    }
+    .btn:hover { transform:translateY(-2px); }
+
+    .feature-strip {
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:12px;
+      margin-top:34px;
+      max-width:720px;
+    }
+    .feature {
+      min-height:94px;
+      padding:15px 13px;
+      border:1px solid rgba(185,144,76,.2);
+      border-radius:16px;
+      background:rgba(255,255,255,.54);
+      box-shadow:0 10px 28px rgba(36,32,27,.04);
+    }
+    .feature .ico {
+      width:32px;
+      height:32px;
+      margin-bottom:9px;
+      border:1px solid rgba(185,144,76,.55);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold);
+      font-size:15px;
+    }
+    .feature b {
+      display:block;
+      font-size:13px;
+      line-height:1.45;
+    }
+    .feature span {
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+    }
+
+    .visual {
+      position:relative;
+      min-height:560px;
+    }
+    .photo-card {
+      position:absolute;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.5);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    .photo-main {
+      inset:0 0 70px 58px;
+      background:
+        linear-gradient(145deg,rgba(23,20,16,.05),rgba(23,20,16,.26)),
+        radial-gradient(circle at 38% 36%,#f7d6d3 0 5%,transparent 6%),
+        radial-gradient(circle at 48% 42%,#f1c1bd 0 7%,transparent 8%),
+        radial-gradient(circle at 59% 36%,#fff2e4 0 6%,transparent 7%),
+        linear-gradient(135deg,#d9c9b5,#9b8063);
+    }
+    .photo-sub {
+      left:0;
+      bottom:0;
+      width:42%;
+      height:220px;
+      background:
+        radial-gradient(circle at 50% 40%,#fff7e8 0 12%,transparent 13%),
+        linear-gradient(145deg,#fff8eb,#d5b985);
+    }
+    .visual .man,.visual .woman {
+      position:absolute;
+      border-radius:42% 42% 38% 38%;
+      background:#2b241e;
+      box-shadow:inset 0 -12px 0 rgba(255,255,255,.08);
+    }
+    .man { left:160px; top:120px; width:92px; height:122px; }
+    .woman { right:78px; top:138px; width:84px; height:116px; background:#3a2e27; }
+    .body1,.body2 {
+      position:absolute;
+      border-radius:46px 46px 20px 20px;
+    }
+    .body1 { left:132px; top:236px; width:146px; height:190px; background:#25211e; }
+    .body2 { right:42px; top:244px; width:136px; height:180px; background:#eee4d4; }
+    .bouquet { position:absolute; left:250px; top:282px; width:162px; height:162px; }
+    .flower {
+      position:absolute;
+      border-radius:50%;
+      background:#efd5d4;
+      box-shadow:0 0 0 10px rgba(255,255,255,.18);
+    }
+    .f1 { left:8px; top:38px; width:56px; height:56px; }
+    .f2 { left:58px; top:12px; width:70px; height:70px; background:#f5e9df; }
+    .f3 { left:90px; top:68px; width:54px; height:54px; background:#e6c2bd; }
+    .stem {
+      position:absolute;
+      left:78px;
+      top:84px;
+      width:12px;
+      height:100px;
+      border-radius:12px;
+      background:#6a7757;
+      transform:rotate(20deg);
+    }
+    .floating-panel {
+      position:absolute;
+      left:0;
+      bottom:42px;
+      width:min(350px,84%);
+      padding:22px;
+      border:1px solid rgba(217,188,122,.26);
+      border-radius:22px;
+      background:rgba(23,20,16,.92);
+      color:#fff;
+      box-shadow:0 28px 72px rgba(0,0,0,.3);
+      backdrop-filter:blur(10px);
+    }
+    .floating-panel b {
+      color:var(--gold-2);
+      font-family:var(--font-heading);
+      font-size:23px;
+      line-height:1.55;
+      letter-spacing:.04em;
+    }
+    .floating-panel p {
+      margin-top:7px;
+      color:#d9d1c5;
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    section { padding:88px 0; }
+    .section-head {
+      display:grid;
+      grid-template-columns:minmax(0,.86fr) minmax(0,1fr);
+      gap:44px;
+      align-items:end;
+      margin-bottom:42px;
+    }
+    .problems { background:var(--cream-2); }
+    .problem-grid {
+      display:grid;
+      grid-template-columns:minmax(0,.92fr) minmax(0,1fr);
+      gap:34px;
+      align-items:center;
+    }
+    .problem-list {
+      display:grid;
+      gap:14px;
+    }
+    .problem-item {
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      padding:18px 20px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--paper);
+      box-shadow:var(--shadow-soft);
+    }
+    .problem-item span {
+      color:var(--gold);
+      font-family:var(--font-en);
+      font-size:18px;
+      font-weight:700;
+      line-height:1.6;
+    }
+    .problem-item p {
+      color:#4e463d;
+      font-size:15px;
+      line-height:1.85;
+    }
+
+    .dark {
+      background:
+        radial-gradient(circle at 78% 8%,rgba(185,144,76,.18),transparent 34%),
+        linear-gradient(180deg,var(--charcoal),#0f0d0b);
+      color:#f6efe3;
+    }
+    .dark .section-lead { color:#c6bbab; }
+    .executive-grid {
+      display:grid;
+      grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+      gap:38px;
+      align-items:center;
+    }
+    .statement {
+      padding:36px;
+      border:1px solid var(--line-dark);
+      border-radius:28px;
+      background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+      box-shadow:0 28px 80px rgba(0,0,0,.3);
+    }
+    .statement .section-title {
+      font-size:clamp(36px,4.4vw,60px);
+    }
+    .quote-cards {
+      display:grid;
+      gap:16px;
+    }
+    .quote-card {
+      padding:24px;
+      border:1px solid var(--line-dark);
+      border-radius:20px;
+      background:rgba(255,255,255,.045);
+    }
+    .quote-card b {
+      color:var(--gold-2);
+      font-family:var(--font-heading);
+      font-size:23px;
+      line-height:1.55;
+      letter-spacing:.04em;
+    }
+    .quote-card p {
+      margin-top:8px;
+      color:#cdc4b6;
+      font-size:14px;
+      line-height:1.9;
+    }
+
+    .service-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .service-card {
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--paper);
+      box-shadow:0 18px 48px rgba(56,42,25,.08);
+    }
+    .service-visual {
+      height:220px;
+      background:
+        radial-gradient(circle at 45% 38%,#f1c6c1 0 7%,transparent 8%),
+        radial-gradient(circle at 56% 34%,#fff2e4 0 6%,transparent 7%),
+        radial-gradient(circle at 62% 49%,#dcb3ae 0 5%,transparent 6%),
+        linear-gradient(135deg,#efe2d0,#bfa177);
+    }
+    .service-card:nth-child(2) .service-visual {
+      background:
+        radial-gradient(circle at 45% 38%,#fff8ee 0 7%,transparent 8%),
+        radial-gradient(circle at 56% 34%,#d9e0bf 0 6%,transparent 7%),
+        linear-gradient(135deg,#e8dfd2,#9f8b6c);
+    }
+    .service-card:nth-child(3) .service-visual {
+      background:
+        radial-gradient(circle at 45% 38%,#f8d4c8 0 7%,transparent 8%),
+        radial-gradient(circle at 56% 34%,#eed6a6 0 6%,transparent 7%),
+        linear-gradient(135deg,#f0e3d3,#c1a581);
+    }
+    .service-card-body { padding:24px; }
+    .num {
+      color:var(--gold);
+      font-family:var(--font-en);
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:.18em;
+    }
+    .service-card h3 {
+      margin:6px 0 8px;
+      font-size:24px;
+    }
+    .service-card p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.95;
+    }
+
+    .reason {
+      background:linear-gradient(180deg,#f6f0e6,#fffaf1);
+    }
+    .reason-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+    .reason-card {
+      min-height:220px;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.58);
+      box-shadow:var(--shadow-soft);
+    }
+    .reason-icon {
+      width:46px;
+      height:46px;
+      margin-bottom:16px;
+      border:1px solid rgba(185,144,76,.45);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--gold);
+      font-size:20px;
+    }
+    .reason-card h3 {
+      margin-bottom:8px;
+      font-size:22px;
+    }
+    .reason-card p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.95;
+    }
+
+    .scene-grid {
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+    }
+    .scene-large,.scene-small {
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      background:linear-gradient(135deg,#d8c5ad,#876d53);
+      box-shadow:var(--shadow);
+    }
+    .scene-large { min-height:520px; }
+    .scene-small { min-height:249px; }
+    .scene-stack { display:grid; gap:22px; }
+    .scene-small:nth-child(1) { background:linear-gradient(135deg,#f2e5d6,#a38b71); }
+    .scene-small:nth-child(2) { background:linear-gradient(135deg,#ead4c7,#7c604e); }
+    .scene-caption {
+      position:absolute;
+      left:22px;
+      right:22px;
+      bottom:22px;
+      padding:18px;
+      border:1px solid rgba(217,188,122,.22);
+      border-radius:18px;
+      background:rgba(23,20,16,.78);
+      color:#fff;
+      backdrop-filter:blur(12px);
+    }
+    .scene-caption b {
+      color:var(--gold-2);
+      font-family:var(--font-heading);
+      font-size:22px;
+      line-height:1.55;
+    }
+    .scene-caption p {
+      margin-top:4px;
+      color:#e4dbcd;
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    .pricing { background:var(--cream-2); }
+    .pricing-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+      align-items:stretch;
+    }
+    .price-card {
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      gap:17px;
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--paper);
+      box-shadow:0 18px 50px rgba(56,42,25,.08);
+    }
+    .price-card.recommended {
+      border-color:rgba(185,144,76,.58);
+      box-shadow:0 24px 70px rgba(185,144,76,.16);
+    }
+    .recommend {
+      position:absolute;
+      top:-14px;
+      right:18px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--gold-2),var(--gold));
+      color:#24190c;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.14em;
+    }
+    .price-card h3 { font-size:27px; }
+    .plan-for {
+      min-height:56px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.85;
+    }
+    .price {
+      color:var(--charcoal);
+      font-family:var(--font-en);
+      font-size:48px;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:.01em;
+    }
+    .price small {
+      margin-left:4px;
+      color:var(--muted);
+      font-family:var(--font-body);
+      font-size:14px;
+    }
+    .annual {
+      padding:14px;
+      border:1px solid rgba(185,144,76,.24);
+      border-radius:16px;
+      background:rgba(185,144,76,.08);
+    }
+    .annual span {
+      display:block;
+      color:var(--gold);
+      font-family:var(--font-en);
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .annual b {
+      display:block;
+      margin-top:2px;
+      font-family:var(--font-en);
+      font-size:28px;
+      line-height:1.2;
+    }
+    .annual em {
+      display:block;
+      margin-top:2px;
+      color:var(--muted);
+      font-size:12px;
+      font-style:normal;
+      line-height:1.6;
+    }
+    .checklist {
+      display:grid;
+      gap:8px;
+      margin:0;
+      padding:0;
+      list-style:none;
+      color:#51493f;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .checklist li:before {
+      content:"✓";
+      margin-right:8px;
+      color:var(--gold);
+      font-weight:900;
+    }
+    .price-card .btn {
+      width:100%;
+      min-height:50px;
+      margin-top:auto;
+      padding:0 14px;
+      font-size:13px;
+    }
+
+    .steps-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .step {
+      padding-top:22px;
+      border-top:1px solid var(--gold);
+    }
+    .step-no {
+      color:var(--gold);
+      font-family:var(--font-en);
+      font-size:42px;
+      font-weight:700;
+      line-height:1;
+    }
+    .step h3 {
+      margin:10px 0 8px;
+      font-size:24px;
+    }
+    .step p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.95;
+    }
+
+    .faq { background:var(--paper); }
+    .faq-list { display:grid; gap:12px; }
+    details {
+      padding:20px 22px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+    }
+    summary {
+      cursor:pointer;
+      font-weight:900;
+      line-height:1.7;
+    }
+    details p {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.95;
+    }
+
+    .final-cta {
+      text-align:center;
+      color:#fff;
+      background:
+        radial-gradient(circle at 50% 0,rgba(185,144,76,.22),transparent 36%),
+        linear-gradient(180deg,#201b15,#0f0d0b);
+    }
+    .final-inner { max-width:900px; }
+    .final-cta .section-title {
+      margin:0 auto;
+      font-size:clamp(36px,4.8vw,64px);
+    }
+    .final-cta p {
+      max-width:620px;
+      margin:20px auto 0;
+      color:#d4c9ba;
+      font-size:15px;
+      line-height:2;
+    }
+
+    footer {
+      padding:26px 0;
+      background:#0f0d0b;
+      color:#9f9485;
+      font-size:13px;
+    }
+    .footer-inner {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    @media (min-width: 1200px) {
+      .container { width:min(1180px, calc(100% - 72px)); }
+      .hero-grid { gap:64px; }
+      .hero h1 { font-size:70px; }
+      .section-title { font-size:54px; }
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid,
+      .problem-grid,
+      .executive-grid,
+      .section-head,
+      .scene-grid {
+        grid-template-columns:1fr;
+      }
+      .hero-grid { gap:42px; }
+      .visual {
+        min-height:520px;
+        max-width:680px;
+        width:100%;
+        margin:0 auto;
+      }
+      .service-grid,
+      .reason-grid,
+      .steps-grid {
+        grid-template-columns:1fr;
+      }
+      .pricing-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .plan-for { min-height:auto; }
+      .section-head {
+        gap:18px;
+        margin-bottom:34px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body {
+        font-size:15px;
+        line-height:1.85;
+        letter-spacing:.015em;
+      }
+      .container { width:min(100% - 28px, 1160px); }
+      .nav { height:62px; }
+      .brand { font-size:27px; }
+      .tagline { display:none; }
+      .navlinks a:not(.nav-cta) { display:none; }
+      .nav-cta {
+        padding:9px 14px;
+        font-size:12px;
+      }
+
+      .hero {
+        padding:46px 0 52px;
+      }
+      .label {
+        font-size:12px;
+        letter-spacing:.18em;
+        margin-bottom:12px;
+      }
+      .label:before { width:24px; }
+      .hero h1 {
+        margin:16px 0 18px;
+        font-size:clamp(34px, 10.6vw, 44px);
+        line-height:1.38;
+        letter-spacing:.025em;
+      }
+      .hero-lead {
+        font-size:15px;
+        line-height:1.95;
+      }
+      .copy-note {
+        margin-top:18px;
+        padding:14px 0 14px 16px;
+        font-size:14px;
+        line-height:1.9;
+      }
+      .cta-row {
+        display:grid;
+        grid-template-columns:1fr;
+        gap:11px;
+        margin-top:24px;
+      }
+      .btn {
+        width:100%;
+        min-height:54px;
+        padding:0 18px;
+      }
+      .feature-strip {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+        margin-top:26px;
+      }
+      .feature {
+        min-height:92px;
+        padding:14px 12px;
+      }
+
+      .visual {
+        min-height:390px;
+        margin-top:6px;
+      }
+      .photo-main {
+        inset:0 0 64px 24px;
+        border-radius:24px;
+      }
+      .photo-sub {
+        width:46%;
+        height:150px;
+        border-radius:20px;
+      }
+      .man { left:34%; top:76px; width:62px; height:84px; }
+      .woman { right:12%; top:88px; width:58px; height:78px; }
+      .body1 { left:28%; top:160px; width:100px; height:132px; }
+      .body2 { right:7%; top:166px; width:92px; height:124px; }
+      .bouquet { left:48%; top:190px; width:108px; height:108px; transform:translateX(-35%); }
+      .f1 { width:40px; height:40px; }
+      .f2 { width:48px; height:48px; left:46px; }
+      .f3 { width:38px; height:38px; left:76px; top:54px; }
+      .stem { height:70px; left:56px; top:62px; }
+      .floating-panel {
+        left:10px;
+        right:10px;
+        bottom:12px;
+        width:auto;
+        padding:16px;
+        border-radius:18px;
+      }
+      .floating-panel b { font-size:18px; }
+      .floating-panel p { font-size:12px; }
+
+      section { padding:62px 0; }
+      .section-title {
+        font-size:clamp(28px, 8.8vw, 38px);
+        line-height:1.45;
+      }
+      .section-lead {
+        font-size:14px;
+        line-height:1.95;
+      }
+      .problem-list { gap:10px; }
+      .problem-item {
+        padding:15px 16px;
+        border-radius:16px;
+      }
+      .statement {
+        padding:24px 20px;
+        border-radius:22px;
+      }
+      .quote-card {
+        padding:19px;
+      }
+      .quote-card b {
+        font-size:19px;
+      }
+      .service-visual {
+        height:174px;
+      }
+      .service-card-body,
+      .reason-card,
+      .price-card {
+        padding:22px;
+      }
+      .reason-grid {
+        gap:12px;
+      }
+      .reason-card {
+        min-height:auto;
+      }
+      .scene-large,
+      .scene-small {
+        min-height:320px;
+        border-radius:22px;
+      }
+      .scene-caption {
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:15px;
+      }
+      .scene-caption b { font-size:18px; }
+      .pricing-grid {
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+      .price {
+        font-size:44px;
+      }
+      .annual b {
+        font-size:27px;
+      }
+      .steps-grid {
+        gap:24px;
+      }
+      details {
+        padding:18px;
+      }
+      .final-cta .section-title {
+        font-size:clamp(30px, 9vw, 42px);
+      }
+      .footer-inner {
+        display:block;
+        text-align:center;
+      }
+      .footer-inner div + div {
+        margin-top:6px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .hero h1 { font-size:32px; }
+      .feature-strip { grid-template-columns:1fr; }
+      .visual { min-height:360px; }
+      .photo-main { left:12px; }
+      .floating-panel b { font-size:17px; }
+      .price { font-size:40px; }
+    }
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="container nav"><div><a class="brand" href="#">Altru</a><div class="tagline">A habit of care</div></div><nav class="navlinks"><a href="#service">Service</a><a href="#reason">Reason</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="nav-cta" href="#pricing">想いを届ける</a></nav></div></header>
+  <header class="topbar">
+    <div class="container nav">
+      <div>
+        <a class="brand" href="#">Altru</a>
+        <div class="tagline">A habit of care</div>
+      </div>
+      <nav class="navlinks">
+        <a href="#service">Service</a>
+        <a href="#reason">Reason</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#pricing">想いを届ける</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Warm Executive</span><h1><span class="gold">女性</span>が手放したくないのは、<br>こういう男。</h1><p class="hero-lead">特別な日だけじゃない。何気ない日にも、想いを届ける。Altruは、男性が大切な人へ花を定期的に届けるサービスです。</p><p class="copy-note">言葉にしにくい感謝を、季節の花にのせて届けます。花を選ぶ手間も、買いに行く手間もありません。</p><div class="cta-row"><a class="btn btn-primary" href="#pricing">想いを届ける</a><a class="btn btn-secondary" href="#service">サービスを見る</a></div><div class="feature-strip"><div class="feature"><div class="ico">◇</div><b>プロが厳選</b><span>季節の花を選定</span></div><div class="feature"><div class="ico">✉</div><b>カード対応</b><span>想いを添える</span></div><div class="feature"><div class="ico">↻</div><b>定期配送</b><span>頻度を選べる</span></div><div class="feature"><div class="ico">✓</div><b>縛りなし</b><span>変更・解約可</span></div></div></div><div class="visual"><div class="photo-card photo-main"><div class="man"></div><div class="body1"></div><div class="woman"></div><div class="body2"></div><div class="bouquet"><div class="stem"></div><div class="flower f1"></div><div class="flower f2"></div><div class="flower f3"></div></div></div><div class="photo-card photo-sub"></div><div class="floating-panel"><b>花を贈る男は、記憶に残る。</b><p>大げさな言葉より、何気ない日に届く気遣いが関係を変えていく。</p></div></div></div></section>
-    <section class="problems"><div class="container problem-grid"><div><span class="label">Insight</span><h2>大切にしたい気持ちはある。<br>でも、うまく伝えられていない。</h2><div class="spacer"></div><p class="section-lead">忙しさや照れくささで、感謝を伝えるきっかけは簡単に失われます。Altruは、その一歩を自然に仕組み化します。</p></div><div class="problem-list"><div class="problem-item"><span>01</span><p>忙しくて、花を買いに行く時間がない。</p></div><div class="problem-item"><span>02</span><p>何を選べば喜ばれるのかわからない。</p></div><div class="problem-item"><span>03</span><p>感謝しているのに、言葉にするのが照れくさい。</p></div><div class="problem-item"><span>04</span><p>記念日以外に何かを贈る発想がない。</p></div></div></div></section>
-    <section class="dark"><div class="container executive-grid"><div class="statement"><span class="label">Reward</span><h2>選ばれる男は、<br><span class="gold">想いを行動</span>で示す。</h2><p class="section-lead" style="margin-top:20px">女性の心に残るのは、大げさな言葉よりも、何気ない日に届く気遣い。忙しくても、想いはちゃんと届けられる。</p><div class="cta-row"><a class="btn btn-primary" href="#pricing">選ばれる男になる</a></div></div><div class="quote-cards"><div class="quote-card"><b>花を贈る男は、女性の記憶に残る。</b><p>特別な日だけでなく、何でもない日に届くから印象に残る。</p></div><div class="quote-card"><b>感謝を後回しにしない男は、強い。</b><p>忙しいからこそ、気遣いを仕組みにしておく。</p></div><div class="quote-card"><b>何気ない気遣いが、男の価値を上げる。</b><p>Altruは、やさしさを行動に変える習慣です。</p></div></div></div></section>
-    <section id="service"><div class="container"><div class="section-head"><div><span class="label">Service</span><h2>男性が、大切な人へ花を定期的に届けるサービス。</h2></div><p class="section-lead">季節の花をプロが厳選し、指定の住所へ定期的にお届けします。花を選ぶ必要も、買いに行く必要もありません。</p></div><div class="service-grid"><article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">01</span><h3>プロが季節の花を厳選</h3><p>花に詳しくなくても、相手に喜ばれる一束が届きます。</p></div></article><article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">02</span><h3>あなたの想いとして届く</h3><p>メッセージカードを添えて、自然に感謝を伝えられます。</p></div></article><article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">03</span><h3>一度設定すれば続く</h3><p>毎月・季節・半年・記念日から、届ける頻度を選べます。</p></div></article></div></div></section>
-    <section class="reason" id="reason"><div class="container"><div class="section-head"><div><span class="label">Reason</span><h2>花を選べなくても、<br>想いは届けられる。</h2></div><p class="section-lead">便利さだけではなく、男性自身が「気遣いができる余裕のある男」に見える設計を大切にしています。</p></div><div class="reason-grid"><div class="reason-card"><div class="reason-icon">✦</div><h3>上質な見え方</h3><p>ベージュ包装と季節の花で、安っぽく見えない贈り物に。</p></div><div class="reason-card"><div class="reason-icon">↻</div><h3>続けやすい頻度</h3><p>毎月から年1回まで、関係性に合わせて選べます。</p></div><div class="reason-card"><div class="reason-icon">✉</div><h3>言葉も添えられる</h3><p>口で言いにくい感謝も、カードなら自然に伝わります。</p></div><div class="reason-card"><div class="reason-icon">□</div><h3>届け先を指定</h3><p>妻・パートナー・母など、大切な人の住所に直接届きます。</p></div><div class="reason-card"><div class="reason-icon">✓</div><h3>変更・解約も簡単</h3><p>回数縛りなし。予定に合わせてスキップも可能です。</p></div><div class="reason-card"><div class="reason-icon">◇</div><h3>定期便感を抑える</h3><p>あなたからの贈り物として自然に届く見え方を重視します。</p></div></div></div></section>
-    <section class="scenes"><div class="container"><div class="section-head"><div><span class="label">Scene</span><h2>記念日じゃない日こそ、<br>男が出る。</h2></div><p class="section-lead">妻へ、パートナーへ、母へ。何気ない日の気遣いが、あなたの印象を変えていきます。</p></div><div class="scene-grid"><div class="scene-large"><div class="scene-caption"><b>妻へ、月に一度の感謝として。</b><p>忙しい日々の中でも、ちゃんと想っていることが伝わる。</p></div></div><div class="scene-stack"><div class="scene-small"><div class="scene-caption"><b>パートナーへ、サプライズとして。</b><p>何でもない日に届くから、心に残る。</p></div></div><div class="scene-small"><div class="scene-caption"><b>母へ、離れていても。</b><p>照れくさい感謝も、花なら自然に届けられる。</p></div></div></div></div></div></section>
-    <section class="pricing" id="pricing"><div class="container"><div class="section-head"><div><span class="label">Pricing</span><h2>大切な人を想う習慣を、<br>無理なく続ける。</h2></div><p class="section-lead">すべてのプランに送料込み。回数縛り・違約金なし。価格ではなく、どの頻度で想いを届けるかを選べます。</p></div><div class="pricing-grid"><article class="price-card recommended"><span class="recommend">MAIN PLAN</span><h3>月額</h3><p class="plan-for">毎月、想いが届く習慣を持ちたい方へ</p><div class="price">¥5,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥60,000/年</b><em>年12回｜毎月お届け</em></div><ul class="checklist"><li>季節の花束 + カード</li><li>毎月届くから習慣になる</li><li>いつでもスキップ可</li></ul><a class="btn btn-primary" href="#">想いを届ける</a></article><article class="price-card"><h3>季節</h3><p class="plan-for">季節の変わり目にサプライズを届けたい方へ</p><div class="price">¥6,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥24,000/年</b><em>年4回｜3ヶ月ごと</em></div><ul class="checklist"><li>春夏秋冬の花を厳選</li><li>自然なサプライズに</li><li>無理なく続けやすい</li></ul><a class="btn btn-secondary" href="#">感謝を届ける</a></article><article class="price-card"><h3>半年</h3><p class="plan-for">記念日級の特別な贈り物を年2回届けたい方へ</p><div class="price">¥8,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥16,000/年</b><em>年2回｜半年ごと</em></div><ul class="checklist"><li>上質なボリューム</li><li>誕生日やクリスマスに</li><li>特別感を出しやすい</li></ul><a class="btn btn-secondary" href="#">選ばれる男になる</a></article><article class="price-card"><h3>記念日</h3><p class="plan-for">絶対に外したくない1日に届けたい方へ</p><div class="price">¥12,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥12,000/年</b><em>年1回｜記念日お届け</em></div><ul class="checklist"><li>特別な花束</li><li>記念日リマインド</li><li>大切な日に確実に届く</li></ul><a class="btn btn-secondary" href="#">差がつく習慣を始める</a></article></div></div></section>
-    <section><div class="container"><div class="section-head"><div><span class="label">How to Use</span><h2>想いを届けるまで、<br>たった3ステップ。</h2></div><p class="section-lead">一度設定すれば、あとはAltruがあなたの代わりに花を届けます。</p></div><div class="steps-grid"><div class="step"><div class="step-no">01</div><h3>プランを選ぶ</h3><p>毎月・季節・半年・記念日から、届けたい頻度を選びます。</p></div><div class="step"><div class="step-no">02</div><h3>届け先を入力</h3><p>大切な人の住所と、必要に応じてメッセージカードを設定します。</p></div><div class="step"><div class="step-no">03</div><h3>季節の花が届く</h3><p>プロが選んだ花が、あなたの想いとして大切な人へ届きます。</p></div></div></div></section>
-    <section class="faq" id="faq"><div class="container"><div class="section-head"><div><span class="label">FAQ</span><h2>始める前の不安を、<br>ここでなくす。</h2></div><p class="section-lead">解約・配送・メッセージカードなど、よくある質問をまとめました。</p></div><div class="faq-list"><details open><summary>解約やスキップは自由ですか？</summary><p>はい。回数縛り・違約金はありません。予定に合わせて、いつでもスキップや変更ができます。</p></details><details><summary>花は自分で選ぶ必要がありますか？</summary><p>基本的にはプロのフローリストが季節の花を厳選します。花に詳しくなくても、安心して始められます。</p></details><details><summary>メッセージカードは付けられますか？</summary><p>はい。言葉にしにくい感謝や想いを、カードとして添えることができます。</p></details><details><summary>相手に定期便だとわかりますか？</summary><p>定期便感を強く出さず、あなたからの贈り物として自然に届く見え方を重視しています。</p></details><details><summary>届け先は変更できますか？</summary><p>はい。妻・パートナー・母など、届けたい相手に合わせて住所変更ができます。</p></details></div></div></section>
-    <section class="final-cta"><div class="container final-inner"><span class="label">Begin</span><h2>女性が手放したくない男は、<br><span class="gold">想いを行動</span>にしている。</h2><p>言葉にするのが得意じゃなくてもいい。大切な人を想う習慣は、今日から始められる。</p><div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="#pricing">想いを届ける</a></div></div></section>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="label">Warm Executive</span>
+          <h1><span class="gold">女性</span>が手放したくないのは、<br>こういう男。</h1>
+          <p class="hero-lead">特別な日だけじゃない。何気ない日にも、想いを届ける。Altruは、男性が大切な人へ花を定期的に届けるサービスです。</p>
+          <p class="copy-note">言葉にしにくい感謝を、季節の花にのせて届けます。花を選ぶ手間も、買いに行く手間もありません。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#pricing">想いを届ける</a>
+            <a class="btn btn-secondary" href="#service">サービスを見る</a>
+          </div>
+          <div class="feature-strip">
+            <div class="feature"><div class="ico">◇</div><b>プロが厳選</b><span>季節の花を選定</span></div>
+            <div class="feature"><div class="ico">✉</div><b>カード対応</b><span>想いを添える</span></div>
+            <div class="feature"><div class="ico">↻</div><b>定期配送</b><span>頻度を選べる</span></div>
+            <div class="feature"><div class="ico">✓</div><b>縛りなし</b><span>変更・解約可</span></div>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="花を贈る男性と喜ぶ女性のイメージ">
+          <div class="photo-card photo-main">
+            <div class="man"></div><div class="body1"></div>
+            <div class="woman"></div><div class="body2"></div>
+            <div class="bouquet"><div class="stem"></div><div class="flower f1"></div><div class="flower f2"></div><div class="flower f3"></div></div>
+          </div>
+          <div class="photo-card photo-sub"></div>
+          <div class="floating-panel">
+            <b>花を贈る男は、記憶に残る。</b>
+            <p>大げさな言葉より、何気ない日に届く気遣いが関係を変えていく。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problems">
+      <div class="container problem-grid">
+        <div>
+          <span class="label">Insight</span>
+          <h2 class="section-title">大切にしたい気持ちはある。<br>でも、うまく伝えられていない。</h2>
+          <p class="section-lead" style="margin-top:18px;">忙しさや照れくささで、感謝を伝えるきっかけは簡単に失われます。Altruは、その一歩を自然に仕組み化します。</p>
+        </div>
+        <div class="problem-list">
+          <div class="problem-item"><span>01</span><p>忙しくて、花を買いに行く時間がない。</p></div>
+          <div class="problem-item"><span>02</span><p>何を選べば喜ばれるのかわからない。</p></div>
+          <div class="problem-item"><span>03</span><p>感謝しているのに、言葉にするのが照れくさい。</p></div>
+          <div class="problem-item"><span>04</span><p>記念日以外に何かを贈る発想がない。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="container executive-grid">
+        <div class="statement">
+          <span class="label">Reward</span>
+          <h2 class="section-title">選ばれる男は、<br><span class="gold">想いを行動</span>で示す。</h2>
+          <p class="section-lead" style="margin-top:20px;">女性の心に残るのは、大げさな言葉よりも、何気ない日に届く気遣い。忙しくても、想いはちゃんと届けられる。</p>
+          <div class="cta-row"><a class="btn btn-primary" href="#pricing">選ばれる男になる</a></div>
+        </div>
+        <div class="quote-cards">
+          <div class="quote-card"><b>花を贈る男は、女性の記憶に残る。</b><p>特別な日だけでなく、何でもない日に届くから印象に残る。</p></div>
+          <div class="quote-card"><b>感謝を後回しにしない男は、強い。</b><p>忙しいからこそ、気遣いを仕組みにしておく。</p></div>
+          <div class="quote-card"><b>何気ない気遣いが、男の価値を上げる。</b><p>Altruは、やさしさを行動に変える習慣です。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">Service</span>
+            <h2 class="section-title">男性が、大切な人へ花を定期的に届けるサービス。</h2>
+          </div>
+          <p class="section-lead">季節の花をプロが厳選し、指定の住所へ定期的にお届けします。花を選ぶ必要も、買いに行く必要もありません。</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">01</span><h3>プロが季節の花を厳選</h3><p>花に詳しくなくても、相手に喜ばれる一束が届きます。</p></div></article>
+          <article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">02</span><h3>あなたの想いとして届く</h3><p>メッセージカードを添えて、自然に感謝を伝えられます。</p></div></article>
+          <article class="service-card"><div class="service-visual"></div><div class="service-card-body"><span class="num">03</span><h3>一度設定すれば続く</h3><p>毎月・季節・半年・記念日から、届ける頻度を選べます。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reason" id="reason">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">Reason</span>
+            <h2 class="section-title">花を選べなくても、<br>想いは届けられる。</h2>
+          </div>
+          <p class="section-lead">便利さだけではなく、男性自身が「気遣いができる余裕のある男」に見える設計を大切にしています。</p>
+        </div>
+        <div class="reason-grid">
+          <div class="reason-card"><div class="reason-icon">✦</div><h3>上質な見え方</h3><p>ベージュ包装と季節の花で、安っぽく見えない贈り物に。</p></div>
+          <div class="reason-card"><div class="reason-icon">↻</div><h3>続けやすい頻度</h3><p>毎月から年1回まで、関係性に合わせて選べます。</p></div>
+          <div class="reason-card"><div class="reason-icon">✉</div><h3>言葉も添えられる</h3><p>口で言いにくい感謝も、カードなら自然に伝わります。</p></div>
+          <div class="reason-card"><div class="reason-icon">□</div><h3>届け先を指定</h3><p>妻・パートナー・母など、大切な人の住所に直接届きます。</p></div>
+          <div class="reason-card"><div class="reason-icon">✓</div><h3>変更・解約も簡単</h3><p>回数縛りなし。予定に合わせてスキップも可能です。</p></div>
+          <div class="reason-card"><div class="reason-icon">◇</div><h3>定期便感を抑える</h3><p>あなたからの贈り物として自然に届く見え方を重視します。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">Scene</span>
+            <h2 class="section-title">記念日じゃない日こそ、<br>男が出る。</h2>
+          </div>
+          <p class="section-lead">妻へ、パートナーへ、母へ。何気ない日の気遣いが、あなたの印象を変えていきます。</p>
+        </div>
+        <div class="scene-grid">
+          <div class="scene-large"><div class="scene-caption"><b>妻へ、月に一度の感謝として。</b><p>忙しい日々の中でも、ちゃんと想っていることが伝わる。</p></div></div>
+          <div class="scene-stack">
+            <div class="scene-small"><div class="scene-caption"><b>パートナーへ、サプライズとして。</b><p>何でもない日に届くから、心に残る。</p></div></div>
+            <div class="scene-small"><div class="scene-caption"><b>母へ、離れていても。</b><p>照れくさい感謝も、花なら自然に届けられる。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">Pricing</span>
+            <h2 class="section-title">大切な人を想う習慣を、<br>無理なく続ける。</h2>
+          </div>
+          <p class="section-lead">すべてのプランに送料込み。回数縛り・違約金なし。価格ではなく、どの頻度で想いを届けるかを選べます。</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card recommended"><span class="recommend">MAIN PLAN</span><h3>月額</h3><p class="plan-for">毎月、想いが届く習慣を持ちたい方へ</p><div class="price">¥5,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥60,000/年</b><em>年12回｜毎月お届け</em></div><ul class="checklist"><li>季節の花束 + カード</li><li>毎月届くから習慣になる</li><li>いつでもスキップ可</li></ul><a class="btn btn-primary" href="#">想いを届ける</a></article>
+          <article class="price-card"><h3>季節</h3><p class="plan-for">季節の変わり目にサプライズを届けたい方へ</p><div class="price">¥6,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥24,000/年</b><em>年4回｜3ヶ月ごと</em></div><ul class="checklist"><li>春夏秋冬の花を厳選</li><li>自然なサプライズに</li><li>無理なく続けやすい</li></ul><a class="btn btn-secondary" href="#">感謝を届ける</a></article>
+          <article class="price-card"><h3>半年</h3><p class="plan-for">記念日級の特別な贈り物を年2回届けたい方へ</p><div class="price">¥8,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥16,000/年</b><em>年2回｜半年ごと</em></div><ul class="checklist"><li>上質なボリューム</li><li>誕生日やクリスマスに</li><li>特別感を出しやすい</li></ul><a class="btn btn-secondary" href="#">選ばれる男になる</a></article>
+          <article class="price-card"><h3>記念日</h3><p class="plan-for">絶対に外したくない1日に届けたい方へ</p><div class="price">¥12,000<small>/回</small></div><div class="annual"><span>Annual Estimate</span><b>¥12,000/年</b><em>年1回｜記念日お届け</em></div><ul class="checklist"><li>特別な花束</li><li>記念日リマインド</li><li>大切な日に確実に届く</li></ul><a class="btn btn-secondary" href="#">差がつく習慣を始める</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">How to Use</span>
+            <h2 class="section-title">想いを届けるまで、<br>たった3ステップ。</h2>
+          </div>
+          <p class="section-lead">一度設定すれば、あとはAltruがあなたの代わりに花を届けます。</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step"><div class="step-no">01</div><h3>プランを選ぶ</h3><p>毎月・季節・半年・記念日から、届けたい頻度を選びます。</p></div>
+          <div class="step"><div class="step-no">02</div><h3>届け先を入力</h3><p>大切な人の住所と、必要に応じてメッセージカードを設定します。</p></div>
+          <div class="step"><div class="step-no">03</div><h3>季節の花が届く</h3><p>プロが選んだ花が、あなたの想いとして大切な人へ届きます。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="label">FAQ</span>
+            <h2 class="section-title">始める前の不安を、<br>ここでなくす。</h2>
+          </div>
+          <p class="section-lead">解約・配送・メッセージカードなど、よくある質問をまとめました。</p>
+        </div>
+        <div class="faq-list">
+          <details open><summary>解約やスキップは自由ですか？</summary><p>はい。回数縛り・違約金はありません。予定に合わせて、いつでもスキップや変更ができます。</p></details>
+          <details><summary>花は自分で選ぶ必要がありますか？</summary><p>基本的にはプロのフローリストが季節の花を厳選します。花に詳しくなくても、安心して始められます。</p></details>
+          <details><summary>メッセージカードは付けられますか？</summary><p>はい。言葉にしにくい感謝や想いを、カードとして添えることができます。</p></details>
+          <details><summary>相手に定期便だとわかりますか？</summary><p>定期便感を強く出さず、あなたからの贈り物として自然に届く見え方を重視しています。</p></details>
+          <details><summary>届け先は変更できますか？</summary><p>はい。妻・パートナー・母など、届けたい相手に合わせて住所変更ができます。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-inner">
+        <span class="label">Begin</span>
+        <h2 class="section-title">女性が手放したくない男は、<br><span class="gold">想いを行動</span>にしている。</h2>
+        <p>言葉にするのが得意じゃなくてもいい。大切な人を想う習慣は、今日から始められる。</p>
+        <div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="#pricing">想いを届ける</a></div>
+      </div>
+    </section>
   </main>
-  <footer><div class="container footer-inner"><div>© Altru</div><div>大切な人を想う習慣の定期便</div></div></footer>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© Altru</div>
+      <div>大切な人を想う習慣の定期便</div>
+    </div>
+  </footer>
 </body>
 </html>
