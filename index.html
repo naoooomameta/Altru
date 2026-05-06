@@ -1682,6 +1682,26 @@ section { position: relative; }
   opacity: 0.35;
 }
 
+/* ============ STATS — fix readability ============ */
+/* The .stats section uses .inv (cream text) but its background was --bg-deep
+   (light beige), producing cream-on-beige low contrast. Switch to the proper
+   dark surface so numbers and labels are readable. */
+.stats.inv {
+  background: #100E0B;
+  border-top-color: rgba(236,230,217,0.12);
+  border-bottom-color: rgba(236,230,217,0.12);
+}
+.stats.inv::before {
+  background: radial-gradient(ellipse 60% 100% at 50% 0%, rgba(236,230,217,0.06), transparent 60%);
+}
+.stats.inv .stats__item { border-right-color: rgba(236,230,217,0.12); }
+.stats.inv .stats__num { color: #ECE6D9; }
+.stats.inv .stats__num-unit { color: rgba(236,230,217,0.7); }
+.stats.inv .stats__label {
+  color: rgba(236,230,217,0.75);
+  border-top-color: rgba(236,230,217,0.18);
+}
+
 /* ============ MOBILE RESPONSIVE REFINEMENTS ============ */
 @media (max-width: 768px) {
   /* General section spacing — tighten vertical rhythm on small screens */
