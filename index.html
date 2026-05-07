@@ -1749,11 +1749,17 @@ section { position: relative; }
   color: var(--ink);
 }
 /* Allow long phrases to wrap when they exceed container width (e.g. zoom / narrow viewport).
-   Tokens already include trailing 、 / 。 so we don't need nowrap to prevent orphans. */
+   Switch from inline-block + nowrap to plain inline so the text inside each
+   token can break at natural Japanese boundaries instead of overflowing. */
 .manifesto__big .word {
-  white-space: normal !important;
-  word-break: keep-all;
+  display: inline;
+  white-space: normal;
+  word-break: normal;
   overflow-wrap: break-word;
+  line-break: strict;
+}
+.manifesto__big {
+  max-width: 22em;
 }
 
 /* ============ STATS — fix readability ============ */
@@ -2954,7 +2960,7 @@ if (manifestoEl){
     if (buf) tokens.push(buf);
     return tokens.map(t => {
       const cls = (t.includes('大切にできる男') || t.includes('花というかたち')) ? 'word accented' : 'word';
-      return `<span class="${cls}" style="display:inline-block;white-space:nowrap;">${t}</span>`;
+      return `<span class="${cls}">${t}</span>`;
     }).join('');
   }).join('<br><br>');
   manifestoEl.innerHTML = lineHtml;
