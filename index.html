@@ -1682,6 +1682,80 @@ section { position: relative; }
   opacity: 0.35;
 }
 
+/* ============ CTA STEP FLOW ============ */
+.cta-step__meta {
+  display: flex; align-items: center; gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+.cta-step__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.cta-step__bar {
+  flex: 1; height: 2px;
+  background: rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.inv .cta-step__bar { background: rgba(236,230,217,0.18); }
+.cta-step__bar > span {
+  position: absolute; top: 0; left: 0; bottom: 0;
+  background: var(--gold);
+  width: 50%;
+  transition: width .5s cubic-bezier(.6,.05,.05,1);
+}
+.cta-step__bar--full > span { width: 100%; }
+.cta-step__title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.05rem; line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.02em;
+}
+.cta-step__desc {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.95;
+  margin-bottom: 1.25rem;
+}
+.cta-step__desc strong {
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.cta-step__back {
+  display: inline-flex; align-items: center;
+  background: transparent; border: none; cursor: pointer;
+  margin-top: 0.85rem;
+  padding: 0.5rem 0;
+  color: var(--ink-mute);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  transition: color .25s;
+}
+.cta-step__back:hover { color: var(--ink); }
+
+/* ============ MANIFESTO — fix selection / overflow ============ */
+/* Subtle selection in dark sections so each .word doesn't render as a cream block */
+.inv ::selection {
+  background: rgba(236,230,217,0.18);
+  color: var(--ink);
+}
+/* Allow long phrases to wrap when they exceed container width (e.g. zoom / narrow viewport).
+   Tokens already include trailing 、 / 。 so we don't need nowrap to prevent orphans. */
+.manifesto__big .word {
+  white-space: normal !important;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 /* ============ STATS — fix readability ============ */
 /* The .stats section uses .inv (cream text) but its background was --bg-deep
    (light beige), producing cream-on-beige low contrast. Switch to the proper
@@ -2728,20 +2802,37 @@ section { position: relative; }
       <span>現在 <strong class="cta-section__count" id="registrationCount">328</strong> 名が登録済み・残り <strong class="cta-section__count" id="remainingCount">172</strong> 名</span>
     </div>
     <div class="cta-box reveal reveal-d3" id="ctaBox">
-      <div id="ctaForm">
+      <!-- Step 1: Email -->
+      <div id="ctaStep1" class="cta-step">
+        <div class="cta-step__meta">
+          <span class="cta-step__num">Step 1 / 2</span>
+          <span class="cta-step__bar"><span></span></span>
+        </div>
+        <p class="cta-step__title">まず、メールアドレスを登録</p>
         <div class="cta-box__row">
           <input type="email" id="emailInput" placeholder="メールアドレスを入力" class="cta-box__input">
-          <button class="cta-box__submit" onclick="handleEmailSubmit()">花を届ける準備をする →</button>
+          <button class="cta-box__submit" onclick="handleEmailNext()">次へ →</button>
         </div>
         <p class="cta-box__fine" id="emailError" style="color:#c0392b;display:none;">メールアドレスを正しく入力してください。</p>
-        <div class="cta-box__divider">
-          <div class="cta-box__divider-line"></div>
-          <span class="cta-box__divider-text">— or —</span>
-          <div class="cta-box__divider-line"></div>
+        <p class="cta-box__fine">入力後、LINEでの友だち追加にお進みいただきます。</p>
+      </div>
+
+      <!-- Step 2: LINE -->
+      <div id="ctaStep2" class="cta-step" style="display:none;">
+        <div class="cta-step__meta">
+          <span class="cta-step__num">Step 2 / 2</span>
+          <span class="cta-step__bar cta-step__bar--full"><span></span></span>
         </div>
-        <button class="cta-box__line" onclick="handleLineSubmit()">LINEで登録する</button>
+        <p class="cta-step__title">最後にLINEで友だち追加</p>
+        <p class="cta-step__desc">
+          お届け管理・先行特典のご案内はLINEから。<br>
+          登録メール: <strong id="ctaEmailEcho"></strong>
+        </p>
+        <button class="cta-box__line" onclick="handleLineSubmit()">LINEで友だち追加する →</button>
+        <button class="cta-step__back" onclick="handleBackToEmail()">← メールを変更する</button>
         <p class="cta-box__fine">いつでも登録解除できます。勧誘メールは送りません。</p>
       </div>
+
       <div class="cta-success" id="ctaSuccess">
         <div class="cta-success__icon">✓</div>
         <p class="cta-success__title">先行登録が完了しました</p>
@@ -2898,17 +2989,29 @@ const sObs = new IntersectionObserver((es)=>{
 }, { threshold: 0.1 });
 sObs.observe(heroSection); sObs.observe(ctaSection);
 
-/* CTA FORM */
-function handleEmailSubmit(){
+/* CTA FORM — sequential flow: email → LINE */
+const LINE_FRIEND_URL = '#'; // 実際のLINE友だち追加URLに差し替え可能
+function handleEmailNext(){
   const input = document.getElementById('emailInput');
   const err = document.getElementById('emailError');
   const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
   if(!valid){ err.style.display='block'; input.style.borderColor='#c0392b'; return; }
-  err.style.display='none'; showSuccess();
+  err.style.display='none'; input.style.borderColor='';
+  document.getElementById('ctaEmailEcho').textContent = input.value.trim();
+  document.getElementById('ctaStep1').style.display='none';
+  document.getElementById('ctaStep2').style.display='block';
 }
-function handleLineSubmit(){ showSuccess(); }
+function handleBackToEmail(){
+  document.getElementById('ctaStep2').style.display='none';
+  document.getElementById('ctaStep1').style.display='block';
+}
+function handleLineSubmit(){
+  if (LINE_FRIEND_URL && LINE_FRIEND_URL !== '#') window.open(LINE_FRIEND_URL, '_blank');
+  showSuccess();
+}
 function showSuccess(){
-  document.getElementById('ctaForm').style.display='none';
+  document.getElementById('ctaStep1').style.display='none';
+  document.getElementById('ctaStep2').style.display='none';
   document.getElementById('ctaSuccess').style.display='flex';
   const c = document.getElementById('registrationCount');
   const r = document.getElementById('remainingCount');
