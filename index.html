@@ -995,13 +995,14 @@ button, input, textarea { font-family: inherit; }
 }
 .manifesto__big {
   font-family: 'Shippori Mincho', serif;
-  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-size: clamp(2rem, 5.4vw, 4rem);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.45;
   letter-spacing: 0.005em;
-  max-width: 14em;
+  max-width: none;
   margin: 0 auto;
 }
+.manifesto .container--narrow { max-width: 1200px; }
 .manifesto__big .word {
   display: inline-block;
   opacity: 0.18;
@@ -1757,9 +1758,6 @@ section { position: relative; }
   word-break: normal;
   overflow-wrap: break-word;
   line-break: strict;
-}
-.manifesto__big {
-  max-width: 22em;
 }
 
 /* ============ STATS — fix readability ============ */
