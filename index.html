@@ -643,7 +643,8 @@ button, input, textarea { font-family: inherit; }
   border-bottom: 1px solid var(--line);
   display: flex; align-items: center; justify-content: center;
 }
-.season-visual svg { width: 100%; height: 100%; display: block; }
+.season-visual svg,
+.season-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .season-content {
   padding: 1.5rem 1.4rem 1.6rem;
 }
@@ -2377,7 +2378,7 @@ section { position: relative; }
     <div class="scenes__head reveal">
       <div class="eyebrow-num">— 06 / Use Cases</div>
       <h2 class="section-hl" style="margin-top:1.5rem;">
-        彼女の誕生日、結婚記念日、母の日。<br>
+        彼女の誕生日、結婚記念日に。<br>
         <em>Altruが代わりに覚えています。</em>
       </h2>
     </div>
@@ -2566,7 +2567,7 @@ section { position: relative; }
         </div>
         <div>
           <p class="price__context">一年に一度だからこそ、<br>絶対に忘れたくない日に。</p>
-          <p class="price__note">結婚記念日、誕生日、母の日。年に一度の大切な日だけ、確実に届けたい方のためのプランです。</p>
+          <p class="price__note">結婚記念日や誕生日。年に一度の大切な日だけ、確実に届けたい方のためのプランです。</p>
           <div class="hairline hairline--gold hairline--short" style="margin-bottom:1.5rem;"></div>
           <p class="price__small">4プランの中で最もボリュームのあるプレミアムブーケをお届けします。</p>
         </div>
@@ -2591,19 +2592,7 @@ section { position: relative; }
     <div class="seasons__grid">
       <div class="season-card reveal">
         <div class="season-visual">
-          <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="#EAE8E1"/>
-            <circle cx="60" cy="80" r="3" fill="#5A5246" opacity="0.4"/>
-            <circle cx="140" cy="60" r="2.5" fill="#5A5246" opacity="0.35"/>
-            <circle cx="100" cy="50" r="2" fill="#75695C" opacity="0.45"/>
-            <ellipse cx="100" cy="180" rx="40" ry="55" fill="#a3593f" opacity="0.55"/>
-            <ellipse cx="80" cy="170" rx="20" ry="28" fill="#c47a4a" opacity="0.7"/>
-            <ellipse cx="120" cy="175" rx="22" ry="30" fill="#b06030" opacity="0.65"/>
-            <ellipse cx="100" cy="160" rx="18" ry="25" fill="#d4a888" opacity="0.7"/>
-            <path d="M 100 230 Q 90 240 95 250 L 105 250 Q 110 240 100 230 Z" fill="#5a6048"/>
-            <path d="M 70 195 Q 55 205 60 220" stroke="#5a6048" stroke-width="1.5" fill="none"/>
-            <path d="M 130 200 Q 145 210 140 220" stroke="#5a6048" stroke-width="1.5" fill="none"/>
-          </svg>
+          <img src="https://picsum.photos/seed/altru-spring/600/750" alt="春のイメージ（仮画像）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">春 — はる</div>
@@ -2616,23 +2605,7 @@ section { position: relative; }
       </div>
       <div class="season-card reveal reveal-d1">
         <div class="season-visual">
-          <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="#E0DDD3"/>
-            <circle cx="100" cy="170" r="35" fill="#3D3530" opacity="0.7"/>
-            <circle cx="100" cy="170" r="22" fill="#1A1612" opacity="0.85"/>
-            <g transform="translate(100, 170)">
-              <ellipse cx="0" cy="-45" rx="8" ry="20" fill="#3D3530" opacity="0.85"/>
-              <ellipse cx="32" cy="-32" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(45 32 -32)"/>
-              <ellipse cx="45" cy="0" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(90 45 0)"/>
-              <ellipse cx="32" cy="32" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(135 32 32)"/>
-              <ellipse cx="0" cy="45" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(180 0 45)"/>
-              <ellipse cx="-32" cy="32" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(225 -32 32)"/>
-              <ellipse cx="-45" cy="0" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(270 -45 0)"/>
-              <ellipse cx="-32" cy="-32" rx="8" ry="20" fill="#3D3530" opacity="0.85" transform="rotate(315 -32 -32)"/>
-            </g>
-            <ellipse cx="60" cy="220" rx="15" ry="6" fill="#5a6048" opacity="0.6"/>
-            <ellipse cx="140" cy="220" rx="18" ry="7" fill="#5a6048" opacity="0.6"/>
-          </svg>
+          <img src="https://picsum.photos/seed/altru-summer/600/750" alt="夏のイメージ（仮画像）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">夏 — なつ</div>
@@ -2645,18 +2618,7 @@ section { position: relative; }
       </div>
       <div class="season-card reveal reveal-d2">
         <div class="season-visual">
-          <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="#EAE8E1"/>
-            <ellipse cx="100" cy="170" rx="38" ry="48" fill="#a3593f" opacity="0.55"/>
-            <circle cx="80" cy="155" r="14" fill="#c47a4a" opacity="0.8"/>
-            <circle cx="115" cy="160" r="16" fill="#b06030" opacity="0.85"/>
-            <circle cx="95" cy="180" r="13" fill="#d49060" opacity="0.7"/>
-            <circle cx="125" cy="180" r="11" fill="#a3593f" opacity="0.85"/>
-            <path d="M 60 195 Q 50 215 55 230 L 60 230 Q 65 215 65 195 Z" fill="#7a4520" opacity="0.8"/>
-            <path d="M 140 195 Q 150 215 145 230 L 140 230 Q 135 215 135 195 Z" fill="#a3593f" opacity="0.7"/>
-            <path d="M 70 200 Q 55 220 65 235" stroke="#5a4020" stroke-width="1.5" fill="none"/>
-            <path d="M 130 200 Q 145 220 135 235" stroke="#5a4020" stroke-width="1.5" fill="none"/>
-          </svg>
+          <img src="https://picsum.photos/seed/altru-autumn/600/750" alt="秋のイメージ（仮画像）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">秋 — あき</div>
@@ -2669,20 +2631,7 @@ section { position: relative; }
       </div>
       <div class="season-card reveal reveal-d3">
         <div class="season-visual">
-          <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="200" height="250" fill="#E0DDD3"/>
-            <circle cx="50" cy="60" r="1.5" fill="#ECE4D2" opacity="0.7"/>
-            <circle cx="150" cy="50" r="1" fill="#ECE4D2" opacity="0.6"/>
-            <circle cx="120" cy="80" r="1.2" fill="#ECE4D2" opacity="0.55"/>
-            <circle cx="80" cy="100" r="1" fill="#ECE4D2" opacity="0.6"/>
-            <ellipse cx="100" cy="180" rx="40" ry="50" fill="#B8AE99" opacity="0.55"/>
-            <ellipse cx="100" cy="170" rx="28" ry="35" fill="#ECE4D2" opacity="0.7"/>
-            <circle cx="100" cy="165" r="12" fill="#3D3530" opacity="0.55"/>
-            <ellipse cx="75" cy="190" rx="18" ry="22" fill="#B8AE99" opacity="0.55"/>
-            <ellipse cx="125" cy="195" rx="20" ry="24" fill="#3D3530" opacity="0.4"/>
-            <path d="M 50 210 L 60 230 M 145 220 L 155 235" stroke="#5a6048" stroke-width="1.5" opacity="0.7"/>
-            <path d="M 70 215 Q 65 225 70 235" stroke="#5a6048" stroke-width="1.2" fill="none" opacity="0.6"/>
-          </svg>
+          <img src="https://picsum.photos/seed/altru-winter/600/750" alt="冬のイメージ（仮画像）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">冬 — ふゆ</div>
