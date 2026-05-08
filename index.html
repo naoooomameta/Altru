@@ -995,14 +995,16 @@ button, input, textarea { font-family: inherit; }
 }
 .manifesto__big {
   font-family: 'Shippori Mincho', serif;
-  font-size: clamp(2rem, 5.4vw, 4rem);
+  font-size: clamp(1.85rem, 4.6vw, 3.4rem);
   font-weight: 500;
-  line-height: 1.45;
-  letter-spacing: 0.005em;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
   max-width: none;
   margin: 0 auto;
 }
 .manifesto .container--narrow { max-width: 1200px; }
+/* visual rhythm between the two stanzas */
+.manifesto__big br + br { line-height: 0.9; }
 .manifesto__big .word {
   display: inline-block;
   opacity: 0.18;
@@ -2959,7 +2961,7 @@ if (manifestoEl){
     return tokens.map(t => {
       const cls = (t.includes('大切にできる男') || t.includes('花というかたち')) ? 'word accented' : 'word';
       return `<span class="${cls}">${t}</span>`;
-    }).join('');
+    }).join('<br>');
   }).join('<br><br>');
   manifestoEl.innerHTML = lineHtml;
 }
