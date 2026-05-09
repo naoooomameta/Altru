@@ -2045,6 +2045,63 @@ section { position: relative; }
 html, body { max-width: 100%; overflow-x: hidden; }
 img { height: auto; }
 
+/* ============ REAL IMAGE TREATMENT (replaces .ph placeholders) ============ */
+.media-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+.about__media,
+.steps__media,
+.features__val-media,
+.scenes__img,
+.story__visual-inner {
+  position: relative;
+  overflow: hidden;
+}
+.about__media-num, .about__media-cap,
+.steps__media-cap,
+.features__val-num, .features__val-cap,
+.scenes__img-num {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+/* HERO photo */
+.hero__visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+.hero__visual-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 22%, transparent 78%, rgba(0,0,0,0.55) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__visual-tag, .hero__visual-foot {
+  position: relative;
+  z-index: 2;
+}
+/* Our Story photo */
+.story__visual-inner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Avoid horizontal scroll caused by very wide background marks */
 @media (max-width: 768px) {
   .cta-section { overflow: hidden; }
@@ -2135,19 +2192,10 @@ img { height: auto; }
 
     <div class="hero__visual">
       <div class="hero__visual-inner">
+        <img class="hero__visual-img" src="a_No.%20001.png" alt="スーツ姿の男性が花束とAltruのカードを手にする" loading="eager">
         <div class="hero__visual-tag">
           <span>No. 001</span>
           <span>Hero Image</span>
-        </div>
-        <div class="hero__visual-mid">
-          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="1">
-            <circle cx="21" cy="13" r="6"/>
-            <circle cx="13" cy="22" r="6"/>
-            <circle cx="29" cy="22" r="6"/>
-            <circle cx="21" cy="29" r="6"/>
-            <line x1="21" y1="34" x2="21" y2="40"/>
-          </svg>
-          <span>スーツ姿の男性の手元に<br>さりげなく花束とAltruのカード</span>
         </div>
         <div class="hero__visual-foot">
           <span>Florist's Choice</span>
@@ -2287,13 +2335,10 @@ img { height: auto; }
 
     <div class="about__grid">
       <div class="about__card reveal">
-        <div class="about__media ph">
+        <div class="about__media">
+          <img class="media-img" src="a_image%EF%BC%98.png" alt="季節の花束が街の夜景を背に届けられる" loading="lazy">
           <span class="about__media-num">i.</span>
           <span class="about__media-cap">Auto Delivery</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 01</span>
-            <span class="ph__desc">テーブルに置かれた季節の花束と、添えられたAltruのカード</span>
-          </div>
         </div>
         <div class="about__body-wrap">
           <h3 class="about__title">自動で届く</h3>
@@ -2301,13 +2346,10 @@ img { height: auto; }
         </div>
       </div>
       <div class="about__card reveal reveal-d1">
-        <div class="about__media ph">
+        <div class="about__media">
+          <img class="media-img" src="a_image6.png" alt="玄関で花束を受け取る女性" loading="lazy">
           <span class="about__media-num">ii.</span>
           <span class="about__media-cap">Designated Recipient</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 02</span>
-            <span class="ph__desc">花束を受け取り、ふと微笑む女性の手元・後ろ姿</span>
-          </div>
         </div>
         <div class="about__body-wrap">
           <h3 class="about__title">あなたが指定した、あの人へ</h3>
@@ -2315,13 +2357,10 @@ img { height: auto; }
         </div>
       </div>
       <div class="about__card reveal reveal-d2">
-        <div class="about__media ph">
+        <div class="about__media">
+          <img class="media-img" src="a_image%EF%BC%95.png" alt="メッセージカードに万年筆で言葉を書き添える手元" loading="lazy">
           <span class="about__media-num">iii.</span>
           <span class="about__media-cap">Your Words</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 03</span>
-            <span class="ph__desc">手書きのメッセージカードと万年筆、傍らに小さな花</span>
-          </div>
         </div>
         <div class="about__body-wrap">
           <h3 class="about__title">あなたの言葉を添えて</h3>
@@ -2343,13 +2382,10 @@ img { height: auto; }
     </div>
     <div class="steps__list">
       <div class="steps__item reveal">
-        <div class="steps__media ph">
+        <div class="steps__media">
+          <img class="media-img" src="a_image4.png" alt="スマホで届け先と日付を登録する画面" loading="lazy">
           <div class="steps__circle">i</div>
           <span class="steps__media-cap">Register</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 04</span>
-            <span class="ph__desc">スマートフォンでLINE登録画面、住所と日付を入力する手元</span>
-          </div>
         </div>
         <div class="steps__step-label">Step 01</div>
         <h3 class="steps__title">届け先と日付を登録</h3>
@@ -2420,13 +2456,10 @@ img { height: auto; }
     </div>
     <div class="features__grid">
       <div class="features__val reveal">
-        <div class="features__val-media ph">
+        <div class="features__val-media">
+          <img class="media-img" src="a_image7.png" alt="記念日が記されたスマホのカレンダーと花" loading="lazy">
           <span class="features__val-num">i</span>
           <span class="features__val-cap">Sender's Lens</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 07</span>
-            <span class="ph__desc">スマホのカレンダーに記された記念日と、傍らに置かれた花の写真</span>
-          </div>
         </div>
         <div class="features__val-body-wrap">
           <h3 class="features__val-title">忘れる不安を、<br>仕組みで肩代わり</h3>
@@ -2448,13 +2481,10 @@ img { height: auto; }
         </div>
       </div>
       <div class="features__val reveal reveal-d2">
-        <div class="features__val-media ph">
+        <div class="features__val-media">
+          <img class="media-img" src="a_image9.png" alt="窓辺の一輪挿しに差し込む柔らかな光" loading="lazy">
           <span class="features__val-num">iii</span>
           <span class="features__val-cap">Twice a Year</span>
-          <div class="ph__label">
-            <span class="ph__tag">Image 09</span>
-            <span class="ph__desc">静かな部屋に置かれた一輪挿し、窓から差し込む柔らかな光</span>
-          </div>
         </div>
         <div class="features__val-body-wrap">
           <h3 class="features__val-title">押し付けない、<br>ちょうどいい間隔</h3>
@@ -2477,25 +2507,25 @@ img { height: auto; }
     </div>
     <div class="scenes__grid">
       <div class="scenes__card reveal">
-        <div class="scenes__img ph">
+        <div class="scenes__img">
+          <img class="media-img" src="a_Scene%2001.png" alt="出張先のホテルでスマホにAltruからの通知を見る男性" loading="lazy">
           <span class="scenes__img-num">i.</span>
-          <div class="ph__label"><span class="ph__tag">Scene 01</span><span class="ph__desc">夜のホテル室内、ベッドサイドのスマホを見る男性のシルエット</span></div>
         </div>
         <h3 class="scenes__title">出張先のホテルで</h3>
         <p class="scenes__body">夜遅く、ホテルでスマホを開く。「数日後、お花が届きます」というAltruからの通知。自分は今、東京にいない。それでも、あの人の手元には確かに花が届く。少しだけ、肩の力が抜ける。</p>
       </div>
       <div class="scenes__card reveal reveal-d1">
-        <div class="scenes__img ph">
+        <div class="scenes__img">
+          <img class="media-img" src="a_Scene%2002.png" alt="玄関で花束を持った妻が帰宅した夫を笑顔で迎える" loading="lazy">
           <span class="scenes__img-num">ii.</span>
-          <div class="ph__label"><span class="ph__tag">Scene 02</span><span class="ph__desc">玄関で笑顔の妻と、帰宅した夫の後ろ姿。あたたかな室内光</span></div>
         </div>
         <h3 class="scenes__title">帰宅したら玄関で</h3>
         <p class="scenes__body">「今日、お花届いたよ」玄関で笑う妻の顔を見て、思い出す。ああ、そうだった。今日は結婚記念日だった。忘れていた自分を、Altruが救ってくれた。</p>
       </div>
       <div class="scenes__card reveal reveal-d2">
-        <div class="scenes__img ph">
+        <div class="scenes__img">
+          <img class="media-img" src="a_Scene%2003.png" alt="スマホのLINE画面に表示された花の写真とお礼のメッセージ" loading="lazy">
           <span class="scenes__img-num">iii.</span>
-          <div class="ph__label"><span class="ph__tag">Scene 03</span><span class="ph__desc">スマホの画面に映る、届いた花の写真とお礼のメッセージ</span></div>
         </div>
         <h3 class="scenes__title">LINEで届いた、お礼の一枚</h3>
         <p class="scenes__body">「お花届いたよ。ありがとう、きれいね。」夜、彼女からのLINEに花の写真と短いメッセージ。言葉にしづらかった想いが、ふっと返ってくる瞬間。</p>
@@ -2685,7 +2715,7 @@ img { height: auto; }
     <div class="seasons__grid">
       <div class="season-card reveal">
         <div class="season-visual">
-          <img src="https://loremflickr.com/600/750/cherry-blossom,sakura,tulip" alt="春の花（仮画像 / Flickr CC）" loading="lazy">
+          <img src="a_Spring.png" alt="春の花束（桜・チューリップ・スイートピーなど）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">春 — はる</div>
@@ -2698,7 +2728,7 @@ img { height: auto; }
       </div>
       <div class="season-card reveal reveal-d1">
         <div class="season-visual">
-          <img src="https://loremflickr.com/600/750/sunflower,hydrangea,summer-flower" alt="夏の花（仮画像 / Flickr CC）" loading="lazy">
+          <img src="a_Summer.png" alt="夏の花束（ひまわり・トルコキキョウ・紫陽花など）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">夏 — なつ</div>
@@ -2711,7 +2741,7 @@ img { height: auto; }
       </div>
       <div class="season-card reveal reveal-d2">
         <div class="season-visual">
-          <img src="https://loremflickr.com/600/750/dahlia,cosmos,autumn-flower" alt="秋の花（仮画像 / Flickr CC）" loading="lazy">
+          <img src="a_autumn.png" alt="秋の花束（ダリア・コスモス・実物など）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">秋 — あき</div>
@@ -2724,7 +2754,7 @@ img { height: auto; }
       </div>
       <div class="season-card reveal reveal-d3">
         <div class="season-visual">
-          <img src="https://loremflickr.com/600/750/camellia,anemone,winter-flower" alt="冬の花（仮画像 / Flickr CC）" loading="lazy">
+          <img src="a_winter.png" alt="冬の花束（アネモネ・ラナンキュラス・白椿など）" loading="lazy">
         </div>
         <div class="season-content">
           <div class="season-jp">冬 — ふゆ</div>
@@ -2758,11 +2788,8 @@ img { height: auto; }
   <div class="container--mid">
     <div class="story__grid">
       <div class="story__visual reveal">
-        <div class="ph story__visual-inner">
-          <div class="ph__label">
-            <span class="ph__tag">Our Story</span>
-            <span class="ph__desc">机に向かい、メッセージカードを書く男性の手元。背景に小さな花。</span>
-          </div>
+        <div class="story__visual-inner">
+          <img src="a_Our%20Story.png" alt="机に向かいメッセージカードを書く男性の手元" loading="lazy">
         </div>
       </div>
       <div>
