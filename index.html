@@ -2059,6 +2059,90 @@ section { position: relative; }
 html, body { max-width: 100%; overflow-x: hidden; }
 img { height: auto; }
 
+/* ============ DELIVERY GALLERY ============ */
+.delivery {
+  padding: clamp(5rem, 9vw, 8rem) 0;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.delivery__head {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+.delivery__lead {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 2;
+  max-width: 36em;
+  margin: 1.5rem auto 0;
+}
+.delivery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
+}
+.delivery__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+}
+.delivery__img {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.delivery__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .8s cubic-bezier(.16,1,.3,1);
+}
+.delivery__item:hover .delivery__img img {
+  transform: scale(1.04);
+}
+.delivery__caption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0 0.25rem;
+}
+.delivery__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+.delivery__label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.delivery__foot {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  line-height: 1.85;
+}
+@media (max-width: 768px) {
+  .delivery { padding: clamp(3.5rem, 9vw, 5rem) 0; }
+  .delivery__grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .delivery__head { margin-bottom: 2.5rem; }
+  .delivery__lead { font-size: 0.88rem; }
+}
+@media (max-width: 480px) {
+  .delivery__caption { gap: 0.6rem; }
+  .delivery__label { font-size: 0.92rem; letter-spacing: 0.18em; }
+  .delivery__foot { font-size: 0.72rem; }
+}
+
 /* ============ REAL IMAGE TREATMENT (replaces .ph placeholders) ============ */
 .media-img {
   position: absolute;
@@ -2513,6 +2597,63 @@ img { height: auto; }
         <span class="arrow">→</span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY GALLERY ============ -->
+<section class="delivery">
+  <div class="container">
+    <div class="delivery__head reveal">
+      <div class="eyebrow-num">— Actual Delivery</div>
+      <h2 class="section-hl" style="margin-top:1.25rem;">
+        実際に、<em>こんな花束</em>を届けます。
+      </h2>
+      <p class="delivery__lead">
+        フローリストが、季節とお届けタイミングに合わせて、<br>
+        一束ずつ仕立てたブーケを、メッセージカードと共に。
+      </p>
+    </div>
+    <div class="delivery__grid">
+      <figure class="delivery__item reveal">
+        <div class="delivery__img">
+          <img src="a_Spring.jpg" alt="春のお届け例：桜・チューリップ・ラナンキュラスを束ねた花束" loading="lazy">
+        </div>
+        <figcaption class="delivery__caption">
+          <span class="delivery__num">i.</span>
+          <span class="delivery__label">Spring</span>
+        </figcaption>
+      </figure>
+      <figure class="delivery__item reveal reveal-d1">
+        <div class="delivery__img">
+          <img src="a_Summer.jpg" alt="夏のお届け例：ひまわり・トルコキキョウ・紫陽花の花束" loading="lazy">
+        </div>
+        <figcaption class="delivery__caption">
+          <span class="delivery__num">ii.</span>
+          <span class="delivery__label">Summer</span>
+        </figcaption>
+      </figure>
+      <figure class="delivery__item reveal reveal-d2">
+        <div class="delivery__img">
+          <img src="a_autumn.jpg" alt="秋のお届け例：ダリア・コスモス・実物を束ねた花束" loading="lazy">
+        </div>
+        <figcaption class="delivery__caption">
+          <span class="delivery__num">iii.</span>
+          <span class="delivery__label">Autumn</span>
+        </figcaption>
+      </figure>
+      <figure class="delivery__item reveal reveal-d3">
+        <div class="delivery__img">
+          <img src="a_winter.jpg" alt="冬のお届け例：アネモネ・ラナンキュラス・白椿の花束" loading="lazy">
+        </div>
+        <figcaption class="delivery__caption">
+          <span class="delivery__num">iv.</span>
+          <span class="delivery__label">Winter</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="delivery__foot reveal">
+      ※ 写真はイメージです。お届けする花束は、その時期にもっとも美しい花材で仕立てます。
+    </p>
   </div>
 </section>
 
