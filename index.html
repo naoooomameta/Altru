@@ -1662,9 +1662,20 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
     font-size: clamp(1.7rem, 6.8vw, 2.4rem); line-height: 1.5;
   }
   .stats .stats__num { font-size: clamp(4rem, 18vw, 7rem); }
-  .hero__visual { aspect-ratio: 4 / 5; max-height: 70vh; order: -1; }
-  .hero__visual-inner { inset: 0.75rem; padding: 1rem; }
-  .hero__inner { grid-template-columns: 1fr; }
+  .hero__visual {
+    aspect-ratio: 4 / 5;
+    max-height: 70vh;
+    order: -1;
+    width: 100%;
+  }
+  .hero__visual-inner {
+    inset: 0;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+  }
+  .hero__visual::before { display: none; }
+  .hero__inner { grid-template-columns: 1fr; min-height: 0; }
   .hero__copy::after { display: none; }
   .hero__copy { padding-top: 1.25rem; }
 }
