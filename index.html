@@ -1662,7 +1662,8 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
     font-size: clamp(1.7rem, 6.8vw, 2.4rem); line-height: 1.5;
   }
   .stats .stats__num { font-size: clamp(4rem, 18vw, 7rem); }
-  .hero__visual { display: none; }
+  .hero__visual { aspect-ratio: 4 / 5; max-height: 80vh; }
+  .hero__visual-inner { inset: 1rem; padding: 1.1rem; }
   .hero__inner { grid-template-columns: 1fr; }
   .hero__copy::after { display: none; }
 }
