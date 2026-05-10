@@ -729,6 +729,9 @@ button, input, textarea { font-family: inherit; }
   .press__logo:nth-child(2n) { border-right: none; }
 }
 
+/* keep Japanese phrases together — wrap as a unit, never mid-phrase */
+.nobr { display: inline-block; }
+
 /* ============ KOAN (problem) ============ */
 .koan { background: var(--bg); border-top: 1px solid var(--line); position: relative; }
 .koan::before {
@@ -2338,7 +2341,7 @@ img { height: auto; }
     <div class="koan__head reveal">
       <div class="eyebrow-num">— 02 / A familiar feeling</div>
       <h2 class="section-hl" style="margin-top:1.5rem;">
-        こんな日々に、<em>覚え</em>はありませんか。
+        <span class="nobr">こんな日々に、</span><span class="nobr"><em>覚え</em>はありませんか。</span>
       </h2>
     </div>
     <div class="koan__lines">
