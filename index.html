@@ -667,10 +667,24 @@ button, input, textarea { font-family: inherit; }
 
 /* ============ VOICES ECHO (recipients) ============ */
 .voices-echo {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url('a_VoiceEcho_Desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: clamp(5rem, 9vw, 8rem) 0;
   border-bottom: 1px solid var(--line);
   position: relative;
+  isolation: isolate;
+}
+.voices-echo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(244, 242, 236, 0.7);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: -1;
 }
 .voices-echo__head {
   text-align: center;
@@ -704,22 +718,6 @@ button, input, textarea { font-family: inherit; }
   max-width: 1080px;
   margin: 0 auto;
 }
-.voices-echo__media {
-  max-width: 1080px;
-  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  position: relative;
-}
-.voices-echo__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 1.2s cubic-bezier(.16,1,.3,1);
-}
-.voices-echo__media:hover img { transform: scale(1.03); }
 .voice-echo {
   background: var(--bg-1);
   border: 1px solid var(--line);
@@ -2066,9 +2064,11 @@ section { position: relative; }
   .marquee__track span::after { font-size: 0.6rem; }
 
   /* VOICES ECHO */
-  .voices-echo { padding: clamp(3.5rem, 9vw, 5rem) 0; }
+  .voices-echo {
+    padding: clamp(3.5rem, 9vw, 5rem) 0;
+    background-image: url('a_VoiceEcho_Mobile.png');
+  }
   .voices-echo__head { margin-bottom: 2.75rem; }
-  .voices-echo__media { aspect-ratio: 3 / 4; margin-bottom: 2.5rem; }
   .voice-echo { padding: 1.85rem 1.4rem 1.6rem; }
   .voice-echo__text { font-size: 0.9rem; line-height: 1.95; }
   .voice-echo__author { flex-direction: column; gap: 0.35rem; align-items: flex-start; }
@@ -2549,12 +2549,6 @@ img { height: auto; }
         こういう<em>言葉</em>が返ってくる。
       </h2>
     </div>
-    <figure class="voices-echo__media reveal reveal-d1">
-      <picture>
-        <source media="(max-width: 768px)" srcset="a_VoiceEcho_Mobile.png">
-        <img src="a_VoiceEcho_Desktop.png" alt="花束を受け渡し合う男女の手元 — 室内の柔らかな光の中で" loading="lazy">
-      </picture>
-    </figure>
     <div class="voices-echo__grid">
       <div class="voice-echo reveal">
         <div class="voice-echo__mark">"</div>
