@@ -231,7 +231,138 @@ button, input, textarea { font-family: inherit; }
 .mobile-menu a { font-family: 'Shippori Mincho', serif; font-size: 1.05rem; color: var(--ink-soft); }
 .mobile-menu__cta { background: var(--gold); color: var(--paper); padding: 0.9rem 1.5rem; text-align:center; font-weight: 700; letter-spacing: 0.1em; }
 
-/* ============ HERO ============ */
+/* ============ HERO (FV / image-led) ============ */
+.hero-fv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.hero-fv__media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  line-height: 0;
+}
+.hero-fv__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-fv__copy { display: none; }
+.hero-fv__cta {
+  position: absolute;
+  bottom: clamp(2rem, 5vw, 3.5rem);
+  right: clamp(2rem, 5vw, 4rem);
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.8rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Shippori Mincho', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.hero-fv__cta:hover {
+  transform: translateY(-2px);
+  background: var(--gold);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.1);
+}
+.hero-fv__cta .arrow { transition: transform 0.3s ease; }
+.hero-fv__cta:hover .arrow { transform: translateX(4px); }
+.hero-fv__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  z-index: 4;
+}
+.hero-fv__scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(180deg, transparent, var(--ink-mute));
+}
+@media (max-width: 768px) {
+  .hero-fv__media img {
+    object-position: 70% center;
+  }
+  .hero-fv__copy {
+    display: block;
+    position: absolute;
+    inset: 0;
+    padding: calc(var(--nav-h) + 1.5rem) 1.4rem 1.5rem;
+    pointer-events: none;
+    color: var(--ink);
+    background: linear-gradient(180deg, rgba(245,239,230,0.85) 0%, rgba(245,239,230,0.55) 40%, rgba(245,239,230,0) 70%);
+  }
+  .hero-fv__logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    color: var(--ink);
+  }
+  .hero-fv__hl {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.6rem, 7.5vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.9rem;
+    color: var(--ink);
+  }
+  .hero-fv__sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+    color: var(--ink);
+  }
+  .hero-fv__sub em {
+    font-style: italic;
+    color: var(--ink);
+  }
+  .hero-fv__body {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 0.72rem;
+    line-height: 1.85;
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: 22em;
+  }
+  .hero-fv__cta {
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: 4.5rem;
+    justify-content: center;
+    padding: 1rem 1.4rem;
+    font-size: 0.9rem;
+  }
+  .hero-fv__scroll { bottom: 1rem; }
+}
+
+/* ============ HERO (legacy / kept for backward compatibility) ============ */
 .hero {
   min-height: 100svh;
   position: relative; overflow: hidden;
@@ -2287,48 +2418,32 @@ img { height: auto; }
   <a href="#cta" class="mobile-menu__cta" onclick="closeMobileMenu()">先行登録する →</a>
 </div>
 
-<!-- ============ HERO ============ -->
-<section id="top" class="hero">
-  <div class="hero__grain"></div>
-  <div class="hero__bg-mark">A</div>
-  <div class="hero__inner">
-    <div class="hero__copy">
-      <div>
-        <h1 class="hero-hl line-anim">
-          <span class="line"><span>忙しくても、</span></span>
-          <span class="line"><span>大切な人を</span></span>
-          <span class="line"><span><span class="accent">大切にできる</span>男でいる。</span></span>
-          <span class="line"><span><em>What matters,</em> on time.</span></span>
-        </h1>
-        <p class="hero-lede reveal reveal-d2">
-          結局のところ、<strong>大切にされている人は、定期的に想われている。</strong><br>
-          記念日だけじゃない。何気ない一日にも、<br>
-          ほんの少しの花と、一行のメッセージを。
-        </p>
-        <div class="hero__chips reveal reveal-d3">
-          <span class="hero__chip"><span class="hero__chip-mark">✦</span>手配の手間ゼロ</span>
-          <span class="hero__chip"><span class="hero__chip-mark">✦</span>贈り忘れゼロ</span>
-          <span class="hero__chip"><span class="hero__chip-mark">✦</span>メッセージカード込</span>
-          <span class="hero__chip"><span class="hero__chip-mark">✦</span>税込・送料込</span>
-        </div>
-        <div class="hero__cta-row reveal reveal-d4">
-          <a href="#cta" class="btn btn--primary">
-            <span>大切な人に花を届けるサービスを見る</span>
-            <span class="arrow">→</span>
-          </a>
-          <p class="hero__note">¥5,000〜 / 送料込み・回数縛りなし。<br>先着500名に初回特別ギフト。</p>
-        </div>
-      </div>
-    </div>
+<!-- ============ HERO (FV / image-led) ============ -->
+<section id="top" class="hero-fv">
+  <picture class="hero-fv__media">
+    <source media="(max-width: 768px)" srcset="a_FV_Mobile.png">
+    <img src="a_FV_Desktop.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager">
+  </picture>
 
-    <div class="hero__visual">
-      <div class="hero__visual-inner">
-        <img class="hero__visual-img" src="a_No_001.jpg" alt="スーツ姿の男性が花束とAltruのカードを手にする" loading="eager">
-      </div>
-    </div>
+  <!-- Mobile-only HTML text overlay (the desktop image has the copy baked in) -->
+  <div class="hero-fv__copy">
+    <div class="hero-fv__logo">Altru</div>
+    <h1 class="hero-fv__hl">
+      忙しくても、<br>大切な人を<br>大切にできる<br>男でいる。
+    </h1>
+    <p class="hero-fv__sub"><em>What matters,</em> on&nbsp;time.</p>
+    <p class="hero-fv__body">
+      結局のところ、大切にされている人は、定期的に想われている。記念日だけじゃない、何気ない一日にも。
+    </p>
   </div>
-  <div class="hero__scroll">
-    <span class="hero__scroll-line"></span>
+
+  <a href="#cta" class="hero-fv__cta">
+    <span class="hero-fv__cta-label">先行登録リストに加わる</span>
+    <span class="arrow">→</span>
+  </a>
+
+  <div class="hero-fv__scroll">
+    <span class="hero-fv__scroll-line"></span>
     <span>Scroll</span>
   </div>
 </section>
