@@ -885,6 +885,10 @@ button, input, textarea { font-family: inherit; }
   transition: opacity .8s, transform .8s;
 }
 .koan__line.in { opacity: 1; transform: none; }
+.koan__line-en { display: inline; }
+.koan__line-ja { display: inline; }
+.koan__line-en + .koan__line-ja::before { content: "\3000"; }
+.koan__br-mobile { display: none; }
 .koan__pivot {
   margin-top: 4rem; text-align: center;
   display: flex; flex-direction: column; align-items: center; gap: 2rem;
@@ -2020,7 +2024,19 @@ section { position: relative; }
 
   /* KOAN */
   .koan__head { margin-bottom: 2.5rem; }
-  .koan__line { line-height: 2.15; font-size: 0.95rem; }
+  .koan__line { line-height: 2.05; font-size: 0.95rem; margin-bottom: 1.8rem; }
+  .koan__line:last-child { margin-bottom: 0; }
+  .koan__line-en {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .koan__line-en + .koan__line-ja::before { content: none; }
+  .koan__line-ja { display: block; }
+  .koan__br-mobile { display: inline; }
+  .koan__line--summary { margin-top: 0.8rem; font-size: 0.95rem; }
   .koan__pivot { margin-top: 2.75rem; gap: 1.5rem; }
 
   /* STATS */
@@ -2511,10 +2527,22 @@ img { height: auto; }
       </h2>
     </div>
     <div class="koan__lines">
-      <p class="koan__line"><em class="f-display">"Time slips away."</em>　気づけば一週間が終わり、月が変わっている。</p>
-      <p class="koan__line"><em class="f-display">"Special occasions only."</em>　記念日にだけ、思い出したように花を買う。</p>
-      <p class="koan__line"><em class="f-display">"What should I choose?"</em>　花屋に入っても、何が彼女の好みかわからない。</p>
-      <p class="koan__line">「思っているのに、できていない」——<br>そんな小さな心残りが、いつのまにか積もっていく。</p>
+      <p class="koan__line">
+        <em class="f-display koan__line-en">"Time slips away."</em>
+        <span class="koan__line-ja">気づけば一週間が終わり、<br class="koan__br-mobile">月が変わっている。</span>
+      </p>
+      <p class="koan__line">
+        <em class="f-display koan__line-en">"Special occasions only."</em>
+        <span class="koan__line-ja">記念日にだけ、<br class="koan__br-mobile">思い出したように花を買う。</span>
+      </p>
+      <p class="koan__line">
+        <em class="f-display koan__line-en">"What should I choose?"</em>
+        <span class="koan__line-ja">花屋に入っても、<br class="koan__br-mobile">何が彼女の好みかわからない。</span>
+      </p>
+      <p class="koan__line koan__line--summary">
+        「思っているのに、できていない」——<br>
+        そんな小さな心残りが、<br class="koan__br-mobile">いつのまにか積もっていく。
+      </p>
     </div>
     <div class="koan__pivot reveal">
       <div class="hairline hairline--gold hairline--short"></div>
