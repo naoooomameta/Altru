@@ -913,9 +913,16 @@ button, input, textarea { font-family: inherit; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(244, 242, 236, 0.78);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background:
+    radial-gradient(
+      ellipse 70% 80% at 50% 50%,
+      rgba(244, 242, 236, 0.94) 0%,
+      rgba(244, 242, 236, 0.9) 40%,
+      rgba(244, 242, 236, 0.7) 80%,
+      rgba(244, 242, 236, 0.55) 100%
+    );
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 .koan::before {
