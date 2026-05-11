@@ -2291,6 +2291,14 @@ img { height: auto; }
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(1rem, 2vw, 1.75rem);
 }
+.delivery__grid--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.delivery__grid--single .delivery__img {
+  aspect-ratio: 4 / 5;
+}
 .delivery__item {
   display: flex;
   flex-direction: column;
@@ -2824,42 +2832,11 @@ img { height: auto; }
         一束ずつ仕立てたブーケを、メッセージカードと共に。
       </p>
     </div>
-    <div class="delivery__grid">
+    <div class="delivery__grid delivery__grid--single">
       <figure class="delivery__item reveal">
         <div class="delivery__img">
-          <img src="a_Spring.jpg" alt="春のお届け例：桜・チューリップ・ラナンキュラスを束ねた花束" loading="lazy">
+          <img src="a_Spring.jpg" alt="お届け例：季節の花材で仕立てたブーケ" loading="lazy">
         </div>
-        <figcaption class="delivery__caption">
-          <span class="delivery__num">i.</span>
-          <span class="delivery__label">Spring</span>
-        </figcaption>
-      </figure>
-      <figure class="delivery__item reveal reveal-d1">
-        <div class="delivery__img">
-          <img src="a_Summer.jpg" alt="夏のお届け例：ひまわり・トルコキキョウ・紫陽花の花束" loading="lazy">
-        </div>
-        <figcaption class="delivery__caption">
-          <span class="delivery__num">ii.</span>
-          <span class="delivery__label">Summer</span>
-        </figcaption>
-      </figure>
-      <figure class="delivery__item reveal reveal-d2">
-        <div class="delivery__img">
-          <img src="a_autumn.jpg" alt="秋のお届け例：ダリア・コスモス・実物を束ねた花束" loading="lazy">
-        </div>
-        <figcaption class="delivery__caption">
-          <span class="delivery__num">iii.</span>
-          <span class="delivery__label">Autumn</span>
-        </figcaption>
-      </figure>
-      <figure class="delivery__item reveal reveal-d3">
-        <div class="delivery__img">
-          <img src="a_winter.jpg" alt="冬のお届け例：アネモネ・ラナンキュラス・白椿の花束" loading="lazy">
-        </div>
-        <figcaption class="delivery__caption">
-          <span class="delivery__num">iv.</span>
-          <span class="delivery__label">Winter</span>
-        </figcaption>
       </figure>
     </div>
     <p class="delivery__foot reveal">
