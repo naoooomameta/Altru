@@ -925,9 +925,10 @@ button, input, textarea { font-family: inherit; }
   -webkit-backdrop-filter: blur(1.5px);
   z-index: -1;
 }
-.koan::before {
+.koan::after {
   content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
   width: 1px; height: 4rem; background: var(--gold);
+  z-index: 1;
 }
 .koan__head {
   text-align: center; margin-bottom: 4rem;
@@ -2099,6 +2100,7 @@ section { position: relative; }
   .voice-echo__author { flex-direction: column; gap: 0.35rem; align-items: flex-start; }
 
   /* KOAN */
+  .koan { background-image: url('a_Koan_Mobile.png'); }
   .koan__head { margin-bottom: 2.5rem; }
   .koan__line { line-height: 2.05; font-size: 0.95rem; margin-bottom: 1.8rem; }
   .koan__line:last-child { margin-bottom: 0; }
