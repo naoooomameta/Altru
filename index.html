@@ -332,7 +332,14 @@ button, input, textarea { font-family: inherit; }
     padding: calc(var(--nav-h) + 1.5rem) 1.4rem 1.5rem;
     pointer-events: none;
     color: var(--ink);
-    background: linear-gradient(180deg, rgba(245,239,230,0.85) 0%, rgba(245,239,230,0.55) 40%, rgba(245,239,230,0) 70%);
+    background: linear-gradient(
+      180deg,
+      rgba(244, 242, 236, 0.94) 0%,
+      rgba(244, 242, 236, 0.9) 40%,
+      rgba(244, 242, 236, 0.72) 62%,
+      rgba(244, 242, 236, 0.35) 78%,
+      rgba(244, 242, 236, 0) 92%
+    );
   }
   .hero-fv__logo {
     font-family: 'Cormorant Garamond', serif;
@@ -342,15 +349,17 @@ button, input, textarea { font-family: inherit; }
     line-height: 1;
     margin-bottom: 1.2rem;
     color: var(--ink);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45);
   }
   .hero-fv__hl {
     font-family: 'Shippori Mincho', serif;
     font-size: clamp(1.6rem, 7.5vw, 2.2rem);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.55;
     letter-spacing: 0.02em;
     margin: 0 0 0.9rem;
     color: var(--ink);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
   }
   .hero-fv__sub {
     font-family: 'Cormorant Garamond', serif;
@@ -358,6 +367,7 @@ button, input, textarea { font-family: inherit; }
     line-height: 1.4;
     margin: 0 0 1rem;
     color: var(--ink);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
   }
   .hero-fv__sub em {
     font-style: italic;
@@ -365,11 +375,13 @@ button, input, textarea { font-family: inherit; }
   }
   .hero-fv__body {
     font-family: 'Shippori Mincho', serif;
-    font-size: 0.72rem;
-    line-height: 1.85;
+    font-size: 0.78rem;
+    line-height: 1.9;
     margin: 0;
-    color: var(--ink-soft);
+    color: var(--ink);
     max-width: 22em;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
   }
   .hero-fv__cta {
     left: 1.4rem;
@@ -1477,6 +1489,21 @@ button, input, textarea { font-family: inherit; }
   padding: clamp(2rem, 3.5vw, 3rem);
   position: relative;
 }
+.price__media {
+  display: block;
+  margin: calc(clamp(2rem, 3.5vw, 3rem) * -1) calc(clamp(2rem, 3.5vw, 3rem) * -1) clamp(1.5rem, 3vw, 2rem);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-1);
+}
+.price__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s cubic-bezier(.16,1,.3,1);
+}
+.price__card:hover .price__media img { transform: scale(1.03); }
 .price__card--featured {
   border-color: var(--gold);
   box-shadow: 0 0 0 1px var(--gold), 0 8px 40px rgba(201,164,90,0.1);
@@ -2931,6 +2958,10 @@ img { height: auto; }
     <div class="price__panels">
       <div class="price__panel" id="plan-monthly">
         <div class="price__card">
+          <picture class="price__media">
+            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+          </picture>
           <div class="price__badge">— Monthly —</div>
           <h3 class="price__name">Altru Monthly</h3>
           <p class="price__tagline">想うを、毎月に。</p>
@@ -2954,6 +2985,10 @@ img { height: auto; }
       </div>
       <div class="price__panel" id="plan-seasonal">
         <div class="price__card">
+          <picture class="price__media">
+            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+          </picture>
           <div class="price__badge">— Seasonal —</div>
           <h3 class="price__name">Altru Seasonal</h3>
           <p class="price__tagline">季節を、届ける。</p>
@@ -2977,6 +3012,10 @@ img { height: auto; }
       </div>
       <div class="price__panel active" id="plan-halfyear">
         <div class="price__card price__card--featured">
+          <picture class="price__media">
+            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+          </picture>
           <div class="price__badge">— Half Year —</div>
           <h3 class="price__name">Altru Half Year</h3>
           <p class="price__tagline">想うを、届ける。</p>
@@ -3000,6 +3039,10 @@ img { height: auto; }
       </div>
       <div class="price__panel" id="plan-anniversary">
         <div class="price__card">
+          <picture class="price__media">
+            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+          </picture>
           <div class="price__badge">— Anniversary —</div>
           <h3 class="price__name">Altru Anniversary</h3>
           <p class="price__tagline">大切な日に、花を。</p>
