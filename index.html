@@ -2389,9 +2389,13 @@ img { height: auto; }
   grid-template-columns: minmax(0, 1fr);
   max-width: 640px;
   margin: 0 auto;
+  justify-items: center;
+}
+.delivery__grid--single .delivery__item {
+  width: 100%;
 }
 .delivery__grid--single .delivery__img {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
 }
 .delivery__item {
   display: flex;
@@ -2449,6 +2453,8 @@ img { height: auto; }
 @media (max-width: 768px) {
   .delivery { padding: clamp(3.5rem, 9vw, 5rem) 0; }
   .delivery__grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .delivery__grid--single { grid-template-columns: minmax(0, 1fr); max-width: none; }
+  .delivery__grid--single .delivery__img { aspect-ratio: 4 / 3; }
   .delivery__head { margin-bottom: 2.5rem; }
   .delivery__lead { font-size: 0.88rem; }
 }
