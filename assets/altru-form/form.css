@@ -367,9 +367,12 @@
 }
 .plan-card__price-annual {
   font-family: var(--af-serif-it);
-  font-size: 12px;
-  color: var(--af-paper-soft);
-  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--af-paper);
+  margin: 10px 0 4px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--af-paper-line);
 }
 .plan-card__price-day {
   font-family: var(--af-serif-it);
