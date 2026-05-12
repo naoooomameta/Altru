@@ -254,7 +254,7 @@ button, input, textarea { font-family: inherit; }
   display: block;
 }
 .hero-fv__copy { display: none; }
-.hero-fv__cta {
+.hero-fv__cta-group {
   position: absolute;
   bottom: clamp(4.5rem, 9vw, 7rem);
   left: 50%;
@@ -262,45 +262,47 @@ button, input, textarea { font-family: inherit; }
   z-index: 5;
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.4rem 2.6rem;
-  background: var(--gold);
-  color: var(--paper);
+  gap: 0.9rem;
+}
+.hero-fv__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.15rem 2.2rem;
   font-family: 'Shippori Mincho', serif;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-decoration: none;
   border-radius: 999px;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+.hero-fv__cta--primary {
+  background: var(--gold);
+  color: var(--paper);
   box-shadow: 0 14px 44px rgba(0,0,0,0.28), 0 4px 14px rgba(0,0,0,0.14);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  animation: heroFvCtaPulse 2.4s ease-in-out infinite;
+  border: 1px solid var(--gold);
 }
-.hero-fv__cta::before {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 999px;
-  border: 2px solid var(--gold);
-  opacity: 0.55;
-  animation: heroFvCtaRing 2.4s ease-out infinite;
-  pointer-events: none;
+.hero-fv__cta--primary:hover {
+  background: transparent;
+  color: var(--gold);
+  box-shadow: 0 18px 56px rgba(0,0,0,0.18), 0 6px 18px rgba(0,0,0,0.1);
 }
-.hero-fv__cta:hover {
-  background: var(--ink);
-  box-shadow: 0 18px 56px rgba(0,0,0,0.34), 0 6px 18px rgba(0,0,0,0.18);
-  animation-play-state: paused;
+.hero-fv__cta--secondary {
+  background: rgba(244, 242, 236, 0.88);
+  color: var(--ink);
+  border: 1px solid rgba(26, 22, 18, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.hero-fv__cta--secondary:hover {
+  background: rgba(244, 242, 236, 1);
+  border-color: var(--ink);
 }
 .hero-fv__cta .arrow { transition: transform 0.3s ease; }
-.hero-fv__cta:hover .arrow { transform: translateX(5px); }
-@keyframes heroFvCtaPulse {
-  0%, 100% { box-shadow: 0 14px 44px rgba(0,0,0,0.28), 0 4px 14px rgba(0,0,0,0.14); }
-  50% { box-shadow: 0 18px 60px rgba(184, 142, 75, 0.55), 0 6px 22px rgba(0,0,0,0.2); }
-}
-@keyframes heroFvCtaRing {
-  0% { transform: scale(1); opacity: 0.55; }
-  100% { transform: scale(1.28); opacity: 0; }
-}
+.hero-fv__cta:hover .arrow { transform: translateX(4px); }
 .hero-fv__scroll {
   position: absolute;
   bottom: 1.5rem;
@@ -383,14 +385,19 @@ button, input, textarea { font-family: inherit; }
     font-weight: 500;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
   }
-  .hero-fv__cta {
+  .hero-fv__cta-group {
     left: 1.4rem;
     right: 1.4rem;
     bottom: 4.5rem;
     transform: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  .hero-fv__cta {
     justify-content: center;
-    padding: 1.15rem 1.4rem;
-    font-size: 1rem;
+    padding: 1.1rem 1.4rem;
+    font-size: 0.95rem;
   }
   .hero-fv__scroll { bottom: 1rem; }
 }
@@ -2572,10 +2579,15 @@ img { height: auto; }
     </p>
   </div>
 
-  <a href="#cta" class="hero-fv__cta">
-    <span class="hero-fv__cta-label">先行登録する</span>
-    <span class="arrow">→</span>
-  </a>
+  <div class="hero-fv__cta-group">
+    <a href="#cta" class="hero-fv__cta hero-fv__cta--primary">
+      <span class="hero-fv__cta-label">先行登録する</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="#steps" class="hero-fv__cta hero-fv__cta--secondary">
+      <span class="hero-fv__cta-label">詳しく見る</span>
+    </a>
+  </div>
 
   <div class="hero-fv__scroll">
     <span class="hero-fv__scroll-line"></span>
