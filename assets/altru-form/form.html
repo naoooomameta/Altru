@@ -172,9 +172,6 @@
 
       </div>
 
-      <div class="panel__actions">
-        <button class="btn-primary" data-action="next-1" disabled>次へ：日付を設定する →</button>
-      </div>
       <p class="panel__footnote">— プランは次のステップでいつでも変更できます —</p>
     </div>
 
@@ -217,6 +214,18 @@
 
         <div class="field">
           <label class="field__label">
+            Recipient <span class="ja">贈る相手</span>
+          </label>
+          <div class="relations">
+            <button class="rel-btn" data-rel="妻">妻</button>
+            <button class="rel-btn" data-rel="パートナー">パートナー</button>
+            <button class="rel-btn" data-rel="母">母</button>
+            <button class="rel-btn" data-rel="その他">その他</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label">
             Occasion <span class="ja">この日は何の日ですか？</span>
           </label>
           <input type="text" class="field__input" id="afOccasion" placeholder="例: 結婚記念日 / 妻の誕生日 / 母の日">
@@ -227,18 +236,6 @@
             <button class="chip" data-occasion="母の日">母の日</button>
             <button class="chip" data-occasion="付き合った記念日">付き合った記念日</button>
             <button class="chip" data-occasion="プロポーズの日">プロポーズの日</button>
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="field__label">
-            Recipient <span class="ja">贈る相手</span>
-          </label>
-          <div class="relations">
-            <button class="rel-btn" data-rel="妻">妻</button>
-            <button class="rel-btn" data-rel="パートナー">パートナー</button>
-            <button class="rel-btn" data-rel="母">母</button>
-            <button class="rel-btn" data-rel="その他">その他</button>
           </div>
         </div>
 
