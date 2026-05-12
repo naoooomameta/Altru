@@ -63,6 +63,7 @@
     occasion: '',
     relation: null,
     currentPanel: 1,
+    schedule: [],
   };
 
   /* ─────────────────────────────────
@@ -181,6 +182,15 @@
      NAVIGATION BUTTONS
      ───────────────────────────────── */
   root.addEventListener('click', (e) => {
+    // スケジュール行の日付編集
+    const editBtn = e.target.closest('.schedule__edit-btn');
+    if (editBtn) {
+      const idx = parseInt(editBtn.dataset.rowIndex, 10);
+      const rowEl = editBtn.closest('.schedule__row');
+      if (rowEl) openRowEditor(idx, rowEl);
+      return;
+    }
+
     const action = e.target.dataset.action;
     if (!action) return;
 
@@ -340,6 +350,7 @@
   function renderResult() {
     const plan     = PLANS[state.plan];
     const schedule = calcSchedule(state.plan, state.anchorDate, state.occasion);
+    state.schedule = schedule;
 
     $('#afResultPlanName').textContent = plan.name;
 
@@ -423,18 +434,74 @@
   function makeRow(it, i) {
     const row = document.createElement('div');
     row.className = 'schedule__row' + (it.type === 'anchor' ? ' highlight' : '');
+    row.dataset.rowIndex = i;
     let tag = '';
     if (it.type === 'anchor')       tag = '<span class="schedule__tag anchor">Anchor</span>';
     else if (it.type === 'season')  tag = '<span class="schedule__tag season">Season</span>';
     else                            tag = '<span class="schedule__tag routine">Routine</span>';
+    // Anchor 以外は変更ボタンを付ける
+    const editBtn = it.type !== 'anchor'
+      ? '<button class="schedule__edit-btn" type="button" data-row-index="' + i + '">変更</button>'
+      : '';
     row.innerHTML =
       '<div class="schedule__num">' + String(i + 1).padStart(2, '0') + '</div>' +
       '<div>' +
-        '<div class="schedule__date">' + fmtDate(it.date) + '</div>' +
+        '<div class="schedule__date">' + fmtDate(it.date) + editBtn + '</div>' +
         '<div class="schedule__meta">' + it.label + ' <span class="sub">— ' + it.sub + '</span></div>' +
       '</div>' +
       '<div>' + tag + '</div>';
     return row;
+  }
+
+  /* ─────────────────────────────────
+     SCHEDULE ROW DATE EDIT
+     ───────────────────────────────── */
+  function openRowEditor(idx, rowEl) {
+    const it = state.schedule[idx];
+    if (!it || it.type === 'anchor') return;
+    const dateEl = rowEl.querySelector('.schedule__date');
+    const metaEl = rowEl.querySelector('.schedule__meta');
+    const current = it.date;
+    const ymd =
+      current.getFullYear() + '-' +
+      String(current.getMonth() + 1).padStart(2, '0') + '-' +
+      String(current.getDate()).padStart(2, '0');
+    const input = document.createElement('input');
+    input.type = 'date';
+    input.className = 'schedule__date-input';
+    input.value = ymd;
+    input.min = $('#afDate').min;
+    dateEl.innerHTML = '';
+    dateEl.appendChild(input);
+    try { input.focus(); } catch (_) {}
+
+    let committed = false;
+    const commit = () => {
+      if (committed) return;
+      committed = true;
+      if (input.value) {
+        const newDate = new Date(input.value);
+        if (!isNaN(newDate.getTime())) {
+          it.date = newDate;
+          // season 行は季節の花を、routine 行は月のラベルを再計算
+          if (it.type === 'season') {
+            it.sub = getSeason(newDate).flowers;
+            it.label = getSeason(newDate).name + 'のお届け';
+          } else if (it.type === 'routine') {
+            it.sub = getEverydayLabel(newDate.getMonth() + 1);
+          }
+        }
+      }
+      dateEl.innerHTML =
+        fmtDate(it.date) +
+        '<button class="schedule__edit-btn" type="button" data-row-index="' + idx + '">変更</button>';
+      if (metaEl) {
+        metaEl.innerHTML = it.label + ' <span class="sub">— ' + it.sub + '</span>';
+      }
+    };
+
+    input.addEventListener('change', commit);
+    input.addEventListener('blur', () => setTimeout(commit, 150));
   }
 
   function renderSeasonAccent() {
