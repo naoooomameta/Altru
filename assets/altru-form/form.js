@@ -128,7 +128,11 @@
     chip.addEventListener('click', () => {
       $$('.chip').forEach((c) => c.classList.remove('active'));
       chip.classList.add('active');
-      $('#afOccasion').value = chip.dataset.occasion;
+      $('#afOccasion').value = chip.dataset.occasion || '';
+      // 「その他」が選択された場合は自由入力できるようフォーカス
+      if (chip.dataset.other === 'true') {
+        try { $('#afOccasion').focus(); } catch (_) {}
+      }
       checkStep2();
     });
   });
@@ -439,17 +443,17 @@
     if (it.type === 'anchor')       tag = '<span class="schedule__tag anchor">Anchor</span>';
     else if (it.type === 'season')  tag = '<span class="schedule__tag season">Season</span>';
     else                            tag = '<span class="schedule__tag routine">Routine</span>';
-    // Anchor 以外は変更ボタンを付ける
+    // Anchor 以外は行の右側に変更ボタンを配置
     const editBtn = it.type !== 'anchor'
-      ? '<button class="schedule__edit-btn" type="button" data-row-index="' + i + '">変更</button>'
+      ? '<button class="schedule__edit-btn" type="button" data-row-index="' + i + '"><span class="schedule__edit-icon" aria-hidden="true">✎</span><span>日付を変更</span></button>'
       : '';
     row.innerHTML =
       '<div class="schedule__num">' + String(i + 1).padStart(2, '0') + '</div>' +
       '<div>' +
-        '<div class="schedule__date">' + fmtDate(it.date) + editBtn + '</div>' +
+        '<div class="schedule__date">' + fmtDate(it.date) + '</div>' +
         '<div class="schedule__meta">' + it.label + ' <span class="sub">— ' + it.sub + '</span></div>' +
       '</div>' +
-      '<div>' + tag + '</div>';
+      '<div class="schedule__row-right">' + editBtn + tag + '</div>';
     return row;
   }
 
@@ -492,9 +496,7 @@
           }
         }
       }
-      dateEl.innerHTML =
-        fmtDate(it.date) +
-        '<button class="schedule__edit-btn" type="button" data-row-index="' + idx + '">変更</button>';
+      dateEl.innerHTML = fmtDate(it.date);
       if (metaEl) {
         metaEl.innerHTML = it.label + ' <span class="sub">— ' + it.sub + '</span>';
       }
