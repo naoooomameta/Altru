@@ -1036,8 +1036,7 @@
   color: var(--af-paper);
   text-align: center;
 }
-.altru-form__panel[data-panel="4"] .bridge-pill,
-.altru-form__panel[data-panel="5"] .bridge-pill {
+.altru-form__panel[data-panel="4"] .bridge-pill {
   display: block;
   max-width: fit-content;
   margin: 0 auto 2.5rem;

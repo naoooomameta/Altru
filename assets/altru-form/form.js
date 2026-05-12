@@ -14,8 +14,7 @@
    発火イベント (window.dataLayer がある場合):
      - altru_form_plan_selected   { plan }
      - altru_form_schedule_shown  { plan, date, occasion, relation }
-     - altru_form_email_submitted { plan, date, occasion, relation, email }
-     - altru_form_line_clicked    { plan, date, occasion, relation, email }
+     - altru_form_line_clicked    { plan, date, occasion, relation }
    ════════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -63,7 +62,6 @@
     anchorDate: null,
     occasion: '',
     relation: null,
-    email: '',
     currentPanel: 1,
   };
 
@@ -215,22 +213,10 @@
         $('#afDataRelation').value = state.relation;
         renderBridgePill();
         goToPanel(4);
-        // メアド欄にフォーカス
-        setTimeout(() => {
-          try { $('#afEmail').focus({ preventScroll: true }); } catch (_) {}
-        }, 400);
         break;
 
       case 'back-4':
         goToPanel(3);
-        break;
-
-      case 'next-4':
-        handleEmailSubmit();
-        break;
-
-      case 'back-5':
-        goToPanel(4);
         break;
 
       case 'line-add':
@@ -252,24 +238,13 @@
   });
 
   /* ─────────────────────────────────
-     EMAIL SUBMIT
+     LINE ADD
      ───────────────────────────────── */
-  function handleEmailSubmit() {
-    const email = $('#afEmail').value.trim();
-    const errEl = $('#afEmailError');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errEl.style.display = 'flex';
-      return;
-    }
-    errEl.style.display = 'none';
-    state.email = email;
-    $('#afDataEmail').value = email;
-    $('#afEmailEcho').textContent = email;
-
+  function handleLineAdd() {
     // localStorage 保存（LIFFアプリ等の後続処理用）
     saveToStorage();
 
-    // Webhook 送信（設定されていれば）
+    // Webhook 送信（設定されていれば）— LINE クリック時に診断データを送る
     if (WEBHOOK_URL) {
       try {
         fetch(WEBHOOK_URL, {
@@ -281,15 +256,6 @@
       } catch (_) {}
     }
 
-    pushEvent('altru_form_email_submitted', getData());
-    renderBridgePill();
-    goToPanel(5);
-  }
-
-  /* ─────────────────────────────────
-     LINE ADD
-     ───────────────────────────────── */
-  function handleLineAdd() {
     pushEvent('altru_form_line_clicked', getData());
 
     // 別タブで LINE 友だち追加を開く
@@ -297,7 +263,7 @@
 
     // 完了画面へ
     renderBridgePill();
-    setTimeout(() => goToPanel(6), 600);
+    setTimeout(() => goToPanel(5), 600);
   }
 
   /* ─────────────────────────────────
@@ -570,7 +536,7 @@
       '<b>' + state.relation + '</b>へ<span class="sep">|</span>' +
       '<b>' + anchorStr + ' ' + state.occasion + '</b> 起点';
 
-    const targets = ['#afBridgePill', '#afBridgePill2', '#afBridgePillFinal'];
+    const targets = ['#afBridgePill', '#afBridgePillFinal'];
     targets.forEach((id) => {
       const el = root.querySelector(id);
       if (el) el.innerHTML = html;
@@ -586,7 +552,6 @@
       date:     state.anchorDate,
       occasion: state.occasion,
       relation: state.relation,
-      email:    state.email,
     };
   }
 
@@ -611,13 +576,12 @@
     getData: getData,
     reset: function () {
       state.plan = null; state.anchorDate = null; state.occasion = '';
-      state.relation = null; state.email = '';
+      state.relation = null;
       $$('.plan-card').forEach((c) => c.classList.remove('selected'));
       $$('.chip').forEach((c) => c.classList.remove('active'));
       $$('.rel-btn').forEach((b) => b.classList.remove('active'));
       $('#afDate').value = '';
       $('#afOccasion').value = '';
-      $('#afEmail').value = '';
       $('[data-action="next-2"]').disabled = true;
       goToPanel(1);
     },
