@@ -783,28 +783,42 @@
   font-size: 15px;
   color: var(--af-paper);
   margin-bottom: 2px;
+}
+.schedule__row-right {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
 }
 .schedule__edit-btn {
-  background: transparent;
-  border: 1px solid var(--af-paper-line);
-  color: var(--af-paper-mute);
-  font-family: var(--af-serif-it);
-  font-style: italic;
-  font-size: 10px;
-  letter-spacing: .15em;
-  padding: 3px 10px;
-  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(236, 230, 217, .08);
+  border: 1px solid rgba(236, 230, 217, .45);
+  color: var(--af-paper);
+  font-family: var(--af-serif);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  padding: 6px 14px;
   cursor: pointer;
   transition: all .25s;
-  border-radius: 12px;
+  border-radius: 14px;
+  white-space: nowrap;
 }
 .schedule__edit-btn:hover {
+  background: var(--af-paper);
+  color: var(--af-ink);
   border-color: var(--af-paper);
-  color: var(--af-paper);
+}
+.schedule__edit-icon {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1;
+}
+@media (max-width: 520px) {
+  .schedule__edit-btn { font-size: 11px; padding: 5px 11px; }
 }
 .schedule__date-input {
   background: transparent;
