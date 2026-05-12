@@ -874,23 +874,23 @@
 .schedule__note {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
   padding: 14px 4px 6px;
   font-family: var(--af-serif);
-  font-size: 11.5px;
-  color: var(--af-paper-mute);
-  line-height: 1.75;
+  font-size: 13px;
+  color: var(--af-paper-soft);
+  line-height: 1.85;
   border-top: 1px dashed var(--af-paper-line-soft);
   margin-top: 8px;
 }
 .schedule__note .note-mark {
-  color: rgba(236, 230, 217, .5);
-  font-size: 10px;
-  margin-top: 3px;
+  color: var(--af-paper-soft);
+  font-size: 11px;
+  margin-top: 4px;
   flex-shrink: 0;
 }
 .schedule__note b {
-  color: rgba(236, 230, 217, .85);
+  color: var(--af-paper);
   font-weight: 500;
 }
 
