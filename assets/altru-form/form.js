@@ -172,9 +172,9 @@
   });
 
   function checkStep2() {
-    const date     = $('#afDate').value;
-    const occasion = $('#afOccasion').value.trim();
-    $('[data-action="next-2"]').disabled = !(date && occasion && state.relation);
+    // Occasion は任意項目 — Date と Recipient が揃えば次へ進める
+    const date = $('#afDate').value;
+    $('[data-action="next-2"]').disabled = !(date && state.relation);
   }
 
   /* ─────────────────────────────────
@@ -302,11 +302,12 @@
 
   function calcSchedule(plan, dateStr, occasion) {
     const first = calcAnchorDelivery(new Date(dateStr), occasion);
+    const anchorLabel = occasion || '大切な日';
     const arr = [];
     if (plan === 'anniversary') {
-      arr.push({ date: first, label: occasion, sub: 'プレミアムブーケ', type: 'anchor' });
+      arr.push({ date: first, label: anchorLabel, sub: 'プレミアムブーケ', type: 'anchor' });
     } else if (plan === 'halfyear') {
-      arr.push({ date: first, label: occasion, sub: '記念日のお届け', type: 'anchor' });
+      arr.push({ date: first, label: anchorLabel, sub: '記念日のお届け', type: 'anchor' });
       const second = offsetMonths(first, 6);
       arr.push({ date: second, label: '何でもない日に', sub: getEverydayLabel(second.getMonth() + 1), type: 'routine' });
     } else if (plan === 'seasonal') {
@@ -315,7 +316,7 @@
         const s = getSeason(d);
         arr.push({
           date: d,
-          label: i === 0 ? occasion : s.name + 'のお届け',
+          label: i === 0 ? anchorLabel : s.name + 'のお届け',
           sub:   i === 0 ? '記念日のお届け' : s.flowers,
           type:  i === 0 ? 'anchor' : 'season',
         });
@@ -326,7 +327,7 @@
         const s = getSeason(d);
         arr.push({
           date: d,
-          label: i === 0 ? occasion : getEverydayLabel(d.getMonth() + 1),
+          label: i === 0 ? anchorLabel : getEverydayLabel(d.getMonth() + 1),
           sub:   i === 0 ? '記念日のお届け（特別仕様）' : s.flowers,
           type:  i === 0 ? 'anchor' : 'routine',
         });
@@ -355,9 +356,10 @@
     $('#afResultPlanName').textContent = plan.name;
 
     const anchor = new Date(state.anchorDate);
+    const occasionLabel = state.occasion || '大切な日';
     $('#afResultContext').innerHTML =
       'Anchor Date: <b>' + anchor.getFullYear() + '年' + (anchor.getMonth() + 1) + '月' +
-      anchor.getDate() + '日 — ' + state.occasion + '</b>（' + state.relation + '）<br>' +
+      anchor.getDate() + '日 — ' + occasionLabel + '</b>（' + state.relation + '）<br>' +
       'この日を起点に、Altruが ' + plan.count + '回 のお届けを設計しました。';
 
     $('#afPhilosophyText').innerHTML  = plan.philosophy;
@@ -531,10 +533,11 @@
     const plan = PLANS[state.plan];
     const anchor = new Date(state.anchorDate);
     const anchorStr = (anchor.getMonth() + 1) + '/' + anchor.getDate();
+    const occasionLabel = state.occasion ? ' ' + state.occasion : '';
     const html =
       '<b>' + plan.name + '</b><span class="sep">|</span>' +
       '<b>' + state.relation + '</b>へ<span class="sep">|</span>' +
-      '<b>' + anchorStr + ' ' + state.occasion + '</b> 起点';
+      '<b>' + anchorStr + occasionLabel + '</b> 起点';
 
     const targets = ['#afBridgePill', '#afBridgePillFinal'];
     targets.forEach((id) => {
