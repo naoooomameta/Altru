@@ -381,30 +381,6 @@
   color: var(--af-paper-faint);
   margin-bottom: 16px;
 }
-.plan-card__scores {
-  margin-bottom: 14px;
-  padding: 12px 0;
-  border-top: 1px dashed var(--af-paper-line);
-  border-bottom: 1px dashed var(--af-paper-line);
-}
-.score-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--af-serif-it);
-  font-size: 11px;
-  color: var(--af-paper-soft);
-  margin-bottom: 6px;
-}
-.score-row:last-child { margin-bottom: 0; }
-.score-row .score-stars {
-  color: var(--af-paper);
-  letter-spacing: 1.5px;
-  font-size: 9px;
-}
-.score-row .score-stars .dim {
-  color: rgba(236, 230, 217, .22);
-}
 .plan-card__features {
   list-style: none;
   padding: 0;
