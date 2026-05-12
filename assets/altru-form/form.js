@@ -454,6 +454,15 @@
     note.innerHTML =
       '<span class="note-mark">✦</span> 鮮度を保つため、各お届けは記念日の<b>1〜2日前</b>に到着するよう設計しています。お申込みから<b>最短2日後</b>からの配送に対応しています。';
     wrap.appendChild(note);
+
+    // 2回目以降の変更可否の案内（複数回お届けプランのみ）
+    if (sched.length > 1) {
+      const flexNote = document.createElement('div');
+      flexNote.className = 'schedule__note';
+      flexNote.innerHTML =
+        '<span class="note-mark">✦</span> <b>2回目以降のお届け</b>は、配送日の<b>2日前</b>までであれば花の内容やお届け日を自由に変更できます。気分や予定に合わせて、後から調整可能です。';
+      wrap.appendChild(flexNote);
+    }
   }
 
   function makeRow(it, i) {
@@ -520,31 +529,25 @@
 
     let suggestions = [];
     if (state.plan === 'monthly') {
-      titleEl.textContent = 'もう少し"特別感"を残すなら';
-      subEl.textContent = '毎月のお届けは関係を温め続ける一方で、"日常化"してしまうリスクもあります。Half Yearなら：';
+      titleEl.textContent = '他のリズムも参考までに';
+      subEl.textContent = '毎月のお届け、素敵な選択です。もし気になれば、半年に一度のリズムもこんな感じです：';
       suggestions = [
-        '1回あたり <b>¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '</b> に。より<b>"記念日仕様"の特別な束</b>として格上げできます',
-        '年間 <b>¥' + (plan.annual - hy.annual).toLocaleString() + 'の節約</b>。浮いた予算で食事や旅行にも回せます',
-        '"半年に一度"は、受取側の<b>記憶に最も残りやすい頻度</b>と言われています',
-        '日常化させず、<b>"特別な体験"</b>として残すリズム',
+        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
+        '頻度はゆっくりめ。"特別な日に届く" 感覚が残るリズムです',
       ];
     } else if (state.plan === 'seasonal') {
-      titleEl.textContent = 'よりシンプルに、確実に届けるなら';
-      subEl.textContent = '年4回も素敵ですが、Half Yearは"記念日中心"の最もシャープな設計です：';
+      titleEl.textContent = '他のリズムも参考までに';
+      subEl.textContent = '四季を届けるリズム、素敵な選択です。半年に一度のリズムも参考までに：';
       suggestions = [
-        '1回あたり <b>¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '</b> に。<b>より上質なブーケ</b>が届きます',
-        '年間 <b>¥' + (plan.annual - hy.annual).toLocaleString() + 'の節約</b>になります',
-        '<b>年2回</b>は、最も多くの方が選ぶバランス（<b>78%</b>）です',
-        '贈り忘れもなく、相手の負担にもならない<b>"ちょうどいい"</b>頻度',
+        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
+        '記念日を起点に組み立てるので、"大切な日に届く" 設計になります',
       ];
     } else if (state.plan === 'anniversary') {
-      titleEl.textContent = '記念日 "プラス1回" で、印象が変わります';
-      subEl.textContent = '年1回も素晴らしい選択。ただ、Half Yearの "+1回" が驚くほど印象を変えます：';
+      titleEl.textContent = '他のリズムも参考までに';
+      subEl.textContent = '年に一度の記念日、素敵な選択です。もし "+1回" 増やすなら、半年後にこんなお届けもあります：';
       suggestions = [
-        '年1回だけだと、<b>"記念日だから贈ってくれた"</b>として受け取られがちです',
-        '<b>"何でもない日"の半年後のお届け</b>を加えることで、<b>"日常的に想ってくれている"</b>という印象に変わります',
-        '年間 <b>+¥' + (hy.annual - plan.annual).toLocaleString() + '</b>（月割約 ¥333）の追加投資で、印象は劇的に変わります',
-        '1回あたりは <b>¥' + hy.per.toLocaleString() + '</b>。記念日のクオリティは保ったまま、もう一度想いを届けられます',
+        '記念日のクオリティはそのまま、半年後に "何でもない日" のお届けが加わります',
+        '1回あたりは ¥' + hy.per.toLocaleString() + '。記念日仕様は維持したまま、もう一度想いを届けられます',
       ];
     }
     suggestions.forEach((s) => {
