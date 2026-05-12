@@ -3159,6 +3159,22 @@ img { height: auto; }
 <!-- ============ CTA ============ -->
 <section id="cta" class="section cta-section inv">
 
+  <!-- Mobile-only: redirect to dedicated signup page -->
+  <div class="cta-mobile-redirect">
+    <div class="cta-mobile-redirect__inner">
+      <p class="cta-mobile-redirect__eyebrow">— Start your story</p>
+      <h2 class="cta-mobile-redirect__title">
+        あなたの想いを、<br><em>仕組みに変える。</em>
+      </h2>
+      <p class="cta-mobile-redirect__lede">
+        先行登録は専用ページからお進みください。<br>
+        プラン選択 → 大切な日 → スケジュール → メール・LINE登録。
+      </p>
+      <a href="signup.html" class="cta-mobile-redirect__btn">先行登録ページへ →</a>
+      <p class="cta-mobile-redirect__fine">© 2026 Altru. All Rights Reserved.</p>
+    </div>
+  </div>
+
   <!-- ════════════════════════════════════════════════════════════════
        Altru — Plan Selector & Schedule Recommender + 先行登録フォーム
        (assets/altru-form/form.html を展開)
@@ -3695,6 +3711,15 @@ const sObs = new IntersectionObserver((es)=>{
 sObs.observe(heroSection); sObs.observe(ctaSection);
 
 /* CTA FORM — assets/altru-form/form.js に統合済み */
+
+/* MOBILE — 全 #cta リンクを signup.html に振り替え（モバイルは別ページで先行登録） */
+if (window.matchMedia('(max-width: 768px)').matches) {
+  document.querySelectorAll('a[href="#cta"]').forEach((a) => { a.href = 'signup.html'; });
+  const stickyBtn = document.querySelector('.sticky-cta__btn');
+  if (stickyBtn) {
+    stickyBtn.setAttribute('onclick', "window.location.href='signup.html'");
+  }
+}
 
 /* PARALLAX hero bg mark */
 const bgMark = document.querySelector('.hero__bg-mark');
