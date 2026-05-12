@@ -14,8 +14,7 @@
    発火イベント (window.dataLayer がある場合):
      - altru_form_plan_selected   { plan }
      - altru_form_schedule_shown  { plan, date, occasion, relation }
-     - altru_form_email_submitted { plan, date, occasion, relation, email }
-     - altru_form_line_clicked    { plan, date, occasion, relation, email }
+     - altru_form_line_clicked    { plan, date, occasion, relation }
    ════════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -63,7 +62,6 @@
     anchorDate: null,
     occasion: '',
     relation: null,
-    email: '',
     currentPanel: 1,
   };
 
@@ -174,9 +172,9 @@
   });
 
   function checkStep2() {
-    const date     = $('#afDate').value;
-    const occasion = $('#afOccasion').value.trim();
-    $('[data-action="next-2"]').disabled = !(date && occasion && state.relation);
+    // Occasion は任意項目 — Date と Recipient が揃えば次へ進める
+    const date = $('#afDate').value;
+    $('[data-action="next-2"]').disabled = !(date && state.relation);
   }
 
   /* ─────────────────────────────────
@@ -215,61 +213,26 @@
         $('#afDataRelation').value = state.relation;
         renderBridgePill();
         goToPanel(4);
-        // メアド欄にフォーカス
-        setTimeout(() => {
-          try { $('#afEmail').focus({ preventScroll: true }); } catch (_) {}
-        }, 400);
         break;
 
       case 'back-4':
         goToPanel(3);
         break;
 
-      case 'next-4':
-        handleEmailSubmit();
-        break;
-
-      case 'back-5':
-        goToPanel(4);
-        break;
-
       case 'line-add':
         handleLineAdd();
-        break;
-
-      case 'switch-halfyear':
-        state.plan = 'halfyear';
-        $$('.plan-card').forEach((c) => c.classList.remove('selected'));
-        root.querySelector('[data-plan="halfyear"]').classList.add('selected');
-        renderResult();
-        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        break;
-
-      case 'keep-current':
-        $('#afAltSuggest').style.display = 'none';
         break;
     }
   });
 
   /* ─────────────────────────────────
-     EMAIL SUBMIT
+     LINE ADD
      ───────────────────────────────── */
-  function handleEmailSubmit() {
-    const email = $('#afEmail').value.trim();
-    const errEl = $('#afEmailError');
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errEl.style.display = 'flex';
-      return;
-    }
-    errEl.style.display = 'none';
-    state.email = email;
-    $('#afDataEmail').value = email;
-    $('#afEmailEcho').textContent = email;
-
+  function handleLineAdd() {
     // localStorage 保存（LIFFアプリ等の後続処理用）
     saveToStorage();
 
-    // Webhook 送信（設定されていれば）
+    // Webhook 送信（設定されていれば）— LINE クリック時に診断データを送る
     if (WEBHOOK_URL) {
       try {
         fetch(WEBHOOK_URL, {
@@ -281,15 +244,6 @@
       } catch (_) {}
     }
 
-    pushEvent('altru_form_email_submitted', getData());
-    renderBridgePill();
-    goToPanel(5);
-  }
-
-  /* ─────────────────────────────────
-     LINE ADD
-     ───────────────────────────────── */
-  function handleLineAdd() {
     pushEvent('altru_form_line_clicked', getData());
 
     // 別タブで LINE 友だち追加を開く
@@ -297,7 +251,7 @@
 
     // 完了画面へ
     renderBridgePill();
-    setTimeout(() => goToPanel(6), 600);
+    setTimeout(() => goToPanel(5), 600);
   }
 
   /* ─────────────────────────────────
@@ -336,11 +290,12 @@
 
   function calcSchedule(plan, dateStr, occasion) {
     const first = calcAnchorDelivery(new Date(dateStr), occasion);
+    const anchorLabel = occasion || '大切な日';
     const arr = [];
     if (plan === 'anniversary') {
-      arr.push({ date: first, label: occasion, sub: 'プレミアムブーケ', type: 'anchor' });
+      arr.push({ date: first, label: anchorLabel, sub: 'プレミアムブーケ', type: 'anchor' });
     } else if (plan === 'halfyear') {
-      arr.push({ date: first, label: occasion, sub: '記念日のお届け', type: 'anchor' });
+      arr.push({ date: first, label: anchorLabel, sub: '記念日のお届け', type: 'anchor' });
       const second = offsetMonths(first, 6);
       arr.push({ date: second, label: '何でもない日に', sub: getEverydayLabel(second.getMonth() + 1), type: 'routine' });
     } else if (plan === 'seasonal') {
@@ -349,7 +304,7 @@
         const s = getSeason(d);
         arr.push({
           date: d,
-          label: i === 0 ? occasion : s.name + 'のお届け',
+          label: i === 0 ? anchorLabel : s.name + 'のお届け',
           sub:   i === 0 ? '記念日のお届け' : s.flowers,
           type:  i === 0 ? 'anchor' : 'season',
         });
@@ -360,7 +315,7 @@
         const s = getSeason(d);
         arr.push({
           date: d,
-          label: i === 0 ? occasion : getEverydayLabel(d.getMonth() + 1),
+          label: i === 0 ? anchorLabel : getEverydayLabel(d.getMonth() + 1),
           sub:   i === 0 ? '記念日のお届け（特別仕様）' : s.flowers,
           type:  i === 0 ? 'anchor' : 'routine',
         });
@@ -389,9 +344,10 @@
     $('#afResultPlanName').textContent = plan.name;
 
     const anchor = new Date(state.anchorDate);
+    const occasionLabel = state.occasion || '大切な日';
     $('#afResultContext').innerHTML =
       'Anchor Date: <b>' + anchor.getFullYear() + '年' + (anchor.getMonth() + 1) + '月' +
-      anchor.getDate() + '日 — ' + state.occasion + '</b>（' + state.relation + '）<br>' +
+      anchor.getDate() + '日 — ' + occasionLabel + '</b>（' + state.relation + '）<br>' +
       'この日を起点に、Altruが ' + plan.count + '回 のお届けを設計しました。';
 
     $('#afPhilosophyText').innerHTML  = plan.philosophy;
@@ -402,7 +358,6 @@
 
     renderTimeline(schedule);
     renderSeasonAccent();
-    renderAlt(plan);
   }
 
   function renderTimeline(sched) {
@@ -499,63 +454,6 @@
     }
   }
 
-  function renderAlt(plan) {
-    const alt     = $('#afAltSuggest');
-    const titleEl = $('#afAltTitle');
-    const subEl   = $('#afAltSub');
-    const listEl  = $('#afAltList');
-    const compEl  = $('#afAltComp');
-
-    if (state.plan === 'halfyear') {
-      alt.style.display = 'none';
-      return;
-    }
-    alt.style.display = 'block';
-    listEl.innerHTML  = '';
-    const hy = PLANS.halfyear;
-
-    compEl.innerHTML =
-      '<div class="comp-side">' +
-        '<div class="lbl">現在の選択</div>' +
-        '<div class="name">' + plan.name + '</div>' +
-        '<div class="price">年間 ¥' + plan.annual.toLocaleString() + '</div>' +
-      '</div>' +
-      '<div class="arrow">→</div>' +
-      '<div class="comp-side target">' +
-        '<div class="lbl">提案</div>' +
-        '<div class="name">Altru Half Year</div>' +
-        '<div class="price">年間 ¥' + hy.annual.toLocaleString() + '</div>' +
-      '</div>';
-
-    let suggestions = [];
-    if (state.plan === 'monthly') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '毎月のお届け、素敵な選択です。もし気になれば、半年に一度のリズムもこんな感じです：';
-      suggestions = [
-        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
-        '頻度はゆっくりめ。"特別な日に届く" 感覚が残るリズムです',
-      ];
-    } else if (state.plan === 'seasonal') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '四季を届けるリズム、素敵な選択です。半年に一度のリズムも参考までに：';
-      suggestions = [
-        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
-        '記念日を起点に組み立てるので、"大切な日に届く" 設計になります',
-      ];
-    } else if (state.plan === 'anniversary') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '年に一度の記念日、素敵な選択です。もし "+1回" 増やすなら、半年後にこんなお届けもあります：';
-      suggestions = [
-        '記念日のクオリティはそのまま、半年後に "何でもない日" のお届けが加わります',
-        '1回あたりは ¥' + hy.per.toLocaleString() + '。記念日仕様は維持したまま、もう一度想いを届けられます',
-      ];
-    }
-    suggestions.forEach((s) => {
-      const li = document.createElement('li');
-      li.innerHTML = s;
-      listEl.appendChild(li);
-    });
-  }
 
   /* ─────────────────────────────────
      BRIDGE PILL (診断結果の要約)
@@ -565,12 +463,13 @@
     const plan = PLANS[state.plan];
     const anchor = new Date(state.anchorDate);
     const anchorStr = (anchor.getMonth() + 1) + '/' + anchor.getDate();
+    const occasionLabel = state.occasion ? ' ' + state.occasion : '';
     const html =
       '<b>' + plan.name + '</b><span class="sep">|</span>' +
       '<b>' + state.relation + '</b>へ<span class="sep">|</span>' +
-      '<b>' + anchorStr + ' ' + state.occasion + '</b> 起点';
+      '<b>' + anchorStr + occasionLabel + '</b> 起点';
 
-    const targets = ['#afBridgePill', '#afBridgePill2', '#afBridgePillFinal'];
+    const targets = ['#afBridgePill', '#afBridgePillFinal'];
     targets.forEach((id) => {
       const el = root.querySelector(id);
       if (el) el.innerHTML = html;
@@ -586,7 +485,6 @@
       date:     state.anchorDate,
       occasion: state.occasion,
       relation: state.relation,
-      email:    state.email,
     };
   }
 
@@ -611,13 +509,12 @@
     getData: getData,
     reset: function () {
       state.plan = null; state.anchorDate = null; state.occasion = '';
-      state.relation = null; state.email = '';
+      state.relation = null;
       $$('.plan-card').forEach((c) => c.classList.remove('selected'));
       $$('.chip').forEach((c) => c.classList.remove('active'));
       $$('.rel-btn').forEach((b) => b.classList.remove('active'));
       $('#afDate').value = '';
       $('#afOccasion').value = '';
-      $('#afEmail').value = '';
       $('[data-action="next-2"]').disabled = true;
       goToPanel(1);
     },
