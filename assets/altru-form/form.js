@@ -418,7 +418,7 @@
     const note = document.createElement('div');
     note.className = 'schedule__note';
     note.innerHTML =
-      '<span class="note-mark">✦</span> 鮮度を保つため、各お届けは記念日の<b>1〜2日前</b>に到着するよう設計しています。お申込みから<b>最短2日後</b>からの配送に対応しています。';
+      '<span class="note-mark">✦</span><span>鮮度を保つため、各お届けは記念日の<b>1〜2日前</b>に到着するよう設計しています。お申込みから<b>最短2日後</b>からの配送に対応しています。</span>';
     wrap.appendChild(note);
 
     // 2回目以降の変更可否の案内（複数回お届けプランのみ）
@@ -426,7 +426,7 @@
       const flexNote = document.createElement('div');
       flexNote.className = 'schedule__note';
       flexNote.innerHTML =
-        '<span class="note-mark">✦</span> <b>2回目以降のお届け</b>は、配送日の<b>2日前</b>までであれば花の内容やお届け日を自由に変更できます。気分や予定に合わせて、後から調整可能です。';
+        '<span class="note-mark">✦</span><span><b>2回目以降のお届け</b>は、配送日の<b>2日前</b>までであれば花の内容やお届け日を自由に変更できます。気分や予定に合わせて、後から調整可能です。</span>';
       wrap.appendChild(flexNote);
     }
   }
