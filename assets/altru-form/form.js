@@ -113,8 +113,12 @@
       $$('.plan-card').forEach((c) => c.classList.remove('selected'));
       card.classList.add('selected');
       state.plan = card.dataset.plan;
-      $('[data-action="next-1"]').disabled = false;
       pushEvent('altru_form_plan_selected', { plan: state.plan });
+
+      // 選択した瞬間に次パネルへ遷移（350ms は選択フィードバックを見せるための遅延）
+      $('#afStripName').textContent  = PLANS[state.plan].name;
+      $('#afStripPrice').textContent = '¥' + PLANS[state.plan].per.toLocaleString() + ' / 回';
+      setTimeout(() => goToPanel(2), 350);
     });
   });
 
@@ -183,12 +187,6 @@
     if (!action) return;
 
     switch (action) {
-      case 'next-1':
-        $('#afStripName').textContent  = PLANS[state.plan].name;
-        $('#afStripPrice').textContent = '¥' + PLANS[state.plan].per.toLocaleString() + ' / 回';
-        goToPanel(2);
-        break;
-
       case 'change-plan':
       case 'back-2':
         goToPanel(1);
@@ -617,7 +615,6 @@
       $('#afDate').value = '';
       $('#afOccasion').value = '';
       $('#afEmail').value = '';
-      $('[data-action="next-1"]').disabled = true;
       $('[data-action="next-2"]').disabled = true;
       goToPanel(1);
     },
