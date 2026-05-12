@@ -23,8 +23,7 @@
   /* ─────────────────────────────────
      ⚙ CONFIG — 必ず本番のURLに差し替え
      ───────────────────────────────── */
-  // TODO: 本番LINE友だち追加URLに書き換えること
-  const LINE_ADD_URL = 'https://lin.ee/YOUR_LINE_ID'; // ← LINE公式アカウント友だち追加URL
+  const LINE_ADD_URL = 'https://lin.ee/ryyxpoq'; // LINE公式アカウント友だち追加URL
   const WEBHOOK_URL  = '';                              // ← メアドPOST先（空ならスキップ）
   const STORAGE_KEY  = 'altru_form_data';               // localStorage キー
 
