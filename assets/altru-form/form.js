@@ -222,18 +222,6 @@
       case 'line-add':
         handleLineAdd();
         break;
-
-      case 'switch-halfyear':
-        state.plan = 'halfyear';
-        $$('.plan-card').forEach((c) => c.classList.remove('selected'));
-        root.querySelector('[data-plan="halfyear"]').classList.add('selected');
-        renderResult();
-        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        break;
-
-      case 'keep-current':
-        $('#afAltSuggest').style.display = 'none';
-        break;
     }
   });
 
@@ -370,7 +358,6 @@
 
     renderTimeline(schedule);
     renderSeasonAccent();
-    renderAlt(plan);
   }
 
   function renderTimeline(sched) {
@@ -467,63 +454,6 @@
     }
   }
 
-  function renderAlt(plan) {
-    const alt     = $('#afAltSuggest');
-    const titleEl = $('#afAltTitle');
-    const subEl   = $('#afAltSub');
-    const listEl  = $('#afAltList');
-    const compEl  = $('#afAltComp');
-
-    if (state.plan === 'halfyear') {
-      alt.style.display = 'none';
-      return;
-    }
-    alt.style.display = 'block';
-    listEl.innerHTML  = '';
-    const hy = PLANS.halfyear;
-
-    compEl.innerHTML =
-      '<div class="comp-side">' +
-        '<div class="lbl">現在の選択</div>' +
-        '<div class="name">' + plan.name + '</div>' +
-        '<div class="price">年間 ¥' + plan.annual.toLocaleString() + '</div>' +
-      '</div>' +
-      '<div class="arrow">→</div>' +
-      '<div class="comp-side target">' +
-        '<div class="lbl">提案</div>' +
-        '<div class="name">Altru Half Year</div>' +
-        '<div class="price">年間 ¥' + hy.annual.toLocaleString() + '</div>' +
-      '</div>';
-
-    let suggestions = [];
-    if (state.plan === 'monthly') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '毎月のお届け、素敵な選択です。もし気になれば、半年に一度のリズムもこんな感じです：';
-      suggestions = [
-        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
-        '頻度はゆっくりめ。"特別な日に届く" 感覚が残るリズムです',
-      ];
-    } else if (state.plan === 'seasonal') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '四季を届けるリズム、素敵な選択です。半年に一度のリズムも参考までに：';
-      suggestions = [
-        '1回あたり ¥' + plan.per.toLocaleString() + ' → ¥' + hy.per.toLocaleString() + '。一束ごとの密度が少し増えます',
-        '記念日を起点に組み立てるので、"大切な日に届く" 設計になります',
-      ];
-    } else if (state.plan === 'anniversary') {
-      titleEl.textContent = '他のリズムも参考までに';
-      subEl.textContent = '年に一度の記念日、素敵な選択です。もし "+1回" 増やすなら、半年後にこんなお届けもあります：';
-      suggestions = [
-        '記念日のクオリティはそのまま、半年後に "何でもない日" のお届けが加わります',
-        '1回あたりは ¥' + hy.per.toLocaleString() + '。記念日仕様は維持したまま、もう一度想いを届けられます',
-      ];
-    }
-    suggestions.forEach((s) => {
-      const li = document.createElement('li');
-      li.innerHTML = s;
-      listEl.appendChild(li);
-    });
-  }
 
   /* ─────────────────────────────────
      BRIDGE PILL (診断結果の要約)
