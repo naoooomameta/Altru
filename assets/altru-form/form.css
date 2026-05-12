@@ -783,6 +783,42 @@
   font-size: 15px;
   color: var(--af-paper);
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.schedule__edit-btn {
+  background: transparent;
+  border: 1px solid var(--af-paper-line);
+  color: var(--af-paper-mute);
+  font-family: var(--af-serif-it);
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: .15em;
+  padding: 3px 10px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: all .25s;
+  border-radius: 12px;
+}
+.schedule__edit-btn:hover {
+  border-color: var(--af-paper);
+  color: var(--af-paper);
+}
+.schedule__date-input {
+  background: transparent;
+  border: 1px solid var(--af-paper);
+  color: var(--af-paper);
+  padding: 6px 10px;
+  font-family: var(--af-serif);
+  font-size: 14px;
+  outline: none;
+}
+.schedule__date-input::-webkit-calendar-picker-indicator {
+  filter: invert(.95);
+  opacity: .7;
+  cursor: pointer;
 }
 .schedule__date .y {
   font-family: var(--af-serif-it);
