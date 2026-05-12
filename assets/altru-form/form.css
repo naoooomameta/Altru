@@ -303,10 +303,9 @@
   transform: translateX(-50%);
   background: var(--af-paper);
   color: var(--af-ink);
-  font-family: var(--af-serif-it);
-  font-size: 10px;
-  letter-spacing: .25em;
-  text-transform: uppercase;
+  font-family: var(--af-serif);
+  font-size: 12px;
+  letter-spacing: .06em;
   font-weight: 500;
   padding: 6px 14px;
   white-space: nowrap;
