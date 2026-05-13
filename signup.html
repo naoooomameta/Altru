@@ -16,10 +16,32 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: #0A0907;
     color: #ECE6D9;
     min-height: 100vh;
     font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+  }
+
+  /* 男女・ブーケ画像を CTA セクションと共通の背景としてリンク。
+     画像は body に fixed で敷き、コンテンツがスクロールしても
+     ランディングからの遷移で同じ画が継続して見えるようにする。 */
+  body {
+    background-color: #0A0907;
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.75), rgba(10, 9, 7, 0.82)),
+      url('a_Manifesto_Desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-image:
+        linear-gradient(rgba(10, 9, 7, 0.55), rgba(10, 9, 7, 0.7)),
+        url('a_Manifesto_Mobile.png');
+      background-attachment: scroll;
+    }
   }
 
   /* 上部のヘッダー: ロゴ + 戻るリンク */
@@ -29,6 +51,9 @@
     justify-content: space-between;
     padding: 1.25rem 1.5rem;
     border-bottom: 1px solid rgba(236, 230, 217, 0.12);
+    background: rgba(10, 9, 7, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
   .signup-header__logo {
     font-family: 'Cormorant Garamond', 'Times New Roman', serif;
