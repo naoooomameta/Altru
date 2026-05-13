@@ -2835,7 +2835,7 @@ img { height: auto; }
       <li><a href="#price">Plan</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="#cta" class="nav__cta">
+    <a href="apply.html" class="nav__cta">
       <span class="nav__cta-dot"></span>
       <span>Waiting List</span>
     </a>
@@ -2849,7 +2849,7 @@ img { height: auto; }
   <a href="#features" onclick="closeMobileMenu()">Why Altru</a>
   <a href="#price" onclick="closeMobileMenu()">Plan</a>
   <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
-  <a href="#cta" class="mobile-menu__cta" onclick="closeMobileMenu()">先行登録する →</a>
+  <a href="apply.html" class="mobile-menu__cta" onclick="closeMobileMenu()">先行登録する →</a>
 </div>
 
 <!-- ============ HERO (FV / image-led) ============ -->
@@ -2876,7 +2876,7 @@ img { height: auto; }
   </div>
 
   <div class="hero-fv__cta-group">
-    <a href="#cta" class="hero-fv__cta hero-fv__cta--primary">
+    <a href="apply.html" class="hero-fv__cta hero-fv__cta--primary">
       <span class="hero-fv__cta-label">先行登録する</span>
       <span class="arrow">→</span>
     </a>
@@ -3062,7 +3062,7 @@ img { height: auto; }
       </div>
     </div>
     <div class="scenes__cta-row reveal" style="margin-top: 3rem;">
-      <a href="#cta" class="btn btn--primary">
+      <a href="apply.html" class="btn btn--primary">
         <span>3ステップで、はじめる</span>
         <span class="arrow">→</span>
       </a>
@@ -3178,7 +3178,7 @@ img { height: auto; }
       </div>
     </div>
     <div class="scenes__cta-row reveal">
-      <a href="#cta" class="btn btn--primary">
+      <a href="apply.html" class="btn btn--primary">
         <span>先行登録する</span>
         <span class="arrow">→</span>
       </a>
@@ -3494,7 +3494,7 @@ img { height: auto; }
       </div>
     </div>
     <div class="scenes__cta-row reveal" style="margin-top: 3.5rem;">
-      <a href="#cta" class="btn btn--primary">
+      <a href="apply.html" class="btn btn--primary">
         <span>プランを選んで、先行登録する</span>
         <span class="arrow">→</span>
       </a>
@@ -3596,7 +3596,7 @@ img { height: auto; }
         先行登録は専用ページからお進みください。<br>
         プラン選択 → 大切な日 → スケジュール → メール・LINE登録。
       </p>
-      <a href="signup.html" class="cta-mobile-redirect__btn">先行登録ページへ →</a>
+      <a href="apply.html" class="cta-mobile-redirect__btn">お申し込みページへ →</a>
       <p class="cta-mobile-redirect__fine">© 2026 Altru. All Rights Reserved.</p>
     </div>
   </div>
@@ -4055,13 +4055,10 @@ sObs.observe(heroSection); sObs.observe(ctaSection);
 
 /* CTA FORM — assets/altru-form/form.js に統合済み */
 
-/* MOBILE — 全 #cta リンクを signup.html に振り替え（モバイルは別ページで先行登録） */
-if (window.matchMedia('(max-width: 768px)').matches) {
-  document.querySelectorAll('a[href="#cta"]').forEach((a) => { a.href = 'signup.html'; });
-  const stickyBtn = document.querySelector('.sticky-cta__btn');
-  if (stickyBtn) {
-    stickyBtn.setAttribute('onclick', "window.location.href='signup.html'");
-  }
+/* Sticky CTA を apply.html に遷移させる */
+const stickyBtn = document.querySelector('.sticky-cta__btn');
+if (stickyBtn) {
+  stickyBtn.setAttribute('onclick', "window.location.href='apply.html'");
 }
 
 /* PARALLAX hero bg mark */
