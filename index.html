@@ -2530,8 +2530,17 @@ img { height: auto; }
 
 /* Avoid horizontal scroll caused by very wide background marks */
 @media (max-width: 768px) {
-  .cta-section { overflow: hidden; }
+  .cta-section {
+    overflow: hidden;
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.84), rgba(10, 9, 7, 0.88)),
+      url('a_Manifesto_Mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .cta-section::before { font-size: clamp(7rem, 32vw, 14rem); }
+  .cta-mobile-redirect { position: relative; z-index: 1; }
 }
 
 </style>
