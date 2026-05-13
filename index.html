@@ -1411,18 +1411,16 @@ button, input, textarea { font-family: inherit; }
 }
 .audience-card {
   background-color: var(--bg);
-  background-size: cover;
-  background-position: center top;
+  background-size: 100% auto;
+  background-position: top center;
   background-repeat: no-repeat;
   border: 1px solid var(--line-soft);
-  padding: clamp(1.5rem, 2.5vw, 2rem) clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
+  padding: 78% clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33.333% - 1rem);
   min-width: 280px;
   max-width: 360px;
-  min-height: 620px;
-  padding-top: clamp(280px, 38vw, 360px);
   transition: border-color 0.4s ease;
 }
 .audience-card:nth-child(1) {
@@ -1466,7 +1464,7 @@ button, input, textarea { font-family: inherit; }
   );
 }
 @media (max-width: 1023px) {
-  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; min-height: 720px; padding-top: clamp(340px, 48vw, 460px); }
+  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; }
 }
 .audience-card:hover {
   border-color: var(--line);
@@ -2101,7 +2099,7 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   .features__grid { grid-template-columns: 1fr; }
   .scenes__grid { grid-template-columns: 1fr; }
   .audience__grid { gap: 1rem; }
-  .audience-card { flex: 1 1 100%; max-width: none; min-height: auto; padding-top: 78vw; }
+  .audience-card { flex: 1 1 100%; max-width: none; }
   .audience__lede { font-size: 0.82rem; line-height: 1.95; }
   .price__tabs { grid-template-columns: 1fr 1fr; }
   .price__tab { border-bottom: 1px solid var(--line); }
