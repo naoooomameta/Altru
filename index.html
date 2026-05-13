@@ -1415,7 +1415,7 @@ button, input, textarea { font-family: inherit; }
   background-position: top center;
   background-repeat: no-repeat;
   border: 1px solid var(--line-soft);
-  padding: 78% clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
+  padding: clamp(260px, 26vw, 320px) clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
   display: flex;
   flex-direction: column;
   flex: 1 1 calc(33.333% - 1rem);
@@ -1464,7 +1464,7 @@ button, input, textarea { font-family: inherit; }
   );
 }
 @media (max-width: 1023px) {
-  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; }
+  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; padding-top: clamp(290px, 40vw, 380px); }
 }
 .audience-card:hover {
   border-color: var(--line);
@@ -2099,7 +2099,7 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   .features__grid { grid-template-columns: 1fr; }
   .scenes__grid { grid-template-columns: 1fr; }
   .audience__grid { gap: 1rem; }
-  .audience-card { flex: 1 1 100%; max-width: none; }
+  .audience-card { flex: 1 1 100%; max-width: none; padding-top: 78vw; }
   .audience__lede { font-size: 0.82rem; line-height: 1.95; }
   .price__tabs { grid-template-columns: 1fr 1fr; }
   .price__tab { border-bottom: 1px solid var(--line); }
