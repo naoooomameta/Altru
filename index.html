@@ -1842,6 +1842,29 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   color: var(--gold);
   letter-spacing: 0.1em;
 }
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 24px 16px;
+  margin-top: 48px;
+  border-top: 1px solid rgba(236, 230, 217, 0.12);
+  font-size: 12px;
+}
+.legal-links a {
+  color: rgba(236, 230, 217, 0.55);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.25s;
+}
+.legal-links a:hover {
+  color: rgba(236, 230, 217, 0.95);
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .legal-links { gap: 16px; font-size: 11px; }
+}
 
 /* ============ MOBILE STICKY ============ */
 .sticky-cta {
@@ -3637,6 +3660,11 @@ img { height: auto; }
       <span class="footer__motto">— A habit of care —</span>
       <span>© 2026 Altru, Tokyo</span>
     </div>
+  </div>
+  <div class="legal-links">
+    <a href="legal.html?doc=terms">利用規約</a>
+    <a href="legal.html?doc=privacy">プライバシーポリシー</a>
+    <a href="legal.html?doc=tokushoho">特定商取引法に基づく表記</a>
   </div>
 </footer>
 
