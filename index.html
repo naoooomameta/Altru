@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
 <!-- LCP: preload the FV image so the browser fetches it before CSS resolves -->
-<link rel="preload" as="image" type="image/avif" href="a_FV_Mobile_v3.avif" media="(max-width: 768px)" fetchpriority="high">
-<link rel="preload" as="image" type="image/avif" href="a_FV_Desktop_v2.avif" media="(min-width: 769px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="a_FV_Mobile_v4.avif" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="a_FV_Desktop_v3.avif" media="(min-width: 769px)" fetchpriority="high">
 <style>
 /* ============ TOKENS — Sumi (Paper × Sumi × Gold) ============ */
 :root {
@@ -257,7 +257,61 @@ button, input, textarea { font-family: inherit; }
   object-position: center top;
   display: block;
 }
-.hero-fv__copy { display: none; }
+.hero-fv__copy {
+  position: absolute;
+  inset: 0;
+  padding: clamp(5rem, 10vw, 8rem) clamp(3rem, 6vw, 6rem);
+  pointer-events: none;
+  color: var(--ink);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 58%;
+}
+.hero-fv__logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+.hero-fv__hl {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+.hero-fv__sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  line-height: 1.4;
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+.hero-fv__sub em {
+  font-style: italic;
+}
+.hero-fv__body {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(0.78rem, 1vw, 0.95rem);
+  line-height: 1.95;
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 26em;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
 .hero-fv__cta-group {
   position: absolute;
   bottom: clamp(4.5rem, 9vw, 7rem);
@@ -336,6 +390,9 @@ button, input, textarea { font-family: inherit; }
     position: absolute;
     inset: 0;
     padding: calc(var(--nav-h) + 1.5rem) 1.4rem 1.5rem;
+    max-width: none;
+    align-items: initial;
+    justify-content: initial;
     pointer-events: none;
     color: var(--ink);
     background: linear-gradient(
@@ -2855,12 +2912,12 @@ img { height: auto; }
 <!-- ============ HERO (FV / image-led) ============ -->
 <section id="top" class="hero-fv">
   <picture class="hero-fv__media">
-    <source type="image/avif" media="(max-width: 768px)" srcset="a_FV_Mobile_v3.avif">
-    <source type="image/avif" srcset="a_FV_Desktop_v2.avif">
-    <source type="image/webp" media="(max-width: 768px)" srcset="a_FV_Mobile_v3.webp">
-    <source type="image/webp" srcset="a_FV_Desktop_v2.webp">
-    <source media="(max-width: 768px)" srcset="a_FV_Mobile_v3.png">
-    <img src="a_FV_Desktop_v2.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941">
+    <source type="image/avif" media="(max-width: 768px)" srcset="a_FV_Mobile_v4.avif">
+    <source type="image/avif" srcset="a_FV_Desktop_v3.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_FV_Mobile_v4.webp">
+    <source type="image/webp" srcset="a_FV_Desktop_v3.webp">
+    <source media="(max-width: 768px)" srcset="a_FV_Mobile_v4.png">
+    <img src="a_FV_Desktop_v3.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941">
   </picture>
 
   <!-- Mobile-only HTML text overlay (the desktop image has the copy baked in) -->
