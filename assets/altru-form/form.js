@@ -272,10 +272,10 @@
      ───────────────────────────────── */
   function getSeason(d) {
     const m = d.getMonth() + 1;
-    if (m >= 3 && m <= 5)  return { name: '春', en: 'Spring', flowers: '桜・チューリップ・ラナンキュラス' };
-    if (m >= 6 && m <= 8)  return { name: '夏', en: 'Summer', flowers: 'ひまわり・トルコキキョウ・紫陽花' };
-    if (m >= 9 && m <= 11) return { name: '秋', en: 'Autumn', flowers: 'ダリア・コスモス・ケイトウ' };
-    return { name: '冬', en: 'Winter', flowers: 'アネモネ・ラナンキュラス・白椿' };
+    if (m >= 3 && m <= 5)  return { name: '春', en: 'Spring', flowers: '芽吹く春の、やわらかな彩り' };
+    if (m >= 6 && m <= 8)  return { name: '夏', en: 'Summer', flowers: '盛夏の生命力を、一束に' };
+    if (m >= 9 && m <= 11) return { name: '秋', en: 'Autumn', flowers: '深まる秋の、静かな彩り' };
+    return { name: '冬', en: 'Winter', flowers: '凛とした冬の、たたずまい' };
   }
 
   function getEverydayLabel(month) {
@@ -512,7 +512,7 @@
     if (state.plan === 'seasonal') {
       el.style.display = 'block';
       titleEl.textContent = '— 四季それぞれの便り';
-      textEl.innerHTML = '春は桜やチューリップ、夏はひまわりや紫陽花、秋はダリアやコスモス、冬はアネモネや白椿。<br>その時期にしか出会えない花を、フローリストが一束ずつ仕立てます。';
+      textEl.innerHTML = '春のやわらかな彩り、盛夏の生命力、深まる秋の静けさ、凛とした冬のたたずまい。<br>その時期にしか出会えない花を、フローリストが一束ずつ仕立てます。';
     } else if (state.plan === 'monthly') {
       el.style.display = 'block';
       titleEl.textContent = '— 12ヶ月の花の旅';
