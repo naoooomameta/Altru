@@ -1402,9 +1402,12 @@ button, input, textarea { font-family: inherit; }
   color: var(--ink);
 }
 .audience__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 1180px;
+  margin: 0 auto;
 }
 .audience-card {
   background: var(--bg);
@@ -1412,7 +1415,13 @@ button, input, textarea { font-family: inherit; }
   padding: clamp(1.5rem, 2.5vw, 2rem) clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
   display: flex;
   flex-direction: column;
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 280px;
+  max-width: 360px;
   transition: background 0.4s ease, border-color 0.4s ease;
+}
+@media (max-width: 1023px) {
+  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; }
 }
 .audience-card:hover {
   background: var(--bg-2);
@@ -2047,7 +2056,8 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   .steps__list::before { display: none; }
   .features__grid { grid-template-columns: 1fr; }
   .scenes__grid { grid-template-columns: 1fr; }
-  .audience__grid { grid-template-columns: 1fr; gap: 1rem; }
+  .audience__grid { gap: 1rem; }
+  .audience-card { flex: 1 1 100%; max-width: none; }
   .audience__lede { font-size: 0.82rem; line-height: 1.95; }
   .price__tabs { grid-template-columns: 1fr 1fr; }
   .price__tab { border-bottom: 1px solid var(--line); }
