@@ -1412,23 +1412,32 @@ button, input, textarea { font-family: inherit; }
 .audience-card {
   position: relative;
   background-color: var(--bg);
-  background-size: 100% auto;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   border: 1px solid var(--line-soft);
-  padding: clamp(260px, 26vw, 320px) clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
+  padding: clamp(1.25rem, 2vw, 1.6rem);
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   flex: 1 1 calc(33.333% - 1rem);
   min-width: 280px;
   max-width: 360px;
+  aspect-ratio: 4 / 5;
   transition: border-color 0.4s ease;
 }
 .audience-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 0%, transparent 55%, var(--bg) 80%, var(--bg) 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 48%,
+    rgba(244, 242, 236, 0.55) 62%,
+    rgba(244, 242, 236, 0.88) 76%,
+    var(--bg) 100%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -1474,7 +1483,7 @@ button, input, textarea { font-family: inherit; }
   );
 }
 @media (max-width: 1023px) {
-  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; padding-top: clamp(290px, 40vw, 380px); }
+  .audience-card { flex: 1 1 calc(50% - 0.75rem); max-width: 460px; }
 }
 .audience-card:hover {
   border-color: var(--line);
@@ -1482,41 +1491,40 @@ button, input, textarea { font-family: inherit; }
 .audience-card__num {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   letter-spacing: 0.12em;
   color: var(--gold);
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.4rem;
 }
 .audience-card__en {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   color: var(--ink-mute);
   letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 .audience-card__title {
   font-family: 'Shippori Mincho', serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.55;
   letter-spacing: 0.02em;
   color: var(--ink);
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
 }
 .audience-card__scene {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--ink-soft);
-  line-height: 2.05;
-  letter-spacing: 0.03em;
-  flex: 1;
-  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.85rem;
 }
 .audience-card__foot {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 0.7rem;
   border-top: 1px solid var(--line-soft);
 }
 .audience-card__rel {
