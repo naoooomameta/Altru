@@ -1386,6 +1386,104 @@ button, input, textarea { font-family: inherit; }
 }
 .scenes__cta-row { text-align: center; }
 
+/* ============ AUDIENCE (Who chooses Altru) ============ */
+.audience { background: var(--bg-1); border-top: 1px solid var(--line); }
+.audience__head { text-align: center; margin-bottom: clamp(3rem, 6vw, 5rem); }
+.audience__lede {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 2.05;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  letter-spacing: 0.04em;
+}
+.audience__lede strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+.audience__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.audience-card {
+  background: var(--bg);
+  border: 1px solid var(--line-soft);
+  padding: clamp(1.5rem, 2.5vw, 2rem) clamp(1.4rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+.audience-card:hover {
+  background: var(--bg-2);
+  border-color: var(--line);
+}
+.audience-card__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+.audience-card__en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+.audience-card__title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.audience-card__scene {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 2.05;
+  letter-spacing: 0.03em;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+.audience-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-soft);
+}
+.audience-card__rel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.audience-card__plan {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.audience__footnote {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.06em;
+}
+
 /* ============ VOICE ============ */
 .voice__head {
   max-width: 880px;
@@ -1949,6 +2047,8 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   .steps__list::before { display: none; }
   .features__grid { grid-template-columns: 1fr; }
   .scenes__grid { grid-template-columns: 1fr; }
+  .audience__grid { grid-template-columns: 1fr; gap: 1rem; }
+  .audience__lede { font-size: 0.82rem; line-height: 1.95; }
   .price__tabs { grid-template-columns: 1fr 1fr; }
   .price__tab { border-bottom: 1px solid var(--line); }
   .price__tab:nth-child(2n) { border-right: none; }
@@ -3016,6 +3116,89 @@ img { height: auto; }
   </div>
 </section>
 
+<!-- ============ AUDIENCE (Who chooses Altru) ============ -->
+<section id="audience" class="section audience" aria-labelledby="audience-title">
+  <div class="container">
+    <div class="audience__head reveal">
+      <div class="eyebrow-num">— 07 / Who chooses Altru</div>
+      <h2 class="section-hl" id="audience-title" style="margin-top:1.5rem;">
+        想いを<em>仕組み</em>にしている男たちは、こういう人。
+      </h2>
+      <p class="audience__lede">
+        役職や年収ではなく、"置かれている状況"で選ばれています。<br>
+        忙しさの種類は違っても、共通しているのは——<strong>大切な人を、忙しさの言い訳にしないこと。</strong>
+      </p>
+    </div>
+    <div class="audience__grid">
+      <article class="audience-card reveal">
+        <span class="audience-card__num">01</span>
+        <p class="audience-card__en">The Executive</p>
+        <h3 class="audience-card__title">時間が最も希少な、経営者。</h3>
+        <p class="audience-card__scene">
+          毎日30の意思決定をしている。だからこそ、最も大切な人への意思決定だけは、自動化する。気づきや想いは、忙しさで消費されるものではない、と知っている。
+        </p>
+        <div class="audience-card__foot">
+          <span class="audience-card__rel">For Wife</span>
+          <span class="audience-card__plan">Seasonal</span>
+        </div>
+      </article>
+
+      <article class="audience-card reveal reveal-d1">
+        <span class="audience-card__num">02</span>
+        <p class="audience-card__en">The Long-Distance Husband</p>
+        <h3 class="audience-card__title">距離のある場所で、戦う夫。</h3>
+        <p class="audience-card__scene">
+          単身赴任、海外駐在。物理的に隣にいられない月日が続く。だからこそ、月に一度の花が、距離を超えて"いる"ことを伝えてくれる。
+        </p>
+        <div class="audience-card__foot">
+          <span class="audience-card__rel">For Wife</span>
+          <span class="audience-card__plan">Monthly</span>
+        </div>
+      </article>
+
+      <article class="audience-card reveal reveal-d2">
+        <span class="audience-card__num">03</span>
+        <p class="audience-card__en">The Quiet Romantic</p>
+        <h3 class="audience-card__title">言葉が、少しだけ苦手な人。</h3>
+        <p class="audience-card__scene">
+          「好き」「ありがとう」を、面と向かって言うのは、いまでも照れくさい。でも、想っていないわけじゃない。その照れを、花が代わりに語ってくれる。
+        </p>
+        <div class="audience-card__foot">
+          <span class="audience-card__rel">For Partner</span>
+          <span class="audience-card__plan">Half Year</span>
+        </div>
+      </article>
+
+      <article class="audience-card reveal reveal-d3">
+        <span class="audience-card__num">04</span>
+        <p class="audience-card__en">The Father of Two Worlds</p>
+        <h3 class="audience-card__title">仕事も家庭も、全力の父。</h3>
+        <p class="audience-card__scene">
+          朝から夜まで、走り続けている。妻に「ありがとう」を伝える時間さえ、削られていく。だからAltruに、その一回を、確実に肩代わりさせる。
+        </p>
+        <div class="audience-card__foot">
+          <span class="audience-card__rel">For Wife</span>
+          <span class="audience-card__plan">Half Year</span>
+        </div>
+      </article>
+
+      <article class="audience-card reveal reveal-d4">
+        <span class="audience-card__num">05</span>
+        <p class="audience-card__en">The 5-Year Partner</p>
+        <h3 class="audience-card__title">長く、続いている関係。</h3>
+        <p class="audience-card__scene">
+          付き合って5年、結婚して10年。"慣れ"と"続いている"は違うと、本人が一番よく知っている。だから、定期的に、関係を温め直す装置を持っている。
+        </p>
+        <div class="audience-card__foot">
+          <span class="audience-card__rel">For Partner</span>
+          <span class="audience-card__plan">Anniversary</span>
+        </div>
+      </article>
+    </div>
+    <p class="audience__footnote">— 共通項は、ひとつだけ。「忙しさを、言い訳にしない」</p>
+  </div>
+</section>
+
 <!-- ============ DELIVERY GALLERY ============ -->
 <section class="delivery">
   <div class="container">
@@ -3047,7 +3230,7 @@ img { height: auto; }
 <section class="section voice">
   <div class="container--mid">
     <div class="voice__head reveal">
-      <div class="eyebrow-num" style="margin-bottom:1.5rem;">— 07 / Voice</div>
+      <div class="eyebrow-num" style="margin-bottom:1.5rem;">— 08 / Voice</div>
       <h2 class="voice__hl">
         花は、その瞬間ではなく、<br>
         <em>その後ずっと効く。</em>
@@ -3088,7 +3271,7 @@ img { height: auto; }
 <section id="price" class="section price">
   <div class="container--mid">
     <div class="price__head reveal">
-      <div class="eyebrow-num">— 08 / Plan</div>
+      <div class="eyebrow-num">— 09 / Plan</div>
       <h2 class="section-hl" style="margin-top:1.5rem;">
         忙しくても、<em>続けられる。</em>
       </h2>
@@ -3259,7 +3442,7 @@ img { height: auto; }
         </div>
       </div>
       <div>
-        <div class="eyebrow-num reveal" style="margin-bottom:1.5rem;">— 09 / Our Story</div>
+        <div class="eyebrow-num reveal" style="margin-bottom:1.5rem;">— 10 / Our Story</div>
         <h2 class="section-hl reveal reveal-d1" style="margin-bottom:2.5rem;">
           なぜ、私たちは<br>このサービスを<em>作ったのか。</em>
         </h2>
@@ -3279,7 +3462,7 @@ img { height: auto; }
 <section id="faq" class="section faq">
   <div class="container--narrow">
     <div class="faq__head reveal">
-      <div class="eyebrow-num">— 10 / FAQ</div>
+      <div class="eyebrow-num">— 11 / FAQ</div>
       <h2 class="section-hl" style="margin-top:1.5rem;">よくあるご質問</h2>
     </div>
     <div class="faq__list">
