@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
 <!-- LCP: preload the FV image so the browser fetches it before CSS resolves -->
-<link rel="preload" as="image" href="a_FV_Mobile.png" media="(max-width: 768px)" fetchpriority="high">
-<link rel="preload" as="image" href="a_FV_Desktop.png" media="(min-width: 769px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="a_FV_Mobile.avif" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="a_FV_Desktop.avif" media="(min-width: 769px)" fetchpriority="high">
 <style>
 /* ============ TOKENS — Sumi (Paper × Sumi × Gold) ============ */
 :root {
@@ -692,6 +692,11 @@ button, input, textarea { font-family: inherit; }
 .voices-echo {
   background-color: var(--bg);
   background-image: url('a_VoiceEcho_Desktop.png');
+  background-image: image-set(
+    url('a_VoiceEcho_Desktop.avif') type('image/avif'),
+    url('a_VoiceEcho_Desktop.webp') type('image/webp'),
+    url('a_VoiceEcho_Desktop.png') type('image/png')
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -925,6 +930,11 @@ button, input, textarea { font-family: inherit; }
 .koan {
   background-color: var(--bg);
   background-image: url('a_Koan_Desktop.png');
+  background-image: image-set(
+    url('a_Koan_Desktop.avif') type('image/avif'),
+    url('a_Koan_Desktop.webp') type('image/webp'),
+    url('a_Koan_Desktop.png') type('image/png')
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1216,6 +1226,13 @@ button, input, textarea { font-family: inherit; }
   background-image:
     linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.78)),
     url('a_Manifesto_Desktop.png');
+  background-image:
+    linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.78)),
+    image-set(
+      url('a_Manifesto_Desktop.avif') type('image/avif'),
+      url('a_Manifesto_Desktop.webp') type('image/webp'),
+      url('a_Manifesto_Desktop.png') type('image/png')
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1673,6 +1690,13 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   background-image:
     linear-gradient(rgba(10, 9, 7, 0.75), rgba(10, 9, 7, 0.82)),
     url('a_Manifesto_Desktop.png');
+  background-image:
+    linear-gradient(rgba(10, 9, 7, 0.75), rgba(10, 9, 7, 0.82)),
+    image-set(
+      url('a_Manifesto_Desktop.avif') type('image/avif'),
+      url('a_Manifesto_Desktop.webp') type('image/webp'),
+      url('a_Manifesto_Desktop.png') type('image/png')
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2145,6 +2169,11 @@ section { position: relative; }
   .voices-echo {
     padding: clamp(3.5rem, 9vw, 5rem) 0;
     background-image: url('a_VoiceEcho_Mobile.png');
+    background-image: image-set(
+      url('a_VoiceEcho_Mobile.avif') type('image/avif'),
+      url('a_VoiceEcho_Mobile.webp') type('image/webp'),
+      url('a_VoiceEcho_Mobile.png') type('image/png')
+    );
   }
   .voices-echo__head { margin-bottom: 2.75rem; }
   .voice-echo { padding: 1.85rem 1.4rem 1.6rem; }
@@ -2152,7 +2181,14 @@ section { position: relative; }
   .voice-echo__author { flex-direction: column; gap: 0.35rem; align-items: flex-start; }
 
   /* KOAN */
-  .koan { background-image: url('a_Koan_Mobile.png'); }
+  .koan {
+    background-image: url('a_Koan_Mobile.png');
+    background-image: image-set(
+      url('a_Koan_Mobile.avif') type('image/avif'),
+      url('a_Koan_Mobile.webp') type('image/webp'),
+      url('a_Koan_Mobile.png') type('image/png')
+    );
+  }
   .koan__head { margin-bottom: 2.5rem; }
   .koan__line { line-height: 2.05; font-size: 0.95rem; margin-bottom: 1.8rem; }
   .koan__line:last-child { margin-bottom: 0; }
@@ -2285,6 +2321,13 @@ section { position: relative; }
     background-image:
       linear-gradient(rgba(10, 9, 7, 0.78), rgba(10, 9, 7, 0.82)),
       url('a_Manifesto_Mobile.png');
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.78), rgba(10, 9, 7, 0.82)),
+      image-set(
+        url('a_Manifesto_Mobile.avif') type('image/avif'),
+        url('a_Manifesto_Mobile.webp') type('image/webp'),
+        url('a_Manifesto_Mobile.png') type('image/png')
+      );
   }
   .manifesto__big { font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.55; }
   .manifesto__pre { font-size: 0.78rem; margin-bottom: 1.5rem; }
@@ -2545,6 +2588,13 @@ img { height: auto; }
     background-image:
       linear-gradient(rgba(10, 9, 7, 0.55), rgba(10, 9, 7, 0.7)),
       url('a_Manifesto_Mobile.png');
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.55), rgba(10, 9, 7, 0.7)),
+      image-set(
+        url('a_Manifesto_Mobile.avif') type('image/avif'),
+        url('a_Manifesto_Mobile.webp') type('image/webp'),
+        url('a_Manifesto_Mobile.png') type('image/png')
+      );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2594,6 +2644,10 @@ img { height: auto; }
 <!-- ============ HERO (FV / image-led) ============ -->
 <section id="top" class="hero-fv">
   <picture class="hero-fv__media">
+    <source type="image/avif" media="(max-width: 768px)" srcset="a_FV_Mobile.avif">
+    <source type="image/avif" srcset="a_FV_Desktop.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_FV_Mobile.webp">
+    <source type="image/webp" srcset="a_FV_Desktop.webp">
     <source media="(max-width: 768px)" srcset="a_FV_Mobile.png">
     <img src="a_FV_Desktop.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager" fetchpriority="high" decoding="async" width="1536" height="1024">
   </picture>
@@ -2760,7 +2814,7 @@ img { height: auto; }
     <div class="steps__list">
       <div class="steps__item reveal">
         <div class="steps__media">
-          <img class="media-img" src="a_image4.jpg" alt="スマホで届け先と日付を登録する画面" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_image4.avif"><source type="image/webp" srcset="a_image4.webp"><img class="media-img" src="a_image4.jpg" alt="スマホで届け先と日付を登録する画面" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <div class="steps__circle">i</div>
           <span class="steps__media-cap">Register</span>
         </div>
@@ -2770,7 +2824,7 @@ img { height: auto; }
       </div>
       <div class="steps__item reveal reveal-d1">
         <div class="steps__media">
-          <img class="media-img" src="a_image5.jpg" alt="メッセージカードに万年筆で一言を書き添える手元" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_image5.avif"><source type="image/webp" srcset="a_image5.webp"><img class="media-img" src="a_image5.jpg" alt="メッセージカードに万年筆で一言を書き添える手元" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <div class="steps__circle">ii</div>
           <span class="steps__media-cap">Personalize</span>
         </div>
@@ -2780,7 +2834,7 @@ img { height: auto; }
       </div>
       <div class="steps__item reveal reveal-d2">
         <div class="steps__media">
-          <img class="media-img" src="a_image6.jpg" alt="玄関先に届いた花束を受け取る女性" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_image6.avif"><source type="image/webp" srcset="a_image6.webp"><img class="media-img" src="a_image6.jpg" alt="玄関先に届いた花束を受け取る女性" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <div class="steps__circle">iii</div>
           <span class="steps__media-cap">Delivered</span>
         </div>
@@ -2828,7 +2882,7 @@ img { height: auto; }
     <div class="features__grid">
       <div class="features__val reveal">
         <div class="features__val-media">
-          <img class="media-img" src="a_image7.jpg" alt="記念日が記されたスマホのカレンダーと花" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_image7.avif"><source type="image/webp" srcset="a_image7.webp"><img class="media-img" src="a_image7.jpg" alt="記念日が記されたスマホのカレンダーと花" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <span class="features__val-num">i</span>
           <span class="features__val-cap">Sender's Lens</span>
         </div>
@@ -2839,7 +2893,7 @@ img { height: auto; }
       </div>
       <div class="features__val reveal reveal-d1">
         <div class="features__val-media">
-          <img class="media-img" src="a_FromTheField.png" alt="フローリストが季節の花束をクラフト紙で包む手元" loading="lazy" decoding="async" width="1122" height="1402">
+          <picture><source type="image/avif" srcset="a_FromTheField.avif"><source type="image/webp" srcset="a_FromTheField.webp"><img class="media-img" src="a_FromTheField.png" alt="フローリストが季節の花束をクラフト紙で包む手元" loading="lazy" decoding="async" width="1122" height="1402"></picture>
           <span class="features__val-num">ii</span>
           <span class="features__val-cap">From the Field</span>
         </div>
@@ -2850,7 +2904,7 @@ img { height: auto; }
       </div>
       <div class="features__val reveal reveal-d2">
         <div class="features__val-media">
-          <img class="media-img" src="a_TwiceAYear.png" alt="窓辺で青い紫陽花と白い花の活け込みを整える女性" loading="lazy" decoding="async" width="1086" height="1448">
+          <picture><source type="image/avif" srcset="a_TwiceAYear.avif"><source type="image/webp" srcset="a_TwiceAYear.webp"><img class="media-img" src="a_TwiceAYear.png" alt="窓辺で青い紫陽花と白い花の活け込みを整える女性" loading="lazy" decoding="async" width="1086" height="1448"></picture>
           <span class="features__val-num">iii</span>
           <span class="features__val-cap">Twice a Year</span>
         </div>
@@ -2876,7 +2930,7 @@ img { height: auto; }
     <div class="scenes__grid">
       <div class="scenes__card reveal">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_01.jpg" alt="出張先のホテルでスマホにAltruからの通知を見る男性" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_Scene_01.avif"><source type="image/webp" srcset="a_Scene_01.webp"><img class="media-img" src="a_Scene_01.jpg" alt="出張先のホテルでスマホにAltruからの通知を見る男性" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <span class="scenes__img-num">i.</span>
         </div>
         <h3 class="scenes__title">出張先のホテルで</h3>
@@ -2884,7 +2938,7 @@ img { height: auto; }
       </div>
       <div class="scenes__card reveal reveal-d1">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_02.jpg" alt="玄関で花束を持った妻が帰宅した夫を笑顔で迎える" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_Scene_02.avif"><source type="image/webp" srcset="a_Scene_02.webp"><img class="media-img" src="a_Scene_02.jpg" alt="玄関で花束を持った妻が帰宅した夫を笑顔で迎える" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <span class="scenes__img-num">ii.</span>
         </div>
         <h3 class="scenes__title">帰宅したら玄関で</h3>
@@ -2892,7 +2946,7 @@ img { height: auto; }
       </div>
       <div class="scenes__card reveal reveal-d2">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_03.jpg" alt="スマホのLINE画面に表示された花の写真とお礼のメッセージ" loading="lazy" decoding="async" width="1200" height="1200">
+          <picture><source type="image/avif" srcset="a_Scene_03.avif"><source type="image/webp" srcset="a_Scene_03.webp"><img class="media-img" src="a_Scene_03.jpg" alt="スマホのLINE画面に表示された花の写真とお礼のメッセージ" loading="lazy" decoding="async" width="1200" height="1200"></picture>
           <span class="scenes__img-num">iii.</span>
         </div>
         <h3 class="scenes__title">LINEで届いた、お礼の一枚</h3>
@@ -2924,7 +2978,7 @@ img { height: auto; }
     <div class="delivery__grid delivery__grid--single">
       <figure class="delivery__item reveal">
         <div class="delivery__img">
-          <img src="a_Delivery.png" alt="お届け例：ラッピングを纏った季節のブーケ" loading="lazy" decoding="async" width="1448" height="1086">
+          <picture><source type="image/avif" srcset="a_Delivery.avif"><source type="image/webp" srcset="a_Delivery.webp"><img src="a_Delivery.png" alt="お届け例：ラッピングを纏った季節のブーケ" loading="lazy" decoding="async" width="1448" height="1086"></picture>
         </div>
       </figure>
     </div>
@@ -2946,7 +3000,7 @@ img { height: auto; }
       </h2>
     </div>
     <figure class="voice__image reveal">
-      <img src="a_Voice.png" alt="贈られたブーケを胸元に、穏やかに微笑む女性。日常のひととき" loading="lazy" decoding="async" width="1448" height="1086">
+      <picture><source type="image/avif" srcset="a_Voice.avif"><source type="image/webp" srcset="a_Voice.webp"><img src="a_Voice.png" alt="贈られたブーケを胸元に、穏やかに微笑む女性。日常のひととき" loading="lazy" decoding="async" width="1448" height="1086"></picture>
       <figcaption class="voice__image-cap">
         <span class="voice__image-mark">—</span>
         贈られた花は、その日だけでなく、ふとした日常の瞬間に蘇る。
@@ -3010,7 +3064,11 @@ img { height: auto; }
       <div class="price__panel" id="plan-monthly">
         <div class="price__card">
           <picture class="price__media">
-            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <source type="image/avif" media="(max-width: 768px)" srcset="a_Plan_Mobile.avif">
+    <source type="image/avif" srcset="a_Plan_Desktop.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_Plan_Mobile.webp">
+    <source type="image/webp" srcset="a_Plan_Desktop.webp">
+    <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
             <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Monthly —</div>
@@ -3037,7 +3095,11 @@ img { height: auto; }
       <div class="price__panel" id="plan-seasonal">
         <div class="price__card">
           <picture class="price__media">
-            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <source type="image/avif" media="(max-width: 768px)" srcset="a_Plan_Mobile.avif">
+    <source type="image/avif" srcset="a_Plan_Desktop.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_Plan_Mobile.webp">
+    <source type="image/webp" srcset="a_Plan_Desktop.webp">
+    <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
             <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Seasonal —</div>
@@ -3064,7 +3126,11 @@ img { height: auto; }
       <div class="price__panel active" id="plan-halfyear">
         <div class="price__card price__card--featured">
           <picture class="price__media">
-            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <source type="image/avif" media="(max-width: 768px)" srcset="a_Plan_Mobile.avif">
+    <source type="image/avif" srcset="a_Plan_Desktop.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_Plan_Mobile.webp">
+    <source type="image/webp" srcset="a_Plan_Desktop.webp">
+    <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
             <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Half Year —</div>
@@ -3091,7 +3157,11 @@ img { height: auto; }
       <div class="price__panel" id="plan-anniversary">
         <div class="price__card">
           <picture class="price__media">
-            <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
+            <source type="image/avif" media="(max-width: 768px)" srcset="a_Plan_Mobile.avif">
+    <source type="image/avif" srcset="a_Plan_Desktop.avif">
+    <source type="image/webp" media="(max-width: 768px)" srcset="a_Plan_Mobile.webp">
+    <source type="image/webp" srcset="a_Plan_Desktop.webp">
+    <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
             <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Anniversary —</div>
@@ -3125,7 +3195,7 @@ img { height: auto; }
     <div class="story__grid">
       <div class="story__visual reveal">
         <div class="story__visual-inner">
-          <img src="a_Our%20Story.png" alt="Altruの看板の前で花束を持つスーツ姿の男性" loading="lazy" decoding="async" width="1536" height="1024">
+          <picture><source type="image/avif" srcset="a_Our%20Story.avif"><source type="image/webp" srcset="a_Our%20Story.webp"><img src="a_Our%20Story.png" alt="Altruの看板の前で花束を持つスーツ姿の男性" loading="lazy" decoding="async" width="1536" height="1024"></picture>
         </div>
       </div>
       <div>
