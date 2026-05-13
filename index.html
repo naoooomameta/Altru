@@ -1665,7 +1665,13 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
 
 /* ============ CTA ============ */
 .cta-section {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(10, 9, 7, 0.75), rgba(10, 9, 7, 0.82)),
+    url('a_Manifesto_Desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-top: 1px solid var(--line);
   position: relative; overflow: hidden;
 }
@@ -2533,7 +2539,7 @@ img { height: auto; }
   .cta-section {
     overflow: hidden;
     background-image:
-      linear-gradient(rgba(10, 9, 7, 0.84), rgba(10, 9, 7, 0.88)),
+      linear-gradient(rgba(10, 9, 7, 0.55), rgba(10, 9, 7, 0.7)),
       url('a_Manifesto_Mobile.png');
     background-size: cover;
     background-position: center;
