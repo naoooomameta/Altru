@@ -1665,7 +1665,13 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
 
 /* ============ CTA ============ */
 .cta-section {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(10, 9, 7, 0.75), rgba(10, 9, 7, 0.82)),
+    url('a_Manifesto_Desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-top: 1px solid var(--line);
   position: relative; overflow: hidden;
 }
