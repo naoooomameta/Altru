@@ -1945,6 +1945,21 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   letter-spacing: -0.02em;
   color: var(--ink);
 }
+.stats .stats__num--dual {
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(2.8rem, 6.5vw, 5rem);
+}
+.stats__num--dual .stats__num-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15em;
+}
+.stats__num--dual .stats__num-line--sub {
+  font-size: 0.62em;
+  opacity: 0.72;
+}
 .stats .stats__num-unit {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -1997,6 +2012,7 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   .voice__quote { padding: 1.5rem 1.25rem 1.25rem; }
   .voice__quote::before { font-size: 2.6rem; top: 0.25rem; left: 0.7rem; }
   .stats .stats__num { font-size: clamp(4rem, 18vw, 7rem); }
+  .stats .stats__num--dual { font-size: clamp(2.4rem, 9vw, 3.8rem); }
   .hero__visual {
     aspect-ratio: 4 / 5;
     max-height: 70vh;
@@ -2208,6 +2224,7 @@ section { position: relative; }
   /* STATS */
   .stats__item { padding: 2.25rem 1.25rem; }
   .stats .stats__num { font-size: clamp(3.6rem, 16vw, 5.6rem); }
+  .stats .stats__num--dual { font-size: clamp(2.2rem, 8.5vw, 3.4rem); }
   .stats__label { font-size: 0.82rem; line-height: 1.85; }
 
   /* ABOUT / FEATURES grid spacing */
@@ -2309,6 +2326,7 @@ section { position: relative; }
   .stats__grid { display: grid; }
   .stats__item { padding: 2rem 1rem; }
   .stats .stats__num { font-size: clamp(3rem, 15vw, 4.6rem); }
+  .stats .stats__num--dual { font-size: clamp(1.9rem, 7.5vw, 2.8rem); }
   .stats__label { font-size: 0.78rem; line-height: 1.8; }
 
   /* SECTION padding tighter */
@@ -2791,12 +2809,19 @@ img { height: auto; }
         <div class="stats__label">Altruがあなたの代わりに覚えている、<br>標準プランの年間お届け回数</div>
       </div>
       <div class="stats__item reveal reveal-d2">
-        <div class="stats__num">
-          <span class="stats__num-unit" style="font-size:1.8rem;">¥</span>
-          <span class="counter" data-target="16000">0</span>
-          <span class="stats__num-unit"> / 年〜</span>
+        <div class="stats__num stats__num--dual">
+          <div class="stats__num-line">
+            <span class="stats__num-unit" style="font-size:1.4rem;">¥</span>
+            <span class="counter" data-target="8000">0</span>
+            <span class="stats__num-unit"> / 回</span>
+          </div>
+          <div class="stats__num-line stats__num-line--sub">
+            <span class="stats__num-unit" style="font-size:1.1rem;">¥</span>
+            <span class="counter" data-target="16000">0</span>
+            <span class="stats__num-unit"> / 年</span>
+          </div>
         </div>
-        <div class="stats__label">標準プラン（年2回お届け）の年間費用。<br><span style="opacity:0.55;font-size:0.78em;">※ 1回 ¥8,000・税込・送料込・メッセージカード込</span></div>
+        <div class="stats__label">標準プラン (年2回お届け) の費用。<br><span style="opacity:0.55;font-size:0.78em;">※ 税込・送料込・メッセージカード込</span></div>
       </div>
     </div>
   </div>
