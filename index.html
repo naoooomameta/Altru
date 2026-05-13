@@ -11,6 +11,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- LCP: preload the FV image so the browser fetches it before CSS resolves -->
+<link rel="preload" as="image" href="a_FV_Mobile.png" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="a_FV_Desktop.png" media="(min-width: 769px)" fetchpriority="high">
 <style>
 /* ============ TOKENS — Sumi (Paper × Sumi × Gold) ============ */
 :root {
@@ -2591,7 +2595,7 @@ img { height: auto; }
 <section id="top" class="hero-fv">
   <picture class="hero-fv__media">
     <source media="(max-width: 768px)" srcset="a_FV_Mobile.png">
-    <img src="a_FV_Desktop.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager">
+    <img src="a_FV_Desktop.png" alt="Altru — 忙しくても、大切な人を大切にできる男でいる。" loading="eager" fetchpriority="high" decoding="async" width="1536" height="1024">
   </picture>
 
   <!-- Mobile-only HTML text overlay (the desktop image has the copy baked in) -->
@@ -2756,7 +2760,7 @@ img { height: auto; }
     <div class="steps__list">
       <div class="steps__item reveal">
         <div class="steps__media">
-          <img class="media-img" src="a_image4.jpg" alt="スマホで届け先と日付を登録する画面" loading="lazy">
+          <img class="media-img" src="a_image4.jpg" alt="スマホで届け先と日付を登録する画面" loading="lazy" decoding="async" width="1200" height="1200">
           <div class="steps__circle">i</div>
           <span class="steps__media-cap">Register</span>
         </div>
@@ -2766,7 +2770,7 @@ img { height: auto; }
       </div>
       <div class="steps__item reveal reveal-d1">
         <div class="steps__media">
-          <img class="media-img" src="a_image5.jpg" alt="メッセージカードに万年筆で一言を書き添える手元" loading="lazy">
+          <img class="media-img" src="a_image5.jpg" alt="メッセージカードに万年筆で一言を書き添える手元" loading="lazy" decoding="async" width="1200" height="1200">
           <div class="steps__circle">ii</div>
           <span class="steps__media-cap">Personalize</span>
         </div>
@@ -2776,7 +2780,7 @@ img { height: auto; }
       </div>
       <div class="steps__item reveal reveal-d2">
         <div class="steps__media">
-          <img class="media-img" src="a_image6.jpg" alt="玄関先に届いた花束を受け取る女性" loading="lazy">
+          <img class="media-img" src="a_image6.jpg" alt="玄関先に届いた花束を受け取る女性" loading="lazy" decoding="async" width="1200" height="1200">
           <div class="steps__circle">iii</div>
           <span class="steps__media-cap">Delivered</span>
         </div>
@@ -2824,7 +2828,7 @@ img { height: auto; }
     <div class="features__grid">
       <div class="features__val reveal">
         <div class="features__val-media">
-          <img class="media-img" src="a_image7.jpg" alt="記念日が記されたスマホのカレンダーと花" loading="lazy">
+          <img class="media-img" src="a_image7.jpg" alt="記念日が記されたスマホのカレンダーと花" loading="lazy" decoding="async" width="1200" height="1200">
           <span class="features__val-num">i</span>
           <span class="features__val-cap">Sender's Lens</span>
         </div>
@@ -2835,7 +2839,7 @@ img { height: auto; }
       </div>
       <div class="features__val reveal reveal-d1">
         <div class="features__val-media">
-          <img class="media-img" src="a_FromTheField.png" alt="フローリストが季節の花束をクラフト紙で包む手元" loading="lazy">
+          <img class="media-img" src="a_FromTheField.png" alt="フローリストが季節の花束をクラフト紙で包む手元" loading="lazy" decoding="async" width="1122" height="1402">
           <span class="features__val-num">ii</span>
           <span class="features__val-cap">From the Field</span>
         </div>
@@ -2846,7 +2850,7 @@ img { height: auto; }
       </div>
       <div class="features__val reveal reveal-d2">
         <div class="features__val-media">
-          <img class="media-img" src="a_TwiceAYear.png" alt="窓辺で青い紫陽花と白い花の活け込みを整える女性" loading="lazy">
+          <img class="media-img" src="a_TwiceAYear.png" alt="窓辺で青い紫陽花と白い花の活け込みを整える女性" loading="lazy" decoding="async" width="1086" height="1448">
           <span class="features__val-num">iii</span>
           <span class="features__val-cap">Twice a Year</span>
         </div>
@@ -2872,7 +2876,7 @@ img { height: auto; }
     <div class="scenes__grid">
       <div class="scenes__card reveal">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_01.jpg" alt="出張先のホテルでスマホにAltruからの通知を見る男性" loading="lazy">
+          <img class="media-img" src="a_Scene_01.jpg" alt="出張先のホテルでスマホにAltruからの通知を見る男性" loading="lazy" decoding="async" width="1200" height="1200">
           <span class="scenes__img-num">i.</span>
         </div>
         <h3 class="scenes__title">出張先のホテルで</h3>
@@ -2880,7 +2884,7 @@ img { height: auto; }
       </div>
       <div class="scenes__card reveal reveal-d1">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_02.jpg" alt="玄関で花束を持った妻が帰宅した夫を笑顔で迎える" loading="lazy">
+          <img class="media-img" src="a_Scene_02.jpg" alt="玄関で花束を持った妻が帰宅した夫を笑顔で迎える" loading="lazy" decoding="async" width="1200" height="1200">
           <span class="scenes__img-num">ii.</span>
         </div>
         <h3 class="scenes__title">帰宅したら玄関で</h3>
@@ -2888,7 +2892,7 @@ img { height: auto; }
       </div>
       <div class="scenes__card reveal reveal-d2">
         <div class="scenes__img">
-          <img class="media-img" src="a_Scene_03.jpg" alt="スマホのLINE画面に表示された花の写真とお礼のメッセージ" loading="lazy">
+          <img class="media-img" src="a_Scene_03.jpg" alt="スマホのLINE画面に表示された花の写真とお礼のメッセージ" loading="lazy" decoding="async" width="1200" height="1200">
           <span class="scenes__img-num">iii.</span>
         </div>
         <h3 class="scenes__title">LINEで届いた、お礼の一枚</h3>
@@ -2920,7 +2924,7 @@ img { height: auto; }
     <div class="delivery__grid delivery__grid--single">
       <figure class="delivery__item reveal">
         <div class="delivery__img">
-          <img src="a_Delivery.png" alt="お届け例：ラッピングを纏った季節のブーケ" loading="lazy">
+          <img src="a_Delivery.png" alt="お届け例：ラッピングを纏った季節のブーケ" loading="lazy" decoding="async" width="1448" height="1086">
         </div>
       </figure>
     </div>
@@ -2942,7 +2946,7 @@ img { height: auto; }
       </h2>
     </div>
     <figure class="voice__image reveal">
-      <img src="a_Voice.png" alt="贈られたブーケを胸元に、穏やかに微笑む女性。日常のひととき" loading="lazy">
+      <img src="a_Voice.png" alt="贈られたブーケを胸元に、穏やかに微笑む女性。日常のひととき" loading="lazy" decoding="async" width="1448" height="1086">
       <figcaption class="voice__image-cap">
         <span class="voice__image-mark">—</span>
         贈られた花は、その日だけでなく、ふとした日常の瞬間に蘇る。
@@ -3007,7 +3011,7 @@ img { height: auto; }
         <div class="price__card">
           <picture class="price__media">
             <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
-            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Monthly —</div>
           <h3 class="price__name">Altru Monthly</h3>
@@ -3034,7 +3038,7 @@ img { height: auto; }
         <div class="price__card">
           <picture class="price__media">
             <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
-            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Seasonal —</div>
           <h3 class="price__name">Altru Seasonal</h3>
@@ -3061,7 +3065,7 @@ img { height: auto; }
         <div class="price__card price__card--featured">
           <picture class="price__media">
             <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
-            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Half Year —</div>
           <h3 class="price__name">Altru Half Year</h3>
@@ -3088,7 +3092,7 @@ img { height: auto; }
         <div class="price__card">
           <picture class="price__media">
             <source media="(max-width: 768px)" srcset="a_Plan_Mobile.png">
-            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy">
+            <img src="a_Plan_Desktop.png" alt="紺のジャケットに添えられた花束 — 大切な日への準備" loading="lazy" decoding="async" width="1448" height="1086">
           </picture>
           <div class="price__badge">— Anniversary —</div>
           <h3 class="price__name">Altru Anniversary</h3>
@@ -3121,7 +3125,7 @@ img { height: auto; }
     <div class="story__grid">
       <div class="story__visual reveal">
         <div class="story__visual-inner">
-          <img src="a_Our%20Story.png" alt="Altruの看板の前で花束を持つスーツ姿の男性" loading="lazy">
+          <img src="a_Our%20Story.png" alt="Altruの看板の前で花束を持つスーツ姿の男性" loading="lazy" decoding="async" width="1536" height="1024">
         </div>
       </div>
       <div>
