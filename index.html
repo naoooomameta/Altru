@@ -1208,13 +1208,20 @@ button, input, textarea { font-family: inherit; }
 
 /* ============ MANIFESTO (kinetic) ============ */
 .manifesto {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.78)),
+    url('a_Manifesto_Desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: clamp(6rem, 14vw, 12rem) 0;
   position: relative; overflow: hidden;
   text-align: center;
 }
+.manifesto .container--narrow { position: relative; z-index: 1; }
 .manifesto__pre {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -2264,6 +2271,11 @@ section { position: relative; }
   .manifesto { padding: 3.5rem 0; }
 
   /* MANIFESTO — tighter rhythm */
+  .manifesto {
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.78), rgba(10, 9, 7, 0.82)),
+      url('a_Manifesto_Mobile.png');
+  }
   .manifesto__big { font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.55; }
   .manifesto__pre { font-size: 0.78rem; margin-bottom: 1.5rem; }
   .manifesto__sig { margin-top: 2rem !important; font-size: 0.82rem !important; }
