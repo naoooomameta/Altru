@@ -210,6 +210,14 @@ button, input, textarea { font-family: inherit; }
   transition: background .35s;
 }
 .nav__cta:hover .nav__cta-dot { background: var(--bg); }
+.nav__cta-ja {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  margin-left: 0.15em;
+  transition: color .35s;
+}
+.nav__cta:hover .nav__cta-ja { color: rgba(245,239,227,0.8); }
 
 .nav__burger {
   display:none; cursor:pointer; background:none; border:none;
@@ -2895,7 +2903,7 @@ img { height: auto; }
     </ul>
     <a href="apply.html" class="nav__cta">
       <span class="nav__cta-dot"></span>
-      <span>Waiting List</span>
+      <span>Apply<span class="nav__cta-ja">（お申し込み）</span></span>
     </a>
     <button class="nav__burger" id="burger" aria-label="メニュー">
       <span></span><span></span><span></span>
