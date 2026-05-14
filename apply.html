@@ -9,36 +9,40 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --paper: #D9D2C8;
-    --paper-soft: #E5DFD6;
-    --paper-warm: #C9C0B2;
-    --ink: #2C2826;
-    --ink-soft: rgba(44, 40, 38, 0.72);
-    --ink-mute: rgba(44, 40, 38, 0.55);
-    --ink-line: rgba(44, 40, 38, 0.18);
-    --ink-line-soft: rgba(44, 40, 38, 0.1);
-    --accent: #8A7553;
-    --error: #B0473B;
-    --success: #4F6B4C;
-    --serif: 'Noto Serif JP', 'Shippori Mincho', 'Yu Mincho', 'YuMincho', serif;
-    --sans: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-    --serif-it: 'Cormorant Garamond', 'Times New Roman', serif;
+    --paper:        #F4F2EC;
+    --paper-soft:   #EAE8E1;
+    --paper-warm:   #E0DDD3;
+    --ink:          #1A1612;
+    --ink-soft:     rgba(26, 22, 18, 0.78);
+    --ink-mute:     rgba(26, 22, 18, 0.55);
+    --ink-line:     rgba(26, 22, 18, 0.18);
+    --ink-line-soft:rgba(26, 22, 18, 0.10);
+    --line:         #D2CFC4;
+    --line-soft:    #E2DFD7;
+    --gold:         #C9A45A;
+    --accent:       #C9A45A;
+    --error:        #B0473B;
+    --success:      #4F6B4C;
+    --serif:        'Shippori Mincho', 'Yu Mincho', 'YuMincho', serif;
+    --sans:         'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    --serif-it:     'Cormorant Garamond', 'Times New Roman', serif;
   }
 
-  * { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: border-box; }
   html, body {
     margin: 0;
     padding: 0;
     background: var(--paper);
     color: var(--ink);
     min-height: 100vh;
-    font-family: var(--sans);
-    line-height: 1.75;
+    font-family: var(--serif);
+    line-height: 1.85;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   a { color: inherit; }
@@ -48,8 +52,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.1rem 1.5rem;
-    border-bottom: 1px solid var(--ink-line);
+    padding: 1.4rem 2rem;
+    border-bottom: 1px solid var(--line-soft);
     background: var(--paper);
     position: sticky;
     top: 0;
@@ -58,10 +62,11 @@
   .ap-header__logo {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 1.55rem;
+    font-size: 1.7rem;
     color: var(--ink);
     text-decoration: none;
     letter-spacing: 0.04em;
+    line-height: 1;
   }
   .ap-header__back {
     font-family: var(--serif-it);
@@ -69,80 +74,98 @@
     font-size: 0.85rem;
     color: var(--ink-mute);
     text-decoration: none;
-    letter-spacing: 0.1em;
-    transition: color .2s;
+    letter-spacing: 0.14em;
+    transition: color 0.25s ease;
   }
   .ap-header__back:hover { color: var(--ink); }
 
   /* ── HERO ── */
   .ap-hero {
     text-align: center;
-    padding: 4rem 1.5rem 2.5rem;
-    max-width: 720px;
+    padding: clamp(4.5rem, 8vw, 7rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+    max-width: 760px;
     margin: 0 auto;
+  }
+  .ap-hero__ornament {
+    display: block;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;
   }
   .ap-hero__eyebrow {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.85rem;
-    color: var(--accent);
-    letter-spacing: 0.18em;
-    margin-bottom: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--gold);
+    letter-spacing: 0.32em;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
   }
   .ap-hero__title {
     font-family: var(--serif);
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
     font-weight: 500;
-    letter-spacing: 0.05em;
-    margin: 0 0 1rem;
+    letter-spacing: 0.06em;
+    margin: 0 0 1.25rem;
     line-height: 1.5;
   }
   .ap-hero__lede {
     color: var(--ink-soft);
-    font-size: 0.95rem;
-    line-height: 1.9;
-    margin: 0;
+    font-size: 1rem;
+    line-height: 2.05;
+    letter-spacing: 0.04em;
+    max-width: 30em;
+    margin: 0 auto;
   }
 
   /* ── FORM SHELL ── */
   .ap-form {
     max-width: 720px;
     margin: 0 auto;
-    padding: 0 1.5rem 4rem;
+    padding: 0 1.5rem clamp(4rem, 8vw, 6rem);
   }
 
+  /* Each step reads as an editorial spread, not a boxed card. */
   .ap-step {
-    background: var(--paper-soft);
-    border: 1px solid var(--ink-line);
-    border-radius: 4px;
-    padding: 2rem 1.75rem;
-    margin-bottom: 1.5rem;
+    background: transparent;
+    border: none;
+    border-top: 1px solid var(--line);
+    padding: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+    margin: 0 0 clamp(2rem, 4vw, 3rem);
   }
+  .ap-step:first-of-type { border-top: none; padding-top: 0.5rem; }
   .ap-step__head {
     display: flex;
     align-items: baseline;
-    gap: 0.85rem;
-    margin-bottom: 0.4rem;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
   }
   .ap-step__num {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.95rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
+    font-size: 1.25rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    line-height: 1;
   }
   .ap-step__title {
     font-family: var(--serif);
-    font-size: 1.18rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     font-weight: 500;
     margin: 0;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
   }
   .ap-step__desc {
     color: var(--ink-soft);
-    font-size: 0.88rem;
-    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.95;
+    letter-spacing: 0.03em;
+    margin: 0 0 1.75rem;
   }
 
   /* ── PLAN CARDS ── */
@@ -156,137 +179,139 @@
   }
   .ap-plan {
     position: relative;
-    background: var(--paper);
-    border: 1.5px solid var(--ink-line);
-    border-radius: 4px;
-    padding: 1.1rem 1rem 1rem;
+    background: var(--paper-soft);
+    border: 1px solid var(--line-soft);
+    padding: 1.25rem 1.15rem 1.15rem;
     cursor: pointer;
-    transition: border-color .2s, background .2s, transform .15s;
+    transition: border-color 0.3s ease, background 0.3s ease;
     display: block;
   }
-  .ap-plan:hover { border-color: var(--ink-soft); }
+  .ap-plan:hover { border-color: var(--line); background: var(--paper-warm); }
   .ap-plan input { position: absolute; opacity: 0; pointer-events: none; }
-  .ap-plan input:checked ~ .ap-plan__inner {
-    color: var(--ink);
-  }
-  .ap-plan input:checked + .ap-plan__inner,
-  .ap-plan.is-selected { /* visual styling driven by JS class */ }
+  .ap-plan input:checked ~ .ap-plan__inner { color: var(--ink); }
   .ap-plan.is-selected {
-    border-color: var(--ink);
-    background: var(--paper-warm);
+    border-color: var(--gold);
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1px var(--gold);
   }
   .ap-plan__badge {
     position: absolute;
-    top: -0.6rem;
+    top: -0.65rem;
     left: 1rem;
-    background: var(--ink);
+    background: var(--gold);
     color: var(--paper);
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.7rem;
-    padding: 0.15rem 0.7rem;
-    letter-spacing: 0.1em;
-    border-radius: 2px;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.85rem;
+    letter-spacing: 0.12em;
   }
   .ap-plan__name {
     font-family: var(--serif);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.04em;
   }
   .ap-plan__cycle {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--ink-mute);
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.04em;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.06em;
   }
   .ap-plan__price {
     font-family: var(--serif);
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 500;
     letter-spacing: 0.02em;
   }
   .ap-plan__price-unit {
-    font-size: 0.78rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.85rem;
     color: var(--ink-mute);
-    margin-left: 0.2rem;
+    margin-left: 0.3rem;
   }
   .ap-plan__desc {
-    margin-top: 0.7rem;
-    padding-top: 0.7rem;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
     border-top: 1px solid var(--ink-line-soft);
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: var(--ink-soft);
-    line-height: 1.6;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
   }
 
   /* ── FIELDS ── */
   .ap-field {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1.1rem;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
   }
   .ap-field:last-child { margin-bottom: 0; }
   .ap-field__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    gap: 0.85rem;
   }
   @media (max-width: 560px) {
     .ap-field__row { grid-template-columns: 1fr; }
   }
   .ap-field__label {
-    font-size: 0.82rem;
+    font-family: var(--serif);
+    font-size: 0.92rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     color: var(--ink);
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
   }
   .ap-field__required {
-    font-size: 0.66rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.68rem;
     background: var(--ink);
     color: var(--paper);
-    padding: 0.1rem 0.4rem;
-    border-radius: 2px;
-    letter-spacing: 0.06em;
+    padding: 0.12rem 0.5rem;
+    letter-spacing: 0.1em;
     font-weight: 400;
   }
   .ap-field__optional {
-    font-size: 0.66rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.68rem;
     color: var(--ink-mute);
     border: 1px solid var(--ink-line);
-    padding: 0.05rem 0.4rem;
-    border-radius: 2px;
-    letter-spacing: 0.06em;
+    padding: 0.05rem 0.5rem;
+    letter-spacing: 0.1em;
   }
   .ap-input,
   .ap-select,
   .ap-textarea {
     width: 100%;
-    min-height: 48px;
+    min-height: 50px;
     background: var(--paper);
-    border: 1.5px solid var(--ink-line);
-    border-radius: 3px;
-    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--ink-line);
+    padding: 0.8rem 1rem;
     font-family: var(--sans);
     font-size: 1rem;
     color: var(--ink);
-    transition: border-color .2s, background .2s;
+    transition: border-color 0.25s ease, background 0.25s ease;
     appearance: none;
     -webkit-appearance: none;
+    border-radius: 0;
   }
   .ap-textarea {
-    min-height: 96px;
+    min-height: 104px;
     resize: vertical;
-    line-height: 1.7;
+    line-height: 1.85;
   }
   .ap-select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%232C2826' stroke-width='1.5' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%231A1612' stroke-width='1.5' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 1rem center;
+    background-position: right 1.1rem center;
     background-size: 12px 8px;
     padding-right: 2.5rem;
   }
@@ -303,22 +328,27 @@
     border-color: var(--error);
   }
   .ap-field__hint {
-    font-size: 0.76rem;
+    font-family: var(--serif);
+    font-size: 0.82rem;
     color: var(--ink-mute);
-    line-height: 1.55;
+    line-height: 1.7;
     margin: 0;
+    letter-spacing: 0.02em;
   }
   .ap-field__error {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--error);
     margin: 0;
     display: none;
   }
   .ap-field__error.is-visible { display: block; }
   .ap-field__counter {
-    font-size: 0.72rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.78rem;
     color: var(--ink-mute);
     text-align: right;
+    letter-spacing: 0.06em;
   }
   .ap-field__counter.is-over { color: var(--error); }
 
@@ -330,37 +360,38 @@
   }
   .ap-zip__btn {
     background: var(--paper);
-    border: 1.5px solid var(--ink-line);
+    border: 1px solid var(--ink-line);
     color: var(--ink);
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    padding: 0 1rem;
+    font-family: var(--serif);
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    padding: 0 1.15rem;
     cursor: pointer;
-    border-radius: 3px;
     white-space: nowrap;
-    transition: border-color .2s, background .2s;
+    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    border-radius: 0;
   }
-  .ap-zip__btn:hover:not(:disabled) { border-color: var(--ink); background: var(--paper-warm); }
+  .ap-zip__btn:hover:not(:disabled) { border-color: var(--ink); background: var(--ink); color: var(--paper); }
   .ap-zip__btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
   /* ── CHECKBOX ── */
   .ap-check {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.85rem;
     align-items: flex-start;
-    padding: 0.85rem;
-    background: var(--paper);
-    border: 1.5px solid var(--ink-line);
-    border-radius: 3px;
+    padding: 1rem 1.15rem;
+    background: var(--paper-soft);
+    border: 1px solid var(--ink-line);
     cursor: pointer;
-    transition: border-color .2s, background .2s;
+    transition: border-color 0.25s ease, background 0.25s ease;
     margin-bottom: 0.7rem;
   }
   .ap-check:last-child { margin-bottom: 0; }
   .ap-check:hover { border-color: var(--ink-soft); }
   .ap-check.is-checked {
-    border-color: var(--ink);
-    background: var(--paper-warm);
+    border-color: var(--gold);
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1px var(--gold);
   }
   .ap-check.is-error { border-color: var(--error); }
   .ap-check input {
@@ -370,13 +401,13 @@
     width: 22px;
     height: 22px;
     border: 1.5px solid var(--ink-soft);
-    border-radius: 3px;
     margin: 0;
     cursor: pointer;
     background: var(--paper);
     position: relative;
     flex-shrink: 0;
-    margin-top: 1px;
+    margin-top: 2px;
+    border-radius: 0;
   }
   .ap-check input:checked {
     background: var(--ink);
@@ -395,41 +426,46 @@
   }
   .ap-check__body {
     flex: 1;
-    font-size: 0.86rem;
+    font-family: var(--serif);
+    font-size: 0.92rem;
     color: var(--ink);
-    line-height: 1.65;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
   }
   .ap-check__body strong { font-weight: 500; }
   .ap-check__body a {
-    color: var(--accent);
-    text-decoration: underline;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink-line);
+    text-decoration: none;
+    transition: border-color 0.25s ease;
   }
+  .ap-check__body a:hover { border-color: var(--ink); }
 
   /* ── SUBMIT ── */
   .ap-submit-wrap {
-    margin-top: 0.5rem;
+    margin-top: clamp(2rem, 4vw, 3rem);
   }
   .ap-submit {
     width: 100%;
-    min-height: 56px;
+    min-height: 60px;
     background: var(--ink);
     color: var(--paper);
-    border: none;
-    border-radius: 3px;
+    border: 1px solid var(--ink);
+    border-radius: 0;
     font-family: var(--serif);
     font-size: 1.05rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     cursor: pointer;
-    transition: background .2s, transform .15s, opacity .2s;
+    transition: background 0.3s ease, color 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.75rem;
   }
   .ap-submit:hover:not(:disabled) {
-    background: #1A1614;
-    transform: translateY(-1px);
+    background: var(--paper);
+    color: var(--ink);
   }
   .ap-submit:disabled {
     opacity: 0.45;
@@ -439,7 +475,7 @@
     display: none;
     width: 18px;
     height: 18px;
-    border: 2px solid var(--paper);
+    border: 2px solid currentColor;
     border-top-color: transparent;
     border-radius: 50%;
     animation: ap-spin .8s linear infinite;
@@ -452,10 +488,12 @@
 
   .ap-submit-note {
     text-align: center;
-    font-size: 0.74rem;
+    font-family: var(--serif);
+    font-size: 0.82rem;
     color: var(--ink-mute);
-    margin: 0.75rem 0 0;
-    line-height: 1.7;
+    margin: 1rem 0 0;
+    line-height: 1.9;
+    letter-spacing: 0.04em;
   }
   .ap-stripe-mark {
     display: inline-flex;
@@ -463,19 +501,18 @@
     gap: 0.3rem;
     font-family: var(--serif-it);
     font-style: italic;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
   }
 
   /* ── FORM ERROR BANNER ── */
   .ap-banner {
-    background: rgba(176, 71, 59, 0.08);
-    border: 1px solid rgba(176, 71, 59, 0.4);
+    background: rgba(176, 71, 59, 0.07);
+    border-left: 3px solid var(--error);
     color: var(--error);
     padding: 1rem 1.25rem;
-    border-radius: 3px;
     margin-bottom: 1.5rem;
-    font-size: 0.88rem;
-    line-height: 1.7;
+    font-size: 0.92rem;
+    line-height: 1.85;
     display: none;
   }
   .ap-banner.is-visible { display: block; }
@@ -483,30 +520,38 @@
   /* ── FOOTER ── */
   .ap-footer {
     text-align: center;
-    padding: 2rem 1.5rem 3rem;
-    border-top: 1px solid var(--ink-line);
+    padding: 2.5rem 1.5rem 3rem;
+    border-top: 1px solid var(--line-soft);
     color: var(--ink-mute);
     font-size: 0.78rem;
+    letter-spacing: 0.06em;
   }
   .ap-footer a {
-    color: var(--ink-soft);
-    margin: 0 0.6rem;
+    color: var(--ink-mute);
+    margin: 0 0.85rem;
     text-decoration: none;
+    transition: color 0.25s ease;
   }
   .ap-footer a:hover { color: var(--ink); }
   .ap-footer__copy {
     font-family: var(--serif-it);
     font-style: italic;
-    letter-spacing: 0.08em;
-    margin-top: 1rem;
+    letter-spacing: 0.14em;
+    margin-top: 1.1rem;
   }
 
   @media (max-width: 600px) {
-    .ap-header { padding: 0.9rem 1.1rem; }
-    .ap-header__logo { font-size: 1.35rem; }
-    .ap-hero { padding: 2.5rem 1.25rem 2rem; }
-    .ap-form { padding: 0 1.1rem 3rem; }
-    .ap-step { padding: 1.5rem 1.1rem; }
+    .ap-header { padding: 1rem 1.25rem; }
+    .ap-header__logo { font-size: 1.45rem; }
+    .ap-header__back { font-size: 0.78rem; letter-spacing: 0.1em; }
+    .ap-hero { padding: 3rem 1.25rem 2rem; }
+    .ap-hero__lede { font-size: 0.92rem; line-height: 1.95; }
+    .ap-form { padding: 0 1.25rem 3rem; }
+    .ap-step { padding-top: 2rem; }
+    .ap-step__num { font-size: 1.1rem; }
+    .ap-step__title { font-size: 1.15rem; }
+    .ap-step__desc { font-size: 0.9rem; }
+    .ap-footer a { display: inline-block; margin: 0.25rem 0.6rem; }
   }
 </style>
 </head>
@@ -518,10 +563,11 @@
 </header>
 
 <section class="ap-hero">
-  <div class="ap-hero__eyebrow">— Place Your Order</div>
-  <h1 class="ap-hero__title">お申し込み</h1>
+  <span class="ap-hero__ornament" aria-hidden="true">✦</span>
+  <p class="ap-hero__eyebrow">— Place Your Order</p>
+  <h1 class="ap-hero__title">想いを、かたちに。</h1>
   <p class="ap-hero__lede">
-    プラン・お届け先・添えるメッセージをご入力ください。<br>
+    プラン、お届け先、添えるメッセージをご入力ください。<br>
     送信後、Stripe の決済ページへ移動します。
   </p>
 </section>
