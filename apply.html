@@ -727,7 +727,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_phone">
-        受取人の電話番号 <span class="ap-field__required">必須</span>
+        受取人の電話番号 <span class="ap-field__optional">任意</span>
       </label>
       <input class="ap-input" type="tel" id="recipient_phone" name="recipient_phone" placeholder="09012345678" inputmode="tel" maxlength="13">
       <p class="ap-field__hint">配送業者からの不在連絡時に使用します。</p>
@@ -1056,10 +1056,7 @@
 
     var rPhoneEl = document.getElementById('recipient_phone');
     var rPhoneVal = (rPhoneEl.value || '').trim();
-    if (!rPhoneVal) {
-      setError('recipient_phone', '受取人の電話番号を入力してください。');
-      errors.push('recipient_phone');
-    } else if (!validatePhone(rPhoneVal)) {
+    if (rPhoneVal && !validatePhone(rPhoneVal)) {
       setError('recipient_phone', '0で始まる10〜11桁の電話番号を入力してください。');
       errors.push('recipient_phone');
     }
