@@ -9,35 +9,36 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --paper:        #F4F2EC;
-    --paper-soft:   #EAE8E1;
-    --paper-warm:   #E0DDD3;
-    --ink:          #1A1612;
-    --ink-soft:     rgba(26, 22, 18, 0.78);
-    --ink-mute:     rgba(26, 22, 18, 0.55);
-    --ink-line:     rgba(26, 22, 18, 0.18);
-    --ink-line-soft:rgba(26, 22, 18, 0.10);
-    --line:         #D2CFC4;
-    --line-soft:    #E2DFD7;
-    --gold:         #C9A45A;
-    --accent:       #C9A45A;
-    --error:        #B0473B;
-    --success:      #4F6B4C;
-    --serif:        'Shippori Mincho', 'Yu Mincho', 'YuMincho', serif;
-    --sans:         'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-    --serif-it:     'Cormorant Garamond', 'Times New Roman', serif;
+    --ink:           #1A1612;
+    --bg-dark:       #0A0907;
+    --bg-dark-2:     #120F0B;
+    --paper:         #ECE6D9;
+    --paper-soft:    rgba(236, 230, 217, .78);
+    --paper-mute:    rgba(236, 230, 217, .55);
+    --paper-faint:   rgba(236, 230, 217, .35);
+    --paper-line:    rgba(236, 230, 217, .18);
+    --paper-line-soft: rgba(236, 230, 217, .10);
+    --glass:         rgba(236, 230, 217, .04);
+    --glass-2:       rgba(236, 230, 217, .07);
+    --glass-3:       rgba(236, 230, 217, .10);
+    --gold:          #C9A45A;
+    --error:         #d49994;
+    --success:       #8FB58C;
+    --serif:         'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:          'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    --serif-it:      'Cormorant Garamond', 'Times New Roman', serif;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
   html, body {
     margin: 0;
     padding: 0;
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--bg-dark);
+    color: var(--paper);
     min-height: 100vh;
     font-family: var(--serif);
     line-height: 1.85;
@@ -45,25 +46,39 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Subtle background grain */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(201, 164, 90, .06), transparent 55%),
+      radial-gradient(ellipse at 80% 100%, rgba(236, 230, 217, .04), transparent 55%);
+    z-index: 0;
+  }
+
   a { color: inherit; }
 
   /* ── HEADER ── */
   .ap-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.4rem 2rem;
-    border-bottom: 1px solid var(--line-soft);
-    background: var(--paper);
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 2rem;
+    background: rgba(10, 9, 7, .82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--paper-line-soft);
   }
   .ap-header__logo {
     font-family: var(--serif-it);
     font-style: italic;
     font-size: 1.7rem;
-    color: var(--ink);
+    color: var(--paper);
     text-decoration: none;
     letter-spacing: 0.04em;
     line-height: 1;
@@ -72,17 +87,19 @@
     font-family: var(--serif-it);
     font-style: italic;
     font-size: 0.85rem;
-    color: var(--ink-mute);
+    color: var(--paper-mute);
     text-decoration: none;
     letter-spacing: 0.14em;
     transition: color 0.25s ease;
   }
-  .ap-header__back:hover { color: var(--ink); }
+  .ap-header__back:hover { color: var(--paper); }
 
   /* ── HERO ── */
   .ap-hero {
+    position: relative;
+    z-index: 1;
     text-align: center;
-    padding: clamp(4.5rem, 8vw, 7rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+    padding: clamp(4rem, 7vw, 6rem) 1.5rem clamp(2rem, 4vw, 3rem);
     max-width: 760px;
     margin: 0 auto;
   }
@@ -90,263 +107,432 @@
     display: block;
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--gold);
     line-height: 1;
-    margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+    margin-bottom: clamp(1.2rem, 2.5vw, 1.75rem);
     letter-spacing: 0.4em;
     padding-left: 0.4em;
+    opacity: 0.85;
   }
   .ap-hero__eyebrow {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.88rem;
-    color: var(--gold);
+    font-size: 0.85rem;
+    color: var(--paper-mute);
     letter-spacing: 0.32em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.1rem;
     text-transform: uppercase;
   }
   .ap-hero__title {
     font-family: var(--serif);
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(1.9rem, 4.2vw, 2.8rem);
     font-weight: 500;
     letter-spacing: 0.06em;
-    margin: 0 0 1.25rem;
+    margin: 0 0 1.15rem;
     line-height: 1.5;
+    color: var(--paper);
+  }
+  .ap-hero__title em {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--paper-mute);
   }
   .ap-hero__lede {
-    color: var(--ink-soft);
-    font-size: 1rem;
-    line-height: 2.05;
+    color: var(--paper-soft);
+    font-size: 0.95rem;
+    line-height: 2;
     letter-spacing: 0.04em;
     max-width: 30em;
     margin: 0 auto;
   }
 
+  /* ── STEPPER (top, sticky guide) ── */
+  .ap-stepper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+    max-width: 900px;
+    padding: 0 1.25rem;
+    font-family: var(--serif-it);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--paper-faint);
+  }
+  .ap-stepper__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color .35s ease;
+  }
+  .ap-stepper__item.is-active { color: var(--paper); font-weight: 500; }
+  .ap-stepper__item.is-done   { color: var(--paper-soft); }
+  .ap-stepper__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--paper-faint);
+    transition: all .35s ease;
+  }
+  .ap-stepper__item.is-active .ap-stepper__dot {
+    background: var(--paper);
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px rgba(236, 230, 217, .1);
+  }
+  .ap-stepper__item.is-done .ap-stepper__dot { background: rgba(236, 230, 217, .55); }
+  .ap-stepper__line {
+    width: 30px;
+    height: 1px;
+    background: var(--paper-line);
+  }
+
   /* ── FORM SHELL ── */
   .ap-form {
-    max-width: 720px;
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
     margin: 0 auto;
     padding: 0 1.5rem clamp(4rem, 8vw, 6rem);
   }
 
-  /* Each step reads as an editorial spread, not a boxed card. */
+  /* Step section — glass card on dark */
   .ap-step {
-    background: transparent;
-    border: none;
-    border-top: 1px solid var(--line);
-    padding: clamp(2.5rem, 5vw, 3.5rem) 0 0;
-    margin: 0 0 clamp(2rem, 4vw, 3rem);
+    background: var(--glass);
+    border: 1px solid var(--paper-line);
+    padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
+    margin: 0 0 clamp(1.4rem, 2.5vw, 1.75rem);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
-  .ap-step:first-of-type { border-top: none; padding-top: 0.5rem; }
   .ap-step__head {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .ap-step__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--paper-mute);
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
   }
   .ap-step__num {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 1.25rem;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    line-height: 1;
+    color: var(--paper);
+    margin-right: 0.4em;
+    letter-spacing: 0.05em;
   }
   .ap-step__title {
     font-family: var(--serif);
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-size: clamp(1.35rem, 2.7vw, 1.7rem);
     font-weight: 500;
-    margin: 0;
-    letter-spacing: 0.06em;
+    margin: 0 0 0.55rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: var(--paper);
+  }
+  .ap-step__title em {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--paper-mute);
   }
   .ap-step__desc {
-    color: var(--ink-soft);
-    font-size: 0.95rem;
+    color: var(--paper-soft);
+    font-size: 0.9rem;
     line-height: 1.95;
     letter-spacing: 0.03em;
-    margin: 0 0 1.75rem;
+    margin: 0 auto 2rem;
+    max-width: 38em;
+    text-align: center;
   }
 
   /* ── PLAN CARDS ── */
   .ap-plans {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    align-items: stretch;
   }
-  @media (max-width: 600px) {
-    .ap-plans { grid-template-columns: 1fr; }
+  @media (max-width: 980px) {
+    .ap-plans { grid-template-columns: repeat(2, 1fr); }
+    .ap-plan--rec { order: -1; }
   }
+  @media (max-width: 520px) {
+    .ap-plans { grid-template-columns: 1fr; gap: 18px; }
+  }
+
   .ap-plan {
     position: relative;
-    background: var(--paper-soft);
-    border: 1px solid var(--line-soft);
-    padding: 1.25rem 1.15rem 1.15rem;
+    background: var(--glass);
+    border: 1px solid var(--paper-line);
+    padding: 26px 18px 22px;
     cursor: pointer;
-    transition: border-color 0.3s ease, background 0.3s ease;
-    display: block;
+    transition: all .4s cubic-bezier(.2, .7, .3, 1);
+    display: flex;
+    flex-direction: column;
+    color: var(--paper);
   }
-  .ap-plan:hover { border-color: var(--line); background: var(--paper-warm); }
-  .ap-plan input { position: absolute; opacity: 0; pointer-events: none; }
-  .ap-plan input:checked ~ .ap-plan__inner { color: var(--ink); }
+  .ap-plan:hover {
+    border-color: rgba(236, 230, 217, .5);
+    transform: translateY(-3px);
+    background: rgba(236, 230, 217, .07);
+  }
+  .ap-plan input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
   .ap-plan.is-selected {
-    border-color: var(--gold);
-    background: var(--paper);
-    box-shadow: inset 0 0 0 1px var(--gold);
+    border-color: var(--paper);
+    border-width: 2px;
+    padding: 25px 17px 21px;
+    background: var(--glass-3);
   }
+  .ap-plan.is-selected::after {
+    content: '✓ 選択中';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: var(--serif-it);
+    font-size: 10px;
+    letter-spacing: .15em;
+    color: var(--paper);
+    background: rgba(10, 9, 7, .65);
+    padding: 4px 8px;
+  }
+
+  .ap-plan--rec {
+    background: linear-gradient(180deg, rgba(236, 230, 217, .1) 0%, rgba(236, 230, 217, .04) 100%);
+    border-color: rgba(236, 230, 217, .55);
+    border-width: 2px;
+    padding: 25px 17px 21px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, .4);
+  }
+
   .ap-plan__badge {
     position: absolute;
-    top: -0.65rem;
-    left: 1rem;
-    background: var(--gold);
-    color: var(--paper);
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: .06em;
+    font-weight: 500;
+    padding: 5px 13px;
+    white-space: nowrap;
+  }
+  .ap-plan__badge::before {
+    content: '✦';
+    margin-right: 6px;
+    color: #75695C;
+  }
+
+  .ap-plan__eyebrow {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.72rem;
-    padding: 0.2rem 0.85rem;
-    letter-spacing: 0.12em;
+    font-size: 12px;
+    color: var(--paper-mute);
+    margin-bottom: 4px;
+    letter-spacing: .08em;
   }
   .ap-plan__name {
     font-family: var(--serif);
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 0.2rem;
-    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    letter-spacing: .02em;
+  }
+  .ap-plan__tagline {
+    font-family: var(--serif-it);
+    font-style: italic;
+    color: var(--paper-soft);
+    font-size: 12px;
+    margin-bottom: 14px;
+    min-height: 20px;
   }
   .ap-plan__cycle {
-    font-size: 0.82rem;
-    color: var(--ink-mute);
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.06em;
+    font-family: var(--serif-it);
+    font-size: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--paper-mute);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--paper-line);
+    margin-bottom: 14px;
   }
   .ap-plan__price {
-    font-family: var(--serif);
-    font-size: 1.45rem;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 2px;
+  }
+  .ap-plan__price-num {
+    font-family: var(--serif-it);
+    font-size: 26px;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: -.01em;
   }
   .ap-plan__price-unit {
     font-family: var(--serif-it);
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--ink-mute);
-    margin-left: 0.3rem;
+    font-size: 11px;
+    color: var(--paper-mute);
   }
   .ap-plan__desc {
-    margin-top: 0.85rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid var(--ink-line-soft);
-    font-size: 0.85rem;
-    color: var(--ink-soft);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--paper-line);
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--paper-soft);
     line-height: 1.75;
     letter-spacing: 0.02em;
+    flex-grow: 1;
   }
 
   /* ── FIELDS ── */
   .ap-field {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
+    gap: 0.55rem;
+    margin-bottom: 1.6rem;
   }
   .ap-field:last-child { margin-bottom: 0; }
   .ap-field__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
+    gap: 1rem;
   }
   @media (max-width: 560px) {
     .ap-field__row { grid-template-columns: 1fr; }
   }
   .ap-field__label {
-    font-family: var(--serif);
-    font-size: 0.92rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--ink);
+    font-family: var(--serif-it);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--paper-mute);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.55rem;
+  }
+  .ap-field__label .ja {
+    font-family: var(--serif);
+    text-transform: none;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: var(--paper);
+    margin-left: 4px;
+    font-weight: 400;
   }
   .ap-field__required {
     font-family: var(--serif-it);
     font-style: italic;
     font-size: 0.68rem;
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--paper);
+    color: var(--ink);
     padding: 0.12rem 0.5rem;
     letter-spacing: 0.1em;
     font-weight: 400;
+    text-transform: none;
   }
   .ap-field__optional {
     font-family: var(--serif-it);
     font-style: italic;
     font-size: 0.68rem;
-    color: var(--ink-mute);
-    border: 1px solid var(--ink-line);
+    color: var(--paper-mute);
+    border: 1px solid var(--paper-line);
     padding: 0.05rem 0.5rem;
     letter-spacing: 0.1em;
+    text-transform: none;
   }
+
   .ap-input,
   .ap-select,
   .ap-textarea {
     width: 100%;
-    min-height: 50px;
-    background: var(--paper);
-    border: 1px solid var(--ink-line);
-    padding: 0.8rem 1rem;
-    font-family: var(--sans);
-    font-size: 1rem;
-    color: var(--ink);
+    min-height: 48px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--paper-line);
+    padding: 0.7rem 0;
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--paper);
     transition: border-color 0.25s ease, background 0.25s ease;
     appearance: none;
     -webkit-appearance: none;
     border-radius: 0;
+    outline: none;
+  }
+  .ap-input::placeholder,
+  .ap-textarea::placeholder {
+    color: rgba(236, 230, 217, .32);
   }
   .ap-textarea {
-    min-height: 104px;
+    min-height: 96px;
     resize: vertical;
     line-height: 1.85;
+    border: 1px solid var(--paper-line);
+    padding: 0.85rem 1rem;
+    background: var(--glass);
   }
   .ap-select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%231A1612' stroke-width='1.5' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23ECE6D9' stroke-width='1.5' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 1.1rem center;
-    background-size: 12px 8px;
-    padding-right: 2.5rem;
+    background-position: right 0.3rem center;
+    background-size: 11px 7px;
+    padding-right: 1.8rem;
+  }
+  .ap-select option {
+    background: var(--bg-dark);
+    color: var(--paper);
   }
   .ap-input:focus,
-  .ap-select:focus,
-  .ap-textarea:focus {
-    outline: none;
-    border-color: var(--ink);
-    background: var(--paper-soft);
+  .ap-select:focus { border-bottom-color: var(--paper); }
+  .ap-textarea:focus { border-color: var(--paper); background: var(--glass-2); }
+  .ap-input::-webkit-calendar-picker-indicator {
+    filter: invert(.92);
+    opacity: .65;
+    cursor: pointer;
   }
   .ap-input.is-error,
-  .ap-select.is-error,
-  .ap-textarea.is-error {
-    border-color: var(--error);
-  }
+  .ap-select.is-error { border-bottom-color: var(--error); }
+  .ap-textarea.is-error { border-color: var(--error); }
+
   .ap-field__hint {
     font-family: var(--serif);
-    font-size: 0.82rem;
-    color: var(--ink-mute);
-    line-height: 1.7;
+    font-size: 12px;
+    color: var(--paper-mute);
+    line-height: 1.75;
     margin: 0;
     letter-spacing: 0.02em;
   }
   .ap-field__error {
-    font-size: 0.82rem;
+    font-family: var(--serif);
+    font-size: 12px;
     color: var(--error);
     margin: 0;
     display: none;
+    letter-spacing: 0.02em;
   }
   .ap-field__error.is-visible { display: block; }
   .ap-field__counter {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.78rem;
-    color: var(--ink-mute);
+    font-size: 11px;
+    color: var(--paper-mute);
     text-align: right;
     letter-spacing: 0.06em;
   }
@@ -356,23 +542,30 @@
   .ap-zip {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    align-items: end;
   }
   .ap-zip__btn {
-    background: var(--paper);
-    border: 1px solid var(--ink-line);
-    color: var(--ink);
-    font-family: var(--serif);
-    font-size: 0.88rem;
-    letter-spacing: 0.06em;
-    padding: 0 1.15rem;
+    background: transparent;
+    border: 1px solid var(--paper-line);
+    color: var(--paper);
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding: 0.65rem 1.1rem;
     cursor: pointer;
     white-space: nowrap;
-    transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    transition: all 0.25s ease;
     border-radius: 0;
+    height: 44px;
   }
-  .ap-zip__btn:hover:not(:disabled) { border-color: var(--ink); background: var(--ink); color: var(--paper); }
-  .ap-zip__btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .ap-zip__btn:hover:not(:disabled) {
+    border-color: var(--paper);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .ap-zip__btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
   /* ── CHECKBOX ── */
   .ap-check {
@@ -380,101 +573,114 @@
     gap: 0.85rem;
     align-items: flex-start;
     padding: 1rem 1.15rem;
-    background: var(--paper-soft);
-    border: 1px solid var(--ink-line);
+    background: var(--glass);
+    border: 1px solid var(--paper-line);
     cursor: pointer;
     transition: border-color 0.25s ease, background 0.25s ease;
     margin-bottom: 0.7rem;
   }
   .ap-check:last-child { margin-bottom: 0; }
-  .ap-check:hover { border-color: var(--ink-soft); }
+  .ap-check:hover { border-color: rgba(236, 230, 217, .45); }
   .ap-check.is-checked {
-    border-color: var(--gold);
-    background: var(--paper);
-    box-shadow: inset 0 0 0 1px var(--gold);
+    border-color: var(--paper);
+    background: var(--glass-2);
+    box-shadow: inset 0 0 0 1px var(--paper);
   }
   .ap-check.is-error { border-color: var(--error); }
   .ap-check input {
     appearance: none;
     -webkit-appearance: none;
-    min-width: 22px;
-    width: 22px;
-    height: 22px;
-    border: 1.5px solid var(--ink-soft);
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--paper-mute);
     margin: 0;
     cursor: pointer;
-    background: var(--paper);
+    background: transparent;
     position: relative;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 3px;
     border-radius: 0;
+    transition: all 0.2s ease;
   }
   .ap-check input:checked {
-    background: var(--ink);
-    border-color: var(--ink);
+    background: var(--paper);
+    border-color: var(--paper);
   }
   .ap-check input:checked::after {
     content: "";
     position: absolute;
-    left: 6px;
-    top: 2px;
+    left: 5px;
+    top: 1px;
     width: 6px;
     height: 11px;
-    border: solid var(--paper);
+    border: solid var(--ink);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
   .ap-check__body {
     flex: 1;
     font-family: var(--serif);
-    font-size: 0.92rem;
-    color: var(--ink);
-    line-height: 1.75;
+    font-size: 0.9rem;
+    color: var(--paper);
+    line-height: 1.85;
     letter-spacing: 0.02em;
   }
   .ap-check__body strong { font-weight: 500; }
+  .ap-check__body a {
+    color: var(--paper);
+    border-bottom: 1px solid var(--paper-line);
+    text-decoration: none;
+    transition: border-color 0.25s ease;
+  }
+  .ap-check__body a:hover { border-color: var(--paper); }
 
   /* ── STEALTH INTRO ── */
   .ap-stealth {
-    background: var(--paper-soft);
-    border-left: 2px solid var(--gold);
-    padding: 1.5rem 1.5rem 1.5rem 1.65rem;
+    background: linear-gradient(135deg, rgba(236, 230, 217, .05) 0%, rgba(236, 230, 217, .09) 100%);
+    border-left: 2px solid var(--paper);
+    padding: 1.4rem 1.5rem 1.4rem 1.65rem;
     margin: 0 0 1.5rem;
+    position: relative;
+  }
+  .ap-stealth::before {
+    content: '"';
+    font-family: var(--serif-it);
+    font-size: 56px;
+    color: rgba(236, 230, 217, .18);
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    line-height: 1;
   }
   .ap-stealth__eyebrow {
     font-family: var(--serif-it);
     font-style: italic;
-    font-size: 0.78rem;
+    font-size: 12px;
     letter-spacing: 0.28em;
-    color: var(--gold);
+    color: var(--paper-mute);
     text-transform: uppercase;
-    margin: 0 0 0.85rem;
+    margin: 0 0 0.8rem;
     line-height: 1;
   }
   .ap-stealth__title {
     font-family: var(--serif);
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     font-weight: 500;
     letter-spacing: 0.06em;
     margin: 0 0 0.85rem;
     line-height: 1.55;
+    color: var(--paper);
   }
   .ap-stealth__body {
     font-family: var(--serif);
-    font-size: 0.92rem;
-    color: var(--ink-soft);
-    line-height: 2;
+    font-size: 0.9rem;
+    color: var(--paper-soft);
+    line-height: 1.95;
     letter-spacing: 0.03em;
     margin: 0;
   }
   .ap-stealth__body + .ap-stealth__body { margin-top: 0.75rem; }
-  .ap-check__body a {
-    color: var(--ink);
-    border-bottom: 1px solid var(--ink-line);
-    text-decoration: none;
-    transition: border-color 0.25s ease;
-  }
-  .ap-check__body a:hover { border-color: var(--ink); }
 
   /* ── SUBMIT ── */
   .ap-submit-wrap {
@@ -483,24 +689,24 @@
   .ap-submit {
     width: 100%;
     min-height: 60px;
-    background: var(--ink);
-    color: var(--paper);
-    border: 1px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--paper);
     border-radius: 0;
     font-family: var(--serif);
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
   }
   .ap-submit:hover:not(:disabled) {
-    background: var(--paper);
-    color: var(--ink);
+    background: transparent;
+    color: var(--paper);
   }
   .ap-submit:disabled {
     opacity: 0.45;
@@ -525,9 +731,9 @@
     text-align: center;
     font-family: var(--serif);
     font-size: 0.82rem;
-    color: var(--ink-mute);
-    margin: 1rem 0 0;
-    line-height: 1.9;
+    color: var(--paper-mute);
+    margin: 1.1rem 0 0;
+    line-height: 1.95;
     letter-spacing: 0.04em;
   }
   .ap-stripe-mark {
@@ -537,42 +743,46 @@
     font-family: var(--serif-it);
     font-style: italic;
     letter-spacing: 0.1em;
-    color: inherit;
+    color: var(--paper);
     text-decoration: none;
-    border-bottom: 1px solid var(--ink-line);
+    border-bottom: 1px solid var(--paper-line);
     transition: border-color 0.25s ease;
   }
-  .ap-stripe-mark:hover { border-color: var(--ink); }
+  .ap-stripe-mark:hover { border-color: var(--paper); }
 
   /* ── FORM ERROR BANNER ── */
   .ap-banner {
-    background: rgba(176, 71, 59, 0.07);
+    background: rgba(212, 153, 148, .08);
     border-left: 3px solid var(--error);
     color: var(--error);
     padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
+    font-family: var(--serif);
     font-size: 0.92rem;
     line-height: 1.85;
+    letter-spacing: 0.02em;
     display: none;
   }
   .ap-banner.is-visible { display: block; }
 
   /* ── FOOTER ── */
   .ap-footer {
+    position: relative;
+    z-index: 1;
     text-align: center;
     padding: 2.5rem 1.5rem 3rem;
-    border-top: 1px solid var(--line-soft);
-    color: var(--ink-mute);
+    border-top: 1px solid var(--paper-line-soft);
+    color: var(--paper-mute);
     font-size: 0.78rem;
     letter-spacing: 0.06em;
   }
   .ap-footer a {
-    color: var(--ink-mute);
+    color: var(--paper-mute);
     margin: 0 0.85rem;
     text-decoration: none;
     transition: color 0.25s ease;
   }
-  .ap-footer a:hover { color: var(--ink); }
+  .ap-footer a:hover { color: var(--paper); }
   .ap-footer__copy {
     font-family: var(--serif-it);
     font-style: italic;
@@ -580,17 +790,21 @@
     margin-top: 1.1rem;
   }
 
+  @media (max-width: 720px) {
+    .ap-stepper { gap: 6px; font-size: 10px; letter-spacing: 0.15em; }
+    .ap-stepper__line { width: 18px; }
+    .ap-stepper__label { display: none; }
+  }
   @media (max-width: 600px) {
     .ap-header { padding: 1rem 1.25rem; }
     .ap-header__logo { font-size: 1.45rem; }
     .ap-header__back { font-size: 0.78rem; letter-spacing: 0.1em; }
-    .ap-hero { padding: 3rem 1.25rem 2rem; }
-    .ap-hero__lede { font-size: 0.92rem; line-height: 1.95; }
-    .ap-form { padding: 0 1.25rem 3rem; }
-    .ap-step { padding-top: 2rem; }
-    .ap-step__num { font-size: 1.1rem; }
-    .ap-step__title { font-size: 1.15rem; }
-    .ap-step__desc { font-size: 0.9rem; }
+    .ap-hero { padding: 2.8rem 1.25rem 1.5rem; }
+    .ap-hero__lede { font-size: 0.9rem; line-height: 1.95; }
+    .ap-form { padding: 0 1rem 3rem; }
+    .ap-step { padding: 1.75rem 1.25rem; }
+    .ap-step__title { font-size: 1.2rem; }
+    .ap-step__desc { font-size: 0.88rem; }
     .ap-footer a { display: inline-block; margin: 0.25rem 0.6rem; }
   }
 </style>
@@ -605,73 +819,120 @@
 <section class="ap-hero">
   <span class="ap-hero__ornament" aria-hidden="true">✦</span>
   <p class="ap-hero__eyebrow">— Place Your Order</p>
-  <h1 class="ap-hero__title">想いを、かたちに。</h1>
+  <h1 class="ap-hero__title">想いを、<em>かたち</em>に。</h1>
   <p class="ap-hero__lede">
     プラン、お届け先、添えるメッセージをご入力ください。<br>
     送信後、Stripe の決済ページへ移動します。
   </p>
 </section>
 
+<nav class="ap-stepper" aria-label="入力ステップ">
+  <span class="ap-stepper__item is-active" data-step="1">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">01 — Plan</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="2">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">02 — Applicant</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="3">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">03 — Recipient</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="4">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">04 — Message</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="5">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">05 — Confirm</span>
+  </span>
+</nav>
+
 <form class="ap-form" id="apForm" novalidate>
 
   <div class="ap-banner" id="apBanner" role="alert"></div>
 
   <!-- ─────────── STEP 1: PLAN ─────────── -->
-  <div class="ap-step">
+  <section class="ap-step" data-step="1">
     <div class="ap-step__head">
-      <span class="ap-step__num">Step 01</span>
-      <h2 class="ap-step__title">プランを選ぶ</h2>
+      <div class="ap-step__eyebrow">— Step 01 / Choose your rhythm</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">01.</span> まずは、想いを届ける<em>頻度</em>を。</h2>
+      <p class="ap-step__desc">無理のない頻度を選んでください。大切な人へ、続けやすいリズムで花を届けます。</p>
     </div>
-    <p class="ap-step__desc">大切な人へ届ける頻度をお選びください。</p>
 
     <div class="ap-plans" role="radiogroup" aria-label="プラン">
       <label class="ap-plan" data-plan="monthly">
         <input type="radio" name="plan_id" value="monthly">
-        <div class="ap-plan__name">Monthly</div>
-        <div class="ap-plan__cycle">月1回お届け</div>
-        <div class="ap-plan__price">¥5,000<span class="ap-plan__price-unit">/月</span></div>
-        <div class="ap-plan__desc">月1回、季節の花束をお届け</div>
+        <div class="ap-plan__eyebrow">— Monthly</div>
+        <div class="ap-plan__name">Altru Monthly</div>
+        <div class="ap-plan__tagline">想うを、毎月に</div>
+        <div class="ap-plan__cycle">毎月・年12回</div>
+        <div class="ap-plan__price">
+          <span class="ap-plan__price-num">¥5,000</span>
+          <span class="ap-plan__price-unit">/回</span>
+        </div>
+        <div class="ap-plan__desc">月1回、季節の花束をお届け。日常を、特別に。</div>
       </label>
 
       <label class="ap-plan" data-plan="seasonal">
         <input type="radio" name="plan_id" value="seasonal">
-        <div class="ap-plan__name">Seasonal</div>
-        <div class="ap-plan__cycle">3ヶ月毎・四季ごと</div>
-        <div class="ap-plan__price">¥6,000<span class="ap-plan__price-unit">/3ヶ月</span></div>
-        <div class="ap-plan__desc">四季の節目に厳選した花束</div>
+        <div class="ap-plan__eyebrow">— Seasonal</div>
+        <div class="ap-plan__name">Altru Seasonal</div>
+        <div class="ap-plan__tagline">季節を、届ける</div>
+        <div class="ap-plan__cycle">3ヶ月毎・年4回</div>
+        <div class="ap-plan__price">
+          <span class="ap-plan__price-num">¥6,000</span>
+          <span class="ap-plan__price-unit">/回</span>
+        </div>
+        <div class="ap-plan__desc">春夏秋冬の節目に、旬の花材を厳選してお届け。</div>
       </label>
 
-      <label class="ap-plan is-selected" data-plan="halfyear">
-        <span class="ap-plan__badge">おすすめ</span>
+      <label class="ap-plan ap-plan--rec is-selected" data-plan="halfyear">
+        <span class="ap-plan__badge">最もおすすめ — 78%</span>
         <input type="radio" name="plan_id" value="halfyear" checked>
-        <div class="ap-plan__name">Half Year</div>
-        <div class="ap-plan__cycle">半年に1回</div>
-        <div class="ap-plan__price">¥8,000<span class="ap-plan__price-unit">/6ヶ月</span></div>
-        <div class="ap-plan__desc">大切な記念日に合わせた花束</div>
+        <div class="ap-plan__eyebrow">— Half Year</div>
+        <div class="ap-plan__name">Altru Half Year</div>
+        <div class="ap-plan__tagline">想うを、確かに届ける</div>
+        <div class="ap-plan__cycle">6ヶ月毎・年2回</div>
+        <div class="ap-plan__price">
+          <span class="ap-plan__price-num">¥8,000</span>
+          <span class="ap-plan__price-unit">/回</span>
+        </div>
+        <div class="ap-plan__desc">大切な記念日に合わせた花束。迷ったら、これ。</div>
       </label>
 
       <label class="ap-plan" data-plan="anniversary">
         <input type="radio" name="plan_id" value="anniversary">
-        <div class="ap-plan__name">Anniversary</div>
+        <div class="ap-plan__eyebrow">— Anniversary</div>
+        <div class="ap-plan__name">Altru Anniversary</div>
+        <div class="ap-plan__tagline">大切な日に、花を</div>
         <div class="ap-plan__cycle">年1回・記念日</div>
-        <div class="ap-plan__price">¥12,000<span class="ap-plan__price-unit">/年</span></div>
-        <div class="ap-plan__desc">結婚記念日・誕生日など最重要記念日に</div>
+        <div class="ap-plan__price">
+          <span class="ap-plan__price-num">¥12,000</span>
+          <span class="ap-plan__price-unit">/回</span>
+        </div>
+        <div class="ap-plan__desc">結婚記念日・誕生日など、年に一度の最重要日に。</div>
       </label>
     </div>
     <p class="ap-field__error" id="err-plan_id"></p>
-  </div>
+  </section>
 
   <!-- ─────────── STEP 2: APPLICANT ─────────── -->
-  <div class="ap-step">
+  <section class="ap-step" data-step="2">
     <div class="ap-step__head">
-      <span class="ap-step__num">Step 02</span>
-      <h2 class="ap-step__title">お申込者の情報</h2>
+      <div class="ap-step__eyebrow">— Step 02 / About you</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">02.</span> お申込者の<em>情報</em>。</h2>
+      <p class="ap-step__desc">ご請求・各種ご連絡先としてお預かりします。</p>
     </div>
-    <p class="ap-step__desc">ご請求・各種ご連絡先としてお預かりします。</p>
 
     <div class="ap-field">
       <label class="ap-field__label" for="applicant_name">
-        お名前 <span class="ap-field__required">必須</span>
+        Name <span class="ja">お名前</span> <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="text" id="applicant_name" name="applicant_name" maxlength="50" autocomplete="name" placeholder="山田 太郎">
       <p class="ap-field__error" id="err-applicant_name"></p>
@@ -679,7 +940,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="applicant_email">
-        メールアドレス <span class="ap-field__required">必須</span>
+        Email <span class="ja">メールアドレス</span> <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="email" id="applicant_email" name="applicant_email" autocomplete="email" placeholder="you@example.com" inputmode="email">
       <p class="ap-field__hint">領収書・お届け予定日のご案内をお送りします。</p>
@@ -688,25 +949,25 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="applicant_phone">
-        電話番号 <span class="ap-field__required">必須</span>
+        Phone <span class="ja">電話番号</span> <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="tel" id="applicant_phone" name="applicant_phone" autocomplete="tel" placeholder="09012345678" inputmode="tel" maxlength="13">
       <p class="ap-field__hint">ハイフンあり・なし どちらでも可。</p>
       <p class="ap-field__error" id="err-applicant_phone"></p>
     </div>
-  </div>
+  </section>
 
   <!-- ─────────── STEP 3: RECIPIENT ─────────── -->
-  <div class="ap-step">
+  <section class="ap-step" data-step="3">
     <div class="ap-step__head">
-      <span class="ap-step__num">Step 03</span>
-      <h2 class="ap-step__title">お届け先</h2>
+      <div class="ap-step__eyebrow">— Step 03 / The one to receive</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">03.</span> <em>お届け先</em>。</h2>
+      <p class="ap-step__desc">花束を受け取るお相手の、ご住所とお名前をご入力ください。</p>
     </div>
-    <p class="ap-step__desc">お届け先のご住所・お名前をご入力ください。</p>
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_name">
-        お届け先のお名前 <span class="ap-field__required">必須</span>
+        Recipient <span class="ja">お届け先のお名前</span> <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="text" id="recipient_name" name="recipient_name" maxlength="50" placeholder="山田 花子">
       <p class="ap-field__error" id="err-recipient_name"></p>
@@ -714,7 +975,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_relation">
-        お相手とのご関係 <span class="ap-field__required">必須</span>
+        Relation <span class="ja">お相手とのご関係</span> <span class="ap-field__required">必須</span>
       </label>
       <select class="ap-select" id="recipient_relation" name="recipient_relation">
         <option value="">選択してください</option>
@@ -728,7 +989,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_postal_code">
-        郵便番号 <span class="ap-field__required">必須</span>
+        Postal <span class="ja">郵便番号</span> <span class="ap-field__required">必須</span>
       </label>
       <div class="ap-zip">
         <input class="ap-input" type="text" id="recipient_postal_code" name="recipient_postal_code" placeholder="152-0001" inputmode="numeric" maxlength="8" autocomplete="postal-code">
@@ -741,7 +1002,7 @@
     <div class="ap-field__row">
       <div class="ap-field">
         <label class="ap-field__label" for="recipient_prefecture">
-          都道府県 <span class="ap-field__required">必須</span>
+          Prefecture <span class="ja">都道府県</span> <span class="ap-field__required">必須</span>
         </label>
         <select class="ap-select" id="recipient_prefecture" name="recipient_prefecture" autocomplete="address-level1">
           <option value="">選択</option>
@@ -750,7 +1011,7 @@
       </div>
       <div class="ap-field">
         <label class="ap-field__label" for="recipient_city">
-          市区町村 <span class="ap-field__required">必須</span>
+          City <span class="ja">市区町村</span> <span class="ap-field__required">必須</span>
         </label>
         <input class="ap-input" type="text" id="recipient_city" name="recipient_city" maxlength="50" autocomplete="address-level2" placeholder="目黒区中央町">
         <p class="ap-field__error" id="err-recipient_city"></p>
@@ -759,7 +1020,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_address_line">
-        番地・建物名 <span class="ap-field__required">必須</span>
+        Address <span class="ja">番地・建物名</span> <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="text" id="recipient_address_line" name="recipient_address_line" maxlength="100" autocomplete="address-line1" placeholder="1-2-3 アルトゥルレジデンス 405号室">
       <p class="ap-field__error" id="err-recipient_address_line"></p>
@@ -767,7 +1028,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_phone">
-        お届け先の電話番号 <span class="ap-field__optional">任意</span>
+        Phone <span class="ja">お届け先の電話番号</span> <span class="ap-field__optional">任意</span>
       </label>
       <input class="ap-input" type="tel" id="recipient_phone" name="recipient_phone" placeholder="09012345678" inputmode="tel" maxlength="13">
       <p class="ap-field__hint">配送業者からの不在連絡時に使用します。</p>
@@ -776,25 +1037,25 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_delivery_note">
-        配送メモ <span class="ap-field__optional">任意</span>
+        Note <span class="ja">配送メモ</span> <span class="ap-field__optional">任意</span>
       </label>
       <textarea class="ap-textarea" id="recipient_delivery_note" name="recipient_delivery_note" maxlength="100" placeholder="例: 平日午前中希望／在宅時間17時以降"></textarea>
       <div class="ap-field__counter"><span id="cnt-delivery_note">0</span>/100</div>
       <p class="ap-field__error" id="err-recipient_delivery_note"></p>
     </div>
-  </div>
+  </section>
 
   <!-- ─────────── STEP 4: MESSAGE ─────────── -->
-  <div class="ap-step">
+  <section class="ap-step" data-step="4">
     <div class="ap-step__head">
-      <span class="ap-step__num">Step 04</span>
-      <h2 class="ap-step__title">メッセージカード</h2>
+      <div class="ap-step__eyebrow">— Step 04 / Words to attach</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">04.</span> <em>メッセージ</em>カード。</h2>
+      <p class="ap-step__desc">花束に添えるメッセージを、6つの定型文からお選びください。</p>
     </div>
-    <p class="ap-step__desc">花束に添えるメッセージを、6つの定型文からお選びください。</p>
 
     <div class="ap-field">
       <label class="ap-field__label" for="message_text">
-        メッセージ <span class="ap-field__required">必須</span>
+        Message <span class="ja">メッセージ</span> <span class="ap-field__required">必須</span>
       </label>
       <select class="ap-select" id="message_text" name="message_text">
         <option value="" disabled selected>お選びください</option>
@@ -817,21 +1078,21 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="anchor_date">
-        記念日 <span class="ap-field__optional">任意</span>
+        Anchor <span class="ja">記念日</span> <span class="ap-field__optional">任意</span>
       </label>
       <input class="ap-input" type="date" id="anchor_date" name="anchor_date">
       <p class="ap-field__hint">記念日を起点に、最適なお届け日を調整します。</p>
       <p class="ap-field__error" id="err-anchor_date"></p>
     </div>
-  </div>
+  </section>
 
   <!-- ─────────── STEP 5: CONSENT ─────────── -->
-  <div class="ap-step">
+  <section class="ap-step" data-step="5">
     <div class="ap-step__head">
-      <span class="ap-step__num">Step 05</span>
-      <h2 class="ap-step__title">ご確認</h2>
+      <div class="ap-step__eyebrow">— Step 05 / Final notes</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">05.</span> <em>ご確認</em>。</h2>
+      <p class="ap-step__desc">最後に、以下の2点にご同意ください。</p>
     </div>
-    <p class="ap-step__desc">最後に、以下の2点にご同意ください。</p>
 
     <aside class="ap-stealth" aria-labelledby="stealth-intro-title">
       <p class="ap-stealth__eyebrow">On Stealth Delivery</p>
@@ -861,7 +1122,7 @@
       </span>
     </label>
     <p class="ap-field__error" id="err-consent"></p>
-  </div>
+  </section>
 
   <!-- ─────────── SUBMIT ─────────── -->
   <div class="ap-submit-wrap">
@@ -986,7 +1247,7 @@
 
   function lookupZip(digits) {
     zipHint.textContent = '住所を検索中...';
-    zipHint.style.color = 'var(--ink-mute)';
+    zipHint.style.color = 'var(--paper-mute)';
     zipBtn.disabled = true;
     var url = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + digits;
     fetch(url)
@@ -1001,13 +1262,13 @@
           zipHint.style.color = 'var(--success)';
         } else {
           zipHint.textContent = '該当する住所が見つかりませんでした。手動でご入力ください。';
-          zipHint.style.color = 'var(--ink-mute)';
+          zipHint.style.color = 'var(--paper-mute)';
         }
       })
       .catch(function () {
         zipBtn.disabled = false;
         zipHint.textContent = '住所検索に失敗しました。手動でご入力ください。';
-        zipHint.style.color = 'var(--ink-mute)';
+        zipHint.style.color = 'var(--paper-mute)';
       });
   }
 
@@ -1201,6 +1462,38 @@
     banner.classList.remove('is-visible');
   }
 
+  /* ── Stepper progress (scroll-driven) ── */
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.ap-step[data-step]'));
+  var stepperItems = Array.prototype.slice.call(document.querySelectorAll('.ap-stepper__item[data-step]'));
+
+  function updateStepper() {
+    var viewportMid = window.innerHeight * 0.42;
+    var activeStep = 1;
+    steps.forEach(function (sec) {
+      var rect = sec.getBoundingClientRect();
+      if (rect.top <= viewportMid) {
+        activeStep = parseInt(sec.getAttribute('data-step'), 10);
+      }
+    });
+    stepperItems.forEach(function (item) {
+      var n = parseInt(item.getAttribute('data-step'), 10);
+      item.classList.toggle('is-active', n === activeStep);
+      item.classList.toggle('is-done', n < activeStep);
+    });
+  }
+
+  var stepperTicking = false;
+  window.addEventListener('scroll', function () {
+    if (!stepperTicking) {
+      window.requestAnimationFrame(function () {
+        updateStepper();
+        stepperTicking = false;
+      });
+      stepperTicking = true;
+    }
+  }, { passive: true });
+  updateStepper();
+
   /* ── Submit ── */
   var form = document.getElementById('apForm');
   var submitBtn = document.getElementById('apSubmit');
@@ -1252,22 +1545,6 @@
         submitBtn.classList.remove('is-loading');
         submitBtn.disabled = false;
       });
-  });
-
-  /* ── On-blur per-field validation (light) ── */
-  ['applicant_name','applicant_email','applicant_phone',
-   'recipient_name','recipient_city','recipient_address_line',
-   'recipient_phone','message_text'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.addEventListener('blur', function () {
-      // Clear error only — full validation runs on submit
-      var errEl = document.getElementById('err-' + id);
-      if (errEl && errEl.classList.contains('is-visible') && (el.value || '').trim()) {
-        // Re-validate this field quickly
-        // (kept light to avoid noise — full check is on submit)
-      }
-    });
   });
 })();
 </script>
