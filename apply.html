@@ -697,11 +697,11 @@
       <span class="ap-step__num">Step 03</span>
       <h2 class="ap-step__title">お届け先</h2>
     </div>
-    <p class="ap-step__desc">受取人様のご住所・お名前をご入力ください。</p>
+    <p class="ap-step__desc">お届け先のご住所・お名前をご入力ください。</p>
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_name">
-        受取人のお名前 <span class="ap-field__required">必須</span>
+        お届け先のお名前 <span class="ap-field__required">必須</span>
       </label>
       <input class="ap-input" type="text" id="recipient_name" name="recipient_name" maxlength="50" placeholder="山田 花子">
       <p class="ap-field__error" id="err-recipient_name"></p>
@@ -762,7 +762,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_phone">
-        受取人の電話番号 <span class="ap-field__optional">任意</span>
+        お届け先の電話番号 <span class="ap-field__optional">任意</span>
       </label>
       <input class="ap-input" type="tel" id="recipient_phone" name="recipient_phone" placeholder="09012345678" inputmode="tel" maxlength="13">
       <p class="ap-field__hint">配送業者からの不在連絡時に使用します。</p>
@@ -1088,7 +1088,7 @@
       errors.push('applicant_phone');
     }
 
-    checkText('recipient_name', '受取人のお名前', 1, 50);
+    checkText('recipient_name', 'お届け先のお名前', 1, 50);
 
     var relEl = document.getElementById('recipient_relation');
     if (!relEl.value) {
