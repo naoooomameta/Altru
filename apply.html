@@ -785,14 +785,28 @@
       <span class="ap-step__num">Step 04</span>
       <h2 class="ap-step__title">メッセージカード</h2>
     </div>
-    <p class="ap-step__desc">花束に添える短いメッセージをご記入ください（50文字以内）。</p>
+    <p class="ap-step__desc">花束に添えるメッセージを、6つの定型文からお選びください。</p>
 
     <div class="ap-field">
       <label class="ap-field__label" for="message_text">
         メッセージ <span class="ap-field__required">必須</span>
       </label>
-      <textarea class="ap-textarea" id="message_text" name="message_text" maxlength="50" placeholder="いつもありがとう。"></textarea>
-      <div class="ap-field__counter"><span id="cnt-message">0</span>/50</div>
+      <select class="ap-select" id="message_text" name="message_text">
+        <option value="" disabled selected>お選びください</option>
+        <optgroup label="感謝の気持ち">
+          <option value="いつもありがとう。">いつもありがとう。</option>
+          <option value="心からの感謝を込めて。">心からの感謝を込めて。</option>
+        </optgroup>
+        <optgroup label="大切な日の想い">
+          <option value="大切な日に、想いを込めて。">大切な日に、想いを込めて。</option>
+          <option value="今日もそばにいてくれて、ありがとう。">今日もそばにいてくれて、ありがとう。</option>
+        </optgroup>
+        <optgroup label="励まし・労い">
+          <option value="お疲れさまでした。ゆっくり休んでね。">お疲れさまでした。ゆっくり休んでね。</option>
+          <option value="あなたの毎日が、穏やかでありますように。">あなたの毎日が、穏やかでありますように。</option>
+        </optgroup>
+      </select>
+      <p class="ap-field__hint">花束に添えるカードに、そのまま手書き風で印刷されます。</p>
       <p class="ap-field__error" id="err-message_text"></p>
     </div>
 
@@ -920,7 +934,6 @@
     input.addEventListener('input', update);
     update();
   }
-  bindCounter('message_text', 'cnt-message');
   bindCounter('recipient_delivery_note', 'cnt-delivery_note');
 
   /* ── Checkbox visual state ── */
@@ -1113,7 +1126,11 @@
       errors.push('recipient_delivery_note');
     }
 
-    checkText('message_text', 'メッセージ', 1, 50);
+    var msgEl = document.getElementById('message_text');
+    if (!msgEl.value) {
+      setError('message_text', 'メッセージをお選びください。');
+      errors.push('message_text');
+    }
 
     var stealthEl = document.getElementById('stealth_confirmed');
     var termsEl = document.getElementById('terms_accepted');
