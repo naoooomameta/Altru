@@ -709,7 +709,7 @@
 
     <div class="ap-field">
       <label class="ap-field__label" for="recipient_relation">
-        続柄 <span class="ap-field__required">必須</span>
+        お相手とのご関係 <span class="ap-field__required">必須</span>
       </label>
       <select class="ap-select" id="recipient_relation" name="recipient_relation">
         <option value="">選択してください</option>
@@ -1092,7 +1092,7 @@
 
     var relEl = document.getElementById('recipient_relation');
     if (!relEl.value) {
-      setError('recipient_relation', '続柄を選択してください。');
+      setError('recipient_relation', 'お相手とのご関係を選択してください。');
       errors.push('recipient_relation');
     }
 
