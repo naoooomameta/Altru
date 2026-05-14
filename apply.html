@@ -433,6 +433,41 @@
     letter-spacing: 0.02em;
   }
   .ap-check__body strong { font-weight: 500; }
+
+  /* ── STEALTH INTRO ── */
+  .ap-stealth {
+    background: var(--paper-soft);
+    border-left: 2px solid var(--gold);
+    padding: 1.5rem 1.5rem 1.5rem 1.65rem;
+    margin: 0 0 1.5rem;
+  }
+  .ap-stealth__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin: 0 0 0.85rem;
+    line-height: 1;
+  }
+  .ap-stealth__title {
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.85rem;
+    line-height: 1.55;
+  }
+  .ap-stealth__body {
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 2;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+  .ap-stealth__body + .ap-stealth__body { margin-top: 0.75rem; }
   .ap-check__body a {
     color: var(--ink);
     border-bottom: 1px solid var(--ink-line);
@@ -778,6 +813,17 @@
       <h2 class="ap-step__title">ご確認</h2>
     </div>
     <p class="ap-step__desc">最後に、以下の2点にご同意ください。</p>
+
+    <aside class="ap-stealth" aria-labelledby="stealth-intro-title">
+      <p class="ap-stealth__eyebrow">On Stealth Delivery</p>
+      <h3 class="ap-stealth__title" id="stealth-intro-title">そっと、届くために。</h3>
+      <p class="ap-stealth__body">
+        Altru は、すべての荷物をステルス梱包でお届けしています。段ボールや伝票に「花」「Flower」「Altru」の文字は一切記載せず、送り主名はご指定の名義のみが残ります。
+      </p>
+      <p class="ap-stealth__body">
+        想いは、人に見せるためのものではなく、届けたい方の心に、そっと触れるためのもの。ご家族と暮らす方も、職場で受け取る方も、ご自分のタイミングで、ひとりで開けられるように。梱包から、その静かな配慮を始めています。
+      </p>
+    </aside>
 
     <label class="ap-check" id="check-stealth">
       <input type="checkbox" id="stealth_confirmed" name="stealth_confirmed">
