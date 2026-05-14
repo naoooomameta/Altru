@@ -212,6 +212,20 @@
     font-style: italic;
   }
 
+  /* ── CTA SUB (text link) ── */
+  .tx-cta-back {
+    display: inline-block;
+    margin-top: 1.6rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .tx-cta-back:hover { color: var(--ink); }
+
   /* ── REFERENCE ID ── */
   .tx-session {
     margin-top: 2.5rem;
@@ -288,10 +302,10 @@
   <section class="tx-hero">
     <span class="tx-hero__ornament" aria-hidden="true">✦</span>
     <p class="tx-eyebrow">Thank You</p>
-    <h1 class="tx-title">あなたの想いを、<br><em>お預かりしました。</em></h1>
+    <h1 class="tx-title">想いを、<br><em>お預かりしました。</em></h1>
     <p class="tx-lead">
-      この度はAltruをお選びいただき、ありがとうございます。<br>
-      大切なあの日まで、私たちが想いを支えます。
+      ここから先は、私たちが大切に整えていきます。<br>
+      どうぞ、いつも通りお過ごしください。
     </p>
   </section>
 
@@ -300,32 +314,35 @@
   <section class="tx-steps" aria-label="この後の流れ">
     <article class="tx-step">
       <span class="tx-step__num">01</span>
-      <h2 class="tx-step__heading">領収書をお送りしました</h2>
+      <h2 class="tx-step__heading">整えていきます</h2>
       <p class="tx-step__body">
-        ご登録のメールアドレスに、決済完了の領収書をお届けしています。受信ボックスをご確認ください。
+        これから、お届け先の方へ届ける一束を、私たちが大切に整えていきます。当日まで、あなたが何かをする必要はありません。
       </p>
     </article>
     <article class="tx-step">
       <span class="tx-step__num">02</span>
-      <h2 class="tx-step__heading">お届け日のご連絡</h2>
+      <h2 class="tx-step__heading">静かにお知らせします</h2>
       <p class="tx-step__body">
-        商品の準備が整い次第、お届け予定日をメールでご案内いたします。今しばらくお待ちください。
+        お届けの前日と当日に、配送のご案内をLINEでお送りします。それ以外の販促や、不要なご連絡はいたしません。
       </p>
     </article>
     <article class="tx-step">
       <span class="tx-step__num">03</span>
       <h2 class="tx-step__heading">お問い合わせ</h2>
       <p class="tx-step__body">
-        ご不明な点は <a href="mailto:altru.inc.jp@gmail.com">altru.inc.jp@gmail.com</a> までお気軽にご連絡ください。
+        ご不明な点や、お届け先の変更がある場合は <a href="mailto:altru.inc.jp@gmail.com">altru.inc.jp@gmail.com</a> までご連絡ください。
       </p>
     </article>
   </section>
 
   <div class="tx-cta-wrap">
-    <a href="index.html" class="tx-cta">
-      <span>トップに戻る</span>
+    <a href="LINE_URL_PLACEHOLDER" class="tx-cta">
+      <span>LINEで、お届け日のご案内を受け取る</span>
       <span class="tx-cta__arrow">→</span>
     </a>
+    <div>
+      <a href="index.html" class="tx-cta-back">トップに戻る</a>
+    </div>
     <div class="tx-session" id="txSession" hidden>
       <span class="tx-session__label">Reference —</span>
       <span class="tx-session__id" id="txSessionId"></span>
