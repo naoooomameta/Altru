@@ -105,10 +105,10 @@
     font-family: var(--serif);
     font-style: normal;
     font-weight: 500;
-    color: var(--gold);
+    color: inherit;
   }
   .tx-lead {
-    font-size: 0.96rem;
+    font-size: 1.05rem;
     color: var(--ink-soft);
     line-height: 2.1;
     letter-spacing: 0.06em;
@@ -149,18 +149,18 @@
   }
   .tx-step__heading {
     font-family: var(--serif);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.04em;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.9rem;
     color: var(--ink);
     line-height: 1.6;
   }
   .tx-step__body {
     font-family: var(--serif);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--ink-soft);
-    line-height: 1.95;
+    line-height: 2;
     letter-spacing: 0.03em;
   }
   .tx-step__body a {
@@ -249,7 +249,9 @@
     .tx-header__back { font-size: 0.78rem; letter-spacing: 0.1em; }
     .tx-hero { padding: 3.5rem 1.25rem 2.5rem; }
     .tx-eyebrow { font-size: 0.78rem; letter-spacing: 0.28em; }
-    .tx-lead { font-size: 0.88rem; line-height: 1.95; letter-spacing: 0.04em; }
+    .tx-lead { font-size: 0.95rem; line-height: 2; letter-spacing: 0.04em; }
+    .tx-step__heading { font-size: 1.02rem; }
+    .tx-step__body { font-size: 0.9rem; line-height: 1.95; }
     .tx-steps {
       grid-template-columns: 1fr;
       gap: 1.5rem;
@@ -273,7 +275,7 @@
   <section class="tx-hero">
     <span class="tx-hero__ornament" aria-hidden="true">✦</span>
     <p class="tx-eyebrow">— Thank You</p>
-    <h1 class="tx-title">あなたの想いを、<em>お預かりしました。</em></h1>
+    <h1 class="tx-title">あなたの想いを、<br><em>お預かりしました。</em></h1>
     <p class="tx-lead">
       この度はAltruをお選びいただき、ありがとうございます。<br>
       大切なあの日まで、私たちが想いを支えます。
@@ -308,7 +310,7 @@
 
   <div class="tx-cta-wrap">
     <a href="index.html" class="tx-cta">
-      <span>LP に戻る</span>
+      <span>トップに戻る</span>
       <span class="tx-cta__arrow">→</span>
     </a>
     <div class="tx-session" id="txSession" hidden>
