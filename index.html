@@ -1954,6 +1954,59 @@ details[open] .faq__icon::after { transform: translate(-50%,-50%) scaleY(0); }
   margin-bottom: 1.5rem;
 }
 .cta-section__hl em { font-family:'Cormorant Garamond',serif; font-style: italic; color: var(--gold); }
+.cta-section__eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  color: var(--ink-mute);
+  margin: 0 0 1.2rem;
+}
+.cta-section__action {
+  margin-top: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+.cta-section__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 1.05rem 2.6rem;
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  transition: background .35s ease, color .35s ease, transform .35s ease, box-shadow .35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section__btn:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(201,164,90,0.18);
+}
+.cta-section__btn .arrow { transition: transform .35s ease; }
+.cta-section__btn:hover .arrow { transform: translateX(4px); }
+.cta-section__btn-ja {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-left: 0.15em;
+  opacity: 0.78;
+}
+.cta-section__action-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  color: var(--ink-mute);
+  margin: 0;
+}
 .cta-section__lede {
   font-family: 'Shippori Mincho', serif;
   font-size: 0.95rem;
@@ -2887,7 +2940,6 @@ img { height: auto; }
     <text x="400" y="250" font-family="Cormorant Garamond, serif" font-size="120" font-style="italic" fill="#3D3530" text-anchor="middle" font-weight="500">A</text>
   </svg>
 </template>
-<link rel="stylesheet" href="assets/altru-form/form.css">
 </head>
 <body>
 
@@ -2915,7 +2967,7 @@ img { height: auto; }
   <a href="#features" onclick="closeMobileMenu()">Why Altru</a>
   <a href="#price" onclick="closeMobileMenu()">Plan</a>
   <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
-  <a href="apply.html" class="mobile-menu__cta" onclick="closeMobileMenu()">先行登録する →</a>
+  <a href="apply.html" class="mobile-menu__cta" onclick="closeMobileMenu()">お申し込み →</a>
 </div>
 
 <!-- ============ HERO (FV / image-led) ============ -->
@@ -2943,7 +2995,7 @@ img { height: auto; }
 
   <div class="hero-fv__cta-group">
     <a href="apply.html" class="hero-fv__cta hero-fv__cta--primary">
-      <span class="hero-fv__cta-label">先行登録する</span>
+      <span class="hero-fv__cta-label">お申し込み</span>
       <span class="arrow">→</span>
     </a>
     <a href="#steps" class="hero-fv__cta hero-fv__cta--secondary">
@@ -3245,7 +3297,7 @@ img { height: auto; }
     </div>
     <div class="scenes__cta-row reveal">
       <a href="apply.html" class="btn btn--primary">
-        <span>先行登録する</span>
+        <span>お申し込み</span>
         <span class="arrow">→</span>
       </a>
     </div>
@@ -3561,7 +3613,7 @@ img { height: auto; }
     </div>
     <div class="scenes__cta-row reveal" style="margin-top: 3.5rem;">
       <a href="apply.html" class="btn btn--primary">
-        <span>プランを選んで、先行登録する</span>
+        <span>プランを選んで、お申し込み</span>
         <span class="arrow">→</span>
       </a>
     </div>
@@ -3621,7 +3673,7 @@ img { height: auto; }
           <span class="faq__q"><span class="faq__qnum">Q3.</span><span>いつから始まりますか？</span></span>
           <span class="faq__icon"></span>
         </summary>
-        <p class="faq__a">現在、サービスの正式開始に向けて準備中です。先行登録いただいた方には、開始時に最優先でご案内し、初回特別ギフトをお届けします。</p>
+        <p class="faq__a">お申し込み受付を開始しています。お申し込みいただくと、Altruがあなたの大切な日から最適なお届けスケジュールを逆算し、初回のお届け予定日をご案内します。</p>
       </details>
       <details class="faq__item reveal">
         <summary class="faq__summary">
@@ -3650,322 +3702,25 @@ img { height: auto; }
 
 <!-- ============ CTA ============ -->
 <section id="cta" class="section cta-section inv">
+  <div class="container cta-section__inner">
+    <p class="cta-section__eyebrow">— Start your story</p>
+    <h2 class="cta-section__hl">
+      できる男は、忘れない。<br><em>先に整えている。</em>
+    </h2>
+    <p class="cta-section__lede">
+      忙しさを理由にしない。<br>
+      大切な日が来る前に、贈る準備まで済ませておく。<br>
+      その余裕を、Altru が支えます。
+    </p>
 
-  <!-- Mobile-only: redirect to dedicated signup page -->
-  <div class="cta-mobile-redirect">
-    <div class="cta-mobile-redirect__inner">
-      <p class="cta-mobile-redirect__eyebrow">— Start your story</p>
-      <h2 class="cta-mobile-redirect__title">
-        できる男は、忘れない。<br><em>先に整えている。</em>
-      </h2>
-      <p class="cta-mobile-redirect__lede">
-        先行登録は専用ページからお進みください。<br>
-        プラン選択 → 大切な日 → スケジュール → メール・LINE登録。
-      </p>
-      <a href="apply.html" class="cta-mobile-redirect__btn">お申し込みページへ →</a>
-      <p class="cta-mobile-redirect__fine">© 2026 Altru. All Rights Reserved.</p>
+    <div class="cta-section__action">
+      <a href="apply.html" class="cta-section__btn">
+        <span>Apply<span class="cta-section__btn-ja">（お申し込み）</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <p class="cta-section__action-note">— 4 つのプランから、自分のリズムで —</p>
     </div>
   </div>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       Altru — Plan Selector & Schedule Recommender + 先行登録フォーム
-       (assets/altru-form/form.html を展開)
-       ════════════════════════════════════════════════════════════════ -->
-  <section id="altru-form" class="altru-form-section altru-form-section--nested">
-    <div class="altru-form__inner">
-
-      <!-- ── 見出し ── -->
-      <div class="altru-form__header">
-        <div class="altru-form__eyebrow">— Start your story</div>
-        <h2 class="altru-form__title">
-          できる男は、忘れない。<br><em>先に整えている。</em>
-        </h2>
-        <p class="altru-form__lede">
-          忙しさを理由にしない。<br>
-        大切な日が来る前に、贈る準備まで済ませておく。<br>
-        その余裕を、Altruが支えます。
-        </p>
-      </div>
-
-      <!-- ── ソーシャルプルーフ (登録カウンタ) ── -->
-      <div class="altru-form__social-wrap">
-        <div class="altru-form__social">
-          <span class="altru-form__social-dot"></span>
-          <span>現在 <strong class="altru-form__social-count" id="registrationCount">328</strong> 名が登録済み・残り <strong class="altru-form__social-count" id="remainingCount">172</strong> 名</span>
-        </div>
-      </div>
-
-      <!-- ── ステップインジケーター ── -->
-      <div class="altru-form__stepper" id="afStepper">
-        <span class="step-label active" data-step="1">01 — Plan</span>
-        <span class="step-dot active" data-step="1"></span>
-        <span class="step-line"></span>
-        <span class="step-dot" data-step="2"></span>
-        <span class="step-label" data-step="2">02 — Date</span>
-        <span class="step-line"></span>
-        <span class="step-dot" data-step="3"></span>
-        <span class="step-label" data-step="3">03 — Schedule</span>
-        <span class="step-line"></span>
-        <span class="step-dot" data-step="4"></span>
-        <span class="step-label" data-step="4">04 — LINE</span>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════════════
-           PANEL 1: プラン選択
-           ═══════════════════════════════════════════════════ -->
-      <div class="altru-form__panel active" data-panel="1">
-        <div class="panel__eyebrow">— Step 01 / Choose your rhythm</div>
-        <h3 class="panel__title">まずは、想いを届ける<em>頻度</em>を。</h3>
-        <p class="panel__desc">
-          無理のない頻度を選んでください。次のステップで、Altruがあなたの大切な日から最適なスケジュールを逆算します。
-        </p>
-
-        <div class="plans-grid">
-
-          <!-- Monthly -->
-          <div class="plan-card" data-plan="monthly">
-            <div class="plan-card__eyebrow">— Monthly</div>
-            <div class="plan-card__name">Altru Monthly</div>
-            <div class="plan-card__tagline">想うを、毎月に</div>
-            <div class="plan-card__freq">毎月・年12回</div>
-            <div class="plan-card__price">
-              <span class="plan-card__price-num">¥5,000</span>
-              <span class="plan-card__price-unit">/回</span>
-            </div>
-            <div class="plan-card__price-annual">年間 ¥60,000</div>
-            <div class="plan-card__price-day">— 1日あたり ¥167</div>
-            <ul class="plan-card__features">
-              <li>毎月、日常を特別に</li>
-              <li>関係を温め続ける</li>
-              <li>記念日月は特別仕様</li>
-            </ul>
-          </div>
-
-          <!-- Seasonal -->
-          <div class="plan-card" data-plan="seasonal">
-            <div class="plan-card__eyebrow">— Seasonal</div>
-            <div class="plan-card__name">Altru Seasonal</div>
-            <div class="plan-card__tagline">季節を、届ける</div>
-            <div class="plan-card__freq">3ヶ月毎・年4回</div>
-            <div class="plan-card__price">
-              <span class="plan-card__price-num">¥6,000</span>
-              <span class="plan-card__price-unit">/回</span>
-            </div>
-            <div class="plan-card__price-annual">年間 ¥24,000</div>
-            <div class="plan-card__price-day">— 月割 約¥2,000</div>
-            <ul class="plan-card__features">
-              <li>春夏秋冬の便り</li>
-              <li>季節の移ろいを花と</li>
-              <li>旬の花材を厳選</li>
-            </ul>
-          </div>
-
-          <!-- Half Year — RECOMMENDED -->
-          <div class="plan-card plan-card--rec" data-plan="halfyear">
-            <div class="plan-card__badge">最もおすすめ — 78%</div>
-            <div class="plan-card__eyebrow">— Half Year</div>
-            <div class="plan-card__name">Altru Half Year</div>
-            <div class="plan-card__tagline">想うを、確かに届ける</div>
-            <div class="plan-card__freq">6ヶ月毎・年2回</div>
-            <div class="plan-card__price">
-              <span class="plan-card__price-num">¥8,000</span>
-              <span class="plan-card__price-unit">/回</span>
-            </div>
-            <div class="plan-card__price-annual">年間 ¥16,000</div>
-            <div class="plan-card__price-day">— 月割 約¥1,333</div>
-            <ul class="plan-card__features">
-              <li>2大記念日を完全カバー</li>
-              <li>"特別感"と"続けやすさ"の両立</li>
-              <li>初めての方に最も選ばれる</li>
-            </ul>
-            <div class="plan-card__micro">— 迷ったら、これ。 —</div>
-          </div>
-
-          <!-- Anniversary -->
-          <div class="plan-card" data-plan="anniversary">
-            <div class="plan-card__eyebrow">— Anniversary</div>
-            <div class="plan-card__name">Altru Anniversary</div>
-            <div class="plan-card__tagline">大切な日に、花を</div>
-            <div class="plan-card__freq">年1回・記念日</div>
-            <div class="plan-card__price">
-              <span class="plan-card__price-num">¥12,000</span>
-              <span class="plan-card__price-unit">/回</span>
-            </div>
-            <div class="plan-card__price-annual">年間 ¥12,000</div>
-            <div class="plan-card__price-day">— 月割 ¥1,000</div>
-            <ul class="plan-card__features">
-              <li>年1回・プレミアム仕様</li>
-              <li>最大ボリュームのブーケ</li>
-              <li>確実に忘れない日に</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <p class="panel__footnote">— プランは次のステップでいつでも変更できます —</p>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════════════
-           PANEL 2: 日付・用途・相手
-           ═══════════════════════════════════════════════════ -->
-      <div class="altru-form__panel" data-panel="2">
-        <div class="panel__eyebrow">— Step 02 / The date that matters</div>
-        <h3 class="panel__title">届けたい<em>日</em>を、教えてください。</h3>
-        <p class="panel__desc">
-          その日を起点に、Altruが最適な配送スケジュールを逆算します。
-        </p>
-
-        <div class="panel__input-card">
-
-          <div class="plan-strip">
-            <div>
-              <span class="plan-strip__label">Selected Plan</span>
-              <span class="plan-strip__name" id="afStripName">Altru Half Year</span>
-              <span class="plan-strip__price" id="afStripPrice">¥8,000 / 回</span>
-            </div>
-            <button class="plan-strip__change" data-action="change-plan">変更する</button>
-          </div>
-
-          <div class="field">
-            <label class="field__label">
-              Anchor Date <span class="ja">最も大切な日</span>
-            </label>
-            <input type="date" class="field__input" id="afDate">
-            <p class="field__hint" id="afDateHint">
-              <span class="hint-mark">✦</span>
-              <span>お申込みから<b>2日以降の日付</b>からお届け可能です（鮮度を保つため当日・翌日着は承っておりません）</span>
-            </p>
-            <p class="field__hint field__hint--error" id="afDateError" style="display:none;">
-              <span class="hint-mark">!</span>
-              <span>お申込みから2日以降の日付をお選びください</span>
-            </p>
-          </div>
-
-          <div class="field">
-            <label class="field__label">
-              Recipient <span class="ja">贈る相手</span>
-            </label>
-            <div class="relations">
-              <button class="rel-btn" data-rel="妻">妻</button>
-              <button class="rel-btn" data-rel="彼女">彼女</button>
-              <button class="rel-btn" data-rel="母">母</button>
-              <button class="rel-btn" data-rel="その他">その他</button>
-            </div>
-          </div>
-
-          <input type="hidden" id="afOccasion" value="">
-
-        </div>
-
-        <div class="panel__actions">
-          <button class="btn-secondary" data-action="back-2">← 戻る</button>
-          <button class="btn-primary" data-action="next-2" disabled>スケジュールを見る →</button>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════════════
-           PANEL 3: 結果（スケジュール）
-           ═══════════════════════════════════════════════════ -->
-      <div class="altru-form__panel" data-panel="3">
-        <div class="panel__result-card">
-
-          <div class="result__eyebrow">— Your Designed Schedule</div>
-          <h3 class="result__title">あなたの想いの<em>設計図</em></h3>
-          <div class="result__plan-name" id="afResultPlanName">Altru Half Year</div>
-          <div class="result__context" id="afResultContext"></div>
-
-          <div class="result__philosophy">
-            <div class="philosophy__eyebrow">— Why this plan</div>
-            <div class="philosophy__text" id="afPhilosophyText"></div>
-          </div>
-
-          <div class="schedule" id="afSchedule"></div>
-
-          <div class="season-accent" id="afSeasonAccent" style="display:none;">
-            <h5 id="afSeasonTitle"></h5>
-            <p id="afSeasonText"></p>
-          </div>
-
-          <div class="result__summary">
-            <div class="summary__item">
-              <span class="summary__label">年間お届け</span>
-              <span class="summary__value" id="afSumCount">2回</span>
-            </div>
-            <div class="summary__item">
-              <span class="summary__label">1回あたり</span>
-              <span class="summary__value" id="afSumPer">¥8,000</span>
-            </div>
-            <div class="summary__item">
-              <span class="summary__label">年間合計</span>
-              <span class="summary__value" id="afSumAnnual">¥16,000</span>
-            </div>
-            <div class="summary__item">
-              <span class="summary__label">月割換算</span>
-              <span class="summary__value" id="afSumMonthly">¥1,333</span>
-            </div>
-          </div>
-
-          <div class="panel__actions">
-            <button class="btn-secondary" data-action="back-3">← 戻る</button>
-            <button class="btn-primary" data-action="confirm">このプランで先行登録 →</button>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════════════
-           PANEL 4: LINE友だち追加
-           ═══════════════════════════════════════════════════ -->
-      <div class="altru-form__panel" data-panel="4">
-        <div class="panel__eyebrow">— Step 04 / LINE</div>
-        <h3 class="panel__title">最後に、<em>LINE</em>で友だち追加</h3>
-        <p class="panel__desc">
-          お届け管理・ご決済・先行特典のご案内はすべてLINEからお送りします。サービス開始時に最優先でご案内し、初回特別ギフトをお届けします。
-        </p>
-
-        <div class="bridge-pill" id="afBridgePill"></div>
-
-        <div class="panel__input-card panel__input-card--center">
-          <button class="btn-line" data-action="line-add">LINEで友だち追加する →</button>
-          <button class="line-step__back" data-action="back-4">← スケジュールに戻る</button>
-          <p class="field__hint" style="justify-content:center; text-align:center;">
-            <span>いつでも登録解除できます。</span>
-          </p>
-        </div>
-      </div>
-
-
-      <!-- ═══════════════════════════════════════════════════
-           PANEL 5: 完了
-           ═══════════════════════════════════════════════════ -->
-      <div class="altru-form__panel" data-panel="5">
-        <div class="panel__result-card panel__result-card--center">
-          <div class="success-icon">✓</div>
-          <div class="result__eyebrow">— Welcome to Altru</div>
-          <h3 class="result__title">先行登録が<em>完了</em>しました</h3>
-          <div class="bridge-pill" id="afBridgePillFinal" style="margin: 1.5rem auto;"></div>
-          <p class="success-body">
-            サービス開始時に最優先でご案内します。<br>
-            初回特別ギフトを楽しみにお待ちください。
-          </p>
-        </div>
-      </div>
-
-
-      <!-- 診断データを保持する hidden form -->
-      <input type="hidden" id="afDataPlan" name="plan" value="">
-      <input type="hidden" id="afDataDate" name="anchor_date" value="">
-      <input type="hidden" id="afDataOccasion" name="occasion" value="">
-      <input type="hidden" id="afDataRelation" name="relation" value="">
-
-      <!-- ── コピーライト ── -->
-      <p class="altru-form__copyright">© 2026 Altru. All Rights Reserved.</p>
-
-    </div>
-  </section>
 </section>
 
 <!-- ============ FOOTER ============ -->
@@ -4136,8 +3891,6 @@ if (bgMark){
   }, { passive: true });
 }
 </script>
-
-<script src="assets/altru-form/form.js"></script>
 
 </body>
 </html>
