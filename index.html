@@ -857,6 +857,19 @@ button, input, textarea { font-family: inherit; }
   border-color: var(--gold-deep);
   transform: translateY(-3px);
 }
+.voice-echo__media {
+  margin: -2.4rem -2.2rem 1.6rem;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.voice-echo__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
 .voice-echo__mark {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -2539,6 +2552,7 @@ section { position: relative; }
   }
   .voices-echo__head { margin-bottom: 2.75rem; }
   .voice-echo { padding: 1.85rem 1.4rem 1.6rem; }
+  .voice-echo__media { margin: -1.85rem -1.4rem 1.3rem; }
   .voice-echo__text { font-size: 0.9rem; line-height: 1.95; }
   .voice-echo__author { flex-direction: column; gap: 0.35rem; align-items: flex-start; }
 
@@ -3102,6 +3116,9 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     </div>
     <div class="voices-echo__grid">
       <div class="voice-echo reveal">
+        <div class="voice-echo__media">
+          <img src="a_Voice_Mio.png" alt="Mio さん（結婚10年目の妻、横浜）の肖像" loading="lazy" decoding="async" width="800" height="1000">
+        </div>
         <div class="voice-echo__mark">"</div>
         <p class="voice-echo__text">
           記念日でもないのに、夫から花が届いて。それも、月に一度。「特別な日」じゃない日に贈られる花って、こんなに沁みるものなんですね。家のなかに花瓶があるだけで、毎日が少しずつ違って見えます。
@@ -3112,6 +3129,9 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="voice-echo reveal reveal-d1">
+        <div class="voice-echo__media">
+          <img src="a_Voice_Akiko.png" alt="Akiko さん（同棲中の彼女、京都）の肖像" loading="lazy" decoding="async" width="800" height="1000">
+        </div>
         <div class="voice-echo__mark">"</div>
         <p class="voice-echo__text">
           誕生日に花をもらうのは嬉しい。でも、Altruで彼から届く花は何かが違うんです。「特別じゃない日に思い出してくれた」という事実そのものが、ものすごい贈り物だと、受け取って初めて気づきました。
