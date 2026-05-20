@@ -82,6 +82,18 @@ async function main() {
   const outPath = path.join(outDir, `${stamp}.json`);
   fs.writeFileSync(outPath, JSON.stringify(result, null, 2));
   console.log(`Wrote ${outPath}`);
+
+  const dates = fs
+    .readdirSync(outDir)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .map((f) => f.replace(/\.json$/, ''))
+    .sort()
+    .reverse();
+  fs.writeFileSync(
+    path.join(outDir, 'index.json'),
+    JSON.stringify({ updatedAt: fetchedAt, dates }, null, 2),
+  );
+  console.log(`Wrote index.json with ${dates.length} dates`);
 }
 
 main().catch((err) => {

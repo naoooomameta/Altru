@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Clarity Dashboard | Altru</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <style>
+      :root {
+        --bg: #f7f7f8;
+        --panel: #ffffff;
+        --border: #e5e7eb;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #2563eb;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      header {
+        background: var(--panel);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+      }
+      header h1 { font-size: 18px; margin: 0; }
+      header .controls { display: flex; gap: 12px; margin-left: auto; }
+      select {
+        padding: 8px 12px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: #fff;
+        font-size: 14px;
+      }
+      main { padding: 24px; max-width: 1280px; margin: 0 auto; }
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .kpi {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .kpi .label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+      .kpi .value { font-size: 24px; font-weight: 600; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .card h2 { font-size: 14px; margin: 0 0 12px; color: var(--muted); font-weight: 600; }
+      .card .chart-wrap { position: relative; height: 280px; }
+      .meta { color: var(--muted); font-size: 12px; margin-bottom: 16px; }
+      .error { background: #fef2f2; border-color: #fecaca; color: #991b1b; padding: 16px; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Clarity Dashboard</h1>
+      <div class="controls">
+        <label>日付 <select id="dateSelect"></select></label>
+        <label>指標 <select id="metricSelect"></select></label>
+      </div>
+    </header>
+    <main>
+      <div id="meta" class="meta"></div>
+      <div id="kpis" class="kpis"></div>
+      <div id="grid" class="grid"></div>
+      <div id="error" class="error" style="display:none"></div>
+    </main>
+    <script>
+      const DATA_DIR = 'data/clarity';
+      const DIMENSIONS = ['Browser', 'Device', 'OS', 'Country', 'Source', 'Medium', 'Campaign', 'Channel', 'URL'];
+      const METRIC_LABEL = {
+        Traffic: 'トラフィック',
+        EngagementTime: 'エンゲージメント時間',
+        ScrollDepth: 'スクロール深度',
+        DeadClickCount: 'デッドクリック',
+        RageClickCount: 'レイジクリック',
+        QuickbackClick: 'クイックバック',
+        ExcessiveScroll: '過剰スクロール',
+        ErrorClickCount: 'エラークリック',
+        ScriptErrorCount: 'スクリプトエラー',
+      };
+
+      const charts = {};
+
+      function fmt(n) {
+        const v = Number(n) || 0;
+        return v >= 1000 ? v.toLocaleString() : String(v);
+      }
+
+      function getMetric(dimensionData, metricName) {
+        return dimensionData?.find((m) => m.metricName === metricName)?.information ?? [];
+      }
+
+      async function loadIndex() {
+        const res = await fetch(`${DATA_DIR}/index.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error('index.json が読み込めません');
+        return res.json();
+      }
+
+      async function loadDay(date) {
+        const res = await fetch(`${DATA_DIR}/${date}.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error(`${date}.json が読み込めません`);
+        return res.json();
+      }
+
+      function renderKpis(snapshot) {
+        const device = snapshot.dimensions.Device;
+        const traffic = getMetric(device, 'Traffic');
+        const engagement = getMetric(device, 'EngagementTime');
+        const totalSessions = traffic.reduce((s, r) => s + Number(r.sessionsCount || 0), 0);
+        const totalPV = traffic.reduce((s, r) => s + Number(r.pagesViews || 0), 0);
+        const totalEngagementSec = engagement.reduce((s, r) => s + Number(r.subTotal || 0), 0);
+        const avgEngagement = totalSessions ? Math.round(totalEngagementSec / totalSessions) : 0;
+        const kpis = [
+          { label: 'セッション数', value: fmt(totalSessions) },
+          { label: 'ページビュー', value: fmt(totalPV) },
+          { label: '平均エンゲージメント秒', value: fmt(avgEngagement) },
+          { label: '取得日数', value: snapshot.numOfDays + '日' },
+        ];
+        document.getElementById('kpis').innerHTML = kpis
+          .map((k) => `<div class="kpi"><div class="label">${k.label}</div><div class="value">${k.value}</div></div>`)
+          .join('');
+      }
+
+      function renderCharts(snapshot, metric) {
+        const grid = document.getElementById('grid');
+        grid.innerHTML = '';
+        Object.values(charts).forEach((c) => c.destroy());
+
+        for (const dim of DIMENSIONS) {
+          const rows = getMetric(snapshot.dimensions[dim], metric);
+          const card = document.createElement('div');
+          card.className = 'card';
+          const id = `chart-${dim}`;
+          card.innerHTML = `<h2>${dim}</h2><div class="chart-wrap"><canvas id="${id}"></canvas></div>`;
+          grid.appendChild(card);
+
+          if (rows.length === 0) {
+            card.querySelector('.chart-wrap').innerHTML =
+              '<div style="color:var(--muted);font-size:13px;padding:24px 0">データなし</div>';
+            continue;
+          }
+
+          const useSubTotal = metric !== 'Traffic';
+          const sorted = [...rows]
+            .map((r) => ({
+              label: r[dim] || '(unknown)',
+              value: Number(useSubTotal ? r.subTotal : r.sessionsCount) || 0,
+              sessions: Number(r.sessionsCount) || 0,
+            }))
+            .sort((a, b) => b.value - a.value)
+            .slice(0, 10);
+
+          charts[dim] = new Chart(document.getElementById(id), {
+            type: 'bar',
+            data: {
+              labels: sorted.map((r) => r.label),
+              datasets: [
+                {
+                  label: useSubTotal ? metric : 'sessionsCount',
+                  data: sorted.map((r) => r.value),
+                  backgroundColor: '#2563eb',
+                  borderRadius: 4,
+                },
+              ],
+            },
+            options: {
+              indexAxis: 'y',
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: {
+                    afterLabel: (ctx) => {
+                      const r = sorted[ctx.dataIndex];
+                      return `sessions: ${fmt(r.sessions)}`;
+                    },
+                  },
+                },
+              },
+              scales: {
+                x: { ticks: { precision: 0 } },
+                y: { ticks: { autoSkip: false } },
+              },
+            },
+          });
+        }
+      }
+
+      function populateMetricSelect(snapshot) {
+        const sel = document.getElementById('metricSelect');
+        const metrics = new Set();
+        for (const dim of DIMENSIONS) {
+          (snapshot.dimensions[dim] || []).forEach((m) => metrics.add(m.metricName));
+        }
+        const ordered = ['Traffic', 'EngagementTime', 'ScrollDepth', ...[...metrics].filter((m) => !['Traffic', 'EngagementTime', 'ScrollDepth'].includes(m))];
+        sel.innerHTML = ordered
+          .filter((m) => metrics.has(m))
+          .map((m) => `<option value="${m}">${METRIC_LABEL[m] || m}</option>`)
+          .join('');
+      }
+
+      async function refresh() {
+        const date = document.getElementById('dateSelect').value;
+        const metric = document.getElementById('metricSelect').value;
+        if (!date || !metric) return;
+        try {
+          const snapshot = await loadDay(date);
+          document.getElementById('meta').textContent = `取得日時: ${snapshot.fetchedAt}`;
+          renderKpis(snapshot);
+          renderCharts(snapshot, metric);
+        } catch (err) {
+          document.getElementById('error').style.display = 'block';
+          document.getElementById('error').textContent = err.message;
+        }
+      }
+
+      async function init() {
+        try {
+          const index = await loadIndex();
+          const dateSel = document.getElementById('dateSelect');
+          dateSel.innerHTML = index.dates.map((d) => `<option value="${d}">${d}</option>`).join('');
+          const latest = await loadDay(index.dates[0]);
+          populateMetricSelect(latest);
+          dateSel.addEventListener('change', refresh);
+          document.getElementById('metricSelect').addEventListener('change', refresh);
+          refresh();
+        } catch (err) {
+          document.getElementById('error').style.display = 'block';
+          document.getElementById('error').textContent = err.message;
+        }
+      }
+
+      init();
+    </script>
+  </body>
+</html>
