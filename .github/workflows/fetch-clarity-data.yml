@@ -36,3 +36,10 @@ jobs:
             git commit -m "chore: update Clarity daily snapshot"
             git push
           fi
+
+      - name: Send daily Clarity report email via Resend
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_FROM: clarity@altru.jp
+          MAIL_TO: altru.inc.jp@gmail.com
+        run: node scripts/send-clarity-email.js
