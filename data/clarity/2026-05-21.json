@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-21T10:53:41.737Z",
+  "fetchedAt": "2026-05-21T20:01:32.548Z",
   "numOfDays": 1,
   "dimensions": {
     "Browser": [
@@ -15,28 +15,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -47,7 +31,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -68,28 +52,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -100,7 +68,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -121,28 +89,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -153,7 +105,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -174,28 +126,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -206,7 +142,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -227,28 +163,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -259,7 +179,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -280,28 +200,12 @@
             "Browser": "Other"
           },
           {
-            "sessionsCount": "5",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Chrome"
-          },
-          {
             "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
             "subTotal": "0",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Browser": "Edge"
+            "Browser": "Chrome"
           },
           {
             "sessionsCount": "1",
@@ -312,7 +216,7 @@
             "Browser": "IE"
           },
           {
-            "sessionsCount": "4",
+            "sessionsCount": "3",
             "sessionsWithMetricPercentage": 0,
             "sessionsWithoutMetricPercentage": 100,
             "pagesViews": "0",
@@ -329,23 +233,15 @@
             "Browser": "Other"
           },
           {
-            "averageScrollDepth": 3.67,
+            "averageScrollDepth": 4.67,
             "Browser": "Chrome"
-          },
-          {
-            "averageScrollDepth": 100,
-            "Browser": "ChromeMobile"
-          },
-          {
-            "averageScrollDepth": 4,
-            "Browser": "Edge"
           },
           {
             "averageScrollDepth": 49,
             "Browser": "IE"
           },
           {
-            "averageScrollDepth": 15.5,
+            "averageScrollDepth": 4,
             "Browser": "MobileSafari"
           }
         ]
@@ -361,44 +257,30 @@
             "Browser": "Other"
           },
           {
-            "totalSessionCount": "5",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "6",
-            "pagesPerSessionPercentage": 1.5714285714285714,
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
             "Browser": "Chrome"
           },
           {
-            "totalSessionCount": "3",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "3",
-            "pagesPerSessionPercentage": 1,
-            "Browser": "ChromeMobile"
-          },
-          {
-            "totalSessionCount": "1",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Browser": "Edge"
-          },
-          {
             "totalSessionCount": "0",
-            "totalBotSessionCount": "5",
-            "distinctUserCount": "6",
+            "totalBotSessionCount": "4",
+            "distinctUserCount": "5",
             "pagesPerSessionPercentage": 1,
             "Browser": "HeadlessChrome"
           },
           {
             "totalSessionCount": "1",
-            "totalBotSessionCount": "4",
-            "distinctUserCount": "5",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "4",
             "pagesPerSessionPercentage": 1,
             "Browser": "IE"
           },
           {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "6",
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "3",
             "pagesPerSessionPercentage": 1,
             "Browser": "MobileSafari"
           }
@@ -413,19 +295,9 @@
             "Browser": "Other"
           },
           {
-            "totalTime": "119",
-            "activeTime": "11",
+            "totalTime": "229",
+            "activeTime": "1",
             "Browser": "Chrome"
-          },
-          {
-            "totalTime": "16",
-            "activeTime": "16",
-            "Browser": "ChromeMobile"
-          },
-          {
-            "totalTime": "3",
-            "activeTime": "3",
-            "Browser": "Edge"
           },
           {
             "totalTime": "124",
@@ -433,1802 +305,36 @@
             "Browser": "IE"
           },
           {
-            "totalTime": "294",
-            "activeTime": "5",
+            "totalTime": "390",
+            "activeTime": "6",
             "Browser": "MobileSafari"
           }
         ]
       }
     ],
-    "Device": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "Mobile"
-          },
-          {
-            "sessionsCount": "7",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 49.5,
-            "Device": "Mobile"
-          },
-          {
-            "averageScrollDepth": 7.82,
-            "Device": "PC"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "8",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "10",
-            "pagesPerSessionPercentage": 1,
-            "Device": "Mobile"
-          },
-          {
-            "totalSessionCount": "7",
-            "totalBotSessionCount": "11",
-            "distinctUserCount": "18",
-            "pagesPerSessionPercentage": 1.2105263157894737,
-            "Device": "PC"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "2",
-            "pagesPerSessionPercentage": 1,
-            "Device": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "157",
-            "activeTime": "12",
-            "Device": "Mobile"
-          },
-          {
-            "totalTime": "103",
-            "activeTime": "8",
-            "Device": "PC"
-          }
-        ]
-      }
-    ],
-    "OS": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "IOS"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Linux"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "MacOSX"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 49.5,
-            "OS": "IOS"
-          },
-          {
-            "averageScrollDepth": 3,
-            "OS": "Linux"
-          },
-          {
-            "averageScrollDepth": 4,
-            "OS": "MacOSX"
-          },
-          {
-            "averageScrollDepth": 14.75,
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "8",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "10",
-            "pagesPerSessionPercentage": 1,
-            "OS": "IOS"
-          },
-          {
-            "totalSessionCount": "1",
-            "totalBotSessionCount": "6",
-            "distinctUserCount": "8",
-            "pagesPerSessionPercentage": 1,
-            "OS": "Linux"
-          },
-          {
-            "totalSessionCount": "2",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 3,
-            "OS": "MacOSX"
-          },
-          {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "7",
-            "distinctUserCount": "11",
-            "pagesPerSessionPercentage": 1,
-            "OS": "Windows"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "157",
-            "activeTime": "12",
-            "OS": "IOS"
-          },
-          {
-            "totalTime": "0",
-            "activeTime": "0",
-            "OS": "Linux"
-          },
-          {
-            "totalTime": "258",
-            "activeTime": "23",
-            "OS": "MacOSX"
-          },
-          {
-            "totalTime": "52",
-            "activeTime": "3",
-            "OS": "Windows"
-          }
-        ]
-      }
-    ],
-    "Country": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Canada"
-          },
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "Japan"
-          },
-          {
-            "sessionsCount": "8",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 100,
-            "Country": "Canada"
-          },
-          {
-            "averageScrollDepth": 7,
-            "Country": "Japan"
-          },
-          {
-            "averageScrollDepth": 39,
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "1",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Country": "Canada"
-          },
-          {
-            "totalSessionCount": "6",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "5",
-            "pagesPerSessionPercentage": 1.6666666666666667,
-            "Country": "Japan"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "2",
-            "pagesPerSessionPercentage": 1,
-            "Country": "Poland"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Country": "Thailand"
-          },
-          {
-            "totalSessionCount": "8",
-            "totalBotSessionCount": "12",
-            "distinctUserCount": "21",
-            "pagesPerSessionPercentage": 1,
-            "Country": "United States"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "17",
-            "activeTime": "17",
-            "Country": "Canada"
-          },
-          {
-            "totalTime": "286",
-            "activeTime": "16",
-            "Country": "Japan"
-          },
-          {
-            "totalTime": "30",
-            "activeTime": "6",
-            "Country": "United States"
-          }
-        ]
-      }
-    ],
-    "Source": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 29.07,
-            "Source": ""
-          },
-          {
-            "averageScrollDepth": 11.5,
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "11",
-            "totalBotSessionCount": "15",
-            "distinctUserCount": "26",
-            "pagesPerSessionPercentage": 1.1481481481481481,
-            "Source": ""
-          },
-          {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "4",
-            "pagesPerSessionPercentage": 1,
-            "Source": "ig"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "70",
-            "activeTime": "10",
-            "Source": ""
-          },
-          {
-            "totalTime": "300",
-            "activeTime": "12",
-            "Source": "ig"
-          }
-        ]
-      }
-    ],
-    "Medium": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": ""
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 29.07,
-            "Medium": ""
-          },
-          {
-            "averageScrollDepth": 11.5,
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "11",
-            "totalBotSessionCount": "15",
-            "distinctUserCount": "26",
-            "pagesPerSessionPercentage": 1.1481481481481481,
-            "Medium": ""
-          },
-          {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "4",
-            "pagesPerSessionPercentage": 1,
-            "Medium": "paid"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "70",
-            "activeTime": "10",
-            "Medium": ""
-          },
-          {
-            "totalTime": "300",
-            "activeTime": "12",
-            "Medium": "paid"
-          }
-        ]
-      }
-    ],
-    "Campaign": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "11",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": null
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 29.07,
-            "Campaign": null
-          },
-          {
-            "averageScrollDepth": 11.5,
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "11",
-            "totalBotSessionCount": "15",
-            "distinctUserCount": "26",
-            "pagesPerSessionPercentage": 1.1481481481481481,
-            "Campaign": null
-          },
-          {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "4",
-            "pagesPerSessionPercentage": 1,
-            "Campaign": "120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "70",
-            "activeTime": "10",
-            "Campaign": null
-          },
-          {
-            "totalTime": "300",
-            "activeTime": "12",
-            "Campaign": "120247301290920769"
-          }
-        ]
-      }
-    ],
-    "Channel": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "15",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 25.37,
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "15",
-            "totalBotSessionCount": "15",
-            "distinctUserCount": "30",
-            "pagesPerSessionPercentage": 1.1290322580645162,
-            "Channel": "Other"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "132",
-            "activeTime": "11",
-            "Channel": "Other"
-          }
-        ]
-      }
-    ],
-    "URL": [
-      {
-        "metricName": "DeadClickCount",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ExcessiveScroll",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "RageClickCount",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "QuickbackClick",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ScriptErrorCount",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ErrorClickCount",
-        "information": [
-          {
-            "sessionsCount": "6",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "sessionsCount": "1",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "sessionsCount": "4",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "sessionsCount": "2",
-            "sessionsWithMetricPercentage": 0,
-            "sessionsWithoutMetricPercentage": 100,
-            "pagesViews": "0",
-            "subTotal": "0",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "ScrollDepth",
-        "information": [
-          {
-            "averageScrollDepth": 23,
-            "Url": "https://altru.jp/"
-          },
-          {
-            "averageScrollDepth": 49,
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "averageScrollDepth": 39.25,
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "averageScrollDepth": 3.5,
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "averageScrollDepth": 19.5,
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      },
-      {
-        "metricName": "Traffic",
-        "information": [
-          {
-            "totalSessionCount": "6",
-            "totalBotSessionCount": "7",
-            "distinctUserCount": "12",
-            "pagesPerSessionPercentage": 1.3076923076923077,
-            "Url": "https://altru.jp/"
-          },
-          {
-            "totalSessionCount": "1",
-            "totalBotSessionCount": "2",
-            "distinctUserCount": "3",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://6a0da80c0523b00008768418--altruflower.netlify.app/"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://6a0e189dde32290008bfed07--altruflower.netlify.app/"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://6a0eba2931489500085ce5e1--altruflower.netlify.app/"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/thanks?session_id=cs_live_test123"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/thanks.html?session_id=cs_live_test123"
-          },
-          {
-            "totalSessionCount": "4",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "4",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "totalSessionCount": "2",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "2",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "totalSessionCount": "2",
-            "totalBotSessionCount": "0",
-            "distinctUserCount": "2",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://6a0da7ee0b1ec500093089bd--altruflower.netlify.app/"
-          },
-          {
-            "totalSessionCount": "0",
-            "totalBotSessionCount": "1",
-            "distinctUserCount": "1",
-            "pagesPerSessionPercentage": 1,
-            "Url": "https://altru.jp/legal?doc=tokushoho"
-          }
-        ]
-      },
-      {
-        "metricName": "EngagementTime",
-        "information": [
-          {
-            "totalTime": "103",
-            "activeTime": "13",
-            "Url": "https://altru.jp/"
-          },
-          {
-            "totalTime": "124",
-            "activeTime": "0",
-            "Url": "https://altru.jp/thanks"
-          },
-          {
-            "totalTime": "6",
-            "activeTime": "4",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
-          },
-          {
-            "totalTime": "8",
-            "activeTime": "8",
-            "Url": "https://altruflower.netlify.app/"
-          },
-          {
-            "totalTime": "595",
-            "activeTime": "20",
-            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769"
-          }
-        ]
-      }
-    ]
+    "Device": {
+      "error": "Clarity API 429 for dimension=Device: Exceeded daily limit"
+    },
+    "OS": {
+      "error": "Clarity API 429 for dimension=OS: Exceeded daily limit"
+    },
+    "Country": {
+      "error": "Clarity API 429 for dimension=Country: Exceeded daily limit"
+    },
+    "Source": {
+      "error": "Clarity API 429 for dimension=Source: Exceeded daily limit"
+    },
+    "Medium": {
+      "error": "Clarity API 429 for dimension=Medium: Exceeded daily limit"
+    },
+    "Campaign": {
+      "error": "Clarity API 429 for dimension=Campaign: Exceeded daily limit"
+    },
+    "Channel": {
+      "error": "Clarity API 429 for dimension=Channel: Exceeded daily limit"
+    },
+    "URL": {
+      "error": "Clarity API 429 for dimension=URL: Exceeded daily limit"
+    }
   }
 }
