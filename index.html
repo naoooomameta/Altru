@@ -3190,21 +3190,21 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     <div class="stats__grid">
       <div class="stats__item reveal">
         <div class="stats__num">
-          <span class="counter" data-target="80">0</span>
+          <span class="counter">80</span>
           <span class="stats__num-unit">%</span>
         </div>
         <div class="stats__label">パートナーから花を贈られた女性のうち、<br>「数週間〜数ヶ月、その日のことを思い出していた」と答えた割合。<br><span style="opacity:0.55;font-size:0.78em;">— Society of American Florists 調査ほか</span></div>
       </div>
       <div class="stats__item reveal reveal-d1">
         <div class="stats__num">
-          <span class="counter" data-target="1">0</span>
+          <span class="counter">1</span>
           <span class="stats__num-unit">束</span>
         </div>
         <div class="stats__label">まず、一度だけ。<br>定期登録なしで贈れる「はじめの一束」</div>
       </div>
       <div class="stats__item reveal reveal-d2">
         <div class="stats__num">
-          <span class="counter" data-target="0">0</span>
+          <span class="counter">0</span>
         </div>
         <div class="stats__label">継続の縛りも、解約の手続きも。<br>気に入らなければ、それで終わりにできます。</div>
       </div>
@@ -3609,26 +3609,6 @@ const lineObs = new IntersectionObserver((es)=>{
 }, { threshold: 0.2 });
 const koanLines = document.querySelector('.koan__lines');
 if (koanLines) lineObs.observe(koanLines);
-
-/* COUNTERS */
-function animateCounter(el, target, duration=1600){
-  const isLarge = target >= 1000;
-  const start = performance.now();
-  function step(now){
-    const p = Math.min((now-start)/duration, 1);
-    const e = 1 - Math.pow(1-p, 3);
-    const v = Math.round(e*target);
-    el.textContent = isLarge ? v.toLocaleString() : v;
-    if (p < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-const counterObs = new IntersectionObserver((es)=>{
-  es.forEach(e=>{
-    if(e.isIntersecting){ animateCounter(e.target, parseInt(e.target.dataset.target,10)); counterObs.unobserve(e.target); }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
 
 /* MANIFESTO kinetic word lighting */
 const manifestoLines = [
