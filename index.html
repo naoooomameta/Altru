@@ -349,7 +349,26 @@ button, input, textarea { font-family: inherit; }
   z-index: 5;
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.9rem;
+}
+.hero-fv__micro {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 0.35rem 0 0;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(0.7rem, 0.85vw, 0.82rem);
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  opacity: 0.85;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+.hero-fv-cta-band .hero-fv__micro {
+  margin: 0.4rem 0 0;
+  opacity: 0.7;
+  text-shadow: none;
+  color: var(--ink-soft);
 }
 .hero-fv__cta {
   display: inline-flex;
@@ -3044,29 +3063,33 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     <source type="image/webp" media="(max-width: 768px)" srcset="a_FV_Mobile_v4.webp">
     <source type="image/webp" srcset="a_FV_Desktop_v3.webp">
     <source media="(max-width: 768px)" srcset="a_FV_Mobile_v4.png">
-    <img src="a_FV_Desktop_v3.png" alt="Altru — まず一度だけ、彼女・奥さまのもとへ花を贈る「はじめの一束」。定期登録なし。" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941">
+    <img src="a_FV_Desktop_v3.png" alt="Altru — 彼女の記憶に、あなたを残す一束を。LINEで季節の花束を、あなたの名義で。" loading="eager" fetchpriority="high" decoding="async" width="1672" height="941">
   </picture>
 
   <div class="hero-fv__copy">
     <div class="hero-fv__logo">Altru</div>
-    <p class="hero-fv__eyebrow">想いを、まず一度だけ形にする。</p>
+    <p class="hero-fv__eyebrow">大切な人を、ちゃんと喜ばせる男でいる。</p>
     <h1 class="hero-fv__hl">
-      まず、一度だけ。<br>あの人へ、<br>はじめの一束を。
+      彼女の記憶に、<br>あなたを残す一束を。
     </h1>
-    <p class="hero-fv__sub"><em>Just once.</em> No&nbsp;strings.</p>
+    <p class="hero-fv__sub"><em>Make her day.</em> Stay&nbsp;unforgettable.</p>
     <p class="hero-fv__body">
-      花選びもカードも配送も、Altruにおまかせ。定期の登録はありません。まず一度だけ贈ってみて、続けるかどうかは、あの人の反応を見てから決めればいい。
+      花選びも、カードも、配送も、Altruが代行。<br>
+      LINEで希望を伝えるだけで、あなたの名義で<br>
+      季節の花束を届けます。<br>
+      まずは一束から。気に入ったら、続ければいい。
     </p>
   </div>
 
   <div class="hero-fv__cta-group">
     <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
-      <span class="hero-fv__cta-label">LINEで、一度だけ贈る</span>
+      <span class="hero-fv__cta-label">LINEで花を贈る</span>
       <span class="arrow">→</span>
     </a>
     <a href="#steps" class="hero-fv__cta hero-fv__cta--secondary">
-      <span class="hero-fv__cta-label">詳しく見る</span>
+      <span class="hero-fv__cta-label">贈り方を見る</span>
     </a>
+    <p class="hero-fv__micro">一度きりOK ／ 定期契約なし ／ あなたの名義でお届け</p>
   </div>
 
   <div class="hero-fv__scroll">
@@ -3078,12 +3101,13 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
 <!-- ============ FV直下 mobile専用 CTAバンド ============ -->
 <section class="hero-fv-cta-band" aria-label="申し込み導線">
   <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
-    <span class="hero-fv__cta-label">LINEで、一度だけ贈る</span>
+    <span class="hero-fv__cta-label">LINEで花を贈る</span>
     <span class="arrow">→</span>
   </a>
   <a href="#steps" class="hero-fv__cta hero-fv__cta--secondary">
-    <span class="hero-fv__cta-label">詳しく見る</span>
+    <span class="hero-fv__cta-label">贈り方を見る</span>
   </a>
+  <p class="hero-fv__micro">一度きりOK ／ 定期契約なし ／ あなたの名義でお届け</p>
 </section>
 
 <!-- ============ MARQUEE ============ -->
