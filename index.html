@@ -3633,7 +3633,7 @@ document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
 /* MANIFESTO kinetic word lighting */
 const manifestoLines = [
   "大切な人を、大切にできる男でいる。",
-  "その姿勢を、花というかたちで届けています。"
+  "その姿勢を、花束というかたちで届けています。"
 ];
 const manifestoEl = document.getElementById('manifestoBig');
 if (manifestoEl){
@@ -3657,7 +3657,7 @@ if (manifestoEl){
     }
     if (buf) tokens.push(buf);
     return tokens.map(t => {
-      const cls = (t.includes('大切にできる男') || t.includes('花というかたち')) ? 'word accented' : 'word';
+      const cls = (t.includes('大切にできる男') || t.includes('花束というかたち')) ? 'word accented' : 'word';
       return `<span class="${cls}">${t}</span>`;
     }).join('<br>');
   }).join('<br><br>');
