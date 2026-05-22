@@ -2716,6 +2716,12 @@ section { position: relative; }
     font-size: clamp(1.55rem, 6.6vw, 2.1rem);
     line-height: 1.5;
   }
+  .voices-echo__hl {
+    font-size: clamp(1.35rem, 5.4vw, 1.85rem);
+    line-break: strict;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
 
   /* STATS */
   .stats__grid { display: grid; }
@@ -3152,8 +3158,8 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     <div class="voices-echo__head reveal">
       <div class="voices-echo__eye">— What the women say.</div>
       <h2 class="voices-echo__hl">
-        花を絶やさない男のもとには、<br>
-        こういう<em>言葉</em>が返ってくる。
+        花を絶やさない<span class="nobr">男のもとには、</span><br>
+        こういう<span class="nobr"><em>言葉</em>が返ってくる。</span>
       </h2>
     </div>
     <div class="voices-echo__grid">
