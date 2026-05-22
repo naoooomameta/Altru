@@ -353,6 +353,22 @@ button, input, textarea { font-family: inherit; }
   justify-content: center;
   gap: 0.9rem;
 }
+.hero-fv__cta-kicker {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 0 0 0.2rem;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(0.72rem, 0.88vw, 0.84rem);
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+.hero-fv-cta-band .hero-fv__cta-kicker {
+  margin: 0 0 0.4rem;
+  opacity: 0.75;
+  text-shadow: none;
+}
 .hero-fv__micro {
   flex-basis: 100%;
   text-align: center;
@@ -3082,6 +3098,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
   </div>
 
   <div class="hero-fv__cta-group">
+    <p class="hero-fv__cta-kicker">— 彼女に、奥さんに —</p>
     <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
       <span class="hero-fv__cta-label">LINEで花を贈る</span>
       <span class="arrow">→</span>
@@ -3100,6 +3117,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
 
 <!-- ============ FV直下 mobile専用 CTAバンド ============ -->
 <section class="hero-fv-cta-band" aria-label="申し込み導線">
+  <p class="hero-fv__cta-kicker">— 彼女に、奥さんに —</p>
   <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
     <span class="hero-fv__cta-label">LINEで花を贈る</span>
     <span class="arrow">→</span>
