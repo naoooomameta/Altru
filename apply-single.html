@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wsezopcxvw");
+</script>
+<title>単発お試し便｜Altru</title>
+<meta name="description" content="Altru の単発お試し便（¥3,000）お申し込みページ。1回だけ、想いを花束にして大切な方へお届けします。">
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:           #1A1612;
+    --bg-dark:       #0A0907;
+    --bg-dark-2:     #120F0B;
+    --paper:         #ECE6D9;
+    --paper-soft:    rgba(236, 230, 217, .78);
+    --paper-mute:    rgba(236, 230, 217, .55);
+    --paper-faint:   rgba(236, 230, 217, .35);
+    --paper-line:    rgba(236, 230, 217, .18);
+    --paper-line-soft: rgba(236, 230, 217, .10);
+    --glass:         rgba(236, 230, 217, .04);
+    --glass-2:       rgba(236, 230, 217, .07);
+    --glass-3:       rgba(236, 230, 217, .10);
+    --gold:          #C9A45A;
+    --error:         #d49994;
+    --success:       #8FB58C;
+    --serif:         'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', 'YuMincho', serif;
+    --sans:          'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    --serif-it:      'Cormorant Garamond', 'Times New Roman', serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-dark);
+    color: var(--paper);
+    min-height: 100vh;
+    font-family: var(--serif);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Background photo — woman behind the form, heavily darkened */
+  .ap-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-color: var(--bg-dark);
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.82)),
+      url('a_Manifesto_Desktop.png');
+    background-image:
+      linear-gradient(rgba(10, 9, 7, 0.72), rgba(10, 9, 7, 0.82)),
+      image-set(
+        url('a_Manifesto_Desktop.avif') type('image/avif'),
+        url('a_Manifesto_Desktop.webp') type('image/webp'),
+        url('a_Manifesto_Desktop.png') type('image/png')
+      );
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+  .ap-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 18% 8%, rgba(201, 164, 90, .07), transparent 55%),
+      linear-gradient(180deg, transparent 0%, transparent 55%, rgba(10, 9, 7, .55) 100%);
+  }
+  @media (max-width: 768px) {
+    .ap-bg {
+      background-image:
+        linear-gradient(rgba(10, 9, 7, 0.78), rgba(10, 9, 7, 0.86)),
+        url('a_Manifesto_Mobile.png');
+      background-image:
+        linear-gradient(rgba(10, 9, 7, 0.78), rgba(10, 9, 7, 0.86)),
+        image-set(
+          url('a_Manifesto_Mobile.avif') type('image/avif'),
+          url('a_Manifesto_Mobile.webp') type('image/webp'),
+          url('a_Manifesto_Mobile.png') type('image/png')
+        );
+      background-position: center;
+    }
+  }
+
+  a { color: inherit; }
+
+  /* ── HEADER ── */
+  .ap-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 2rem;
+    background: rgba(10, 9, 7, .82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--paper-line-soft);
+  }
+  .ap-header__logo {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 1.7rem;
+    color: var(--paper);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .ap-header__back {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--paper-mute);
+    text-decoration: none;
+    letter-spacing: 0.14em;
+    transition: color 0.25s ease;
+  }
+  .ap-header__back:hover { color: var(--paper); }
+
+  /* ── HERO ── */
+  .ap-hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: clamp(4rem, 7vw, 6rem) 1.5rem clamp(2rem, 4vw, 3rem);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .ap-hero__ornament {
+    display: block;
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: clamp(1.2rem, 2.5vw, 1.75rem);
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;
+    opacity: 0.85;
+  }
+  .ap-hero__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--paper-mute);
+    letter-spacing: 0.32em;
+    margin-bottom: 1.1rem;
+    text-transform: uppercase;
+  }
+  .ap-hero__title {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0 0 1.15rem;
+    line-height: 1.5;
+    color: var(--paper);
+  }
+  .ap-hero__title em {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--paper-mute);
+  }
+  .ap-hero__lede {
+    color: var(--paper-soft);
+    font-size: 0.95rem;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    max-width: 30em;
+    margin: 0 auto;
+  }
+
+  /* ── STEPPER (top, sticky guide) ── */
+  .ap-stepper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+    max-width: 900px;
+    padding: 0 1.25rem;
+    font-family: var(--serif-it);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--paper-faint);
+  }
+  .ap-stepper__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color .35s ease;
+  }
+  .ap-stepper__item.is-active { color: var(--paper); font-weight: 500; }
+  .ap-stepper__item.is-done   { color: var(--paper-soft); }
+  .ap-stepper__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--paper-faint);
+    transition: all .35s ease;
+  }
+  .ap-stepper__item.is-active .ap-stepper__dot {
+    background: var(--paper);
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px rgba(236, 230, 217, .1);
+  }
+  .ap-stepper__item.is-done .ap-stepper__dot { background: rgba(236, 230, 217, .55); }
+  .ap-stepper__line {
+    width: 30px;
+    height: 1px;
+    background: var(--paper-line);
+  }
+
+  /* ── FORM SHELL ── */
+  .ap-form {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 1.5rem clamp(4rem, 8vw, 6rem);
+  }
+
+  /* Step section — dark glass card so text stays legible over the photo */
+  .ap-step {
+    background: rgba(10, 9, 7, 0.62);
+    border: 1px solid var(--paper-line);
+    padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
+    margin: 0 0 clamp(1.4rem, 2.5vw, 1.75rem);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .ap-step__head {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .ap-step__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--paper-mute);
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+  .ap-step__num {
+    font-family: var(--serif-it);
+    font-style: italic;
+    color: var(--paper);
+    margin-right: 0.4em;
+    letter-spacing: 0.05em;
+  }
+  .ap-step__title {
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 2.7vw, 1.7rem);
+    font-weight: 500;
+    margin: 0 0 0.55rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: var(--paper);
+  }
+  .ap-step__title em {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--paper-mute);
+  }
+  .ap-step__desc {
+    color: var(--paper-soft);
+    font-size: 0.9rem;
+    line-height: 1.95;
+    letter-spacing: 0.03em;
+    margin: 0 auto 2rem;
+    max-width: 38em;
+    text-align: center;
+  }
+
+  /* ── FIXED PLAN SUMMARY CARD (replaces plan selector) ── */
+  .ap-summary {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto clamp(1.4rem, 2.5vw, 1.75rem);
+    padding: 0 1.5rem;
+  }
+  .ap-summary__card {
+    position: relative;
+    background: linear-gradient(180deg, rgba(236, 230, 217, .1) 0%, rgba(236, 230, 217, .04) 100%);
+    border: 2px solid rgba(236, 230, 217, .55);
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 3.5vw, 2.25rem);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem 2rem;
+    align-items: center;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, .4);
+  }
+  @media (max-width: 520px) {
+    .ap-summary__card {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 0.85rem;
+    }
+  }
+  .ap-summary__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: .06em;
+    font-weight: 500;
+    padding: 5px 13px;
+    white-space: nowrap;
+  }
+  .ap-summary__badge::before {
+    content: '✦';
+    margin-right: 6px;
+    color: #75695C;
+  }
+  .ap-summary__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 12px;
+    color: var(--paper-mute);
+    letter-spacing: .12em;
+    margin: 0 0 4px;
+  }
+  .ap-summary__name {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    font-weight: 500;
+    margin: 0 0 6px;
+    letter-spacing: .04em;
+    color: var(--paper);
+  }
+  .ap-summary__desc {
+    font-family: var(--serif);
+    font-size: 0.88rem;
+    color: var(--paper-soft);
+    line-height: 1.8;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .ap-summary__price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  @media (max-width: 520px) {
+    .ap-summary__price { justify-content: center; }
+  }
+  .ap-summary__price-num {
+    font-family: var(--serif-it);
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 500;
+    letter-spacing: -.01em;
+    color: var(--paper);
+  }
+  .ap-summary__price-unit {
+    font-family: var(--serif-it);
+    font-size: 12px;
+    color: var(--paper-mute);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* ── FIELDS ── */
+  .ap-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 1.6rem;
+  }
+  .ap-field:last-child { margin-bottom: 0; }
+  .ap-field__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .ap-field__row { grid-template-columns: 1fr; }
+  }
+  .ap-field__label {
+    font-family: var(--serif-it);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--paper-mute);
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .ap-field__label .ja {
+    font-family: var(--serif);
+    text-transform: none;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: var(--paper);
+    margin-left: 4px;
+    font-weight: 400;
+  }
+  .ap-field__required {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.68rem;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 0.12rem 0.5rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    text-transform: none;
+  }
+  .ap-field__optional {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 0.68rem;
+    color: var(--paper-mute);
+    border: 1px solid var(--paper-line);
+    padding: 0.05rem 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: none;
+  }
+
+  .ap-input,
+  .ap-select,
+  .ap-textarea {
+    width: 100%;
+    min-height: 48px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--paper-line);
+    padding: 0.7rem 0;
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--paper);
+    transition: border-color 0.25s ease, background 0.25s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
+  }
+  .ap-input::placeholder,
+  .ap-textarea::placeholder {
+    color: rgba(236, 230, 217, .32);
+  }
+  .ap-textarea {
+    min-height: 96px;
+    resize: vertical;
+    line-height: 1.85;
+    border: 1px solid var(--paper-line);
+    padding: 0.85rem 1rem;
+    background: var(--glass);
+  }
+  .ap-select {
+    background: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23ECE6D9' stroke-width='1.5' d='M1 1.5L6 6.5L11 1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.3rem center;
+    background-size: 11px 7px;
+    padding-right: 1.8rem;
+  }
+  .ap-select option {
+    background: var(--bg-dark);
+    color: var(--paper);
+  }
+  .ap-input:focus,
+  .ap-select:focus { border-bottom-color: var(--paper); }
+  .ap-textarea:focus { border-color: var(--paper); background: var(--glass-2); }
+  .ap-input::-webkit-calendar-picker-indicator {
+    filter: invert(.92);
+    opacity: .65;
+    cursor: pointer;
+  }
+  .ap-input.is-error,
+  .ap-select.is-error { border-bottom-color: var(--error); }
+  .ap-textarea.is-error { border-color: var(--error); }
+
+  .ap-field__hint {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--paper-mute);
+    line-height: 1.75;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .ap-field__error {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--error);
+    margin: 0;
+    display: none;
+    letter-spacing: 0.02em;
+  }
+  .ap-field__error.is-visible { display: block; }
+  .ap-field__counter {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 11px;
+    color: var(--paper-mute);
+    text-align: right;
+    letter-spacing: 0.06em;
+  }
+  .ap-field__counter.is-over { color: var(--error); }
+
+  /* ── ZIP ROW ── */
+  .ap-zip {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+    align-items: end;
+  }
+  .ap-zip__btn {
+    background: transparent;
+    border: 1px solid var(--paper-line);
+    color: var(--paper);
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding: 0.65rem 1.1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    border-radius: 0;
+    height: 44px;
+  }
+  .ap-zip__btn:hover:not(:disabled) {
+    border-color: var(--paper);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .ap-zip__btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+  /* ── CHECKBOX ── */
+  .ap-check {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    padding: 1rem 1.15rem;
+    background: var(--glass);
+    border: 1px solid var(--paper-line);
+    cursor: pointer;
+    transition: border-color 0.25s ease, background 0.25s ease;
+    margin-bottom: 0.7rem;
+  }
+  .ap-check:last-child { margin-bottom: 0; }
+  .ap-check:hover { border-color: rgba(236, 230, 217, .45); }
+  .ap-check.is-checked {
+    border-color: var(--paper);
+    background: var(--glass-2);
+    box-shadow: inset 0 0 0 1px var(--paper);
+  }
+  .ap-check.is-error { border-color: var(--error); }
+  .ap-check input {
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--paper-mute);
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 3px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+  }
+  .ap-check input:checked {
+    background: var(--paper);
+    border-color: var(--paper);
+  }
+  .ap-check input:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 11px;
+    border: solid var(--ink);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .ap-check__body {
+    flex: 1;
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    color: var(--paper);
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+  }
+  .ap-check__body strong { font-weight: 500; }
+  .ap-check__body a {
+    color: var(--paper);
+    border-bottom: 1px solid var(--paper-line);
+    text-decoration: none;
+    transition: border-color 0.25s ease;
+  }
+  .ap-check__body a:hover { border-color: var(--paper); }
+
+  /* ── STEALTH INTRO ── */
+  .ap-stealth {
+    background: linear-gradient(135deg, rgba(236, 230, 217, .05) 0%, rgba(236, 230, 217, .09) 100%);
+    border-left: 2px solid var(--paper);
+    padding: 1.4rem 1.5rem 1.4rem 1.65rem;
+    margin: 0 0 1.5rem;
+    position: relative;
+  }
+  .ap-stealth::before {
+    content: '"';
+    font-family: var(--serif-it);
+    font-size: 56px;
+    color: rgba(236, 230, 217, .18);
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    line-height: 1;
+  }
+  .ap-stealth__eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--paper-mute);
+    text-transform: uppercase;
+    margin: 0 0 0.8rem;
+    line-height: 1;
+  }
+  .ap-stealth__title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.85rem;
+    line-height: 1.55;
+    color: var(--paper);
+  }
+  .ap-stealth__body {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    color: var(--paper-soft);
+    line-height: 1.95;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+  .ap-stealth__body + .ap-stealth__body { margin-top: 0.75rem; }
+
+  /* ── SUBMIT ── */
+  .ap-submit-wrap {
+    margin-top: clamp(2rem, 4vw, 3rem);
+  }
+  .ap-submit {
+    width: 100%;
+    min-height: 60px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--paper);
+    border-radius: 0;
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .ap-submit:hover:not(:disabled) {
+    background: transparent;
+    color: var(--paper);
+  }
+  .ap-submit:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .ap-submit__spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ap-spin .8s linear infinite;
+  }
+  .ap-submit.is-loading .ap-submit__spinner { display: inline-block; }
+  .ap-submit.is-loading .ap-submit__label-default { display: none; }
+  .ap-submit__label-loading { display: none; }
+  .ap-submit.is-loading .ap-submit__label-loading { display: inline; }
+  @keyframes ap-spin { to { transform: rotate(360deg); } }
+
+  .ap-submit-note {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 0.82rem;
+    color: var(--paper-mute);
+    margin: 1.1rem 0 0;
+    line-height: 1.95;
+    letter-spacing: 0.04em;
+  }
+  .ap-stripe-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--serif-it);
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: var(--paper);
+    text-decoration: none;
+    border-bottom: 1px solid var(--paper-line);
+    transition: border-color 0.25s ease;
+  }
+  .ap-stripe-mark:hover { border-color: var(--paper); }
+
+  /* ── FORM ERROR BANNER ── */
+  .ap-banner {
+    background: rgba(212, 153, 148, .08);
+    border-left: 3px solid var(--error);
+    color: var(--error);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    display: none;
+  }
+  .ap-banner.is-visible { display: block; }
+
+  /* ── FOOTER ── */
+  .ap-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2.5rem 1.5rem 3rem;
+    border-top: 1px solid var(--paper-line-soft);
+    color: var(--paper-mute);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+  .ap-footer a {
+    color: var(--paper-mute);
+    margin: 0 0.85rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .ap-footer a:hover { color: var(--paper); }
+  .ap-footer__copy {
+    font-family: var(--serif-it);
+    font-style: italic;
+    letter-spacing: 0.14em;
+    margin-top: 1.1rem;
+  }
+
+  @media (max-width: 720px) {
+    .ap-stepper { gap: 6px; font-size: 10px; letter-spacing: 0.15em; }
+    .ap-stepper__line { width: 18px; }
+    .ap-stepper__label { display: none; }
+  }
+  @media (max-width: 600px) {
+    .ap-header { padding: 1rem 1.25rem; }
+    .ap-header__logo { font-size: 1.45rem; }
+    .ap-header__back { font-size: 0.78rem; letter-spacing: 0.1em; }
+    .ap-hero { padding: 2.8rem 1.25rem 1.5rem; }
+    .ap-hero__lede { font-size: 0.9rem; line-height: 1.95; }
+    .ap-form { padding: 0 1rem 3rem; }
+    .ap-step { padding: 1.75rem 1.25rem; }
+    .ap-step__title { font-size: 1.2rem; }
+    .ap-step__desc { font-size: 0.88rem; }
+    .ap-footer a { display: inline-block; margin: 0.25rem 0.6rem; }
+  }
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1677373676625503');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>
+  // Altru: 申込フォーム到達 (InitiateCheckout)
+  fbq('track', 'InitiateCheckout');
+</script>
+</head>
+<body>
+
+<div class="ap-bg" aria-hidden="true"></div>
+
+<header class="ap-header">
+  <a href="index.html" class="ap-header__logo">Altru</a>
+  <a href="index.html" class="ap-header__back">← トップに戻る</a>
+</header>
+
+<section class="ap-hero">
+  <span class="ap-hero__ornament" aria-hidden="true">✦</span>
+  <p class="ap-hero__eyebrow">— Single Delivery</p>
+  <h1 class="ap-hero__title">想いを、<em>一度だけ</em>、花束に。</h1>
+  <p class="ap-hero__lede">
+    まずは一度、Altru の花束をお試しください。<br>
+    ¥3,000 ぽっきり、定期契約はありません。
+  </p>
+</section>
+
+<section class="ap-summary" aria-label="ご注文内容">
+  <div class="ap-summary__card">
+    <span class="ap-summary__badge">単発お試し便</span>
+    <div>
+      <p class="ap-summary__eyebrow">— One-time Trial</p>
+      <h2 class="ap-summary__name">Altru 単発お試し便</h2>
+      <p class="ap-summary__desc">季節の花束を一度だけお届け。定期契約・更新は一切ありません。</p>
+    </div>
+    <div class="ap-summary__price">
+      <span class="ap-summary__price-num">¥3,000</span>
+      <span class="ap-summary__price-unit">/ 一度のみ</span>
+    </div>
+  </div>
+</section>
+
+<nav class="ap-stepper" aria-label="入力ステップ">
+  <span class="ap-stepper__item is-active" data-step="1">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">01 — Applicant</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="2">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">02 — Recipient</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="3">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">03 — Message</span>
+  </span>
+  <span class="ap-stepper__line"></span>
+  <span class="ap-stepper__item" data-step="4">
+    <span class="ap-stepper__dot"></span>
+    <span class="ap-stepper__label">04 — Confirm</span>
+  </span>
+</nav>
+
+<form class="ap-form" id="apForm" novalidate>
+
+  <div class="ap-banner" id="apBanner" role="alert"></div>
+
+  <!-- ─────────── STEP 1: APPLICANT ─────────── -->
+  <section class="ap-step" data-step="1">
+    <div class="ap-step__head">
+      <div class="ap-step__eyebrow">— Step 01 / About you</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">01.</span> お申込者の<em>情報</em>。</h2>
+      <p class="ap-step__desc">ご請求・各種ご連絡先としてお預かりします。</p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="applicant_name">
+        Name <span class="ja">お名前</span> <span class="ap-field__required">必須</span>
+      </label>
+      <input class="ap-input" type="text" id="applicant_name" name="applicant_name" maxlength="50" autocomplete="name" placeholder="山田 太郎">
+      <p class="ap-field__error" id="err-applicant_name"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="applicant_email">
+        Email <span class="ja">メールアドレス</span> <span class="ap-field__required">必須</span>
+      </label>
+      <input class="ap-input" type="email" id="applicant_email" name="applicant_email" autocomplete="email" placeholder="you@example.com" inputmode="email">
+      <p class="ap-field__hint">領収書・お届け予定日のご案内をお送りします。</p>
+      <p class="ap-field__error" id="err-applicant_email"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="applicant_phone">
+        Phone <span class="ja">電話番号</span> <span class="ap-field__required">必須</span>
+      </label>
+      <input class="ap-input" type="tel" id="applicant_phone" name="applicant_phone" autocomplete="tel" placeholder="09012345678" inputmode="tel" maxlength="13">
+      <p class="ap-field__hint">ハイフンあり・なし どちらでも可。</p>
+      <p class="ap-field__error" id="err-applicant_phone"></p>
+    </div>
+  </section>
+
+  <!-- ─────────── STEP 2: RECIPIENT ─────────── -->
+  <section class="ap-step" data-step="2">
+    <div class="ap-step__head">
+      <div class="ap-step__eyebrow">— Step 02 / The one to receive</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">02.</span> <em>お届け先</em>。</h2>
+      <p class="ap-step__desc">花束を受け取るお相手の、ご住所とお名前をご入力ください。</p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_name">
+        Recipient <span class="ja">お届け先のお名前</span> <span class="ap-field__required">必須</span>
+      </label>
+      <input class="ap-input" type="text" id="recipient_name" name="recipient_name" maxlength="50" placeholder="山田 花子">
+      <p class="ap-field__error" id="err-recipient_name"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_relation">
+        Relation <span class="ja">お相手とのご関係</span> <span class="ap-field__required">必須</span>
+      </label>
+      <select class="ap-select" id="recipient_relation" name="recipient_relation">
+        <option value="">選択してください</option>
+        <option value="妻">妻</option>
+        <option value="恋人・パートナー">恋人・パートナー</option>
+        <option value="母">母</option>
+        <option value="その他大切な人">その他大切な人</option>
+      </select>
+      <p class="ap-field__error" id="err-recipient_relation"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_postal_code">
+        Postal <span class="ja">郵便番号</span> <span class="ap-field__required">必須</span>
+      </label>
+      <div class="ap-zip">
+        <input class="ap-input" type="text" id="recipient_postal_code" name="recipient_postal_code" placeholder="152-0001" inputmode="numeric" maxlength="8" autocomplete="postal-code">
+        <button type="button" class="ap-zip__btn" id="zipBtn">住所を検索</button>
+      </div>
+      <p class="ap-field__hint" id="zipHint">郵便番号を入力すると、都道府県・市区町村を自動入力します。</p>
+      <p class="ap-field__error" id="err-recipient_postal_code"></p>
+    </div>
+
+    <div class="ap-field__row">
+      <div class="ap-field">
+        <label class="ap-field__label" for="recipient_prefecture">
+          Prefecture <span class="ja">都道府県</span> <span class="ap-field__required">必須</span>
+        </label>
+        <select class="ap-select" id="recipient_prefecture" name="recipient_prefecture" autocomplete="address-level1">
+          <option value="">選択</option>
+        </select>
+        <p class="ap-field__error" id="err-recipient_prefecture"></p>
+      </div>
+      <div class="ap-field">
+        <label class="ap-field__label" for="recipient_city">
+          City <span class="ja">市区町村</span> <span class="ap-field__required">必須</span>
+        </label>
+        <input class="ap-input" type="text" id="recipient_city" name="recipient_city" maxlength="50" autocomplete="address-level2" placeholder="目黒区中央町">
+        <p class="ap-field__error" id="err-recipient_city"></p>
+      </div>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_address_line">
+        Address <span class="ja">番地・建物名</span> <span class="ap-field__required">必須</span>
+      </label>
+      <input class="ap-input" type="text" id="recipient_address_line" name="recipient_address_line" maxlength="100" autocomplete="address-line1" placeholder="1-2-3 アルトゥルレジデンス 405号室">
+      <p class="ap-field__error" id="err-recipient_address_line"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_phone">
+        Phone <span class="ja">お届け先の電話番号</span> <span class="ap-field__optional">任意</span>
+      </label>
+      <input class="ap-input" type="tel" id="recipient_phone" name="recipient_phone" placeholder="09012345678" inputmode="tel" maxlength="13">
+      <p class="ap-field__hint">配送業者からの不在連絡時に使用します。</p>
+      <p class="ap-field__error" id="err-recipient_phone"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="recipient_delivery_note">
+        Note <span class="ja">配送メモ</span> <span class="ap-field__optional">任意</span>
+      </label>
+      <textarea class="ap-textarea" id="recipient_delivery_note" name="recipient_delivery_note" maxlength="100" placeholder="例: 平日午前中希望／在宅時間17時以降"></textarea>
+      <div class="ap-field__counter"><span id="cnt-delivery_note">0</span>/100</div>
+      <p class="ap-field__error" id="err-recipient_delivery_note"></p>
+    </div>
+  </section>
+
+  <!-- ─────────── STEP 3: MESSAGE ─────────── -->
+  <section class="ap-step" data-step="3">
+    <div class="ap-step__head">
+      <div class="ap-step__eyebrow">— Step 03 / Words to attach</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">03.</span> <em>メッセージ</em>カード。</h2>
+      <p class="ap-step__desc">花束に添えるメッセージを、6つの定型文からお選びください。</p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="message_text">
+        Message <span class="ja">メッセージ</span> <span class="ap-field__required">必須</span>
+      </label>
+      <select class="ap-select" id="message_text" name="message_text">
+        <option value="" disabled selected>お選びください</option>
+        <optgroup label="感謝の気持ち">
+          <option value="いつもありがとう。">いつもありがとう。</option>
+          <option value="心からの感謝を込めて。">心からの感謝を込めて。</option>
+        </optgroup>
+        <optgroup label="大切な日の想い">
+          <option value="大切な日に、想いを込めて。">大切な日に、想いを込めて。</option>
+          <option value="今日もそばにいてくれて、ありがとう。">今日もそばにいてくれて、ありがとう。</option>
+        </optgroup>
+        <optgroup label="励まし・労い">
+          <option value="お疲れさまでした。ゆっくり休んでね。">お疲れさまでした。ゆっくり休んでね。</option>
+          <option value="あなたの毎日が、穏やかでありますように。">あなたの毎日が、穏やかでありますように。</option>
+        </optgroup>
+      </select>
+      <p class="ap-field__hint">花束に添えるカードに、そのまま手書き風で印刷されます。</p>
+      <p class="ap-field__error" id="err-message_text"></p>
+    </div>
+
+    <div class="ap-field">
+      <label class="ap-field__label" for="anchor_date">
+        Anchor <span class="ja">記念日</span> <span class="ap-field__optional">任意</span>
+      </label>
+      <input class="ap-input" type="date" id="anchor_date" name="anchor_date">
+      <p class="ap-field__hint">記念日を起点に、最適なお届け日を調整します。</p>
+      <p class="ap-field__error" id="err-anchor_date"></p>
+    </div>
+  </section>
+
+  <!-- ─────────── STEP 4: CONSENT ─────────── -->
+  <section class="ap-step" data-step="4">
+    <div class="ap-step__head">
+      <div class="ap-step__eyebrow">— Step 04 / Final notes</div>
+      <h2 class="ap-step__title"><span class="ap-step__num">04.</span> <em>ご確認</em>。</h2>
+      <p class="ap-step__desc">最後に、以下の2点にご同意ください。</p>
+    </div>
+
+    <aside class="ap-stealth" aria-labelledby="stealth-intro-title">
+      <p class="ap-stealth__eyebrow">On Stealth Delivery</p>
+      <h3 class="ap-stealth__title" id="stealth-intro-title">そっと、届くために。</h3>
+      <p class="ap-stealth__body">
+        Altru は、すべての荷物をステルス梱包でお届けしています。段ボールや伝票に「花」「Flower」「Altru」の文字は一切記載せず、送り主名はご指定の名義のみが残ります。
+      </p>
+      <p class="ap-stealth__body">
+        想いは、人に見せるためのものではなく、届けたい方の心に、そっと触れるためのもの。ご家族と暮らす方も、職場で受け取る方も、ご自分のタイミングで、ひとりで開けられるように。梱包から、その静かな配慮を始めています。
+      </p>
+    </aside>
+
+    <label class="ap-check" id="check-stealth">
+      <input type="checkbox" id="stealth_confirmed" name="stealth_confirmed">
+      <span class="ap-check__body">
+        <strong>ステルス配送について理解しました。</strong><br>
+        配送物の伝票・梱包には Altru のロゴや「花束」「Flower」等の文字は記載されません。送り主名はご指定の名義で表示されます。
+      </span>
+    </label>
+
+    <label class="ap-check" id="check-terms">
+      <input type="checkbox" id="terms_accepted" name="terms_accepted">
+      <span class="ap-check__body">
+        <a href="legal.html?doc=terms" target="_blank" rel="noopener">利用規約</a> および
+        <a href="legal.html?doc=privacy" target="_blank" rel="noopener">プライバシーポリシー</a>
+        に同意します。
+      </span>
+    </label>
+    <p class="ap-field__error" id="err-consent"></p>
+  </section>
+
+  <!-- ─────────── SUBMIT ─────────── -->
+  <div class="ap-submit-wrap">
+    <button type="submit" class="ap-submit" id="apSubmit">
+      <span class="ap-submit__spinner" aria-hidden="true"></span>
+      <span class="ap-submit__label">
+        <span class="ap-submit__label-default">¥3,000 のお支払いへ進む →</span>
+        <span class="ap-submit__label-loading">決済ページへ遷移中…</span>
+      </span>
+    </button>
+    <p class="ap-submit-note">
+      決済は <a class="ap-stripe-mark" href="https://stripe.com/jp" target="_blank" rel="noopener noreferrer">Stripe</a> の安全な決済ページで行われます。<br>
+      カード情報が当サイトに送信・保存されることはありません。
+    </p>
+  </div>
+
+</form>
+
+<footer class="ap-footer">
+  <div>
+    <a href="legal.html?doc=terms">利用規約</a>
+    <a href="legal.html?doc=privacy">プライバシーポリシー</a>
+    <a href="legal.html?doc=tokushoho">特定商取引法に基づく表記</a>
+  </div>
+  <p class="ap-footer__copy">© 2026 Altru. All Rights Reserved.</p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var API_ENDPOINT = 'https://altru-api.galileo-nao.workers.dev/checkout';
+  var PLAN_ID = 'onetime';
+
+  var PREFECTURES = [
+    '北海道','青森県','岩手県','宮城県','秋田県','山形県','福島県',
+    '茨城県','栃木県','群馬県','埼玉県','千葉県','東京都','神奈川県',
+    '新潟県','富山県','石川県','福井県','山梨県','長野県',
+    '岐阜県','静岡県','愛知県','三重県',
+    '滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県',
+    '鳥取県','島根県','岡山県','広島県','山口県',
+    '徳島県','香川県','愛媛県','高知県',
+    '福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県'
+  ];
+
+  /* ── Populate prefectures ── */
+  var prefSelect = document.getElementById('recipient_prefecture');
+  PREFECTURES.forEach(function (p) {
+    var opt = document.createElement('option');
+    opt.value = p;
+    opt.textContent = p;
+    prefSelect.appendChild(opt);
+  });
+
+  /* ── Character counters ── */
+  function bindCounter(inputId, counterId) {
+    var input = document.getElementById(inputId);
+    var counter = document.getElementById(counterId);
+    var max = parseInt(input.getAttribute('maxlength'), 10);
+    function update() {
+      var len = input.value.length;
+      counter.textContent = len;
+      counter.parentElement.classList.toggle('is-over', len > max);
+    }
+    input.addEventListener('input', update);
+    update();
+  }
+  bindCounter('recipient_delivery_note', 'cnt-delivery_note');
+
+  /* ── Checkbox visual state ── */
+  ['check-stealth', 'check-terms'].forEach(function (id) {
+    var wrap = document.getElementById(id);
+    var input = wrap.querySelector('input');
+    input.addEventListener('change', function () {
+      wrap.classList.toggle('is-checked', input.checked);
+      if (input.checked) wrap.classList.remove('is-error');
+    });
+  });
+
+  /* ── Zipcloud postal lookup ── */
+  var zipInput = document.getElementById('recipient_postal_code');
+  var zipBtn = document.getElementById('zipBtn');
+  var zipHint = document.getElementById('zipHint');
+  var cityInput = document.getElementById('recipient_city');
+
+  function normalizePostal(value) {
+    return value.replace(/[^\d]/g, '');
+  }
+
+  function formatPostal(digits) {
+    if (digits.length <= 3) return digits;
+    return digits.slice(0, 3) + '-' + digits.slice(3, 7);
+  }
+
+  zipInput.addEventListener('input', function () {
+    var digits = normalizePostal(zipInput.value);
+    if (digits.length > 7) digits = digits.slice(0, 7);
+    var formatted = formatPostal(digits);
+    if (formatted !== zipInput.value) zipInput.value = formatted;
+    if (digits.length === 7) lookupZip(digits);
+  });
+
+  zipBtn.addEventListener('click', function () {
+    var digits = normalizePostal(zipInput.value);
+    if (digits.length !== 7) {
+      zipHint.textContent = '7桁の郵便番号を入力してください。';
+      zipHint.style.color = 'var(--error)';
+      return;
+    }
+    lookupZip(digits);
+  });
+
+  function lookupZip(digits) {
+    zipHint.textContent = '住所を検索中...';
+    zipHint.style.color = 'var(--paper-mute)';
+    zipBtn.disabled = true;
+    var url = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + digits;
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        zipBtn.disabled = false;
+        if (data && data.results && data.results.length > 0) {
+          var first = data.results[0];
+          prefSelect.value = first.address1 || '';
+          cityInput.value = (first.address2 || '') + (first.address3 || '');
+          zipHint.textContent = '自動入力しました。必要に応じてご修正ください。';
+          zipHint.style.color = 'var(--success)';
+        } else {
+          zipHint.textContent = '該当する住所が見つかりませんでした。手動でご入力ください。';
+          zipHint.style.color = 'var(--paper-mute)';
+        }
+      })
+      .catch(function () {
+        zipBtn.disabled = false;
+        zipHint.textContent = '住所検索に失敗しました。手動でご入力ください。';
+        zipHint.style.color = 'var(--paper-mute)';
+      });
+  }
+
+  /* ── Validation ── */
+  function setError(fieldId, message) {
+    var errEl = document.getElementById('err-' + fieldId);
+    var input = document.getElementById(fieldId);
+    if (errEl) {
+      errEl.textContent = message || '';
+      errEl.classList.toggle('is-visible', !!message);
+    }
+    if (input) {
+      input.classList.toggle('is-error', !!message);
+    }
+  }
+
+  function clearAllErrors() {
+    document.querySelectorAll('.ap-field__error').forEach(function (el) {
+      el.textContent = '';
+      el.classList.remove('is-visible');
+    });
+    document.querySelectorAll('.is-error').forEach(function (el) {
+      el.classList.remove('is-error');
+    });
+  }
+
+  function validatePhone(value) {
+    var stripped = value.replace(/[-\s]/g, '');
+    return /^0\d{9,10}$/.test(stripped);
+  }
+
+  function validateEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function validatePostal(value) {
+    return /^\d{3}-?\d{4}$/.test(value);
+  }
+
+  function validate() {
+    clearAllErrors();
+    var errors = [];
+
+    function checkText(id, label, min, max) {
+      var el = document.getElementById(id);
+      var v = (el.value || '').trim();
+      if (v.length < min) {
+        setError(id, label + 'を入力してください。');
+        errors.push(id);
+        return;
+      }
+      if (v.length > max) {
+        setError(id, label + 'は' + max + '文字以内でご入力ください。');
+        errors.push(id);
+      }
+    }
+
+    checkText('applicant_name', 'お名前', 1, 50);
+
+    var emailEl = document.getElementById('applicant_email');
+    var emailVal = (emailEl.value || '').trim();
+    if (!emailVal) {
+      setError('applicant_email', 'メールアドレスを入力してください。');
+      errors.push('applicant_email');
+    } else if (!validateEmail(emailVal)) {
+      setError('applicant_email', 'メールアドレスの形式が正しくありません。');
+      errors.push('applicant_email');
+    }
+
+    var aPhoneEl = document.getElementById('applicant_phone');
+    var aPhoneVal = (aPhoneEl.value || '').trim();
+    if (!aPhoneVal) {
+      setError('applicant_phone', '電話番号を入力してください。');
+      errors.push('applicant_phone');
+    } else if (!validatePhone(aPhoneVal)) {
+      setError('applicant_phone', '0で始まる10〜11桁の電話番号を入力してください。');
+      errors.push('applicant_phone');
+    }
+
+    checkText('recipient_name', 'お届け先のお名前', 1, 50);
+
+    var relEl = document.getElementById('recipient_relation');
+    if (!relEl.value) {
+      setError('recipient_relation', 'お相手とのご関係を選択してください。');
+      errors.push('recipient_relation');
+    }
+
+    var postalVal = (zipInput.value || '').trim();
+    if (!postalVal) {
+      setError('recipient_postal_code', '郵便番号を入力してください。');
+      errors.push('recipient_postal_code');
+    } else if (!validatePostal(postalVal)) {
+      setError('recipient_postal_code', '郵便番号の形式が正しくありません（例: 152-0001）。');
+      errors.push('recipient_postal_code');
+    }
+
+    if (!prefSelect.value) {
+      setError('recipient_prefecture', '都道府県を選択してください。');
+      errors.push('recipient_prefecture');
+    }
+
+    checkText('recipient_city', '市区町村', 1, 50);
+    checkText('recipient_address_line', '番地・建物名', 1, 100);
+
+    var rPhoneEl = document.getElementById('recipient_phone');
+    var rPhoneVal = (rPhoneEl.value || '').trim();
+    if (rPhoneVal && !validatePhone(rPhoneVal)) {
+      setError('recipient_phone', '0で始まる10〜11桁の電話番号を入力してください。');
+      errors.push('recipient_phone');
+    }
+
+    var noteEl = document.getElementById('recipient_delivery_note');
+    if ((noteEl.value || '').length > 100) {
+      setError('recipient_delivery_note', '100文字以内でご入力ください。');
+      errors.push('recipient_delivery_note');
+    }
+
+    var msgEl = document.getElementById('message_text');
+    if (!msgEl.value) {
+      setError('message_text', 'メッセージをお選びください。');
+      errors.push('message_text');
+    }
+
+    var stealthEl = document.getElementById('stealth_confirmed');
+    var termsEl = document.getElementById('terms_accepted');
+    if (!stealthEl.checked || !termsEl.checked) {
+      var consentErr = document.getElementById('err-consent');
+      consentErr.textContent = '2つの項目にご同意ください。';
+      consentErr.classList.add('is-visible');
+      if (!stealthEl.checked) document.getElementById('check-stealth').classList.add('is-error');
+      if (!termsEl.checked) document.getElementById('check-terms').classList.add('is-error');
+      errors.push('consent');
+    }
+
+    return errors;
+  }
+
+  /* ── Build payload ── */
+  function buildPayload() {
+    var noteVal = (document.getElementById('recipient_delivery_note').value || '').trim();
+    var anchorVal = (document.getElementById('anchor_date').value || '').trim();
+
+    var recipient = {
+      name: document.getElementById('recipient_name').value.trim(),
+      relation: document.getElementById('recipient_relation').value,
+      postal_code: zipInput.value.trim(),
+      prefecture: prefSelect.value,
+      city: document.getElementById('recipient_city').value.trim(),
+      address_line: document.getElementById('recipient_address_line').value.trim(),
+      phone: document.getElementById('recipient_phone').value.trim()
+    };
+    if (noteVal) recipient.delivery_note = noteVal;
+
+    var message = {
+      text: document.getElementById('message_text').value.trim()
+    };
+    if (anchorVal) message.anchor_date = anchorVal;
+
+    return {
+      plan_id: PLAN_ID,
+      applicant: {
+        name: document.getElementById('applicant_name').value.trim(),
+        email: document.getElementById('applicant_email').value.trim(),
+        phone: document.getElementById('applicant_phone').value.trim()
+      },
+      recipient: recipient,
+      message: message,
+      consent: {
+        stealth_confirmed: true,
+        terms_accepted: true
+      }
+    };
+  }
+
+  /* ── Banner ── */
+  var banner = document.getElementById('apBanner');
+  function showBanner(message) {
+    banner.textContent = message;
+    banner.classList.add('is-visible');
+    banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  function hideBanner() {
+    banner.textContent = '';
+    banner.classList.remove('is-visible');
+  }
+
+  /* ── Stepper progress (scroll-driven) ── */
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.ap-step[data-step]'));
+  var stepperItems = Array.prototype.slice.call(document.querySelectorAll('.ap-stepper__item[data-step]'));
+
+  function updateStepper() {
+    var viewportMid = window.innerHeight * 0.42;
+    var activeStep = 1;
+    steps.forEach(function (sec) {
+      var rect = sec.getBoundingClientRect();
+      if (rect.top <= viewportMid) {
+        activeStep = parseInt(sec.getAttribute('data-step'), 10);
+      }
+    });
+    stepperItems.forEach(function (item) {
+      var n = parseInt(item.getAttribute('data-step'), 10);
+      item.classList.toggle('is-active', n === activeStep);
+      item.classList.toggle('is-done', n < activeStep);
+    });
+  }
+
+  var stepperTicking = false;
+  window.addEventListener('scroll', function () {
+    if (!stepperTicking) {
+      window.requestAnimationFrame(function () {
+        updateStepper();
+        stepperTicking = false;
+      });
+      stepperTicking = true;
+    }
+  }, { passive: true });
+  updateStepper();
+
+  /* ── Submit ── */
+  var form = document.getElementById('apForm');
+  var submitBtn = document.getElementById('apSubmit');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    hideBanner();
+
+    var errors = validate();
+    if (errors.length) {
+      showBanner('入力内容に不備があります。赤色で示された項目をご確認ください。');
+      var firstError = document.querySelector('.ap-field__error.is-visible, .is-error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    submitBtn.classList.add('is-loading');
+    submitBtn.disabled = true;
+
+    var payload = buildPayload();
+
+    fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          return { ok: res.ok, status: res.status, data: data };
+        });
+      })
+      .then(function (result) {
+        if (result.ok && result.data && result.data.url) {
+          window.location.href = result.data.url;
+          return;
+        }
+        var msg = '決済ページへの遷移に失敗しました。お手数ですが再度お試しください。';
+        if (result.data && result.data.error) {
+          msg = '送信エラー: ' + result.data.error;
+        } else if (result.data && result.data.message) {
+          msg = '送信エラー: ' + result.data.message;
+        }
+        showBanner(msg);
+        submitBtn.classList.remove('is-loading');
+        submitBtn.disabled = false;
+      })
+      .catch(function () {
+        showBanner('ネットワークエラーが発生しました。通信状況をご確認のうえ、再度お試しください。');
+        submitBtn.classList.remove('is-loading');
+        submitBtn.disabled = false;
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
