@@ -12,7 +12,7 @@
     })(window, document, "clarity", "script", "wsezopcxvw");
 </script>
 <title>単発お試し便｜Altru</title>
-<meta name="description" content="Altru の単発お試し便（¥3,000）お申し込みページ。1回だけ、想いを花束にして大切な方へお届けします。">
+<meta name="description" content="Altru の単発お試し便（¥3,500）お申し込みページ。1回だけ、想いを花束にして大切な方へお届けします。">
 <meta name="robots" content="noindex">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -369,12 +369,55 @@
   }
   .ap-summary__price {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 6px;
-    justify-content: flex-end;
   }
   @media (max-width: 520px) {
-    .ap-summary__price { justify-content: center; }
+    .ap-summary__price { align-items: center; }
+  }
+  .ap-summary__price-anchor {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+  }
+  .ap-summary__price-was {
+    font-family: var(--serif-it);
+    font-size: 13px;
+    color: var(--paper-mute);
+    letter-spacing: 0.04em;
+  }
+  .ap-summary__price-was s {
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(236, 230, 217, .65);
+  }
+  .ap-summary__price-off {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 3px 8px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .ap-summary__price-now {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .ap-summary__price-eyebrow {
+    font-family: var(--serif-it);
+    font-style: italic;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0 0 2px;
   }
   .ap-summary__price-num {
     font-family: var(--serif-it);
@@ -382,6 +425,7 @@
     font-weight: 500;
     letter-spacing: -.01em;
     color: var(--paper);
+    line-height: 1;
   }
   .ap-summary__price-unit {
     font-family: var(--serif-it);
@@ -837,7 +881,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
   <h1 class="ap-hero__title">想いを、<em>一度だけ</em>、花束に。</h1>
   <p class="ap-hero__lede">
     まずは一度、Altru の花束をお試しください。<br>
-    ¥3,000 ぽっきり、定期契約はありません。
+    初回限定 ¥3,500 ぽっきり、定期契約はありません。
   </p>
 </section>
 
@@ -850,8 +894,15 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
       <p class="ap-summary__desc">季節の花束を一度だけお届け。定期契約・更新は一切ありません。</p>
     </div>
     <div class="ap-summary__price">
-      <span class="ap-summary__price-num">¥3,000</span>
-      <span class="ap-summary__price-unit">/ 一度のみ</span>
+      <div class="ap-summary__price-anchor">
+        <span class="ap-summary__price-was">通常 <s>¥5,500</s></span>
+        <span class="ap-summary__price-off">36% OFF</span>
+      </div>
+      <p class="ap-summary__price-eyebrow">初回限定</p>
+      <div class="ap-summary__price-now">
+        <span class="ap-summary__price-num">¥3,500</span>
+        <span class="ap-summary__price-unit">/ 一度のみ</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1089,7 +1140,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     <button type="submit" class="ap-submit" id="apSubmit">
       <span class="ap-submit__spinner" aria-hidden="true"></span>
       <span class="ap-submit__label">
-        <span class="ap-submit__label-default">¥3,000 のお支払いへ進む →</span>
+        <span class="ap-submit__label-default">¥3,500 のお支払いへ進む →</span>
         <span class="ap-submit__label-loading">決済ページへ遷移中…</span>
       </span>
     </button>
