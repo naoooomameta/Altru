@@ -359,8 +359,13 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <script>
-  // Altru: 申込完了 (Purchase)
-  fbq('track', 'Purchase', {currency: 'JPY', value: 5000});
+  // Altru: 申込完了 (Purchase) — session_id 付きの正規遷移時のみ発火
+  (function () {
+    var sid = new URLSearchParams(window.location.search).get('session_id');
+    if (sid) {
+      fbq('track', 'Purchase', {currency: 'JPY', value: 3500});
+    }
+  })();
 </script>
 </head>
 <body>
