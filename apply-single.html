@@ -1088,12 +1088,13 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     </div>
 
     <div class="ap-field">
-      <label class="ap-field__label" for="anchor_date">
-        Anchor <span class="ja">記念日</span> <span class="ap-field__optional">任意</span>
+      <label class="ap-field__label" for="delivery_date">
+        Special Day <span class="ja">お届けしたい特別な日</span> <span class="ap-field__required">必須</span>
       </label>
-      <input class="ap-input" type="date" id="anchor_date" name="anchor_date">
-      <p class="ap-field__hint">記念日を起点に、最適なお届け日を調整します。</p>
-      <p class="ap-field__error" id="err-anchor_date"></p>
+      <input class="ap-input" type="date" id="delivery_date" name="delivery_date" required>
+      <p class="ap-field__hint">その日に向けて、心を込めてお届けします。</p>
+      <p class="ap-field__hint">ご注文日から4日以降のお日にちをお選びください。</p>
+      <p class="ap-field__error" id="err-delivery_date"></p>
     </div>
   </section>
 
@@ -1202,6 +1203,20 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     update();
   }
   bindCounter('recipient_delivery_note', 'cnt-delivery_note');
+
+  /* ── Delivery date: earliest selectable is today + 4 days ── */
+  var deliveryInput = document.getElementById('delivery_date');
+  function toISODate(d) {
+    var y = d.getFullYear();
+    var m = ('0' + (d.getMonth() + 1)).slice(-2);
+    var day = ('0' + d.getDate()).slice(-2);
+    return y + '-' + m + '-' + day;
+  }
+  var minDelivery = new Date();
+  minDelivery.setHours(0, 0, 0, 0);
+  minDelivery.setDate(minDelivery.getDate() + 4);
+  var minDeliveryISO = toISODate(minDelivery);
+  deliveryInput.min = minDeliveryISO;
 
   /* ── Checkbox visual state ── */
   ['check-stealth', 'check-terms'].forEach(function (id) {
@@ -1393,6 +1408,15 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
       errors.push('message_text');
     }
 
+    var deliveryVal = (deliveryInput.value || '').trim();
+    if (!deliveryVal) {
+      setError('delivery_date', 'お届けしたい特別な日をお選びください。');
+      errors.push('delivery_date');
+    } else if (deliveryVal < minDeliveryISO) {
+      setError('delivery_date', 'お届けは最短でも4日後となります。');
+      errors.push('delivery_date');
+    }
+
     var stealthEl = document.getElementById('stealth_confirmed');
     var termsEl = document.getElementById('terms_accepted');
     if (!stealthEl.checked || !termsEl.checked) {
@@ -1410,7 +1434,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
   /* ── Build payload ── */
   function buildPayload() {
     var noteVal = (document.getElementById('recipient_delivery_note').value || '').trim();
-    var anchorVal = (document.getElementById('anchor_date').value || '').trim();
+    var deliveryVal = (deliveryInput.value || '').trim();
 
     var recipient = {
       name: document.getElementById('recipient_name').value.trim(),
@@ -1424,9 +1448,10 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     if (noteVal) recipient.delivery_note = noteVal;
 
     var message = {
-      text: document.getElementById('message_text').value.trim()
+      text: document.getElementById('message_text').value.trim(),
+      delivery_date: deliveryVal
     };
-    if (anchorVal) message.anchor_date = anchorVal;
+    if (deliveryVal) message.anchor_date = deliveryVal;
 
     return {
       plan_id: PLAN_ID,
