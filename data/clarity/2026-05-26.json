@@ -1,0 +1,2327 @@
+{
+  "fetchedAt": "2026-05-26T20:17:11.919Z",
+  "numOfDays": 1,
+  "dimensions": {
+    "Browser": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 33.33,
+            "sessionsWithoutMetricPercentage": 66.67,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 68.22,
+            "Browser": "Chrome"
+          },
+          {
+            "averageScrollDepth": 69.5,
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 4,
+            "Browser": "Chrome"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "HeadlessChrome"
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "1119",
+            "activeTime": "101",
+            "Browser": "Chrome"
+          },
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "Browser": "MobileSafari"
+          }
+        ]
+      }
+    ],
+    "Device": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 33.33,
+            "sessionsWithoutMetricPercentage": 66.67,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "Mobile"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 69.5,
+            "Device": "Mobile"
+          },
+          {
+            "averageScrollDepth": 68.22,
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Device": "Mobile"
+          },
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "4",
+            "pagesPerSessionPercentage": 3.3333333333333335,
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "Device": "Mobile"
+          },
+          {
+            "totalTime": "1119",
+            "activeTime": "101",
+            "Device": "PC"
+          }
+        ]
+      }
+    ],
+    "OS": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 33.33,
+            "sessionsWithoutMetricPercentage": 66.67,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "IOS"
+          },
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 69.5,
+            "OS": "IOS"
+          },
+          {
+            "averageScrollDepth": 68.22,
+            "OS": "MacOSX"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "OS": "IOS"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "OS": "Linux"
+          },
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 4.5,
+            "OS": "MacOSX"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "OS": "IOS"
+          },
+          {
+            "totalTime": "1119",
+            "activeTime": "101",
+            "OS": "MacOSX"
+          }
+        ]
+      }
+    ],
+    "Country": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 25,
+            "sessionsWithoutMetricPercentage": 75,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 12.5,
+            "sessionsWithoutMetricPercentage": 87.5,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 68.31,
+            "Country": "Japan"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "8",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 3.625,
+            "Country": "Japan"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Country": "United States"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "891",
+            "activeTime": "82",
+            "Country": "Japan"
+          }
+        ]
+      }
+    ],
+    "Source": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 66.67,
+            "sessionsWithoutMetricPercentage": 33.33,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "altru.jp"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "ig"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 65.05,
+            "Source": ""
+          },
+          {
+            "averageScrollDepth": 100,
+            "Source": "altru.jp"
+          },
+          {
+            "averageScrollDepth": 69.5,
+            "Source": "ig"
+          },
+          {
+            "averageScrollDepth": 72.29,
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "4",
+            "pagesPerSessionPercentage": 2.4444444444444446,
+            "Source": ""
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Source": "altru.jp"
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Source": "ig"
+          },
+          {
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 2.3333333333333335,
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "712",
+            "activeTime": "90",
+            "Source": ""
+          },
+          {
+            "totalTime": "311",
+            "activeTime": "6",
+            "Source": "altru.jp"
+          },
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "Source": "ig"
+          },
+          {
+            "totalTime": "709",
+            "activeTime": "20",
+            "Source": "checkout.stripe.com"
+          }
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 66.67,
+            "sessionsWithoutMetricPercentage": 33.33,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "paid"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "referral"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 65.05,
+            "Medium": ""
+          },
+          {
+            "averageScrollDepth": 69.5,
+            "Medium": "paid"
+          },
+          {
+            "averageScrollDepth": 72.29,
+            "Medium": "referral"
+          },
+          {
+            "averageScrollDepth": 100,
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "4",
+            "pagesPerSessionPercentage": 2.4444444444444446,
+            "Medium": ""
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Medium": "paid"
+          },
+          {
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 2.3333333333333335,
+            "Medium": "referral"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Medium": "direct"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "712",
+            "activeTime": "90",
+            "Medium": ""
+          },
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "Medium": "paid"
+          },
+          {
+            "totalTime": "709",
+            "activeTime": "20",
+            "Medium": "referral"
+          },
+          {
+            "totalTime": "311",
+            "activeTime": "6",
+            "Medium": "direct"
+          }
+        ]
+      }
+    ],
+    "Campaign": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 33.33,
+            "sessionsWithoutMetricPercentage": 66.67,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 16.67,
+            "sessionsWithoutMetricPercentage": 83.33,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "6",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 68.22,
+            "Campaign": null
+          },
+          {
+            "averageScrollDepth": 69.5,
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "6",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "4",
+            "pagesPerSessionPercentage": 3.3333333333333335,
+            "Campaign": null
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Campaign": "120247301290920769"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "1119",
+            "activeTime": "101",
+            "Campaign": null
+          },
+          {
+            "totalTime": "208",
+            "activeTime": "26",
+            "Campaign": "120247301290920769"
+          }
+        ]
+      }
+    ],
+    "Channel": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 66.67,
+            "sessionsWithoutMetricPercentage": 33.33,
+            "pagesViews": "2",
+            "subTotal": "11",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 12.5,
+            "sessionsWithoutMetricPercentage": 87.5,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Direct"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Referral"
+          },
+          {
+            "sessionsCount": "8",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 100,
+            "Channel": "Direct"
+          },
+          {
+            "averageScrollDepth": 72.29,
+            "Channel": "Referral"
+          },
+          {
+            "averageScrollDepth": 65.48,
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Channel": "Direct"
+          },
+          {
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 2.3333333333333335,
+            "Channel": "Referral"
+          },
+          {
+            "totalSessionCount": "8",
+            "totalBotSessionCount": "3",
+            "distinctUserCount": "6",
+            "pagesPerSessionPercentage": 2.1818181818181817,
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "311",
+            "activeTime": "6",
+            "Channel": "Direct"
+          },
+          {
+            "totalTime": "709",
+            "activeTime": "20",
+            "Channel": "Referral"
+          },
+          {
+            "totalTime": "586",
+            "activeTime": "74",
+            "Channel": "Other"
+          }
+        ]
+      }
+    ],
+    "URL": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 50,
+            "sessionsWithoutMetricPercentage": 50,
+            "pagesViews": "1",
+            "subTotal": "4",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 100,
+            "sessionsWithoutMetricPercentage": 0,
+            "pagesViews": "1",
+            "subTotal": "7",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 33.33,
+            "sessionsWithoutMetricPercentage": 66.67,
+            "pagesViews": "1",
+            "subTotal": "1",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "sessionsCount": "3",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "sessionsCount": "5",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 99,
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "averageScrollDepth": 39.88,
+            "Url": "https://altru.jp/"
+          },
+          {
+            "averageScrollDepth": 99,
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "averageScrollDepth": 74,
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "averageScrollDepth": 80,
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "averageScrollDepth": 99,
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "averageScrollDepth": 71.6,
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "averageScrollDepth": 56,
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "averageScrollDepth": 83,
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "totalSessionCount": "3",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 2.25,
+            "Url": "https://altru.jp/"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://6a156c832d3ef0000986d649--altruflower.netlify.app/"
+          },
+          {
+            "totalSessionCount": "5",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1.8,
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 5,
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://6a158163a1e7f400077f77b6--altruflower.netlify.app/"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "6",
+            "Url": "https://altru.jp/account"
+          },
+          {
+            "totalTime": "769",
+            "activeTime": "135",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "totalTime": "32",
+            "activeTime": "5",
+            "Url": "https://altru.jp/thanks.html"
+          },
+          {
+            "totalTime": "394",
+            "activeTime": "15",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1uWPh5SUolVHJg1IGrJS6pXW0QI9fi3kgl8ucUdjOjQwCCyEXVJ73gGzd"
+          },
+          {
+            "totalTime": "437",
+            "activeTime": "19",
+            "Url": "https://altru.jp/apply-single.html"
+          },
+          {
+            "totalTime": "34",
+            "activeTime": "32",
+            "Url": "https://altru.jp/apply.html"
+          },
+          {
+            "totalTime": "1340",
+            "activeTime": "31",
+            "Url": "https://altru.jp/thanks.html?session_id=cs_live_a1SBzhx76v5fSrhOVeMr2rYZnWJS0HvmCKFRPmmRxRwilRSElAqCIxEDtW"
+          },
+          {
+            "totalTime": "47",
+            "activeTime": "47",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAZnRzaAR4putleHRuA2FlbQEwAGFkaWQBqzRJRQbNYXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp77HGKWQD6-vlccApSZbB6r4B1Rie2R9e4SpW2wj0gXai8nIAop9GTgrxkX0_aem_LPUA7VBNmG6J3lQcEzx_Iw"
+          },
+          {
+            "totalTime": "369",
+            "activeTime": "4",
+            "Url": "https://altru.jp/?utm_medium=paid&utm_source=ig&utm_id=120247301290920769&utm_content=120247304148040769&utm_term=120247301290930769&utm_campaign=120247301290920769&fbclid=PAdGRleAR3eaNleHRuA2FlbQEwAGFkaWQBqzRJRP-hcXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpx-aIcRbyyiiEIgppco0ghuLWGML43ZPK6gh_2n52GWfSYWuxOf9gwq0vcSv_aem_9mFjaD0jchIP5Epse9AXfA#price"
+          }
+        ]
+      }
+    ]
+  }
+}
