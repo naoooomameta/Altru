@@ -3060,7 +3060,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
       <li><a href="#scenes">Scenes</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://lin.ee/osZSS6P" class="nav__cta" onclick="fbq('track','Lead');">
+    <a href="/go-line.html" class="nav__cta">
       <span class="nav__cta-dot"></span>
       <span>LINEで贈る</span>
     </a>
@@ -3074,7 +3074,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
   <a href="#features" onclick="closeMobileMenu()">Why Altru</a>
   <a href="#scenes" onclick="closeMobileMenu()">Scenes</a>
   <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
-  <a href="https://lin.ee/osZSS6P" class="mobile-menu__cta" onclick="fbq('track','Lead');closeMobileMenu()">LINEで、一度だけ贈る →</a>
+  <a href="/go-line.html" class="mobile-menu__cta" onclick="closeMobileMenu()">LINEで、一度だけ贈る →</a>
 </div>
 
 <!-- ============ HERO (FV / image-led) ============ -->
@@ -3105,7 +3105,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
 
   <div class="hero-fv__cta-group">
     <p class="hero-fv__cta-kicker">— 彼女に、奥さんに —</p>
-    <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
+    <a href="/go-line.html" class="hero-fv__cta hero-fv__cta--primary">
       <span class="hero-fv__cta-label">LINEで花を贈る</span>
       <span class="arrow">→</span>
     </a>
@@ -3124,7 +3124,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
 <!-- ============ FV直下 mobile専用 CTAバンド ============ -->
 <section class="hero-fv-cta-band" aria-label="申し込み導線">
   <p class="hero-fv__cta-kicker">— 彼女に、奥さんに —</p>
-  <a href="https://lin.ee/osZSS6P" class="hero-fv__cta hero-fv__cta--primary" onclick="fbq('track','Lead');">
+  <a href="/go-line.html" class="hero-fv__cta hero-fv__cta--primary">
     <span class="hero-fv__cta-label">LINEで花を贈る</span>
     <span class="arrow">→</span>
   </a>
@@ -3302,7 +3302,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="scenes__cta-row reveal" style="margin-top: 3rem;">
-      <a href="https://lin.ee/osZSS6P" class="btn btn--primary" onclick="fbq('track','Lead');">
+      <a href="/go-line.html" class="btn btn--primary">
         <span>LINEで、一度だけ贈る</span>
         <span class="arrow">→</span>
       </a>
@@ -3418,7 +3418,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="scenes__cta-row reveal">
-      <a href="https://lin.ee/osZSS6P" class="btn btn--primary" onclick="fbq('track','Lead');">
+      <a href="/go-line.html" class="btn btn--primary">
         <span>LINEで、一度だけ贈る</span>
         <span class="arrow">→</span>
       </a>
@@ -3581,7 +3581,7 @@ src="https://www.facebook.com/tr?id=1677373676625503&ev=PageView&noscript=1"
     </p>
 
     <div class="cta-section__action">
-      <a href="https://lin.ee/osZSS6P" class="cta-section__btn" onclick="fbq('track','Lead');">
+      <a href="/go-line.html" class="cta-section__btn">
         <span>LINEで、一度だけ贈る</span>
         <span class="arrow">→</span>
       </a>
@@ -3724,10 +3724,10 @@ sObs.observe(heroSection); sObs.observe(ctaSection);
 
 /* CTA FORM — assets/altru-form/form.js に統合済み */
 
-/* Sticky CTA を LINE 友だち追加へ遷移させる + Lead 計測 */
+/* Sticky CTA を LINE 友だち追加（中間ページ経由）へ遷移 — Lead 計測は go-line.html 側 */
 const stickyBtn = document.querySelector('.sticky-cta__btn');
 if (stickyBtn) {
-  stickyBtn.setAttribute('onclick', "fbq('track','Lead');window.location.href='https://lin.ee/osZSS6P'");
+  stickyBtn.setAttribute('onclick', "window.location.href='/go-line.html'");
 }
 
 /* PARALLAX hero bg mark */
