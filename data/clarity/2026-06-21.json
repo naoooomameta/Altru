@@ -1,0 +1,1147 @@
+{
+  "fetchedAt": "2026-06-21T19:51:32.696Z",
+  "numOfDays": 1,
+  "dimensions": {
+    "Browser": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "Chrome"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Browser": "Chrome"
+          }
+        ]
+      }
+    ],
+    "Device": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Device": "PC"
+          }
+        ]
+      }
+    ],
+    "OS": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "OS": "Linux"
+          },
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "OS": "Windows"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "OS": "Windows"
+          }
+        ]
+      }
+    ],
+    "Country": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "Greenland"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 100,
+            "Country": "Greenland"
+          },
+          {
+            "averageScrollDepth": 7,
+            "Country": "United Kingdom"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Country": "Greenland"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Country": "United Kingdom"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Country": "United States"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "34",
+            "activeTime": "34",
+            "Country": "Greenland"
+          },
+          {
+            "totalTime": "10",
+            "activeTime": "10",
+            "Country": "United Kingdom"
+          }
+        ]
+      }
+    ],
+    "Source": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Source": ""
+          }
+        ]
+      }
+    ],
+    "Medium": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Medium": ""
+          }
+        ]
+      }
+    ],
+    "Campaign": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Campaign": null
+          }
+        ]
+      }
+    ],
+    "Channel": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "2",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 53.5,
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "2",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "3",
+            "pagesPerSessionPercentage": 1,
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "22",
+            "activeTime": "22",
+            "Channel": "Other"
+          }
+        ]
+      }
+    ],
+    "URL": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 100,
+            "Url": "https://altru.jp/"
+          },
+          {
+            "averageScrollDepth": 7,
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altru.jp/"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "0",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "34",
+            "activeTime": "34",
+            "Url": "https://altru.jp/"
+          },
+          {
+            "totalTime": "10",
+            "activeTime": "10",
+            "Url": "https://altruflower.netlify.app/"
+          }
+        ]
+      }
+    ]
+  }
+}
