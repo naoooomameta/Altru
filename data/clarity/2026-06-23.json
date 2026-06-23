@@ -1,0 +1,169 @@
+{
+  "fetchedAt": "2026-06-23T20:13:05.027Z",
+  "numOfDays": 1,
+  "dimensions": {
+    "Browser": [
+      {
+        "metricName": "DeadClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": [
+          {
+            "sessionsCount": "1",
+            "sessionsWithMetricPercentage": 0,
+            "sessionsWithoutMetricPercentage": 100,
+            "pagesViews": "0",
+            "subTotal": "0",
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": [
+          {
+            "averageScrollDepth": 5,
+            "Browser": "MobileSafari"
+          }
+        ]
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "Other"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "4",
+            "distinctUserCount": "4",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "Chrome"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "1",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "HeadlessChrome"
+          },
+          {
+            "totalSessionCount": "1",
+            "totalBotSessionCount": "1",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "MobileSafari"
+          },
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "5",
+            "distinctUserCount": "5",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "FacebookApp"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": [
+          {
+            "totalTime": "32",
+            "activeTime": "32",
+            "Browser": "MobileSafari"
+          }
+        ]
+      }
+    ],
+    "Device": {
+      "error": "Clarity API 429 for dimension=Device: Exceeded daily limit"
+    },
+    "OS": {
+      "error": "Clarity API 429 for dimension=OS: Exceeded daily limit"
+    },
+    "Country": {
+      "error": "Clarity API 429 for dimension=Country: Exceeded daily limit"
+    },
+    "Source": {
+      "error": "Clarity API 429 for dimension=Source: Exceeded daily limit"
+    },
+    "Medium": {
+      "error": "Clarity API 429 for dimension=Medium: Exceeded daily limit"
+    },
+    "Campaign": {
+      "error": "Clarity API 429 for dimension=Campaign: Exceeded daily limit"
+    },
+    "Channel": {
+      "error": "Clarity API 429 for dimension=Channel: Exceeded daily limit"
+    },
+    "URL": {
+      "error": "Clarity API 429 for dimension=URL: Exceeded daily limit"
+    }
+  }
+}
