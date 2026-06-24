@@ -1,0 +1,420 @@
+{
+  "fetchedAt": "2026-06-24T19:54:07.419Z",
+  "numOfDays": 1,
+  "dimensions": {
+    "Browser": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Browser": "HeadlessChrome"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Device": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Device": "PC"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "OS": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "OS": "Linux"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Country": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Country": "United States"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Source": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Source": ""
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Medium": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Medium": ""
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Campaign": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Campaign": null
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "Channel": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Channel": "Other"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ],
+    "URL": [
+      {
+        "metricName": "DeadClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ExcessiveScroll",
+        "information": []
+      },
+      {
+        "metricName": "RageClickCount",
+        "information": []
+      },
+      {
+        "metricName": "QuickbackClick",
+        "information": []
+      },
+      {
+        "metricName": "ScriptErrorCount",
+        "information": []
+      },
+      {
+        "metricName": "ErrorClickCount",
+        "information": []
+      },
+      {
+        "metricName": "ScrollDepth",
+        "information": []
+      },
+      {
+        "metricName": "Traffic",
+        "information": [
+          {
+            "totalSessionCount": "0",
+            "totalBotSessionCount": "2",
+            "distinctUserCount": "2",
+            "pagesPerSessionPercentage": 1,
+            "Url": "https://6a3ae8d5e85a9300081bf116--altruflower.netlify.app/"
+          }
+        ]
+      },
+      {
+        "metricName": "EngagementTime",
+        "information": []
+      }
+    ]
+  }
+}
